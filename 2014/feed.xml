@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PyCon India 2014</title>
+    <description>The premier conference in India on using and developing the Python programming language</description>
+    <link>http://in.pycon.org/2014</link>
+    <atom:link href="http://in.pycon.org/2014/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Prabhu Ramachandran is winner of Kenneth Gonsalves Award 2014</title>
+        <description>&lt;p&gt;PSSI is happy to announce that &lt;a href=&quot;http://www.aero.iitb.ac.in/%7Eprabhu/&quot;&gt;Prabhu Ramachandran&lt;/a&gt;, faculty member of Department of Aerospace Engineering, IIT Bombay is the winner of Kenneth Gonsalves Award, 2014.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.aero.iitb.ac.in/~prabhu/cgi-bin/moin.cgi/Home?action=AttachFile&amp;do=get&amp;target=profile.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Prabhu has been active in the Open source and Python community for close to 15 years. He co-founded the Chennai LUG in 1998. He is also well known as the author and lead developer of the award winning &lt;a href=&quot;http://mayavi.sourceforge.net/&quot;&gt;Mayavi&lt;/a&gt; and &lt;a href=&quot;http://docs.enthought.com/mayavi/tvtk/README.html&quot;&gt;TVTK&lt;/a&gt; Python packages. He also maintains &lt;a href=&quot;https://bitbucket.org/pysph/pysph&quot;&gt;PySPH&lt;/a&gt;, an open source framework for Smoothed Particle Hydrodynamics (SPH) simulations. &lt;/p&gt;
+
+&lt;p&gt;Prabhu is also Member of Board, &lt;a href=&quot;https://www.python.org/psf/members/#nominated-members&quot;&gt;Python Software Foundation&lt;/a&gt; since 2010 and is closely involved with the activities of &lt;a href=&quot;http://fossee.in&quot;&gt;FOSSEE&lt;/a&gt; and &lt;a href=&quot;http://scipy.in&quot;&gt;SciPy India&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;His research interests are primarily in particle methods and applied scientific computing.&lt;/p&gt;
+
+&lt;p&gt;Prabhu will be presented the Award on 27th Sep, the opening day of PyCon India 2014.&lt;/p&gt;
+
+&lt;p&gt;PSSI and Team PyCon India would like to extend their hearty Congratulations to Prabhu for his achievement and wish him the very best for his future endeavours.&lt;/p&gt;
+
+&lt;p&gt;Team PyCon India&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Sep 2014 19:30:09 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/prabhu-ramachandran-is-winner-of-kenneth-gonsalves-award-2014/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/prabhu-ramachandran-is-winner-of-kenneth-gonsalves-award-2014/</guid>
+      </item>
+    
+      <item>
+        <title>Discounts from GoIbibo for PyCon India Attendees</title>
+        <description>&lt;p&gt;Goibibo is yet again the Gold Sponsor for Pycon India 2014, for a consecutive 2nd year.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2014/static/images/sponsor_goibibo.png&quot; alt=&quot;GoIbibo&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Goibibo.com is a leading online travel site in India that enables travelers to buy air and bus tickets, hotels and holidays. Goibibo has a very strong technology base, enabling it to serve its customers fastest in the market.&lt;/p&gt;
+
+&lt;p&gt;Apart for sponsoring the conference, GoIbibo is offering special discounts for everyone attending Pycon India 2014.&lt;/p&gt;
+
+&lt;p&gt;Offer Value: &lt;strong&gt;₹6,000/Registered PyCon India attendee&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rs. 1000 Off on Domestic Flight*&lt;/li&gt;
+&lt;li&gt;Rs. 1500 Off on International Flight*&lt;/li&gt;
+&lt;li&gt;Upto Rs. 3000 Off on Hotel*&lt;/li&gt;
+&lt;li&gt;Rs. 500 Off on Bus*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Offer Details to be printed on the voucher.&lt;/p&gt;
+
+&lt;p&gt;Terms &amp;amp; Conditions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Domestic Flight: Rs. 1000 Off – Valid only on return flight booking; Minimum booking value Rs. 10,000&lt;/li&gt;
+&lt;li&gt;International Flight: Rs. 1500 Off – Valid only on return flight booking; Minimum booking value Rs. 15,000&lt;/li&gt;
+&lt;li&gt;Hotels: Upto Rs. 3000 Off – Flat 50% Off&lt;/li&gt;
+&lt;li&gt;Bus: Rs. 500 Off – Valid only on a minimum booking value of Rs. 3000&lt;/li&gt;
+&lt;li&gt;General Terms &amp;amp; Conditions are applicable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How to Avail this offer?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Log on to www.goibibo.com&lt;/li&gt;
+&lt;li&gt;Key in required details to search for desired flights/hotels/bus.&lt;/li&gt;
+&lt;li&gt;Finalize your booking, use PROMO CODE (Price will change immediately. Discount amount will be deducted from the total value)&lt;/li&gt;
+&lt;li&gt;Ibibo Group Pvt Ltd will validate the transactions based on PROMO CODE before giving out the said benefit.&lt;/li&gt;
+&lt;li&gt;In case of cancellation entire amount of the discount will be deducted from the refund amount apart from the cancellation fee charged.&lt;/li&gt;
+&lt;li&gt;Goibibo reserves the right to extend or terminate this offer or alter the terms and conditions at any time without giving any prior notice or assigning any reason whatsoever during the Offer Period.&lt;/li&gt;
+&lt;li&gt;Any person availing this Offer shall be deemed to have read, understood and accepted these terms and conditions.&lt;/li&gt;
+&lt;li&gt;General Terms &amp;amp; Conditions are applicable.&lt;/li&gt;
+&lt;li&gt;No two offers can be clubbed on one transaction.&lt;/li&gt;
+&lt;li&gt;Booking valid till December 31st 2014&lt;/li&gt;
+&lt;li&gt;Travel Validity is open.&lt;/li&gt;
+&lt;li&gt;Applicable on return flight bookings only.&lt;/li&gt;
+&lt;li&gt;Applicable on all Hotels.&lt;/li&gt;
+&lt;li&gt;Applicable on all Airlines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While availing the offer, in case of any issues, customers are requested to call GoIbibo.com customer service numbers: (+91)9213025552/18602-585858 anytime during the day. Goibibo customer service team would be available 24X7. Incase the resolution on phone is taking more time, please write to Goibibo for Express Customer Service at &lt;a href=&quot;mailto:travel@goibibo.com&quot;&gt;travel@goibibo.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We thank goibibo.com for all their support.&lt;/p&gt;
+
+&lt;p&gt;Team PyCon India&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Sep 2014 08:20:43 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/discounts-from-goibibo-for-pycon-india-attendees/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/discounts-from-goibibo-for-pycon-india-attendees/</guid>
+      </item>
+    
+      <item>
+        <title>Open Spaces</title>
+        <description>&lt;p&gt;PyCon has always been more than just a conference. It has been a place where people who have similar interests find each other and have great conversations.&lt;/p&gt;
+
+&lt;p&gt;This time, we want to make room for more such conversations. This time, we are going to make Open Spaces more exciting.&lt;/p&gt;
+
+&lt;h2&gt;What are open spaces?&lt;/h2&gt;
+
+&lt;p&gt;An open space is a place for people to come together and work on / share something. This can be anything like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hacking on some open source project (A feature hack, a Bug bust, etc)&lt;/li&gt;
+&lt;li&gt;Code reading. Pick up a FOSS and start. An experienced hacker can take a group along for a quick intro.&lt;/li&gt;
+&lt;li&gt;Sharing a cool refactor technique&lt;/li&gt;
+&lt;li&gt;Talking about how a technology is used in ones workplace&lt;/li&gt;
+&lt;li&gt;A crash course on static site generators&lt;/li&gt;
+&lt;li&gt;Round table hacking&lt;/li&gt;
+&lt;li&gt;… Or even an all out vim VS emacs battle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best part of an open space is that there is no schedule, there are no pre decided talks. They are entirely up to the people who attend the conference. Just get there, make an announcement and get down to it. Things work purely on a first come first serve basis. Also a smaller group generally leads to a lot more discussions, encourages the audience to ask more questions and keep things lively.&lt;/p&gt;
+
+&lt;p&gt;To give you some examples, here are the list of some of the things that happened in the open spaces last year:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Deploying python application in heroku&lt;/li&gt;
+&lt;li&gt;Python 3 difference and experience in porting python 2 to python 3&lt;/li&gt;
+&lt;li&gt;GSoC experience and how to apply for GSoC.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A testing in RedHat&lt;/li&gt;
+&lt;li&gt;Web scrapping with scrapy.&lt;/li&gt;
+&lt;li&gt;Learning science with &lt;a href=&quot;http://www.expeyes.in/&quot;&gt;expeyes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, If you have proposed a talk that didn&amp;#39;t make it in the schedule, you can come to venue and find a slot if available. That way, the people who are interested in the topic you proposed can catch up with you at the event itself.&lt;/p&gt;
+
+&lt;h2&gt;Getting in touch with others&lt;/h2&gt;
+
+&lt;p&gt;Pulling off something like open spaces requires one key thing - abundant communication.&lt;/p&gt;
+
+&lt;p&gt;There will be a board in a prominent location with a set of stickies. You can come over here and put up your name and interests, that way anyone looking to talk about something can find you and vice versa. This can act as the central point of communication for open spaces. Booking rooms for larger talks could also be done via stickies. To give you a quick idea, &lt;a href=&quot;http://www.globalnerdy.com/wordpress/wp-content/uploads/2011/06/barcamp-grid-1.jpg&quot;&gt;This&lt;/a&gt; is how barcamp did it in 2011.&lt;/p&gt;
+
+&lt;p&gt;As far as actual spaces are concerned, Nimhans is really big and the first floor can be used for discussions. We will arrange a bunch of tables. In addition to these, there are multiple rooms on the first floor that can be utilized as well.&lt;/p&gt;
+
+&lt;p&gt;While we are still trying to figure the details on how to make this communication as seamless as possible and this seems like a good starting point. We will share more details as things get clearer.&lt;/p&gt;
+
+&lt;h2&gt;Final thoughts&lt;/h2&gt;
+
+&lt;p&gt;We always encourage people &lt;strong&gt;not&lt;/strong&gt; to attend all the talks. We believe that there is a lot that you can learn from the other peers attending the conference. So, go over to the open space and interact with someone, or even better, do something yourself!&lt;/p&gt;
+
+&lt;p&gt;For any clarifications please contact &lt;a href=&quot;mailto:jaseemabid@gmail.com&quot;&gt;Jaseem Abid&lt;/a&gt;. He will be in charge of activities around the open spaces.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Sep 2014 16:18:00 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/open-spaces/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/open-spaces/</guid>
+      </item>
+    
+      <item>
+        <title>Deadline for ticket cancellations</title>
+        <description>&lt;p&gt;With the event drawing closer, some of you folks might have one or the other engagement unexpectedly popping up, putting your presence at &lt;a href=&quot;http://in.pycon.org/&quot;&gt;PyCon India 2014&lt;/a&gt; at jeopardy. As much as it breaks our heart to see you go, we understand the situation and are willing to accept a cancellation or transfer.&lt;/p&gt;
+
+&lt;p&gt;However, having hit 1000+ registrations so far, we need to prepare well in advance in order to make the conference a gratifying experience for all. This means organizing the venue, registrations, food and tons of other small things which all goes into the prep.&lt;/p&gt;
+
+&lt;p&gt;Hence, the last date for ticket cancellations is 20th September, 11:59PM. After that, until 24th September, you will have the option to transfer your tickets. Please mail &lt;strong&gt;tickets@in.pycon.org&lt;/strong&gt; or &lt;strong&gt;abdulraufhaseeb@gmail.com&lt;/strong&gt; with your ticket along with the Name &amp;amp; Email address of the person whom you want the ticket to be transferred to.&lt;/p&gt;
+
+&lt;p&gt;If you do neither of these, then you&amp;#39;d better show up for the conference. Otherwise there might be some of us treating ourselves to a second helping for desserts!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Sep 2014 13:00:40 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/deadline-for-ticket-cancellations/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/deadline-for-ticket-cancellations/</guid>
+      </item>
+    
+      <item>
+        <title>Welcoming Media Partners!</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://in.pycon.org&quot;&gt;PyCon India 2014&lt;/a&gt; is happening in a month. As you already know, it is that one time of the year where all the Python enthusiasts come together to share ideas, make relationships, and collectively take the community up to the next level. A lot, and we can&amp;#39;t stress this enough, really a lot of stories, hacks, ideas and special moments happen at the conference.&lt;/p&gt;
+
+&lt;p&gt;We don&amp;#39;t want any of these to be lost. Having them recorded, written down and documented will inspire people in the coming years and also help us to cherish those moments in the future.&lt;/p&gt;
+
+&lt;p&gt;Hence, in order for that to happen, we are putting out a call for Media Partners.&lt;/p&gt;
+
+&lt;p&gt;Do you have an organization who loves covering tech events? Be it a magazine, a video cast, or a well known online blog? Then we are looking for you.&lt;/p&gt;
+
+&lt;p&gt;You are hereby welcome to the conference. However, if you wish to be officially recognized as media partners, please make sure you let us know before hand by dropping a mail to &lt;strong&gt;contact@in.pycon.org&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Your team will get two free media passes to enter the conference and conjure up one of the best stories ever told about PyCon India!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Aug 2014 14:27:53 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/welcoming-media-partners/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/welcoming-media-partners/</guid>
+      </item>
+    
+      <item>
+        <title>Python Month is back as Python Express!</title>
+        <description>&lt;p&gt;Last year, we celebrated the month before PyCon India as &lt;a href=&quot;http://in.pycon.org/blog/2013-python-month&quot;&gt;Python Month&lt;/a&gt;. It was a huge success with over a 100 institutions organizing Python workshops across different parts of the country.&lt;/p&gt;
+
+&lt;p&gt;This year, Python Month is back in all its glory, but with a new face and a new plan. Python Month is now Python Express! There were two main motivations behind this idea.&lt;/p&gt;
+
+&lt;p&gt;One is the tremendous response that we got last year both in terms of trainers willing to teach, as well as colleges and institutions willing to organize workshops. Both these factors made us think, &amp;quot;Why stop with just one month?&amp;quot;. Hence, Python Express is going to be an ongoing effort.&lt;/p&gt;
+
+&lt;p&gt;The second motivation was the lessons learned from organizing such an initiative without the proper use of technology. A lot of time was spent in match making and house keeping the records related to all the workshops. After having understood what would save everyone&amp;#39;s time when automated, we&amp;#39;ve built this brand new website for Python Express!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pythonexpress.in/&quot;&gt;Checkout the Python Express website.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;What should you do?&lt;/h2&gt;
+
+&lt;p&gt;If you are a Python practitioner and interested in teaching, sign up as a trainer on the Python Express website and check the list of colleges that are willing to organize workshops. If you find any of them to be suitable for you to go and teach at, Express Interest in that particular college. Once you are accepted, you will be notified and things can be taken forward from there.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pythonexpress.in/trainers/signup&quot;&gt;Sign up as a trainer now.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are interested in organizing a Python workshop, sign up as an organization/institution on the Python Express website. The trainers who have already signed up will be able to see your institution and Express Interest to visit and teach there if they&amp;#39;re interested. Once that happens, you will be able to accept them and take it forward.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.pythonexpress.in/orgs/signup&quot;&gt;Register an organization now.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Spread the word and let us spread the love of Python far and wide.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/pythonexpress&quot;&gt;Follow Python Express on Twitter for all the updates.&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 Aug 2014 07:23:20 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/python-month-is-back-as-python-express/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/python-month-is-back-as-python-express/</guid>
+      </item>
+    
+      <item>
+        <title>The Conference Schedule is Up!</title>
+        <description>&lt;p&gt;With just one more month to go for &lt;a href=&quot;http://in.pycon.org/&quot;&gt;PyCon India 2014&lt;/a&gt;, we have shifted gears and switched to hyperdrive. The first-cut of the conference schedule is up! After the long list of proposals being submitted, the community voting and the review process plus confirmation, finally we have everything sorted out and ready to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://in.pycon.org/2014/schedule.html&quot;&gt;Checkout the conference schedule here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With 3 Keynotes, 22 Talks, 9 Workshops along with open spaces, lightning talks and panel discussions, this year&amp;#39;s PyCon India will be filled with three days of fun, geeking out with your fellow Pythonistas, brainstorming on ideas, and altogether having a great time!&lt;/p&gt;
+
+&lt;p&gt;So no more procrastination. For those of you who were waiting to see the conference schedule to plan your trip, this is it. For the rest of you who are still thinking about attending the conference, you might want to grab your tickets soon lest they should get sold out.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pyconindia2014.doattend.com/&quot;&gt;Book your tickets&lt;/a&gt;, &lt;a href=&quot;http://in.pycon.org/2014/venue.html&quot;&gt;book your accommodation&lt;/a&gt; and plan your trip right now! The last weekend of September is going to be epic.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Aug 2014 07:42:08 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/the-conference-schedule-is-up/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/the-conference-schedule-is-up/</guid>
+      </item>
+    
+      <item>
+        <title>More affordable accommodation options</title>
+        <description>&lt;p&gt;One of the main pain points for outstation participants to attend any event is getting good and affordable accommodation. This year, we have given this matter due consideration. Apart from getting on the road and figuring out hotels nearby the venue and &lt;a href=&quot;http://in.pycon.org/2014/venue.html&quot;&gt;putting them up on the website&lt;/a&gt;, we have some more good news to share.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://in.pycon.org/&quot;&gt;PyCon India 2014&lt;/a&gt; has partnered with &lt;a href=&quot;https://airbnb.co.in/&quot;&gt;Airbnb&lt;/a&gt; to help you find more affordable accommodation around Bangalore!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.airbnb.co.in/events/PyconIndia&quot;&gt;Check the PyCon India Airbnb page for mode details.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What does this mean? The following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;All The PyCon attendees can get a ₹1500 discount when attending the event. Book using coupon code &amp;quot;PYCON&amp;quot;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Coupon entitles you to a ₹1500 discount for a single booking, which must be completed (including host acceptance) using the promo code before 11.59pm Indian Standard time on September 28th, 2014.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Valid only for registered Airbnb users in India&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Also, if you are from Bangalore and would love to host people at your place, go ahead and list your space on the page. Make new friends and in the process, it wouldn&amp;#39;t hurt to make a few bucks now, would it?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pyconindia2014.doattend.com/&quot;&gt;Get your tickets&lt;/a&gt; and book your accommodation right away!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Aug 2014 18:45:47 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/more-affordable-accommodation-options/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/more-affordable-accommodation-options/</guid>
+      </item>
+    
+      <item>
+        <title>Sponsorship deadline approaching</title>
+        <description>&lt;p&gt;Being a community run event, sponsors are the ones who make PyCon India a reality. The support shown by many organizations over the past years and even this year is heart warming, and much appreciated by the entire Python community, in India and abroad. Apart from letting the world know your generosity by supporting the conference, by sponsoring, the benefits go a long way than just the love of the community.&lt;/p&gt;
+
+&lt;p&gt;Judging from last year&amp;#39;s turnout and this year&amp;#39;s excitement, we are sure to have over a 1000 Pythonistas around for the conference this time. From Software Engineers to Architects, and Senior Managers to Administrators, and even the so called programming rockstars and ninjas, are sure to turn up at the event. If you&amp;#39;re a company who has a development team building on Python and looking to grow your team or maybe looking to build more visibility for your product, &lt;a href=&quot;http://in.pycon.org&quot;&gt;PyCon India 2014&lt;/a&gt; is the place to be at.&lt;/p&gt;
+
+&lt;p&gt;The deadline for sponsorship is on August 15th. &lt;a href=&quot;http://in.pycon.org/2014/sponsorship-prospectus.pdf&quot;&gt;Please find the sponsorship brochure here&lt;/a&gt; or mail contact@in.pycon.org for more details. &lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Aug 2014 14:42:36 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/sponsorship-deadline-approaching/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/sponsorship-deadline-approaching/</guid>
+      </item>
+    
+      <item>
+        <title>Nominations open for the Kenneth Gonsalves 2014 award</title>
+        <description>&lt;p&gt;The first ever Kenneth Gonsalves award was presented to Baiju Muthukadan last year. Read about last year&amp;#39;s award ceremony &lt;a href=&quot;http://in.pycon.org/blog/baijum-first-kenneth-gonsalves-award-recipient&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This award is instituted by PSSI and PSF in the name of our late friend and mentor, Kenneth Gonsalves who passed away in August 2012. KG, as he is fondly known in the community, was the founder of the Indian Python Software Society. This award is for the ones who are doing exemplary work in Python programming language, its development/adoption/advocacy in India.&lt;/p&gt;
+
+&lt;p&gt;With &lt;a href=&quot;http://in.pycon.org/&quot;&gt;PyCon India 2014&lt;/a&gt; just two months away, it is time for us to nominate a worthy candidate for this year&amp;#39;s Kenneth Gonsalves award. The nominations are open now. If you would like to put forward the name of an Indian citizen who is deserving of this great honor, please visit the following Nomination form and propose their name.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/forms/d/1SEy0k4GxMIEJEY4vCXDCqxOSUQJZ7uIUeA0nf-EleMw/viewform?edit_requested=true&quot;&gt;Nomination form&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The last date for nominations is September 1st 2014, midnight. Make sure you speak for the best out there!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Jul 2014 11:53:04 -0400</pubDate>
+        <link>http://in.pycon.org/2014/blog/nominations-open-for-the-kenneth-gonsalves-2014-award/</link>
+        <guid isPermaLink="true">http://in.pycon.org/2014/blog/nominations-open-for-the-kenneth-gonsalves-2014-award/</guid>
+      </item>
+    
+  </channel>
+</rss>
