@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PyCon India 2011 Blog - PyCon India 2011</title>
+    <link rel="shortcut icon" href="/2011/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2011/static/themes/foomanchoo/style.css" />
+
+   <link href="/2011/blog/feed.rss" rel="alternate" title="PyCon India 2011 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2011/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2011/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2011/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2011/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2011/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2011/cfp">CFP</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/talks">Talks</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/sponsors">Sponsors</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/blog">Blog</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/schedule">Schedule</a>
+                    </div>
+                    <!--
+                    <div>
+                        <a href="/2011/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2011/faq">FAQ</a>
+                    </div>
+                    -->
+
+                    <div class='nav_end'>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2010">2010</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.zeomega.com/" title="ZeOmega"><img class="sponsor" src="/2011/static/images/zeomega-logo.gif" alt="ZeOmega"/></a>
+                </p>
+                <p>
+                    <a href="http://www.vayana.in/" title="Vayana Enterprises"><img class="sponsor" src="/2011/static/images/vayana-logo.gif" alt="Vayana Enterprises"/></a>
+                </p>
+                <p>
+                    <a href="http://www.google.com/" title="Google"><img class="sponsor" src="/2011/static/images/google-logo.png" alt="Google"/></a>
+                </p>
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://github.com" title="GitHub"><img class="sponsor" src="/2011/static/images/github-logo.png" alt="GitHub"/></a>
+                </p>
+                <p>
+                    <a href="http://www.openlabs.co.in/" title="Open Labs"><img class="sponsor" src="/2011/static/images/openlabs-logo.png" alt="Open Labs"/></a>
+                </p>
+                <p>
+                    <a href="http://www.druva.com/" title="Druva"><img class="sponsor" src="/2011/static/images/druva-logo.png" alt="Druva"/></a>
+                </p>
+                <p>
+                    <a href="http://www.gslab.com/" title="GS Lab"><img class="sponsor" src="/2011/static/images/gslab-logo.gif" alt="GS Lab"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.symbiosiscomputers.com/v5/home/index.php" title="Symbiosis Institute of Computer Studies and Research"><img class="sponsor" src="/2011/static/images/symbiosis-logo.jpg" alt="Symbiosis Institute of Computer Studies and Research"/></a>
+                </p>
+
+                <h3>MEDIA PARTNER</h3>
+                <p>
+                    <a href="http://www.linuxforu.com" title="Linux For You Magazine"><img class="sponsor" src="/2011/static/images/lfy-logo.png" alt="Linux For You Magazine"/></a>
+                </p>
+                <p>
+                    <a href="http://www.developeriq.in/" title="Developer IQ"><img class="sponsor" src="/2011/static/images/DeveloperIQ-logo.png" alt="Developer IQ Magazine"/></a>
+                </p>
+
+                <h3>BANDWIDTH SPONSOR</h3>
+                <p>
+                    <a href="http://www.aircel.co.in/" title="AirCel"><img class="sponsor" src="/2011/static/images/aircel-logo.png" alt="AirCel"/></a>
+                </p>
+
+                <h3>ORGANISER</h3>
+                <p>
+                    <a href="http://ipss.org.in" title="Indian Python Software Society"><img class="sponsor" src="/2011/static/images/ipss-logo.png" alt="Indian Python Software Society"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>PyCon India 2011 Blog</h1>
+                
+
+    <div class="post">
+            <h2><a href='/2011/blog/14-pycon-india-2011-online-registrations-now-closed'>Pycon India 2011 Online registrations now closed</a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Sep 15, 2011 at 05:24 AM
+        
+</div>
+
+
+<p>Given the strong response to Pycon India 2011 so far, the online registrations are now closed. We thank the community for their enthusiastic response and hope they have a very fruitful and enriching experience at Pycon India. 
+</p>
+<p>Given the likelihood that some people will still end up reaching the conference, we shall keep spot registrations open. The spot registration fees shall be Rupees 1000 for the event. Note that spot registration could be restricted based on capacity constraints.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/13-pycon-india-2011-schedule'>Pycon India 2011 Schedule</a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Sep 12, 2011 at 12:12 AM
+        
+</div>
+
+
+<p>The Pycon India 2011 Schedule is now published at <a href="http://in.pycon.org/2011/schedule">http://in.pycon.org/2011/schedule</a> 
+</p>
+<p>The first day (Friday, September 16th is dedicated to tutorials), and the second and the third days (ie. Saturday and Sunday, September 17th and 18th) shall feature the keynote, talks and lightning talks. The same should be helpful in deciding which of the various talks and tutorials you might find most useful to attend.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/12-event-start-and-stop-times'>Event start and stop times</a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Aug 24, 2011 at 08:54 AM
+        
+</div>
+
+
+<p>Even as we decide the detailed schedule for the event, we are receiving a number of queries with respect to the start and stop times, as people need to finalise their travel plans.
+</p>
+<p>Please note that the start and stop times for the sessions on September 16th, 17th and 18th will be 09:30 hrs and 18:00 hrs. The first day (16th) shall be reserved for tutorials exclusively. Thus all the talks will be conducted on 17th and 18th.
+</p>
+<p>To clarify, the tutorials and talks are marked differently (different background colour) on <a href="http://in.pycon.org/2011/talks">http://in.pycon.org/2011/talks</a> . Tutorials typically last three hours, whereas all talks are a little less than one hour in duration.
+</p>
+<p>The detailed tutorial/talk schedule is expected to be announced in about a weeks time.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/11-accomodations-at-pune'>Accomodations at Pune </a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Aug 20, 2011 at 05:47 PM
+        
+</div>
+
+
+<p>The list of some of the accomodations available at Pune reasonably close by to the venue (&lt; 4 kms) have been published at <a href="http://in.pycon.org/2011/accomodation">http://in.pycon.org/2011/accomodation</a>.
+</p>
+<p>We have been getting a lot of queries about accomodation. Kindly note that event attendees will need to make arrangements for their accomodation independently, either via some of the hotels listed on the page or through their friends / family.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/10-student-speaker-reimbursement'>Student Speaker Reimbursement</a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Aug 15, 2011 at 12:19 PM
+        
+</div>
+
+
+<p>We are glad to introduce assistance for student speakers in the form of the Student Speaker Reimbursement for Pycon India 2011. The details of the same are 
+</p>
+<p>This is the final consolidated policy for student reimbursement :
+</p>
+<ol>
+ <li>
+     Upto 5 students for students with an accepted talk or tutorial. If
+     more than 5 students are eligible, the team selecting the talks will
+     decide the subset of 5 who qualify or depending upon budgeting considerations will increase the number of qualifying talks/tutorials
+ </li>
+
+ <li>
+     Student ID + Letter from institution required proving bonafide student of the institute
+ </li>
+
+ <li>
+     Upto III tier II class AC Rail Fare / Bus Fare (upto Rs. 2500 round
+     trip) + Stipend of Rs.750 per day of attendance per student will be reimbursed.
+ </li>
+
+ <li>
+     Reimbursement will be done after the talk against bills produced for travel.
+ </li>
+
+ <li>
+     Qualifying students still need to register (registration is mandatory for all)
+ </li>
+
+ <li>
+     Students will need to submit their request for reimbursement no later than August 30th, prior to attending the conference.
+ </li>
+</ol>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/9-launching-into-open-space'>Launching into Open Space</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand B Pillai</b> -
+        Posted on Jul 28, 2011 at 05:55 PM
+        
+</div>
+
+
+<p>We are happy to announce a new initiative at the Pycon India 2011 web-site. This is an area on the site where you can create wikis that anyone can edit. We are calling these as 'Open Spaces'.
+</p>
+<p>The Open Space initiative is meant to help folks to plan ahead any BoF/coding activity they want to do together during Pycon India 2011. You can create and share wikis on the site which can be used to plan such activities ahead in time. 
+</p>
+<p>It could be as simple as hacking a game together on PyGame or as complex as trying to write a patch for working around GIL in Python (too ambitious ? :). Or maybe something more realistic such as working in a Django plugin or snippet or maybe something useful to community such as coming together to fix some bugs in Python 3.2. Or maybe simply hanging around in a room and talk of using Redis or Mongodb with Python and some of the more esoteric things you can do with them!
+</p>
+<p>It could be anything that you can think of under the sun and over the snake. But we welcome you to create your space under the Open spaces.
+</p>
+<p>Go and <a href="/2011/openspace">see for yourself</a> and give it a try!
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/8-announcement-talk-and-tutorial-selections'>Announcement : Talk and Tutorial Selections </a></h2>
+            
+
+<div class="post-line">
+            <b>By Dhananjay Nene</b> -
+        Posted on Jul 25, 2011 at 04:37 AM
+        
+</div>
+
+
+<p>The final talk and tutorial selections have been decided, and the decisions have been communicated back to the submitters.
+</p>
+<p>The results are now published on the talks page at <a href="http://in.pycon.org/2011/talks">http://in.pycon.org/2011/talks</a> 
+</p>
+<p>Congratulations to all the selected authors. We look forward to your presentation at Pycon India 2011.
+</p>
+<p>Based on our experiences of some talks getting withdrawn for a variety of reasons, a few talks have been shortlisted as reserved. Should any of the speakers for the selected talks be unable to present, or withdraw their talk, we shall get in touch with the speakers of the reserved talks to offer them to step in. Note that such shortlisted talks continue to appear as &quot;under review&quot; on the talks page mentioned above.
+</p>
+<p>The talks are rated by the review team and the talks with the highest combined rating are selected. Many thanks to the entire review team for their efforts to get the selections out in time. 
+</p>
+<p>Note that all attendees (including selected authors, authors whose submissions could not be selected, and everyone else who wishes to attend) need to register. If not yet done, kindly do so at the earliest at <a href="http://in.pycon.org/2011/register">http://in.pycon.org/2011/register</a>
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/7-cfp-is-closed'>CFP is closed</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand B Pillai</b> -
+        Posted on Jul 11, 2011 at 03:03 AM
+        
+</div>
+
+
+<p>The call for talk/tutorial proposals ended yesterday midnight. We have received a tremendous response this year as well with close to 70 total proposals being submitted. 
+</p>
+<p>In all, 54 talk proposals and 12 tutorial proposals have been received. Proposal reviews start from today. Accepted talk/tutorial proposals will be announced on the site and authors informed of the same by <strong>July 25</strong>.
+</p>
+<p>We would like to thank everyone who submitted a proposal to the conference for their support and encouragement.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/6-sponsorships'>Sponsorships</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand</b> -
+        Posted on Jul 05, 2011 at 06:39 AM
+        
+</div>
+
+
+<p>The <a href="http://ipss.org.in">Indian Python Software Society</a> and the PyCon India organizing committee is looking for corporate sponsors to support PyCon India 2011 conference.
+</p>
+<p>Your sponsorship helps keep PyCon India affordable and accessible to the widest possible audience and helps you connect to the Python community in India.
+</p>
+<p>The sponsorship tiers and benefits are available at <a href="http://in.pycon.org/2011/sponsors">http://in.pycon.org/2011/sponsors</a>.
+</p>
+<p>For more details, please contact <a href="mailto:contact@in.pycon.org">contact@in.pycon.org</a>.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/5-registrations-are-open!'>Registrations are open!</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand B Pillai</b> -
+        Posted on Jul 01, 2011 at 08:33 AM
+        
+</div>
+
+
+<p>We are happy to announce that registrations for PyCon India 2011 are open from today! 
+</p>
+<p>The early bird registration facility lasts exactly one month, so please make sure you register on time. The rates will increase after that and spot registrants might not get the conference goodies and swags.
+</p>
+<p>Every participant, including speakers have to register, so please do so. If you have any questions, please direct them to <a href="mailto:contact@in.pycon.org">contact@in.pycon.org</a> or tweet them to <a href="http://twitter.com/pyconindia">@pyconindia</a>.
+</p>
+<p>Go to <a href="http://in.pycon.org/2011/register">http://in.pycon.org/2011/register</a> and register today!
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/4-call-for-proposals-extended-to-july-10'>Call for Proposals extended to July 10</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand B Pillai</b> -
+        Posted on Jun 29, 2011 at 08:24 AM
+        
+</div>
+
+
+<p>We have decided to extend the <a href="/2011/cfp">CFP</a> for Pycon India 2011 to July 10. This is to give ample time for those interested to submit proposals which can benefit the community.
+</p>
+<p>Go the <a href="/2011/cfp">CFP</a> page and submit a talk or tutorial proposal today!
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/3-seeking-sponsors'>Seeking Sponsors</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand</b> -
+        Posted on Jun 24, 2011 at 12:07 PM
+        
+</div>
+
+
+<p><a href="http://in.pycon.org/2011/">PyCon India 2011</a>, the one and only conference for Python programming enthusiasts in India, is seeking sponsors from India and abroad. The conference is scheduled to be conducted in Pune, India from Sep 16-18 2011. 
+</p>
+<p>Interested parties can reach out on the <a href="mailto:inpycon@python.org?subject=Sponsorship">Pycon India mailing list</a> or email the <a href="mailto:contact@in.pycon.org">organizers</a> directly.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/2-call-for-proposals-is-open'>Call for proposals is open </a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand</b> -
+        Posted on May 10, 2011 at 09:17 AM
+        
+</div>
+
+
+<p>The organisers of PyCon India 2011 are looking for talk and tutorial proposals to fill the formal presentation and tutorial tracks. We accept proposals on a very broad range of topics related to Python programming.
+</p>
+<p>Please visit the <a href="/2011/cfp">CFP</a> page to submit a talk proposal.
+</p>
+
+
+
+
+    </div>
+    <div class="post">
+            <h2><a href='/2011/blog/1-hello-world'>Hello World</a></h2>
+            
+
+<div class="post-line">
+            <b>By Anand</b> -
+        Posted on Feb 21, 2011 at 01:45 AM
+        
+</div>
+
+
+<p>Hello World! 
+</p>
+<p><a href="/">PyCon India 2011 website</a> is ready now.
+</p>
+
+
+
+
+    </div>
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2011/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2011 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+        <!-- end of content -->
+    </div>
+</body>
+</html>

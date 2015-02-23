@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PyCon India 2011 Schedule - PyCon India 2011</title>
+    <link rel="shortcut icon" href="/2011/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2011/static/themes/foomanchoo/style.css" />
+
+   <link href="/2011/blog/feed.rss" rel="alternate" title="PyCon India 2011 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2011/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2011/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2011/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2011/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2011/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2011/cfp">CFP</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/talks">Talks</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/sponsors">Sponsors</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/blog">Blog</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/schedule">Schedule</a>
+                    </div>
+                    <!--
+                    <div>
+                        <a href="/2011/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2011/faq">FAQ</a>
+                    </div>
+                    -->
+
+                    <div class='nav_end'>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2010">2010</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.zeomega.com/" title="ZeOmega"><img class="sponsor" src="/2011/static/images/zeomega-logo.gif" alt="ZeOmega"/></a>
+                </p>
+                <p>
+                    <a href="http://www.vayana.in/" title="Vayana Enterprises"><img class="sponsor" src="/2011/static/images/vayana-logo.gif" alt="Vayana Enterprises"/></a>
+                </p>
+                <p>
+                    <a href="http://www.google.com/" title="Google"><img class="sponsor" src="/2011/static/images/google-logo.png" alt="Google"/></a>
+                </p>
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://github.com" title="GitHub"><img class="sponsor" src="/2011/static/images/github-logo.png" alt="GitHub"/></a>
+                </p>
+                <p>
+                    <a href="http://www.openlabs.co.in/" title="Open Labs"><img class="sponsor" src="/2011/static/images/openlabs-logo.png" alt="Open Labs"/></a>
+                </p>
+                <p>
+                    <a href="http://www.druva.com/" title="Druva"><img class="sponsor" src="/2011/static/images/druva-logo.png" alt="Druva"/></a>
+                </p>
+                <p>
+                    <a href="http://www.gslab.com/" title="GS Lab"><img class="sponsor" src="/2011/static/images/gslab-logo.gif" alt="GS Lab"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.symbiosiscomputers.com/v5/home/index.php" title="Symbiosis Institute of Computer Studies and Research"><img class="sponsor" src="/2011/static/images/symbiosis-logo.jpg" alt="Symbiosis Institute of Computer Studies and Research"/></a>
+                </p>
+
+                <h3>MEDIA PARTNER</h3>
+                <p>
+                    <a href="http://www.linuxforu.com" title="Linux For You Magazine"><img class="sponsor" src="/2011/static/images/lfy-logo.png" alt="Linux For You Magazine"/></a>
+                </p>
+                <p>
+                    <a href="http://www.developeriq.in/" title="Developer IQ"><img class="sponsor" src="/2011/static/images/DeveloperIQ-logo.png" alt="Developer IQ Magazine"/></a>
+                </p>
+
+                <h3>BANDWIDTH SPONSOR</h3>
+                <p>
+                    <a href="http://www.aircel.co.in/" title="AirCel"><img class="sponsor" src="/2011/static/images/aircel-logo.png" alt="AirCel"/></a>
+                </p>
+
+                <h3>ORGANISER</h3>
+                <p>
+                    <a href="http://ipss.org.in" title="Indian Python Software Society"><img class="sponsor" src="/2011/static/images/ipss-logo.png" alt="Indian Python Software Society"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>PyCon India 2011 Schedule</h1>
+                
+
+
+
+
+
+<p>
+<style type="text/css">
+#sched {
+        font-family: verdana,'Lucida Sans', 'Lucida Grande', sans-serif;
+}
+#sched th{
+    width: 32%;
+        font-weight:bold;
+}
+#sched .s_time{
+    width: 4%;
+    background: #cccccc;
+    border-bottom: 1px solid #bbbbbb;
+    font-weight: normal;
+    padding: 5px 10px 20px 10px;
+}
+#sched table{
+        font-size:12px;
+        border-collapse: collapse;
+        background-color: white;
+}
+table.schedule tr td {
+    margin:2px;
+    padding: 10px;        
+    font-weight:bold;
+    border: 1px solid #ccc;
+
+/*
+    background: #fefffe url(shade.png) bottom center repeat-x;
+    color:#4C566D;
+    line-height:15px;        
+    border-bottom: 2px solid #bbbbbb;
+    border-right: 1px solid #8DB5BF; 
+    */
+    /*border: 1px solid #1A7A89;*/
+    height: 25px;
+    line-heigh: 1.5em;
+    text-align: center;
+}
+table.schedule thead{
+        background:#C0DAEE;
+        color:#4C566D;
+}
+table.schedule tr td small {
+        background:#efeffa;
+        padding:2px;
+}
+#sched .s_empty, #sched .s_time{
+        background: #fafafa;
+}
+td.break, .empty, #lunch, #tea{
+    text-align:center;
+    background:#EEEEEE !important;
+}
+
+div.speaker {
+    font-style: italic;
+}
+
+div.title a {
+    /* font-weight: bold; */
+}
+
+</style>
+<style type="text/css" media="print">
+div.pagebreak, div.day {
+    page-break-after: always;
+}
+#sched table{
+        font-size: 12px;
+}
+
+table tr td {
+    padding: 2px 5px;
+    font-size: 11px;
+    font-weight: normal;
+    color: black;
+    border: 1px solid gray;
+}
+
+table th td {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid gray;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#sched .s_time{
+    padding: 0px 5px 11px;
+}
+
+#sched .s_break{
+    padding: 0px 5px 5px;
+}
+
+.download {
+    display: none;
+}
+
+#header, #footer, #sidebar {
+    display: none;
+}
+
+#sched {
+    width: 100%;
+}
+
+h1 {
+    border: none;
+    color: black;
+    font-size: 2.0em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: black;
+}
+
+</style>
+
+<div class="download">
+<!-- <a href="/2011/static/schedule.pdf">Download as PDF</a> -->
+</div>
+
+<div id="sched">
+<div class="day">
+    <h2>
+        Friday, Septemer 16
+    </h2>
+    <table class='schedule'>
+    <thead>
+        <tr>
+            <th class='s_time' style="padding: 10px;">
+                Time
+            </th>
+            <th>
+                Track 1
+            </th>
+            <th>
+                Track 2
+            </th>
+            <th>
+                Track 3
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class='s_time'>
+                9.30
+            </td>
+            <td colspan="3">
+                Registration
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.00
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/37">Twitter / Facebook / Linked-in / Google Data, Oh My! Web API programming using Python</a></div>
+                <div class="speaker">Navin Kabra<div>
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/47">Art of Web Scraping using Python (Low level)</a></div>
+                <div class="speaker">Siddhant Sanyam<div>
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/67">image processing and computer interaction</a></div>
+                <div class="speaker">nitin chadha, karan pratap<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.00
+            </td>
+            <td colspan="3" rowspan="2" class="break">
+                LUNCH
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14:00
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/71">Redis & Python</a></div>
+                <div class="speaker">Sunil Arora<div>
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/4">Functional Programming with Python</a></div>
+                <div class="speaker">Anand Chitipothu<div>
+            </td>
+            <td rowspan="6">
+                <div class="title"><a href="/2011/talks/55">Using Python with Other Languages</a></div>
+                <div class="speaker">Vishesh Yadav, Siddhant Sanyam<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                16.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                16.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                17.00
+            </td>
+            <td class='s_empty' colspan="3">
+            </td>
+        </tr>
+    
+    </tbody>
+    </table>
+</div>
+
+<div class="day">
+    <h2>
+        Saturday, Septemer 17
+    </h2>
+    <table class='schedule'>
+    <thead>
+        <tr>
+            <th class='s_time' style="padding: 10px;">
+                Time
+            </th>
+            <th>
+                Track 1
+            </th>
+            <th>
+                Track 2
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class='s_time'>
+                9.30
+            </td>
+            <td colspan="2">
+                Registration
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.00
+            </td>
+            <td rowspan="2">
+                <div class="title">KEYNOTE</div>
+                <div class="speaker">Raymond Hettinger<div>
+            </td>
+            <td rowspan="2" class="s_empty">
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/1">pyjs: Compiling Python to JavaScript</a></div>
+                <div class="speaker">Anand Chitipotu<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/45">Wikipedia, Dead Authors, Naive Bayes and Python</a></div>
+                <div class="speaker">Abhaya Agarwal<div>
+            </td>            
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/24">Creating Domain Specific Languages in Python</a></div>
+                <div class="speaker">Siddarth Govindaraju<div>
+            </td>
+            <td rowspan="2" class="break">
+                LUNCH
+            </td>            
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.00
+            </td>
+            <td rowspan="2" class="break">
+                LUNCH
+            </td>           
+            
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/13">Python on Android</a></div>
+                <div class="speaker">Sajjad Anwar<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14:00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/7">Emacs as a Python IDE</a></div>
+                <div class="speaker">Noufal Ibrahim<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="javascript:void">(Updated) Fast-track tutorial on functional programming</a></div>
+                <div class="speaker">Anand Chittipothu<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/20">PyTI :PyPI Testing Infrastructure</a></div>
+                <div class="speaker">Yeshwanth<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/11">Machine Learning Using Python</a></div>
+                <div class="speaker">Vikram Kamath<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                16.00
+            </td>
+            <td colspan="2" class="break">
+                Tea and Snacks
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                16.30
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/43">Decorators as composable abstractions</a></div>
+                <div class="speaker">Sidhant Godiwala<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/51">Python in the Life Sciences</a></div>
+                <div class="speaker">Farhat Habib<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                17.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                17.30
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/41">Python threads: Dive into GIL!</a></div>
+                <div class="speaker">V. Kanaujia and C. Giridhar<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/63">Python for Data Analysis and Business Intelligence</a></div>
+                <div class="speaker">Dhananjay Nene<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                18.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                18.30
+            </td>
+            <td rowspan="2">
+                AGM of the Indian Python Software Society
+            </td>
+            <td class='s_empty' rowspan="2">
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                19.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                19.30
+            </td>
+            <td class='s_empty' colspan="2">
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+<div class="day">
+    <h2>
+        Sunday, Septemer 18
+    </h2>
+    <table class='schedule'>
+    <thead>
+        <tr>
+            <th class='s_time' style="padding: 10px;">
+                Time
+            </th>
+            <th>
+                Track 1
+            </th>
+            <th>
+                Track 2
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class='s_time'>
+                9.30
+            </td>
+            <td colspan="2">
+                Registration
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/15">LastUser for user management</a></div>
+                <div class="speaker">Kiran Jonnalagadda<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/35">Network programming with Umit Project</a></div>
+                <div class="speaker">Narendran Thangaranjan<div>
+            </td>            
+        </tr>
+        <tr>
+            <td class='s_time'>
+                10.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/23">Deployment and Hosting of your Python Web Applications</a></div>
+                <div class="speaker">Lakshman Prasad<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/30">Python in the Real World: From Blinking LEDs to Advanced Robotics</a></div>
+                <div class="speaker">JS Dhaliwal<div>
+            </td>            
+        </tr>
+        <tr>
+            <td class='s_time'>
+                11.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/68">Quick Multitouch Apps using kivy and Python</a></div>
+                <div class="speaker">KP Singh, N Chadha<div>
+            </td>
+            <td rowspan="2" class="break">
+                LUNCH
+            </td>            
+        </tr>
+        <tr>
+            <td class='s_time'>
+                12.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.00
+            </td>
+            <td rowspan="2" class="break">
+                LUNCH
+            </td>           
+            
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/12">From Python to Silicon</a></div>
+                <div class="speaker">Shakthi Kannan<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                13.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14:00
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/22">Django: REST in Peace</a></div>
+                <div class="speaker">Shreyank Gupta<div>
+            </td>
+            <td rowspan="2">
+                <div class="title"><a href="/2011/talks/28">gobject-introspection, a new friend to help </a></div>
+                <div class="speaker">Kushal Das<div>
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                14.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.00
+            </td>
+            <td rowspan="2">
+                <div class="title">Untitled (yet)</div>
+                <div class="speaker">Raymond Hettinger<div>
+            </td>
+            <td rowspan="2">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                15.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                16.00
+            </td>
+            <td colspan="2" class="break">
+                Tea and Snacks
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td class='s_time'>
+                16.30
+            </td>
+            <td rowspan="3">Lightning Talks</td>
+            <td rowspan="3" class="s_empty">
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                17.00
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                17.30
+            </td>
+        </tr>
+        <tr>
+            <td class='s_time'>
+                18.00
+            </td>
+            <td class='s_empty' colspan="2">
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+</div>
+
+<br style="clear:both;"/>
+
+
+
+</p>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2011/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2011 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+        <!-- end of content -->
+    </div>
+</body>
+</html>

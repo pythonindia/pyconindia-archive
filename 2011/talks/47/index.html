@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Art of Web Scrapping using Python (Low level) - PyCon India 2011</title>
+    <link rel="shortcut icon" href="/2011/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2011/static/themes/foomanchoo/style.css" />
+
+   <link href="/2011/blog/feed.rss" rel="alternate" title="PyCon India 2011 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2011/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2011/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2011/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2011/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2011/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2011/cfp">CFP</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/talks">Talks</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/sponsors">Sponsors</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/blog">Blog</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/schedule">Schedule</a>
+                    </div>
+                    <!--
+                    <div>
+                        <a href="/2011/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2011/faq">FAQ</a>
+                    </div>
+                    -->
+
+                    <div class='nav_end'>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2010">2010</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.zeomega.com/" title="ZeOmega"><img class="sponsor" src="/2011/static/images/zeomega-logo.gif" alt="ZeOmega"/></a>
+                </p>
+                <p>
+                    <a href="http://www.vayana.in/" title="Vayana Enterprises"><img class="sponsor" src="/2011/static/images/vayana-logo.gif" alt="Vayana Enterprises"/></a>
+                </p>
+                <p>
+                    <a href="http://www.google.com/" title="Google"><img class="sponsor" src="/2011/static/images/google-logo.png" alt="Google"/></a>
+                </p>
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://github.com" title="GitHub"><img class="sponsor" src="/2011/static/images/github-logo.png" alt="GitHub"/></a>
+                </p>
+                <p>
+                    <a href="http://www.openlabs.co.in/" title="Open Labs"><img class="sponsor" src="/2011/static/images/openlabs-logo.png" alt="Open Labs"/></a>
+                </p>
+                <p>
+                    <a href="http://www.druva.com/" title="Druva"><img class="sponsor" src="/2011/static/images/druva-logo.png" alt="Druva"/></a>
+                </p>
+                <p>
+                    <a href="http://www.gslab.com/" title="GS Lab"><img class="sponsor" src="/2011/static/images/gslab-logo.gif" alt="GS Lab"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.symbiosiscomputers.com/v5/home/index.php" title="Symbiosis Institute of Computer Studies and Research"><img class="sponsor" src="/2011/static/images/symbiosis-logo.jpg" alt="Symbiosis Institute of Computer Studies and Research"/></a>
+                </p>
+
+                <h3>MEDIA PARTNER</h3>
+                <p>
+                    <a href="http://www.linuxforu.com" title="Linux For You Magazine"><img class="sponsor" src="/2011/static/images/lfy-logo.png" alt="Linux For You Magazine"/></a>
+                </p>
+                <p>
+                    <a href="http://www.developeriq.in/" title="Developer IQ"><img class="sponsor" src="/2011/static/images/DeveloperIQ-logo.png" alt="Developer IQ Magazine"/></a>
+                </p>
+
+                <h3>BANDWIDTH SPONSOR</h3>
+                <p>
+                    <a href="http://www.aircel.co.in/" title="AirCel"><img class="sponsor" src="/2011/static/images/aircel-logo.png" alt="AirCel"/></a>
+                </p>
+
+                <h3>ORGANISER</h3>
+                <p>
+                    <a href="http://ipss.org.in" title="Indian Python Software Society"><img class="sponsor" src="/2011/static/images/ipss-logo.png" alt="Indian Python Software Society"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Art of Web Scrapping using Python (Low level)</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2011/talks">Talks</a> | <a href="/2011/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Siddhant Sanyam</td>
+    </tr>
+
+    <tr>
+        <td class="label">Talk Type</td>
+        <td class="value">tutorial</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2011/talks?level=Beginner">Beginner</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2011/talks?topic=Network programming">Network programming</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">screen scraping, parsing html, offline interface</td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>Web scrapping involves fetching formatted data from websites, which otherwise do not provide any API to do so. This means that using this technique you can script programs, that can go to different websites, and get you the data which has importance. For Ex: making an desktop interface for a website. For automatically posting data after doing some analysis. Fetching data offline in formatted manner. Web scrapping is very useful for everyday and personal use also.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+
+<h2>What will be covered</h2>
+<ul>
+ <li>
+     urllib
+ </li>
+
+ <li>
+     htmlparse
+ </li>
+
+ <li>
+     xmlparse
+ </li>
+
+ <li>
+     Regex based parsing
+ </li>
+
+ <li>
+     BeautifulSoup
+ </li>
+
+ <li>
+     urllib2
+ </li>
+
+ <li>
+     Cookie handling
+ </li>
+
+ <li>
+     MozillaCookieJar
+ </li>
+
+ <li>
+     Talk on using AI techniques
+ </li>
+
+ <li>
+     Limitations of WebScrapping, where to use, where not to use
+ </li>
+</ul>
+
+<h2>Examples Covered</h2>
+<ul>
+ <li>
+     Simplest: monitoring for changes in a website
+ </li>
+
+ <li>
+     Barebone: Fetching Results from a University website
+ </li>
+
+ <li>
+     onemangadl : Script to fetch online mangas from websites
+ </li>
+
+ <li>
+     Posting data: pasteonline, a script very helpful in pasting logs, text files to free pasting websites like pastebin.com
+ </li>
+
+ <li>
+     Acting like a real browser, Sending additional headers: downloading youtube videos.
+ </li>
+
+ <li>
+     Persistance: maintaining state with Cookies: Sending SMS using free services
+ </li>
+
+ <li>
+     Storing state data to disk: improvising the previous script to try previous session
+ </li>
+
+ <li>
+     Handling Errors, Logging
+ </li>
+
+ <li>
+     Making API: API of the same SMS sending Script
+ </li>
+
+ <li>
+     Making your software configurable and extendable: adding classes and inheritance
+ </li>
+
+ <li>
+     Automatic XSS detector: example of crawling, how webscraping can be put in good use
+ </li>
+
+ <li>
+     Dealing with Captchas
+ </li>
+
+ <li>
+     Not repeating yourself. Making resuable code.
+ </li>
+</ul>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<ul>
+ <li><p>Time needed would be about 2.5 Hours plus minus 15 minutes. Exact timings spent on each example is highly dependent on the audience and can't be predicted at least until 25th July(I'll do a rehearsal with my friends to check) 
+</p>
+
+ </li>
+
+ <li><p>I believe that this tutorial is best covered progressively using examples i.e. explaining the tools then and when needed.
+</p>
+
+ </li>
+</ul>
+
+<h2>Setup for the Tutorial</h2>
+<p>I usually give demonstration talks and tutorials using a GNU Screen setup, it would be awesome if we can have the following setup:
+</p>
+<ul>
+ <li>
+     Every attendee is connected in an Internal LAN (wired or wi-fi) and so am I
+ </li>
+
+ <li>
+     Attendees have SSH client through which they can SSH on my computer
+ </li>
+
+ <li>
+     I have a screen session running
+ </li>
+
+ <li>
+     We all share a common screen session to which only I can write and others can read
+ </li>
+
+ <li>
+     I'll need Internet connection to demonstrate all the examples.
+ </li>
+
+ <li>
+     Attendees can view and download the source files from the HTTP server running on my PC.
+ </li>
+</ul>
+<p>I feel that this setup is better than projector setup since user can see the code and my pointer right on their own screen, they can copy-paste if required.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Blog: http://yatantrika.co.cc/ Git Repo: http://github.com/siddhant3s/
+</p>
+<ul>
+ <li>
+     Undergrad from NIT Trichy. Working
+        with Python for more than three
+        years.
+ </li>
+
+ <li>
+     Use Python for all personal programming needs.
+ </li>
+
+ <li>
+     Currently an Intern at Nexedi working on UNG project (a free
+        alternative of Google Docs and other
+        SaaS service)
+ </li>
+
+ <li>
+     Creator and Designer of DFCTF 2011, India's second CTF style
+        Ethical Hacking competition.(Backend
+        of which was written in Python).
+ </li>
+
+ <li>
+     Speaker at workshops related to Web security.(Last one at Vortex 11)
+ </li>
+
+ <li>
+     Good working knowledge of Robotics and Embedded system and AI
+        related paradigms.
+ </li>
+</ul>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+No files uploaded. You can <a href='/2011/talks/47/upload'>upload a file</a> if you are author of this talk.
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2011/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2011 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+        <!-- end of content -->
+    </div>
+</body>
+</html>

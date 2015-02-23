@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+
+_app_name = "PyCon11"
+_version = "1.0"
+_license = """
+    Copyright 2010 Chetan Giridhar and Vishal Kanaujia <cjgiridhar@gmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License v3 for more details.
+
+"""
+__author__ = "Chetan Giridhar, Vishal Kanaujia"
+__date__ = "$Aug 31, 2011 09:37:00$"
+
+from datetime import datetime
+import threading
+import random
+
+def cpu(n):
+    n = 20000000
+    while n:
+        n = n - 1
+
+def io(n):
+    while n>0:
+        fp = open('null', 'a')
+        (random.uniform(1, 10000))/(random.uniform(1, 100000))
+        fp.write('\n test file')
+        fp.close()
+        fp = open('null', 'r')
+        fp.readlines()
+        fp.close()
+        n = n - 1
+
+iterations = 100
+startTime  = datetime.now()
+thread1 = threading.Thread(target=cpu, args=(iterations,))
+thread2 = threading.Thread(target=io,  args=(iterations,))
+
+startTime_cpu  = datetime.now()
+thread1.start()
+thread2.start()
+startTime_io  = datetime.now()
+
+thread1.join()
+endTime_cpu = datetime.now()
+thread2.join()
+endTime_io = datetime.now()
+
+endTime = datetime.now()
+
+diffTime_cpu = str(endTime_cpu - startTime_cpu)
+diffTime_io = str(endTime_io - startTime_io)
+diffTime = str(endTime - startTime)
+
+print ("CPU ")
+print(diffTime_cpu)
+
+print("IO")
+print (diffTime_io)
+print("Total")
+print(diffTime)

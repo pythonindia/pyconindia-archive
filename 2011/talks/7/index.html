@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Emacs as a Python IDE - PyCon India 2011</title>
+    <link rel="shortcut icon" href="/2011/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2011/static/themes/foomanchoo/style.css" />
+
+   <link href="/2011/blog/feed.rss" rel="alternate" title="PyCon India 2011 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2011/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2011/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2011/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2011/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2011/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2011/cfp">CFP</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/talks">Talks</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/sponsors">Sponsors</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/blog">Blog</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/schedule">Schedule</a>
+                    </div>
+                    <!--
+                    <div>
+                        <a href="/2011/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2011/faq">FAQ</a>
+                    </div>
+                    -->
+
+                    <div class='nav_end'>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2010">2010</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.zeomega.com/" title="ZeOmega"><img class="sponsor" src="/2011/static/images/zeomega-logo.gif" alt="ZeOmega"/></a>
+                </p>
+                <p>
+                    <a href="http://www.vayana.in/" title="Vayana Enterprises"><img class="sponsor" src="/2011/static/images/vayana-logo.gif" alt="Vayana Enterprises"/></a>
+                </p>
+                <p>
+                    <a href="http://www.google.com/" title="Google"><img class="sponsor" src="/2011/static/images/google-logo.png" alt="Google"/></a>
+                </p>
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://github.com" title="GitHub"><img class="sponsor" src="/2011/static/images/github-logo.png" alt="GitHub"/></a>
+                </p>
+                <p>
+                    <a href="http://www.openlabs.co.in/" title="Open Labs"><img class="sponsor" src="/2011/static/images/openlabs-logo.png" alt="Open Labs"/></a>
+                </p>
+                <p>
+                    <a href="http://www.druva.com/" title="Druva"><img class="sponsor" src="/2011/static/images/druva-logo.png" alt="Druva"/></a>
+                </p>
+                <p>
+                    <a href="http://www.gslab.com/" title="GS Lab"><img class="sponsor" src="/2011/static/images/gslab-logo.gif" alt="GS Lab"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.symbiosiscomputers.com/v5/home/index.php" title="Symbiosis Institute of Computer Studies and Research"><img class="sponsor" src="/2011/static/images/symbiosis-logo.jpg" alt="Symbiosis Institute of Computer Studies and Research"/></a>
+                </p>
+
+                <h3>MEDIA PARTNER</h3>
+                <p>
+                    <a href="http://www.linuxforu.com" title="Linux For You Magazine"><img class="sponsor" src="/2011/static/images/lfy-logo.png" alt="Linux For You Magazine"/></a>
+                </p>
+                <p>
+                    <a href="http://www.developeriq.in/" title="Developer IQ"><img class="sponsor" src="/2011/static/images/DeveloperIQ-logo.png" alt="Developer IQ Magazine"/></a>
+                </p>
+
+                <h3>BANDWIDTH SPONSOR</h3>
+                <p>
+                    <a href="http://www.aircel.co.in/" title="AirCel"><img class="sponsor" src="/2011/static/images/aircel-logo.png" alt="AirCel"/></a>
+                </p>
+
+                <h3>ORGANISER</h3>
+                <p>
+                    <a href="http://ipss.org.in" title="Indian Python Software Society"><img class="sponsor" src="/2011/static/images/ipss-logo.png" alt="Indian Python Software Society"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Emacs as a Python IDE</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2011/talks">Talks</a> | <a href="/2011/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Noufal Ibrahim</td>
+    </tr>
+
+    <tr>
+        <td class="label">Talk Type</td>
+        <td class="value">talk</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2011/talks?level=Intermediate">Intermediate</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2011/talks?topic=Software development tools">Software development tools</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">emacs, python, pim</td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>This is a talk about my Emacs setup particularly the bits relevant to coding Python. The first 20-30 minutes will be purely focussing on Python &quot;IDE like&quot; capabilities and after that on slightly more meta things like programmer productivity and issue tracking in general.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<p>The first 30 minutes or so of the talk will include the following.
+</p>
+<p>Some useful features of the basic Python mode(s), <a href="http://www.emacswiki.org/emacs/PdbTrack">pdbtrack</a>, <a href="https://github.com/aculich/virtualenv.el">virtualenv integration</a>, pylint(or pyflakes) + flymake integration, some useful external utilities to help searching for modules, tags, a little bit of nxhtml with the django template editing capability, mozrepl to communicate directly with your Firefox instance for web development and a few other tricks.
+</p>
+<p>Once that's done, the remaining 15 minutes of the talk will focus on using orgmode as a PIM to track projects. Common things like keeping track of requirements which come in via. email and other channels, TBDs in code, maintaining a work journal, keeping track of things to do.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>This is <em>not</em> a Vim vs. Emacs thing. If anyone is coming here to look for vim bashing, they're going to be disappointed. It's also not an &quot;Emacs Rocks! Everything else sucks&quot; talk either. I've been using Emacs for a a while now and this is an overview of some of the tricks I've picked up over the years.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Programmer. Working for the internet archive. Freelance trainer and consultant based out of Bangalore. Founder of PyCon India and organiser of the first two conferences in India. More information at http://nibrahim.net.in
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+<table class="files">
+    <tr>
+        <th>file</th>
+        <th>size</th>
+        <th>uploaded</th>
+        <th>comment</th>
+    </tr>
+<tr>
+    <td><a href="/2011/static/files/talks/7/presentation.pdf">presentation.pdf</a></td>
+    <td>969.4 KB</td>
+    <td>september 15, 2011</td>
+    <td>Emacs as a Python IDE presentation</td>
+</tr>
+</table>
+<p>
+You can <a href='/2011/talks/7/upload'>upload or delete a file</a> if you are author of this talk.
+</p>
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2011/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2011 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+        <!-- end of content -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Talks - PyCon India 2011</title>
+    <link rel="shortcut icon" href="/2011/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2011/static/themes/foomanchoo/style.css" />
+
+   <link href="/2011/blog/feed.rss" rel="alternate" title="PyCon India 2011 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2011/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2011/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2011/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2011/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2011/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2011/cfp">CFP</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/talks">Talks</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/sponsors">Sponsors</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/blog">Blog</a>
+                    </div>
+
+                    <div>
+                        <a href="/2011/schedule">Schedule</a>
+                    </div>
+                    <!--
+                    <div>
+                        <a href="/2011/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2011/faq">FAQ</a>
+                    </div>
+                    -->
+
+                    <div class='nav_end'>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2010">2010</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                        <span style="color: rgb(215, 177, 177);">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.zeomega.com/" title="ZeOmega"><img class="sponsor" src="/2011/static/images/zeomega-logo.gif" alt="ZeOmega"/></a>
+                </p>
+                <p>
+                    <a href="http://www.vayana.in/" title="Vayana Enterprises"><img class="sponsor" src="/2011/static/images/vayana-logo.gif" alt="Vayana Enterprises"/></a>
+                </p>
+                <p>
+                    <a href="http://www.google.com/" title="Google"><img class="sponsor" src="/2011/static/images/google-logo.png" alt="Google"/></a>
+                </p>
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://github.com" title="GitHub"><img class="sponsor" src="/2011/static/images/github-logo.png" alt="GitHub"/></a>
+                </p>
+                <p>
+                    <a href="http://www.openlabs.co.in/" title="Open Labs"><img class="sponsor" src="/2011/static/images/openlabs-logo.png" alt="Open Labs"/></a>
+                </p>
+                <p>
+                    <a href="http://www.druva.com/" title="Druva"><img class="sponsor" src="/2011/static/images/druva-logo.png" alt="Druva"/></a>
+                </p>
+                <p>
+                    <a href="http://www.gslab.com/" title="GS Lab"><img class="sponsor" src="/2011/static/images/gslab-logo.gif" alt="GS Lab"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.symbiosiscomputers.com/v5/home/index.php" title="Symbiosis Institute of Computer Studies and Research"><img class="sponsor" src="/2011/static/images/symbiosis-logo.jpg" alt="Symbiosis Institute of Computer Studies and Research"/></a>
+                </p>
+
+                <h3>MEDIA PARTNER</h3>
+                <p>
+                    <a href="http://www.linuxforu.com" title="Linux For You Magazine"><img class="sponsor" src="/2011/static/images/lfy-logo.png" alt="Linux For You Magazine"/></a>
+                </p>
+                <p>
+                    <a href="http://www.developeriq.in/" title="Developer IQ"><img class="sponsor" src="/2011/static/images/DeveloperIQ-logo.png" alt="Developer IQ Magazine"/></a>
+                </p>
+
+                <h3>BANDWIDTH SPONSOR</h3>
+                <p>
+                    <a href="http://www.aircel.co.in/" title="AirCel"><img class="sponsor" src="/2011/static/images/aircel-logo.png" alt="AirCel"/></a>
+                </p>
+
+                <h3>ORGANISER</h3>
+                <p>
+                    <a href="http://ipss.org.in" title="Indian Python Software Society"><img class="sponsor" src="/2011/static/images/ipss-logo.png" alt="Indian Python Software Society"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Talks</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2011/talks">Talks</a> | <a href="/2011/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    td, th {
+        padding: 5px;
+        border-bottom: 1px solid #E7E3D3;
+    }
+    td.index, th.index {
+        width: 20px;
+        text-align: right;
+    }
+    td.title {
+        width: 40%;
+    }
+    td.author, td.status, td.type {
+        width: 20%;
+    }
+    th {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .pending {
+        background: solid #dddddd;
+     }
+    .accepted {
+        background: #ddffdd;
+    }
+    .rejected {
+        background: #ffdddd;
+    }
+    .withdrawn td.title{
+        text-decoration:line-through;
+        background: solid #dddddd;
+    }
+    .type-tutorial {
+        background-color: #ffdfae;
+    }
+</style>
+<table class="talks">
+    <tr>
+        <th class="index">#</th>
+        <th>Talk title</th>
+        <th>Talk type</th>
+        <th>Submitted by</th>
+        <th>Status</th>
+        <th>Slides Uploaded</th>
+    </tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">1</td>
+    <td class="title"><a href="/2011/talks/1">pyjs: compiling python to javascript</a></td>
+    <td class="type">talk</td>
+    <td class="author">Anand Chitipothu</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-tutorial">
+    <td class="index">4</td>
+    <td class="title"><a href="/2011/talks/4">Functional Programming with Python</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">Anand Chitipothu</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">5</td>
+    <td class="title"><a href="/2011/talks/5">python based push frameworks</a></td>
+    <td class="type">talk</td>
+    <td class="author">Shamail Tayyab</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">7</td>
+    <td class="title"><a href="/2011/talks/7">Emacs as a Python IDE</a></td>
+    <td class="type">talk</td>
+    <td class="author">Noufal Ibrahim</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">11</td>
+    <td class="title"><a href="/2011/talks/11">Machine Learning Using Python</a></td>
+    <td class="type">talk</td>
+    <td class="author">Vikram Kamath</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">12</td>
+    <td class="title"><a href="/2011/talks/12">From Python to Silicon</a></td>
+    <td class="type">talk</td>
+    <td class="author">Shakthi Kannan</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">13</td>
+    <td class="title"><a href="/2011/talks/13">Python on Android</a></td>
+    <td class="type">talk</td>
+    <td class="author">Sajjad Anwar</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">15</td>
+    <td class="title"><a href="/2011/talks/15">LastUser for user management</a></td>
+    <td class="type">talk</td>
+    <td class="author">Kiran Jonnalagadda</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">20</td>
+    <td class="title"><a href="/2011/talks/20">PyTI(PyPI Testing Infrastructure)</a></td>
+    <td class="type">talk</td>
+    <td class="author">Yeswanth</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">23</td>
+    <td class="title"><a href="/2011/talks/23">Deployment and Hosting of your Python Web Applications</a></td>
+    <td class="type">talk</td>
+    <td class="author">Lakshman Prasad</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">24</td>
+    <td class="title"><a href="/2011/talks/24">Creating Domain Specific Languages in Python</a></td>
+    <td class="type">talk</td>
+    <td class="author">Siddharta Govindaraj</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">25</td>
+    <td class="title"><a href="/2011/talks/25">Plivo - Developing Telephony Apps in the Web World</a></td>
+    <td class="type">talk</td>
+    <td class="author">Venky</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">30</td>
+    <td class="title"><a href="/2011/talks/30">Python in the Real World: From Everyday Applications to Advanced Robotics</a></td>
+    <td class="type">talk</td>
+    <td class="author">Jivitesh Singh Dhaliwal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">32</td>
+    <td class="title"><a href="/2011/talks/32">Interacting with the larger Python community around the world</a></td>
+    <td class="type">talk</td>
+    <td class="author">Anand B Pillai</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">34</td>
+    <td class="title"><a href="/2011/talks/34">Doing your homework with Python</a></td>
+    <td class="type">talk</td>
+    <td class="author">Nirbheek Chauhan</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">35</td>
+    <td class="title"><a href="/2011/talks/35">Network programming with Umit Project</a></td>
+    <td class="type">talk</td>
+    <td class="author">Narendran Thangarajan</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-tutorial">
+    <td class="index">37</td>
+    <td class="title"><a href="/2011/talks/37">Twitter/Facebook/Linked-in/Google Data, Oh My! Web API programming using Python</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">Navin Kabra</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">41</td>
+    <td class="title"><a href="/2011/talks/41">Python threads: Dive into GIL!</a></td>
+    <td class="type">talk</td>
+    <td class="author">Vishal Kanaujia, Chetan Giridhar</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-talk">
+    <td class="index">43</td>
+    <td class="title"><a href="/2011/talks/43">Decorators as composable abstractions</a></td>
+    <td class="type">talk</td>
+    <td class="author">Sidhant Godiwala</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">45</td>
+    <td class="title"><a href="/2011/talks/45">Wikipedia, Dead Authors, Naive Bayes and Python </a></td>
+    <td class="type">talk</td>
+    <td class="author">Abhaya Agarwal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-tutorial">
+    <td class="index">47</td>
+    <td class="title"><a href="/2011/talks/47">Art of Web Scrapping using Python (Low level)</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">Siddhant Sanyam</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">51</td>
+    <td class="title"><a href="/2011/talks/51">Python in the Life Sciences</a></td>
+    <td class="type">talk</td>
+    <td class="author">Farhat Habib</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-tutorial">
+    <td class="index">55</td>
+    <td class="title"><a href="/2011/talks/55">Using Python with Other Languages</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">Vishesh Yadav, Siddhant Sanyam</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">63</td>
+    <td class="title"><a href="/2011/talks/63">Using Python for Data Analysis and Business Intelligence</a></td>
+    <td class="type">talk</td>
+    <td class="author">Dhananjay Nene</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted type-tutorial">
+    <td class="index">67</td>
+    <td class="title"><a href="/2011/talks/67">image processing and computer interaction</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">nitin chadha, karan pratap</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted type-talk">
+    <td class="index">68</td>
+    <td class="title"><a href="/2011/talks/68">Quick Multitouch Apps using kivy and Python</a></td>
+    <td class="type">talk</td>
+    <td class="author">Karan Pratap Singh, Nitin Chadha</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted type-tutorial">
+    <td class="index">71</td>
+    <td class="title"><a href="/2011/talks/71">Redis &amp; Python</a></td>
+    <td class="type">tutorial</td>
+    <td class="author">Sunil Arora</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+</table>
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2011/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2011 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+        <!-- end of content -->
+    </div>
+</body>
+</html>
