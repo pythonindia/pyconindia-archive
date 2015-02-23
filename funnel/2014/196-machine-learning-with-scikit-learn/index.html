@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Machine Learning with Scikit-learn &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Machine Learning with Scikit-learn &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="196-machine-learning-with-scikit-learn#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/196-machine-learning-with-scikit-learn/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/196-machine-learning-with-scikit-learn/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/196-machine-learning-with-scikit-learn/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/196-machine-learning-with-scikit-learn/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+59</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Machine Learning with Scikit-learn</h1>
+    <p>
+      by <strong>Ajay Kumar</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/196-machine-learning-with-scikit-learn&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Scientific Computing</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This tutorial will offer an introduction to the core concepts of machine learning, and how they can be easily applied in Python using Scikit-learn. We will use the scikit-learn API to introduce and explore the basic categories of machine learning problems, related topics such as feature selection and model validation, and the application of these tools to real-world data sets.</p>
+    <h2>Description</h2>
+    <p>Scikit-learn provides a range of supervised and unsupervised learning algorithms via a consistent interface in Python. It is licensed under a permissive simplified BSD license and is distributed under many Linux distributions, encouraging academic and commercial use.  </p>
+<p>The library is built upon the SciPy (Scientific Python) that must be installed before you can use scikit-learn. This stack that includes:  </p>
+<ol>
+<li>NumPy: Base n-dimensional array package  </li>
+<li>SciPy: Fundamental library for scientific computing  </li>
+<li>Matplotlib: Comprehensive 2D/3D plotting  </li>
+<li>IPython: Enhanced interactive console  </li>
+<li>Sympy: Symbolic mathematics  </li>
+<li>Pandas: Data structures and analysis  </li>
+</ol>
+<p>This tutorial will focus on the concepts underlying Machine Learning algorithms like supervised, unsupervised and reinforcement with real life examples and its usages in Big Data field.</p>
+    <h2>Requirements</h2>
+      <p>This tutorial will require recent installations of numpy, scipy, matplotlib, scikit-learn, and ipython with ipython notebook.  </p>
+<p>For users who do not yet have these packages installed, a relatively painless way to install all the requirements is to use a distribution such as Anaconda CE, which includes all of the requirements, works on Mac, Linux, and Windows, and can be downloaded and installed for free.  </p>
+    <h2>Speaker bio</h2>
+      <p>A junior at SSN College of Engineering with main experience in Python.  </p>
+<p>My research interests lie in artificial life, and artificial intelligence using computer science and statistics as tools to understand life and its numerous aspects.  </p>
+<p>I have done numerous open source projects which includes  </p>
+<ol>
+<li>FlaskBlog -  An extensive tutorial on writing web applications in Python using the Flask microframework.  </li>
+<li>PyTransmit - With more than 2000 downloads per month, PyTransmit is a simple wrapper on top of the ftplib package which provides an object that can be used to make FTP calls to a PyTransmit installation.  </li>
+<li>HNScrapy - Hacker News Crawler based upon Scrapy which crawls the entire site and stores the links in the Database.  </li>
+<li>Pygram - Instagram-like image filters.  </li>
+</ol>
+<p>You can find the source code from my <a href="http://github.com/ajkumar25">github</a> profile.  </p>
+<p>You can contact me at contact@pypix.com</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://scikit-learn.org/stable/" rel="nofollow" target="_blank">http://scikit-learn.org/stable/</a></li>
+        <li><a href="https://store.continuum.io/cshop/anaconda/" rel="nofollow" target="_blank">https://store.continuum.io/cshop/anaconda/</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c293">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/293/voteup">&#x25b2;</a><br/>
+      <span class="count">6</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/293/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="196-machine-learning-with-scikit-learn#">[-]</a><a class="uncollapse hidden" href="196-machine-learning-with-scikit-learn#">[+]</a>
+        <span class="commenter">Nar Kumar</span>
+          274 days ago
+            (edited 274 days ago)
+      </div>
+      <div class="com-body">
+        <p>I just noticed description to this proposal is blatant copy from PyCon 2014 talk by Jake Vanderplas and Olivier Grisel <a href="https://us.pycon.org/2014/schedule/presentation/131/">https://us.pycon.org/2014/schedule/presentation/131/</a>  </p>
+<p>Not sure if it matters. </p>
+        <div data-id="293" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="196-machine-learning-with-scikit-learn#c293">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="196-machine-learning-with-scikit-learn#c293">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c509">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/509/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/509/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="196-machine-learning-with-scikit-learn#">[-]</a><a class="uncollapse hidden" href="196-machine-learning-with-scikit-learn#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          220 days ago
+      </div>
+      <div class="com-body">
+        <p>This matters, and thanks for pointing it out. Plagiarism is a serious issue.</p>
+        <div data-id="509" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="196-machine-learning-with-scikit-learn#c509">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="196-machine-learning-with-scikit-learn#c509">[link]</a>
+          <a title="Parent" class="comment-parent" href="196-machine-learning-with-scikit-learn#c293">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c290">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/290/voteup">&#x25b2;</a><br/>
+      <span class="count">4</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/290/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="196-machine-learning-with-scikit-learn#">[-]</a><a class="uncollapse hidden" href="196-machine-learning-with-scikit-learn#">[+]</a>
+        <span class="commenter">Erwan Lent</span>
+          276 days ago
+      </div>
+      <div class="com-body">
+        <p>Looks like this would be a really interesting talk. Can't wait to see how it goes!</p>
+        <div data-id="290" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="196-machine-learning-with-scikit-learn#c290">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="196-machine-learning-with-scikit-learn#c290">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c372">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/372/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/196-machine-learning-with-scikit-learn/comments/372/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="196-machine-learning-with-scikit-learn#">[-]</a><a class="uncollapse hidden" href="196-machine-learning-with-scikit-learn#">[+]</a>
+        <span class="commenter">Siddharth Kulshresth</span>
+          267 days ago
+      </div>
+      <div class="com-body">
+        <p>Looking forward to this one!</p>
+        <div data-id="372" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="196-machine-learning-with-scikit-learn#c372">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="196-machine-learning-with-scikit-learn#c372">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/196-machine-learning-with-scikit-learn"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

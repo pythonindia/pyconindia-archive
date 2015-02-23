@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Flask: Introduction to its cool features and ShareNote app construction &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Flask: Introduction to its cool features and ShareNote app construction &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+34</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Flask: Introduction to its cool features and ShareNote app construction</h1>
+    <p>
+      by <strong>Elita Lobo</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The main objective of this session is to introduce Flask (web framework)and its unique features in details to the  attendees and help them to get started with  building their own cool  Flask apps. In this session we would cover the basics of Flask  as well as see in depth how to develop a simple note-sharing flask application-ShareNote which would be similar to Fpaste.</p>
+    <h2>Description</h2>
+    <p>Basically this session would highlight the following topics:<br>
+1. Introduction to Flask as a micro web framework<br>
+2. Brief Introduction to Werzeug and jinja2 template engine.<br>
+3.Templating and URL Routing in Jinja2 and Werzeug  with a Helloworld Flask application example.<br>
+4. Building note-sharing application which would be similar to Fpaste.<br>
+    The note sharing app would consist of login/signup and users and
+    share notes after logging in, and each note can be made private or public through option of setting a password for each shared note.</p>
+    <h2>Requirements</h2>
+      <p>basic knowledge of Javascript and Database Management System preferably Sqlite.<br>
+Attendees should have flask , virtualenv , python &gt; 2.6 and sqlite installed on their laptops.  </p>
+    <h2>Speaker bio</h2>
+      <p>I am a 3rd year Electronics and Communication Engineering student from NIT Durgapur . I am a foss enthusiast and a passionate  coder and currently working on a GSOC project. I have worked as a Python developer in a startup company Addittiveware which helped me enhance my knowledge on Flask.<br>
+Blog: <a href="http://elitaastridlobo.wordpress.com/">http://elitaastridlobo.wordpress.com/</a><br>
+Link to Github: <a href="https://github.com/elitalobo/HomeTask1">https://github.com/elitalobo/HomeTask1</a></p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/elitaalobo1/flask-35316964">http://www.slideshare.net/elitaalobo1/flask-35316964</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://github.com/elitalobo/HomeTask1/tree/master/note_app" rel="nofollow" target="_blank">https://github.com/elitalobo/HomeTask1/tree/master/note_app</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c399">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/399/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/399/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter">Anand Chitipothu</span>
+          258 days ago
+      </div>
+      <div class="com-body">
+        <p>Do you think you can teach how to build apps in Flask in 30 minutes?</p>
+        <div data-id="399" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c399">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c399">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c328">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/328/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/328/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>You should share your slides as this is your first big talk.</p>
+        <div data-id="328" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c328">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c328">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c354">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/354/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/354/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter selected">Elita Lobo</span>
+          268 days ago
+            (edited 268 days ago)
+      </div>
+      <div class="com-body">
+        <p>Kushal Das, I have shared the slides of the introduction  part for now.Would share the slides of 'construction of the sharenote app' soon.  </p>
+        <div data-id="354" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c354">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c354">[link]</a>
+          <a title="Parent" class="comment-parent" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c328">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c480">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/480/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/480/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          229 days ago
+      </div>
+      <div class="com-body">
+        <p>Elita, I dont think you'll have time to cover both an introduction and the construction of your app. I think you may want to focus on just the latter. Also, for some reason, I cant see the slideshare embed - can you provide a direct link?</p>
+        <div data-id="480" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c480">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c480">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c491">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/491/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/491/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter selected">Elita Lobo</span>
+          227 days ago
+            (edited 227 days ago)
+      </div>
+      <div class="com-body">
+        <p>http://www.slideshare.net/elitaalobo1/flask-35316964?fb_action_ids=418689561605833&amp;fb_action_types=slideshare%3Aupload&amp;fb_source=og_timeline_photo_robotext  </p>
+<p>These are the slides of Introduction to Flask. If you think that time would be insufficient to discuss both , then I'll focus more on construction of note application and try to give a more detailed explanation for the same. Thanks for the feedback.<br>
+Do I need to provide slides of the note-app construction?</p>
+        <div data-id="491" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c491">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c491">[link]</a>
+          <a title="Parent" class="comment-parent" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c480">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c427">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/427/voteup">&#x25b2;</a><br/>
+      <span class="count">0</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction/comments/427/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[-]</a><a class="uncollapse hidden" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#">[+]</a>
+        <span class="commenter selected">Elita Lobo</span>
+          250 days ago
+      </div>
+      <div class="com-body">
+        <p>Yes, its a small application which can be taught in 30 mins. I am planning to show the user step by step how to create the hello world application and then explain the code  of the note app I have created , in detail.</p>
+        <div data-id="427" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c427">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="201-flask-introduction-to-its-cool-features-and-sharenote-app-construction#c427">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/201-flask-introduction-to-its-cool-features-and-sharenote-app-construction"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

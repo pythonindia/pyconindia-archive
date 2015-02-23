@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Memory Forensics using Volatility &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Memory Forensics using Volatility &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="219-memory-forensics-using-volatility#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/219-memory-forensics-using-volatility/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/219-memory-forensics-using-volatility/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/219-memory-forensics-using-volatility/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/219-memory-forensics-using-volatility/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+14</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Memory Forensics using Volatility</h1>
+    <p>
+      by <strong>Shankar Raman</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/219-memory-forensics-using-volatility&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Software Development Tools</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The talk is to give an overview and to demonstrate memory analysis using a open source tool called Volatility. This session will also cover the various features embedded in Volatility and also the advantages.</p>
+    <h2>Description</h2>
+    <p>Memory forensics is an emerging topic in the field of digital forensics. Mining artifacts from memory adds valuable asset for any forensic investigations. This talk will demonstrate   beginning with collecting a memory dump, followed by an explanation of artifacts and demonstration of the various plugins available in Volatility on the collected memory dump. Will also present the various techniques and advantages of using the framework.  </p>
+<h1>Session highlight:</h1>
+<ul>
+<li>Introduction:<ul>
+<li>Need for memory forensics</li>
+<li>The components we deal with<ul>
+<li>Processes.</li>
+<li>Registry Keys.</li>
+<li>Connections.</li>
+<li>Logs.    </li>
+<li>Some Malware artifacts.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Setting up the environment - Linux and Windows.</li>
+<li>Demonstration and explanation of a few plugins.<ul>
+<li>Process</li>
+<li>Registry</li>
+<li>Connections</li>
+<li>Logs</li>
+<li>Malware</li>
+<li>Misc</li>
+</ul>
+</li>
+<li>Limitations</li>
+</ul>
+    
+    <h2>Speaker bio</h2>
+      <p>I am a Research Assistant and a Masters student in Cyber security and Network systems from Amrita Vishwa Vidyapeetham, Amritapuri Campus. My area of interest is Digital Forensics. I am a part of University's ethical hacking team "bi0s", which  participates in Capture the Flag competitions. Winners of HackIM and Jailbreak'14 CTF competitions, organized by nu|c0n as part of their annual security conference.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://shankaraman.wordpress.com/" rel="nofollow" target="_blank">http://shankaraman.wordpress.com/</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c350">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/219-memory-forensics-using-volatility/comments/350/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/219-memory-forensics-using-volatility/comments/350/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="219-memory-forensics-using-volatility#">[-]</a><a class="uncollapse hidden" href="219-memory-forensics-using-volatility#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          269 days ago
+      </div>
+      <div class="com-body">
+        <p>Please provide links to your profile and slides and videos from your previous sessions; anything that'll help folks decide if they want to attend your session</p>
+        <div data-id="350" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="219-memory-forensics-using-volatility#c350">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="219-memory-forensics-using-volatility#c350">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c352">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/219-memory-forensics-using-volatility/comments/352/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/219-memory-forensics-using-volatility/comments/352/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="219-memory-forensics-using-volatility#">[-]</a><a class="uncollapse hidden" href="219-memory-forensics-using-volatility#">[+]</a>
+        <span class="commenter selected">Shankar Raman</span>
+          268 days ago
+            (edited 267 days ago)
+      </div>
+      <div class="com-body">
+        <p>I have added my blog link. Is that sufficient?</p>
+        <div data-id="352" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="219-memory-forensics-using-volatility#c352">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="219-memory-forensics-using-volatility#c352">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/219-memory-forensics-using-volatility"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

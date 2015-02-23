@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Network programming in Python: Mastering the layers of protocol stack. &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Network programming in Python: Mastering the layers of protocol stack. &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+21</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Network programming in Python: Mastering the layers of protocol stack.</h1>
+    <p>
+      by <strong>Bharath</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Workshops</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>“A typical bay area venture capitalist type would tell you to be a goodie good developer and pick up a Django type workshop. Will you surrender to the technical lullaby, or are you willing to embark on a journey down the rabbit hole that takes you to places where coders meet the real deal of bits, bytes and protocols with no/low abstractions.”*</p>
+<p>Enough of the technical anecdotes, let's see what this workshop is going to be.  </p>
+    <h2>Description</h2>
+    <h2>Background</h2>
+<p>I planned to propose a workshop solely based on security scripting but then I realized it's seems too contrived to make people dive right into security specifics, rather it would be more natural to make programmers think/code generically in network programming and protocols perspective, then let them progress into specifics. More over many full "stack" developers are clueless about what's behind all those pretty library functions.  </p>
+<h2>What this workshop covers?</h2>
+<p>This workshop is going to be three hours of hands-on journey thorough the murky corners of internet(protocols).  </p>
+<p>We will dissect each layer of OSI model and major protocols involved, from a <strong>programmer's perspective</strong>. This workshop includes both IPV4 and IPV6 discussion.  </p>
+<p>Most probably there will a simple <em>WLAN setup</em> where the participants could write and test their scripts.  </p>
+<p>By the end of this workshop you will be able to understand Network protocol stack from a programmer perspective, understand socket abstraction, be able to write simple network applications and go about understanding advanced network programming concepts.  </p>
+<p>In-case you are going to vote positively, please <strong>fill in the survey</strong> to make the workshop more productive:<br>
+<a href="https://www.surveymonkey.com/s/MT3XVTB">https://www.surveymonkey.com/s/MT3XVTB</a></p>
+<p>A high level overview of what will be covered in the workshop is as follows:  </p>
+<pre class="syntax"><code>                                    Networking essentials</code></pre>
+
+
+<p>Sprint through the essential networking concepts to get started with network programming. Includes core internet protocols, Internet addressing, packet headers etc. We will be covering a little more than what is there in "Beej's Guide to Network Programming Using Internet Sockets"  </p>
+<pre class="syntax"><code>                                    Sockets</code></pre>
+
+
+<p>We will delve into concept of sockets. We'll be covering low level nuisances like socket functions, name functions, byte order and byte order functions etc.  </p>
+<pre class="syntax"><code>                                    Protocols</code></pre>
+
+
+<p>We look at programming using sockets, communicating using various protocols through at different layers. Some protocols that’ll be covered includes HTTP, DNS, SSL/TLS, IMAP, SMTP, SSH, FTP etc.  </p>
+<pre class="syntax"><code>                                    Network errors/Debugging</code></pre>
+
+
+<p>Writing clean network programs is non-trivial. There are numerous error cases that might arise varying from protocol errors to physical cable problems and they should be dealt with properly. Debugging is one of the most important aspects of Network programming.  </p>
+<pre class="syntax"><code>                        Third part libraries- to make life easier</code></pre>
+
+
+<p>After looking at all the low levels details it’s time to take a look at ways to not worry about them while coding. We look at some third party libraries that might often come very handy while writing network scripts. They help you write scripts effortlessly, on the fly. Scapy, Impacket to name some.  </p>
+<pre class="syntax"><code>                            Raw sockets - To make life harder</code></pre>
+
+
+<p>A <em>raw socket</em> is an internet socket that allows direct sending and receiving of Internet Protocol packets without any protocol-specific layer formatting. This is the single most powerful technique that we will be covering. We will code bunch of <em>port scanning techniques</em> using raw sockets.  </p>
+<pre class="syntax"><code>                                    Miscellaneous scripts</code></pre>
+
+
+<p>We will code &amp; look at some interesting scripts in action. Script that uses <em>shodan</em> to search networked devices, <em>maltego</em> to perform OSINT and some <em>security scipts</em>(yeah, I'm biased).  </p>
+<pre class="syntax"><code>                                    Moving forward..</code></pre>
+
+
+<p>A roadmap on where to go next with what participants picked up in the workshop.  </p>
+<h2>Intended Audience</h2>
+<ul>
+<li>Programmers who have intent of writing applications that communicates over networks</li>
+<li>Security Engineers would benefit a ton from knowing the material</li>
+</ul>
+    <h2>Requirements</h2>
+      <p>Prerequisites  </p>
+<ul>
+<li>
+<p>Absolute <em>basic</em> Python or some programming experience in some high level language is a must(C preferred). You need to know what's on "Google's Python classes"</p>
+</li>
+<li>
+<p>Basics of Networking concepts is desired but some essential networking concepts are covered in the talk(depending on the crowd). We'll cover little more than Beej's guide.</p>
+</li>
+<li>
+<p>Survival command line skills on *nix platform desired or just bring a cheat sheet. We will learn necessary commands as we go though.</p>
+</li>
+</ul>
+<p>Resources</p>
+<ul>
+<li>
+<p>"Beej's Guide to Network Programming Using Internet Sockets" <a href="http://beej.us/guide/bgnet/">http://beej.us/guide/bgnet/</a></p>
+</li>
+<li>
+<p>"Google's Python classes" <a href="https://developers.google.com/edu/python/?csw=1">https://developers.google.com/edu/python/?csw=1</a></p>
+</li>
+<li>
+<p>TCP/IP packet headers : <a href="http://nmap.org/book/tcpip-ref.html">http://nmap.org/book/tcpip-ref.html</a></p>
+</li>
+</ul>
+<p>Technical requirements  </p>
+<ul>
+<li>Python 2.7</li>
+<li>Linux 2.6.x / 3.0.x or any *nix platform will do(Kali Linux makes life easier.)</li>
+</ul>
+<p>(Code will be made as OS agnostic as possible but we all know *NIX is better)</p>
+    <h2>Speaker bio</h2>
+      <p>I am a Network Security, Protocols and Software exploitation enthusiast. Been coding in Python for security tasks &amp; academics from past 4 years. Graduated from Asia Pacific University, Kuala Lumpur in Information Systems Security(ISS). I do security contract works for various Bio-pharma companies.  </p>
+<p>When not doing security work or lurking on Coursera, I could be found hiking in the eastern ghats :)</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/hurtl0cker/network-programming-in-python-36678345">http://www.slideshare.net/hurtl0cker/network-programming-in-python-36678345</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Scripts will be uploaded progressively.</li>
+        <li><a href="https://twitter.com/yamakira_" rel="nofollow" target="_blank">https://twitter.com/yamakira_</a></li>
+        <li>Libraries/Modules</li>
+        <li>Most of the packages could be installed simply using Python Package Index(PIP)</li>
+        <li>scapy                                           <a href="http://www.secdev.org/projects/scapy/" rel="nofollow" target="_blank">http://www.secdev.org/projects/scapy/</a></li>
+        <li>dnspython                                     <a href="http://www.dnspython.org/" rel="nofollow" target="_blank">http://www.dnspython.org/</a></li>
+        <li>impacket                                       <a href="http://code.google.com/p/impacket/" rel="nofollow" target="_blank">http://code.google.com/p/impacket/</a></li>
+        <li>ssl                                                <a href="https://docs.python.org/dev/library/ssl.html" rel="nofollow" target="_blank">https://docs.python.org/dev/library/ssl.html</a></li>
+        <li>backports.ssl_match_hostname       <a href="https://pypi.python.org/pypi/backports.ssl_match_hostname" rel="nofollow" target="_blank">https://pypi.python.org/pypi/backports.ssl_match_hostname</a></li>
+        <li>logging                                          <a href="https://docs.python.org/2/library/logging.html" rel="nofollow" target="_blank">https://docs.python.org/2/library/logging.html</a></li>
+        <li>mechanize                                    <a href="https://pypi.python.org/pypi/mechanize/" rel="nofollow" target="_blank">https://pypi.python.org/pypi/mechanize/</a></li>
+        <li>mem-cached                                 <a href="https://pypi.python.org/pypi/python-memcached/1.53" rel="nofollow" target="_blank">https://pypi.python.org/pypi/python-memcached/1.53</a></li>
+        <li>pymaltego                                     <a href="http://code.google.com/p/pymaltego/" rel="nofollow" target="_blank">http://code.google.com/p/pymaltego/</a></li>
+        <li>shodan                                         <a href="https://github.com/achillean/shodan-python" rel="nofollow" target="_blank">https://github.com/achillean/shodan-python</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c434">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/434/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/434/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[-]</a><a class="uncollapse hidden" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[+]</a>
+        <span class="commenter">Jovyn Lobo</span>
+          246 days ago
+      </div>
+      <div class="com-body">
+        <p>This looks amazing. If possible it would be really wonderful to include a section of 'Automating Config reviews' (Just a suggestion). Really looking forward to this.<br>
+Thank You</p>
+        <div data-id="434" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c434">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c434">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c462">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/462/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/462/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[-]</a><a class="uncollapse hidden" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[+]</a>
+        <span class="commenter selected">Bharath</span>
+          231 days ago
+      </div>
+      <div class="com-body">
+        <p>Thanks for suggestions. I have looked into your request but due to time constrain I can't cover the topic but in a couple of months I might upload videos on the topic, I'll link you if I do :)</p>
+        <div data-id="462" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c462">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c462">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c500">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/500/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack/comments/500/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[-]</a><a class="uncollapse hidden" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#">[+]</a>
+        <span class="commenter">Sake Nagarjuna Naidu</span>
+          226 days ago
+      </div>
+      <div class="com-body">
+        <p>Looks promising, looking forward to attend the workshop..</p>
+        <div data-id="500" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c500">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="254-network-programming-in-python-mastering-the-layers-of-protocol-stack#c500">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/254-network-programming-in-python-mastering-the-layers-of-protocol-stack"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

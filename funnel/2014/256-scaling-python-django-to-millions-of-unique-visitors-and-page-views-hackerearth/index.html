@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Scaling Python/Django to millions of unique visitors and page-views (HackerEarth) &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Scaling Python/Django to millions of unique visitors and page-views (HackerEarth) &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><span>&lt;</span></div>
+  <div class="rightear"><a href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+77</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Scaling Python/Django to millions of unique visitors and page-views (HackerEarth)</h1>
+    <p>
+      by <strong>Vivek Prakash</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The audience will get to learn about what it takes to build a highly fault-tolerant and distributed web application which can tolerate high load, offers minimal latency and is surprisingly fast. I will dive into the discussion of such an architecture including optimizations at application level (Python/Django), database (MySQL), Apache, rabbitmq, celery, memcached, Tornado and HAProxy.  </p>
+    <h2>Description</h2>
+    <p>Scaling up a web application is one of the hardest part while handling huge traffic and load bursts. At <a href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth">HackerEarth</a>, we are big fan of Python &amp; Django. We have served up to million unique visitors and tens of millions of pageviews in just over an year, including our Code-Evaluation servers which has served over three million requests. I will talk about how to scale up fast and without failing most of the times.  </p>
+<p><strong>Python/Django</strong></p>
+<p>There are so many lesser-known optimizations that can be done at the application level, including steps to reduce queries, writing code which takes O(1) time irrespective of the size of data, and managing the process memory efficiently. I will talk about some of them in detail.  </p>
+<p><strong>Apache web-server</strong></p>
+<p>we use Apache with mod_wsgi for hosting the application. There is a general complaint that Apache sucks when it comes to hosting Python web applications. It’s said that it’s slow, bloated, uses lots of memory and doesn’t perform very well. It’s also said that it doesn’t handle a high number of concurrent requests.<br>
+All that is true if you are not running the Python application in the right way. If configured properly, Apache works fantastically and is usually never the reason of slowness. That is almost always due to the application bottlenecks and database latency. I will talk about how to setup mod_wsgi and Apache properly to handle traffic bursts.  </p>
+<p><strong>MySQL (Database)</strong></p>
+<p>With the growing data and number of requests/sec, it turns out that the database becomes the major bottlneck to scale the application dynamically. At this point if you are thinking that there are mythical (cloud) providers who can handle the growing need of your application, you can’t be more wrong. To make the problem even harder, you can’t spin a new database whenever you want to just like your frontend servers. To achieve a horizontal scalability at all levels, it requires massive rearchitecture of the system while being completely transparent to the end user. I will talk about how to scale up the database beautifully.  </p>
+<p>I will cover other components like Memcached, celery &amp; rabbitmq in  brief detail, mostly focusing on how to leverage them for faster response time and using the concept of ‘deferred processing’ for most of the tasks.  </p>
+    
+    <h2>Speaker bio</h2>
+      <p>I am the CTO &amp; Co-founder of HackerEarth, a platform for developers to solve programming challenges and connect with each other. I started building HackerEarth about an year back which has quickly become a large production environment, throwing challenges everyday to smoothly scale it up. I will share the experiences and learning I had while building it, some of them very little known in the open but most important to build any good product.  </p>
+<p>I am 23 years old, and graduated in 2013 from IIT Roorkee.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://engineering.hackerearth.com/" rel="nofollow" target="_blank">http://engineering.hackerearth.com/</a></li>
+        <li><a href="http://hck.re/vivekprakash" rel="nofollow" target="_blank">http://hck.re/vivekprakash</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c385">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/385/voteup">&#x25b2;</a><br/>
+      <span class="count">0</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/385/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[-]</a><a class="uncollapse hidden" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          264 days ago
+            (edited 244 days ago)
+      </div>
+      <div class="com-body">
+        <p>Vivek, this sounds interesting, but there are other Django proposals already in the funnel. One of them is from Arun, a known Django practitioner and past speaker. It might be useful to provide your slide deck or more detail on what some your learnings were that you plan to cover. Some of the topics you've mentioned have already been covered before last year by Arun. Also, please separate content of your talk from a pitch about your company (incl the title).  </p>
+        <div data-id="385" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c385">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c385">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c507">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/507/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/507/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[-]</a><a class="uncollapse hidden" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[+]</a>
+        <span class="commenter selected">Vivek Prakash</span>
+          221 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Aravind, somehow I missed your comment among all. The talk is not a pitch about the company, I just added the name to add some credibility to the talk. Do you still want me to provide more details other than that already mentioned in the talk description?</p>
+        <div data-id="507" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c507">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c507">[link]</a>
+          <a title="Parent" class="comment-parent" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c385">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c514">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/514/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth/comments/514/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[-]</a><a class="uncollapse hidden" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          207 days ago
+      </div>
+      <div class="com-body">
+        <p>Vivek, either Krace or I will try to call you and give you a bit more content. The gist of it is that we feel this proposal is too broad to do enough justice to specific learnings. Plus, there is already another Django proposal that was confirmed. </p>
+        <div data-id="514" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c514">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c514">[link]</a>
+          <a title="Parent" class="comment-parent" href="256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth#c507">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/256-scaling-python-django-to-millions-of-unique-visitors-and-page-views-hackerearth"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Sunburnt: Python wrapper for Apache Solr - Search Engine &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Sunburnt: Python wrapper for Apache Solr - Search Engine &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><span>&gt;</span></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+2</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Sunburnt: Python wrapper for Apache Solr - Search Engine</h1>
+    <p>
+      by <strong>Vishrut Mehta</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>To teach people about Sunburnt which is a search engine wrapper over Apache Solr and how to write scripts for Indexing, Query, Highlighting, Optimization etc.</p>
+    <h2>Description</h2>
+    <p>Fed-up of Java ? :P Here's the solution for using Java's Apache Solr without actually touching any Java code.  </p>
+<p>Firstly To describe what Sunburnt is, it is a Python Wrapper over Apache Solr - a high-performance, full-featured text search engine which uses Apache Lucene search library written entirely in Java. It is a technology suitable for nearly any application that requires full-text search, especially cross-platform.  </p>
+<p>So to begin with the session, will show the users how to install Apache Solr, install sunburnt, configure Solr according to users needs.  </p>
+<p>Then would show how to start the Solr server and how to dissolve errors.  </p>
+<p>Then will show the users to write some basic scripts for in and then show how to create Indexes using Sunburnt and how to interact with Apache Solr.  </p>
+<p>Then will also try to demonstrate other features like Highlighting in Search, QueryParsing, Analyzers, etc using Sunburnt itself.  </p>
+<p>Also would like to demonstrate how I integrated Sunburnt in web2py framework in an Open Source Organization called Sahana Software Foundation.  </p>
+<p>This will be helpful to integrate Full-Text Search and other search optimizations techniques using this.</p>
+    <h2>Requirements</h2>
+      <p>Laptop  </p>
+<p>A Linux Machine( preferably 64 bit )  </p>
+<p>Software: Python 2.6+  </p>
+<p>Internet Connection  </p>
+<p>Optional: Java Sun6</p>
+    <h2>Speaker bio</h2>
+      <p>I am currently a 3rd year BTech+MS Computer Science student at IIIT Hyderabad. I have been working for FOSS and Open Source Development since 2 years and have been actively contributing to organizations like Sahana Software Foundation, E-cidadania, Gnome, etc.  </p>
+<p>As a part of my Google Summer of Code Project'13, I have been learning Apache Solr and sunburnt and have worked quite a bit in this.  </p>
+<p>Also, have been selected as a Research intern at INRIA, France to work on dynamic multi-cloud application.  </p>
+<p>For more updates on my work, follow me on github:  </p>
+<p><a href="https://github.com/VishrutMehta">https://github.com/VishrutMehta</a></p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>* Profile Links:</li>
+        <li><a href="https://github.com/VishrutMehta" rel="nofollow" target="_blank">https://github.com/VishrutMehta</a></li>
+        <li><a href="http://in.linkedin.com/pub/vishrut-mehta/4b/1b1/939" rel="nofollow" target="_blank">http://in.linkedin.com/pub/vishrut-mehta/4b/1b1/939</a></li>
+        <li>* Project Links:</li>
+        <li><a href="http://lucene.apache.org/solr/" rel="nofollow" target="_blank">http://lucene.apache.org/solr/</a></li>
+        <li><a href="http://lucene.apache.org/solr/4_3_1/tutorial.html" rel="nofollow" target="_blank">http://lucene.apache.org/solr/4_3_1/tutorial.html</a></li>
+        <li><a href="http://opensource.timetric.com/sunburnt/index.html" rel="nofollow" target="_blank">http://opensource.timetric.com/sunburnt/index.html</a></li>
+        <li><a href="https://github.com/tow/sunburnt" rel="nofollow" target="_blank">https://github.com/tow/sunburnt</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c169">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/169/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/169/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[-]</a><a class="uncollapse hidden" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          376 days ago
+      </div>
+      <div class="com-body">
+        <p>Need to update section for this talk.</p>
+        <div data-id="169" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c169">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c169">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c186">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/186/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/186/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[-]</a><a class="uncollapse hidden" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[+]</a>
+        <span class="commenter">Kiran Gangadharan</span>
+          370 days ago
+      </div>
+      <div class="com-body">
+        <p>Kindly share videos and slides of your previous talks, if any. They are crucial for panel in judging your ability as a speaker.</p>
+        <div data-id="186" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c186">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c186">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c400">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/400/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine/comments/400/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[-]</a><a class="uncollapse hidden" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#">[+]</a>
+        <span class="commenter">Anand Chitipothu</span>
+          258 days ago
+      </div>
+      <div class="com-body">
+        <p>What more are you going to talk other than the API of sunburnt library?</p>
+        <div data-id="400" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c400">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="107-sunburnt-python-wrapper-for-apache-solr-search-engine#c400">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/107-sunburnt-python-wrapper-for-apache-solr-search-engine"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

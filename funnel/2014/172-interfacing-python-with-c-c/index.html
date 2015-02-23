@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> Interfacing Python with C/C++ &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content=" Interfacing Python with C/C++ &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="172-interfacing-python-with-c-c#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/172-interfacing-python-with-c-c/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/172-interfacing-python-with-c-c/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+24</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1> Interfacing Python with C/C++</h1>
+    <p>
+      by <strong>Sinny Kumari</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/172-interfacing-python-with-c-c&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Core Python</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <ul>
+<li>Know different approaches to interface Python with C/C++</li>
+<li>Find out which approach to use in a particular situation</li>
+<li>Learn the basics of writing a C/C++ Python extension</li>
+</ul>
+    <h2>Description</h2>
+    <p>Python is a very powerful language and contains all language features to support most of people’s computing needs. The core feature set is augmented by lot of modules which are available for Python. However, there will be times in a real-world project where you might need to access data or call functions which are implemented in C/C++. The most common reasons for doing this is to reuse existing C/C++ libraries which provide some specific functionality for your project, or simply to boost performance.  </p>
+<p>While different approaches that we will talk about are C/C++ Python extension, ctypes, SWIG, CFFI, boost.python etc, this talk will focus on a working example of a C/C++ Python extension. The talk will also compare the advantages and disadvantages of these approaches to help participants to decide what is best for their usecase.  </p>
+    <h2>Requirements</h2>
+      <p>Basic knowledge of C/C++ and Python</p>
+    <h2>Speaker bio</h2>
+      <p>I have worked extensively on writing C python extensions as part of my work at Red Hat. The extensions provide data which are consumed by high level Python applications. While primarily a C/C++ programmer, I play with Python (and Django) during my spare time. Additionally, I am an Open Source enthusiast and contribute to the  KDE project and have also given talks at various KDE events.  </p>
+<p>I blog at <a href="http://www.sinny.in">http://www.sinny.in</a></p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://docs.google.com/presentation/d/1UKitmpqeaPvxLaPlTJVzLtI-PZmG4pgxkibbqVgKelY/">https://docs.google.com/presentation/d/1UKitmpqeaPvxLaPlTJVzLtI-PZmG4pgxkibbqVgKelY/</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Extending Python with C/C++ - <a href="https://docs.python.org/2/extending/extending.html" rel="nofollow" target="_blank">https://docs.python.org/2/extending/extending.html</a></li>
+        <li>Talk given at conf.kde.india - <a href="http://kde.in/content/one-app-rule-all-your-media" rel="nofollow" target="_blank">http://kde.in/content/one-app-rule-all-your-media</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c251">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/comments/251/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/comments/251/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="172-interfacing-python-with-c-c#">[-]</a><a class="uncollapse hidden" href="172-interfacing-python-with-c-c#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>Sinny, can you provide links to your any previous talks (slides and/or videos).  </p>
+<p>May be you can cover CFFI as well in your talk: <a href="https://cffi.readthedocs.org">https://cffi.readthedocs.org</a></p>
+        <div data-id="251" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="172-interfacing-python-with-c-c#c251">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="172-interfacing-python-with-c-c#c251">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c252">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/comments/252/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/comments/252/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="172-interfacing-python-with-c-c#">[-]</a><a class="uncollapse hidden" href="172-interfacing-python-with-c-c#">[+]</a>
+        <span class="commenter selected">Sinny Kumari</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>Thank you for feedback. Added previous talk link and will talk about CFFI too.</p>
+        <div data-id="252" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="172-interfacing-python-with-c-c#c252">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="172-interfacing-python-with-c-c#c252">[link]</a>
+          <a title="Parent" class="comment-parent" href="172-interfacing-python-with-c-c#c251">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c259">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/comments/259/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/comments/259/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="172-interfacing-python-with-c-c#">[-]</a><a class="uncollapse hidden" href="172-interfacing-python-with-c-c#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>Can you please give us an outline for the talk? Or else this is too big for a 30 minutes talk.</p>
+        <div data-id="259" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="172-interfacing-python-with-c-c#c259">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="172-interfacing-python-with-c-c#c259">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c260">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/comments/260/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/comments/260/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="172-interfacing-python-with-c-c#">[-]</a><a class="uncollapse hidden" href="172-interfacing-python-with-c-c#">[+]</a>
+        <span class="commenter selected">Sinny Kumari</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>Added outline of talk, detailed content will be added later. Let me know in case I missed something :)</p>
+        <div data-id="260" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="172-interfacing-python-with-c-c#c260">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="172-interfacing-python-with-c-c#c260">[link]</a>
+          <a title="Parent" class="comment-parent" href="172-interfacing-python-with-c-c#c259">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c321">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/172-interfacing-python-with-c-c/comments/321/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/172-interfacing-python-with-c-c/comments/321/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="172-interfacing-python-with-c-c#">[-]</a><a class="uncollapse hidden" href="172-interfacing-python-with-c-c#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>I think you should add more details about your talk in those slides.</p>
+        <div data-id="321" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="172-interfacing-python-with-c-c#c321">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="172-interfacing-python-with-c-c#c321">[link]</a>
+          <a title="Parent" class="comment-parent" href="172-interfacing-python-with-c-c#c260">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/172-interfacing-python-with-c-c"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

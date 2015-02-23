@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Medusa: A much faster Python implementation based on the Dart Virtual Machine &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Medusa: A much faster Python implementation based on the Dart Virtual Machine &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+30</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Medusa: A much faster Python implementation based on the Dart Virtual Machine</h1>
+    <p>
+      by <strong>Rahul De</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Core Python</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Get to know about Medusa: a new innovative Python implementation harnessing Google's super fast Dart Virtual Machine running Python at near native speeds.</p>
+    <h2>Description</h2>
+    <p>The session will formally unveil the Medusa project.  </p>
+<p>Python being an interpreted language has its pros and cons and at this PyCon we are going fix one of the most obvious cons of Python: its execution speed.<br>
+We all love Python for its simplicity and flexibility but when it comes to writing large volumes of code involving complex operations and recursions Python somewhat falls short compared to the other native/JIT languages.  </p>
+<p>In late 2012, Google came up with Dart, a language aiming for the unification of server and client side web development and scalable apps. Along with it came The Dart Virtual Machine. A hyper fast VM which builds upon the V8 js engine and even outperforms it. We decided why not let Python have a go on this?  </p>
+<p>The main aim behind creating the Medusa project is giving a typless and flexible language like Python a faster execution environment while still maintaining all its flexibility which we all love. Numerous projects such as the ShedSkin project which converts implicitly typed Python to C++ have tried doing it, but have put some or the other restriction on the input Python code. The Medusa project aims at running pre-existing Python code without any or minimal modification at a much faster rates compared to the usual implementations.  </p>
+<p>Still in its nascent stages and implemented using Qt/C++, Python and Dart, the project works by compiling Python code to a highly optimized Dart code in real time, persistently caching it and letting it rip on the Dart VM. The Dart VM like V8 compiles the dart code directly to machine code and using its vast array of runtime optimizations runs at a much higher speed compared to the CPython implementation and at times upto a 1000 - 1500% faster while maintaining all the features Python offers. Apart from this Python is further enriched with extra features provided by the Dart VM and you can do more stuff with Python which isn't possible with the vanilla Python.</p>
+    <h2>Requirements</h2>
+      <p>Familiarity with Python, C++, Dart(an added bonus) and Programming Language Translation.</p>
+    <h2>Speaker bio</h2>
+      <p>I am a 22 year old recent VIT University graduate working for MartMobi Technologies as the back end and infrastructure engineer. I love systems programming and am really passionate about core systems and programming. My areas of interest are compilers, virtual machines, server programming and game development. I have done quite a few notable projects including a DMBS engine written from scratch and a whole new Symmetric Stream Cipher. I love exploring new creative and unorthodox possibilities and believe in the art rather than the science of computer programming.</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://docs.google.com/presentation/d/1ClsPDKYtCTZGsSOAwYm4N8pGQ_lx-8GzMX21mZ9vikE/pub?start=false&amp;loop=false&amp;delayms=5000">https://docs.google.com/presentation/d/1ClsPDKYtCTZGsSOAwYm4N8pGQ_lx-8GzMX21mZ9vikE/pub?start=false&amp;loop=false&amp;delayms=5000</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://github.com/rahul080327/medusa" rel="nofollow" target="_blank">https://github.com/rahul080327/medusa</a></li>
+        <li><a href="https://www.dartlang.org" rel="nofollow" target="_blank">https://www.dartlang.org</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c197">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/197/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/197/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[-]</a><a class="uncollapse hidden" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[+]</a>
+        <span class="commenter selected">Rahul De</span>
+          322 days ago
+      </div>
+      <div class="com-body">
+        <p>Heres is the slideshare link, if the above ones creating issues:<br>
+<a href="http://www.slideshare.net/CrossPlatform1/the-medusa-project">http://www.slideshare.net/CrossPlatform1/the-medusa-project</a></p>
+        <div data-id="197" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c197">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c197">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c319">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/319/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/319/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[-]</a><a class="uncollapse hidden" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>Are you a contributor to that project ?</p>
+        <div data-id="319" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c319">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c319">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c408">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/408/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/408/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[-]</a><a class="uncollapse hidden" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[+]</a>
+        <span class="commenter selected">Rahul De</span>
+          256 days ago
+      </div>
+      <div class="com-body">
+        <p>Yes. Infact I'm the primary developer.</p>
+        <div data-id="408" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c408">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c408">[link]</a>
+          <a title="Parent" class="comment-parent" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c319">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c415">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/415/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/415/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[-]</a><a class="uncollapse hidden" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[+]</a>
+        <span class="commenter">Kracekumar Ramaraju</span>
+          252 days ago
+      </div>
+      <div class="com-body">
+        <p>So it is a language like python with few extra things built using Dart VM ? Can you show us some sample code which does work in vanilla python and doesn't work in vanilla python ?</p>
+        <div data-id="415" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c415">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c415">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c420">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/420/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine/comments/420/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[-]</a><a class="uncollapse hidden" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#">[+]</a>
+        <span class="commenter selected">Rahul De</span>
+          252 days ago
+            (edited 252 days ago)
+      </div>
+      <div class="com-body">
+        <p>The Python code is compiled into a semantically equivalent Dart code on the fly, persistently cached and executed on the Dart VM. This way that Python code is now able to access Dart features and run at much faster speeds due to the direct Dart to Assembly JIT compiling the Dart VM does. And due to the fact that a compile step takes place, so the compiler is able to figure out stuff which the usual Python interpreter cannot.  </p>
+<p>For example the code:  </p>
+<p>sayHello()  </p>
+<p>def sayHello(): print "Hello"  </p>
+<p>This wont run in the normal cpython implementation as it interprets and the function sayHello is called before its defined. But Medusa can figure this out and generate the dart code accordingly and produce Hello as an output as intended. Similarly classes and their objects are resolved too.</p>
+        <div data-id="420" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c420">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c420">[link]</a>
+          <a title="Parent" class="comment-parent" href="130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine#c415">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

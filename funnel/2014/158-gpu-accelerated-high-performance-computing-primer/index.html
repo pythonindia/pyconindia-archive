@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>GPU accelerated high performance computing primer &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="GPU accelerated high performance computing primer &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="158-gpu-accelerated-high-performance-computing-primer#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+75</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>GPU accelerated high performance computing primer</h1>
+    <p>
+      by <strong>Gurajapu Raja Sumant</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/158-gpu-accelerated-high-performance-computing-primer&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Embedded Python</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The talk will focus on the emergence of <em>GPU</em> computing and how python can help us in taking the first steps towards it.<br>
+ The audience will witness the full power of <em>CUDA/OpenCL</em> technology and how python can truly bring super computing to the masses.</p>
+    <h2>Description</h2>
+    <p><strong>Outline of the talk</strong>:</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>1)The talk is split into two sections; <em>background</em> (7-10 min) and <em>code examples</em>(25 min).  </p>
+<p>2) the rest of time will be utilized for Q&amp;A and interaction with audience  </p>
+<p>3) We will demonstrate the code examples in real-time  </p>
+<p>4)The emphasis will be on the application of Cuda/CL rather than it inner workings.  </p>
+<p>5)We do not wish to bore the audience so the examples will unique,concise,clear and most importantly <strong>original</strong> . github repo will be available soon  </p>
+<p><strong>Examples will cover</strong></p>
+<p><strong>vector addition</strong> 
+The simplest Cuda/Cl program as a basis for understanding parallel programming, threads , blocks etc.  </p>
+<p><strong>Monte Carlo Method</strong> 
+A really insightfull application of parallel processing<br>
+we brute force the value of pi here  </p>
+<p><strong>FIR filter</strong>
+beautiful and extremely fast filter approach  </p>
+<p><strong>Mandelbrot</strong>
+Benchmark for  code speedup  </p>
+<p><strong>Image processing with lena and Cuda</strong></p>
+<p>These examples were carefully chosen to illustrate some of the key<br>
+features of CUDA/CL and also serve as a tutorial.  </p>
+<p>github repo:<br>
+<a href="https://github.com/ashwinashok9111993/andromeda">https://github.com/ashwinashok9111993/andromeda</a></p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>Please also see the slides in the 'Slides' section<br>
+We also have some pre-reading stuff in the links section(not that necessary for the talk. Only if you are feeling adventurous :) )  </p>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>If one is to realize the high performance computing "mantra" , i.e.<br>
+concurrency and parallelism one has to look no further than GPUs .<br>
+To over come the bottlenecks the CPUs are imposing by serial mode of computation,we embrace the fully parallel nature of the GPU.<br>
+Granted the GPUs were initially targetted towards graphics, we have witnessed a paradigm shift towards the inclusion of GPUs in<br>
+numerical and scientific computing . To this end , the speakers strive to potray python as a bridge between conventional computation<br>
+and this new ground breaking field of GPU computing .  </p>
+<p>We intend to acheive this by introducing our audience to technologies like PyCuda ,PyOpenCl and their numerous wrapper libraries.<br>
++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>We aim to familiarize the audience with predominantly PyCuda as it is the most mature GPU (NVIDIA) computing library till date as<br>
+it puts the entire power(read cores and threads!) at our disposal.<br>
+Also the abundance of great documentation and comprehensive code<br>
+examples make it the right candidate to lay emphasis on .  </p>
+    <h2>Requirements</h2>
+      <p>The audience are not expected to bring their laptops ,but if they do want to execute some quick code snippets, it is recommended they<br>
+bring along the following :  </p>
+<p>1) A computer with NVIDIA GPU supporting CUDA or an AMD GPU supporting OpenCl (even 3rd generation i3/i5/i7 have experimental support for their IGP`s )  </p>
+<p>2)Softwares:  </p>
+<p><strong>python2.7</strong></p>
+<p><strong>cuda toolkit, pycuda , numpy ,scipy</strong></p>
+<p><strong>Any OS will do(win7,linux3.4+,MacOSX)</strong></p>
+<p>If anyone has trouble installing the required toolkits to work, please leave the discription of the problem in the comment and we will be<br>
+willing to sort out your problem.</p>
+    <h2>Speaker bio</h2>
+      <p><strong>There are two speakers dealing with the topic.</strong></p>
+<p><strong>G.Raja Sumant</strong> is a TCS employee who happens to be an undergraduate in the field of Electronics and Communications Engineering who has 3 years of experiance in conducting various 
+python and embedded related workshops in conjunction with the IEEE Hyderabad Section. He has won the innovative project showcase at the IEEE<br>
+PES AISC 2013 for Smart Grid technology application for household devices using MSP430 microcontroller. He has good programming skills in<br>
+different python modules such as NumPy,Scipy,MatPlotLib and other signal processing libraries of Python. He has also good expertise in<br>
+embedded Python and embedded C ,thanks to his projects on BeagleBoard,ARM,MSP430,Atmel,RL78 and RaspberryPi.  </p>
+<p>He has completed a short term course in embedded system design from C-DAC(CENTER FOR DEVELOPMENT OF ADVANCED COMPUTING) an initiative of DIEIT(DEPARTMENT OF ELECTRONICS AND INFORMATION TECHNOLOGY).  </p>
+<p>You can find the speakers linkedIn profile in the links section  </p>
+<p><strong>Ashok Ashwin</strong> is currently pursuing Bachelors degree in Electronics and Communications Engineering. He spents most of his spare time working on embedded 
+projects and Python happens to be a subject of great interest to him. He is actively involved  in propagating the use of python as a viable<br>
+alternative to numerical computational packages like MATLAB.He is currently the vice president of the IEEE student branch in his college and many<br>
+workshops regarding Python were conducted under his leadership.His most noteworthy achivement till date is his project in creating an  oscillosope using<br>
+python and MSP430 microcontroller. His expertise also extends to GUI programming with Qt and scientific computing using NumPy and SciPy . His current interests<br>
+include image processing using GPU computing and efficient digital filter synthesis using microcontrollers.<br>
+You can find his code in the github links and youtube channel given below in the links section.  </p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://docs.google.com/presentation/d/1ALkPN61_yYaqit9-B8J2zC2UEF7q8tPsi_TMcRLITJw/edit?usp=sharing">https://docs.google.com/presentation/d/1ALkPN61_yYaqit9-B8J2zC2UEF7q8tPsi_TMcRLITJw/edit?usp=sharing</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>G.Raja Sumant </li>
+        <li> <a href="http://in.linkedin.com/pub/gurajapu-sumant/57/867/919/" rel="nofollow" target="_blank">http://in.linkedin.com/pub/gurajapu-sumant/57/867/919/</a></li>
+        <li>Ashok Ashwin</li>
+        <li> <a href="http://www.linkedin.com/pub/ashwin-ashok/54/183/b5b" rel="nofollow" target="_blank">http://www.linkedin.com/pub/ashwin-ashok/54/183/b5b</a></li>
+        <li>cuda</li>
+        <li><a href="http://www.nvidia.in/object/cuda_home_new.html" rel="nofollow" target="_blank">http://www.nvidia.in/object/cuda_home_new.html</a></li>
+        <li><a href="https://developer.nvidia.com/cuda-toolkit" rel="nofollow" target="_blank">https://developer.nvidia.com/cuda-toolkit</a></li>
+        <li>prereading:</li>
+        <li><a href="http://documen.tician.de/pycuda/tutorial.html" rel="nofollow" target="_blank">http://documen.tician.de/pycuda/tutorial.html</a> </li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c216">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/216/voteup">&#x25b2;</a><br/>
+      <span class="count">4</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/216/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">uhasri akunuru</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>looks very interesting ; will you give lots of code examples to me started?<br>
+my laptop supports CUDA.</p>
+        <div data-id="216" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c216">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c216">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c221">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/221/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/221/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          292 days ago
+            (edited 292 days ago)
+      </div>
+      <div class="com-body">
+        <p>dear usha sri  </p>
+<p>i am one of the speakers. we will start a github repo shortly with a large bank of code examples. we will try to give as many example as possible.</p>
+        <div data-id="221" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c221">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c221">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c216">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c237">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/237/voteup">&#x25b2;</a><br/>
+      <span class="count">4</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/237/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Kondaparti Nikhitha</span>
+          289 days ago
+      </div>
+      <div class="com-body">
+        <p>very nice...! can you elaborate in detail.. it is very interesting</p>
+        <div data-id="237" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c237">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c237">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c238">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/238/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/238/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          289 days ago
+      </div>
+      <div class="com-body">
+        <p>dear nikitha,  </p>
+<p>i wish to see you at the talk, hopefully we will clarify all your doubts and get you started. :)  </p>
+        <div data-id="238" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c238">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c238">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c237">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c241">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/241/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/241/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter selected">Gurajapu Raja Sumant</span>
+          289 days ago
+            (edited 289 days ago)
+      </div>
+      <div class="com-body">
+        <p>hi nikhitha! It is nice that you are showing interest ! it is simply the power of parallel computing. it is a way of faster computing!! Please try to attend the session for a better understanding! </p>
+        <div data-id="241" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c241">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c241">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c237">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c229">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/229/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/229/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Rohan Thacker</span>
+          292 days ago
+            (edited 292 days ago)
+      </div>
+      <div class="com-body">
+        <p>Very interesting stuff, will the talk be very highly technical?  If so can you point us to some pre-reading?  </p>
+<p>P.S : The slides arent loading for me.  </p>
+<p>Looking forward to seeing this in september.</p>
+        <div data-id="229" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c229">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c229">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c243">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/243/voteup">&#x25b2;</a><br/>
+      <span class="count">0</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/243/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter selected">Gurajapu Raja Sumant</span>
+          289 days ago
+      </div>
+      <div class="com-body">
+        <p>dear rohan,<br>
+please see if the problem is solved now! you can go through the slides now!</p>
+        <div data-id="243" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c243">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c243">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c229">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c232">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/232/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/232/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>dear rohan thacker, we are facing problems with slideshare.<br>
+we are working on a easy wrapper around PyCuda to simplify our research work that is the inspiration for our project.  </p>
+<p>the talk will not be highly technical. even though we are from an electronics background, we will stick to programming for the most part.  </p>
+<p>we look forward to your participation too</p>
+        <div data-id="232" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c232">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c232">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c229">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c217">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/217/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/217/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Vijaya kumar</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>I am looking forward to this ! It is quite interesting to know about using the GPU for computational purposes. May be this will be useful in my research. </p>
+        <div data-id="217" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c217">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c217">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c220">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/220/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/220/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>dear vijaya kumar,  </p>
+<p>i am one of the speakers. we personally use pyCUDA,CudaMat as a part of our research into image processing. migrating to PyCuda should not be that much of a problem</p>
+        <div data-id="220" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c220">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c220">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c217">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c222">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/222/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/222/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Harsha Bandaru</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>cool STUFF!!!</p>
+        <div data-id="222" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c222">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c222">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c223">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/223/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/223/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>thanks harsha ,  </p>
+<p>i look forward to the seminar.</p>
+        <div data-id="223" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c223">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c223">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c222">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c235">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/235/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/235/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">sai meghams</span>
+          290 days ago
+      </div>
+      <div class="com-body">
+        <p>awesome information...its very interesting....</p>
+        <div data-id="235" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c235">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c235">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c236">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/236/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/236/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          290 days ago
+      </div>
+      <div class="com-body">
+        <p>thanks..</p>
+        <div data-id="236" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c236">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c236">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c235">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c417">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/417/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/417/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">kamalesh chatterjee</span>
+          252 days ago
+      </div>
+      <div class="com-body">
+        <p>hey guys..  </p>
+<p>i did not realize what my cuda sticker on my laptop meant till i read this...<br>
+i specialize in web dev. i will try to attend this workshop because i am curious about cuda. "supercomputing for masses" .. thats a nice one</p>
+        <div data-id="417" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c417">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c417">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c418">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/418/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/418/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          252 days ago
+      </div>
+      <div class="com-body">
+        <p>PCs come with an amazingly powerful device (GPU). It is mostly underutilized, often doing little more than rendering a desktop to the user. but think of the gpu like a 100 /1000 core processor with a smaller instruction set.... all sharing a common memory.<br>
+you can do amazing stuff with that kind of parallelism... i will demonstrate that in the talk.<br>
+"http://www.pcper.com/news/General-Tech/NVIDIA-Launches-Jetson-TK1-Mobile-CUDA-Development-Platform"
+take a look at this  </p>
+<p>also gpu's can significantly reduce run time of many algorithms where stream processing is involved  </p>
+        <div data-id="418" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c418">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c418">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c417">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c438">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/438/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/438/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">hima girija</span>
+          246 days ago
+      </div>
+      <div class="com-body">
+        <p>It looks like there are two speakers.. will there be division of work? or will there be section wise explanation? </p>
+        <div data-id="438" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c438">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c438">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c460">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/460/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/460/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          233 days ago
+      </div>
+      <div class="com-body">
+        <p>ok..<br>
+it is a matter of our convenience<br>
+CUDA/openCL require completely new form of thinking<br>
+since we will also show the code in action(if permitted)<br>
+we need more persons to clarify the doubts</p>
+        <div data-id="460" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c460">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c460">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c438">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c224">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/224/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/224/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Sreekar Reddy</span>
+          292 days ago
+      </div>
+      <div class="com-body">
+        <p>nicee useful stuff ashwin</p>
+        <div data-id="224" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c224">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c224">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c225">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/225/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/225/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          292 days ago
+            (edited 292 days ago)
+      </div>
+      <div class="com-body">
+        <p>thanks sreekar... it is as cool as it is useful</p>
+        <div data-id="225" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c225">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c225">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c224">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c233">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/233/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/233/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter selected">Gurajapu Raja Sumant</span>
+          291 days ago
+      </div>
+      <div class="com-body">
+        <p>It is nice to see such response to this proposal</p>
+        <div data-id="233" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c233">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c233">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c435">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/435/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/435/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">susheela sri</span>
+          246 days ago
+      </div>
+      <div class="com-body">
+        <p>Looking forward to see this in September. Your proposal seems to be unique in some aspects. All the best!</p>
+        <div data-id="435" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c435">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c435">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c436">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/436/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/436/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">vijaySrikar</span>
+          246 days ago
+      </div>
+      <div class="com-body">
+        <p>I hope you guys don't deviate from the topic. Follow the KISS principle.  </p>
+        <div data-id="436" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c436">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c436">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c447">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/447/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/447/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          239 days ago
+      </div>
+      <div class="com-body">
+        <p>we will.. thanks</p>
+        <div data-id="447" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c447">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c447">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c436">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c437">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/437/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/437/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Gaurav Kumar</span>
+          246 days ago
+      </div>
+      <div class="com-body">
+        <p>How can I apply these concepts in  real time? Is the implementation bare bones enough?What level of abstraction are we talking about here?(judging from the description)It would be kind of you if you can answer these queries in the comments.</p>
+        <div data-id="437" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c437">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c437">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c448">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/448/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/158-gpu-accelerated-high-performance-computing-primer/comments/448/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="158-gpu-accelerated-high-performance-computing-primer#">[-]</a><a class="uncollapse hidden" href="158-gpu-accelerated-high-performance-computing-primer#">[+]</a>
+        <span class="commenter">Ashwin Ashok</span>
+          239 days ago
+      </div>
+      <div class="com-body">
+        <p>we will cover them at the talk... we dont want to lose our thunder right?</p>
+        <div data-id="448" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="158-gpu-accelerated-high-performance-computing-primer#c448">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="158-gpu-accelerated-high-performance-computing-primer#c448">[link]</a>
+          <a title="Parent" class="comment-parent" href="158-gpu-accelerated-high-performance-computing-primer#c437">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/158-gpu-accelerated-high-performance-computing-primer"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Django Testing: As easy as 1,2,3 &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Django Testing: As easy as 1,2,3 &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="244-django-testing-as-easy-as-1-2-3#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/244-django-testing-as-easy-as-1-2-3/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/244-django-testing-as-easy-as-1-2-3/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/244-django-testing-as-easy-as-1-2-3/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/244-django-testing-as-easy-as-1-2-3/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+8</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Django Testing: As easy as 1,2,3</h1>
+    <p>
+      by <strong>Gaurav Dadhania</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/244-django-testing-as-easy-as-1-2-3&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Django testing <em>is</em> easy, there's official docs for it that you can skim through in a couple of hours and start using within a day. But what happens as your project grows? What testing patterns stand the test of time? Which libraries should you use to help you test faster and better? Can you handle the embarrassment of having a production "fail whale"? Does <code>git blame</code> keep you up at night?  </p>
+<p><strong>THEN THIS TALK IS FOR <em>YOU</em>!</strong></p>
+<p>Let's look at a few tools, some proven testing strategies and have a small discussion about our battle wounds, so we emerge stronger and our builds, greener!</p>
+    <h2>Description</h2>
+    <p>Let's get the ball rolling by summarizing Django test docs including:  </p>
+<ul>
+<li>
+<p>Using the Django test client </p>
+</li>
+<li>
+<p>Test runners and which one to use (if not the default?!)</p>
+</li>
+<li>
+<p>Fixtures and why they suck! </p>
+</li>
+</ul>
+<p>Then we'll look at 3 libraries that will make you a testing superhero(ine)!:  </p>
+<ul>
+<li>
+<p>Behave</p>
+</li>
+<li>
+<p>BDD and specs as tests</p>
+</li>
+<li>
+<p>powered by Selenium (look at VMs, BrowserStack and PhantomJS)</p>
+</li>
+<li>
+<p>FactoryBoy</p>
+</li>
+<li>
+<p>What it is and how it works </p>
+</li>
+<li>
+<p>Why is it better than using fixtures</p>
+</li>
+<li>
+<p>Mock</p>
+</li>
+<li>
+<p>Why mocking is a good idea (aka "build shouldn't be red cause there's no internet")</p>
+</li>
+<li>
+<p>libraries built on mock like dropbox/responses and examples of using mock to test functions with side-effects </p>
+</li>
+</ul>
+<p>We'll end the session with a short Q&amp;A about testing and loud, thunderous applause. </p>
+    
+    <h2>Speaker bio</h2>
+      <p>Gaurav is a code connoisseur at CommonCode, where he works with clients like Kogan Australia and CottonOn. He thinks he's fluent in Python and JavaScript. In the past, he has been lucky enough to talk at PyCon Australia and multiple MelbDjango meetups. He likes GIFs.  </p>
+<p>He's not sure whether he should be writing this in the third-person.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://slides.com/gvrv" rel="nofollow" target="_blank">https://slides.com/gvrv</a></li>
+        <li><a href="https://www.youtube.com/watch?v=7cuQEOP7BsA" rel="nofollow" target="_blank">https://www.youtube.com/watch?v=7cuQEOP7BsA</a></li>
+        <li><a href="https://twitter.com/GVRV" rel="nofollow" target="_blank">https://twitter.com/GVRV</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/244-django-testing-as-easy-as-1-2-3"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

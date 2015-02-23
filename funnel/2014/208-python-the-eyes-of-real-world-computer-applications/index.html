@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Python, the eyes of real world computer applications &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Python, the eyes of real world computer applications &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="208-python-the-eyes-of-real-world-computer-applications#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+19</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Python, the eyes of real world computer applications</h1>
+    <p>
+      by <strong>Ankush Sharma</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/208-python-the-eyes-of-real-world-computer-applications&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Core Python</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>A talk to give you insight into how real life computer applications can be easily interfaced by using the power of image processing with Python.I will be showing how you can play games,control your computer and do other cool stuff without using any other hardware,just your gestures alone.</p>
+    <h2>Description</h2>
+    <p>We are a group of three people from IIT-BHU, Varanasi  whom i will be speaking.I will be showing you the building process of two computer applications we have made for this presentation talk:  </p>
+<ol>
+<li>
+<p>Touch-Free Flappy Bird - Almost all of you have known about the addictive Flappy game in android. I will be showing how to interface this game to let you control the bird by your fingers itself. I will be first showing how to build the game by using Pygame and then how to interface it by using SimpleCV.  </p>
+</li>
+<li>
+<p>Virtual User - Through this, I will be showing how to perform clicks,scrolls,mouse movements on your pc without using any hardware; just by your fingers alone.  </p>
+</li>
+</ol>
+<p>The aim of the talk is to present a model which has endless applications in real life; like automated CCTv surveillance, self-capable projectors(no need of having laptop with projector for working) and much more.<br>
+The motto of the talk is:    Python can make comfort in human life!!  </p>
+<p>PROJECT-AUTHORS :<br>
+1. Ankush Sharma<br>
+2. Shivam Verma<br>
+3. Abhishek Yadav  </p>
+    <h2>Requirements</h2>
+      <p>Basic understanding of Python and it's libraries.  </p>
+<p>Here are quick download links:  </p>
+<ol>
+<li>Python 2.7.5 ( <a href="https://www.python.org/download/releases/2.7.5">https://www.python.org/download/releases/2.7.5</a> )  </li>
+<li>Pygame ( <a href="http://www.pygame.org/download.shtml">http://www.pygame.org/download.shtml</a> )  </li>
+<li>SimpleCV and other dependencies( <a href="http://sourceforge.net/projects/simplecv/files/latest/download?source=files">http://sourceforge.net/projects/simplecv/files/latest/download?source=files</a> )  </li>
+<li>Xlib ( <a href="https://pypi.python.org/pypi/python-xlib/0.12">https://pypi.python.org/pypi/python-xlib/0.12</a> )  </li>
+<li>Laptop with preferably Ubuntu or other linux distro installed  </li>
+<li>A webcam ( Not required in case your laptop have a built-in camera) .</li>
+</ol>
+    <h2>Speaker bio</h2>
+      <p>I, Ankush Sharma is an undergraduate from IIT BHU Varanasi with 1.5+ years experience  with Python.I have given multiple presentations on this technology in my college.Really looking forward to give one here.  </p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://drive.google.com/file/d/0B_aMAnqOOFmJWE4tdkxOU3BINVU/view?usp=sharing">https://drive.google.com/file/d/0B_aMAnqOOFmJWE4tdkxOU3BINVU/view?usp=sharing</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Virtual-User :  <a href="https://github.com/black-perl/Virtual-User" rel="nofollow" target="_blank">https://github.com/black-perl/Virtual-User</a></li>
+        <li>Video: </li>
+        <li>           <a href="https://www.youtube.com/watch?v=Fc3KyU1DVf0&amp;feature=youtu.be" rel="nofollow" target="_blank">https://www.youtube.com/watch?v=Fc3KyU1DVf0&amp;feature=youtu.be</a></li>
+        <li>Touch-free-flappy-bird-game : <a href="https://github.com/black-perl/Touch-free-flappy-bird-game" rel="nofollow" target="_blank">https://github.com/black-perl/Touch-free-flappy-bird-game</a></li>
+        <li>Video : </li>
+        <li>           <a href="https://www.youtube.com/watch?v=1g2kJx1qmyE" rel="nofollow" target="_blank">https://www.youtube.com/watch?v=1g2kJx1qmyE</a></li>
+        <li>Talk link :</li>
+        <li>           <a href="https://www.youtube.com/watch?v=XP8SV42YcDo" rel="nofollow" target="_blank">https://www.youtube.com/watch?v=XP8SV42YcDo</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c504">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/504/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/504/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="208-python-the-eyes-of-real-world-computer-applications#">[-]</a><a class="uncollapse hidden" href="208-python-the-eyes-of-real-world-computer-applications#">[+]</a>
+        <span class="commenter">Senthil Kumaran</span>
+          223 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Ankush, in the description you said you are three people, are you three planning to present, or you are the one presenting?</p>
+        <div data-id="504" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="208-python-the-eyes-of-real-world-computer-applications#c504">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="208-python-the-eyes-of-real-world-computer-applications#c504">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c505">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/505/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/505/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="208-python-the-eyes-of-real-world-computer-applications#">[-]</a><a class="uncollapse hidden" href="208-python-the-eyes-of-real-world-computer-applications#">[+]</a>
+        <span class="commenter selected">Ankush Sharma</span>
+          223 days ago
+      </div>
+      <div class="com-body">
+        <p>I, alone will be presenting</p>
+        <div data-id="505" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="208-python-the-eyes-of-real-world-computer-applications#c505">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="208-python-the-eyes-of-real-world-computer-applications#c505">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c537">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/537/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/208-python-the-eyes-of-real-world-computer-applications/comments/537/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="208-python-the-eyes-of-real-world-computer-applications#">[-]</a><a class="uncollapse hidden" href="208-python-the-eyes-of-real-world-computer-applications#">[+]</a>
+        <span class="commenter">Abhishek Mishra</span>
+          132 days ago
+            (edited 132 days ago)
+      </div>
+      <div class="com-body">
+        <p>Greetings,  </p>
+<p>Like your work. Would request you to connect to me. We are a Bangalore based start-up working in domain of AI and specifically computer vision. Here is the website www.aindra.in . You can find the contact details over my website. </p>
+        <div data-id="537" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="208-python-the-eyes-of-real-world-computer-applications#c537">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="208-python-the-eyes-of-real-world-computer-applications#c537">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/208-python-the-eyes-of-real-world-computer-applications"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

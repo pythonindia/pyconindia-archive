@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Write your own mongoDB ORM (for fun and profit) &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Write your own mongoDB ORM (for fun and profit) &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="121-write-your-own-mongodb-orm-for-fun-and-profit#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+23</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Write your own mongoDB ORM (for fun and profit)</h1>
+    <p>
+      by <strong>Piyush Verma</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Workshops</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>A take-home ORM written by you, ready-to-be-used in your current applications without having to bother about the lack of data sanitizations and data consistencies in MongoDB.</p>
+    <h2>Description</h2>
+    <p>NoSQL databases like MongoDB are really a hot tool these days. The ease of usage and the speed of development make them the right choice of tool for most of application use cases. If you really do not have the luxury of developers who are comfortable with SQL, you might as well use it as your primary data source.  </p>
+<p>We at siminars.com have been using MongoDB for almost all of our needs like 1. Payments 2. User Data 3. Logs 4. Job Queue and have been using it well for over 4 years now.  </p>
+<p>The fact that you can dump any JSON (read BSON) data to databases is the real advantage over tight physical schemas. But the lack of data integrity and validations could mean that all the validations and datatype checks have to re-implemented at the application layer.  </p>
+<p>This session orients around implementing a really light weight ORM for Mongo in Python, all from scratch, which would ensure basic data valdiations like:  </p>
+<ol>
+<li>Required fields  </li>
+<li>Default values  </li>
+<li>Datatype checks  </li>
+<li>OnUpdate/ OnInsert / OnDelete triggers  </li>
+</ol>
+<p>and yeah a lot more.</p>
+    <h2>Requirements</h2>
+      <ul>
+<li>Working Laptop (running any flavor of Linux)</li>
+<li>Working MongoDB binary</li>
+<li>Prior experience with Python</li>
+</ul>
+    <h2>Speaker bio</h2>
+      <p>Piyush Verma has been using Python for bread &amp; butter for for over 7 years. He started out as a Summer Of Code student with KDE. Through out his career he has worked with small &amp; successful startups &amp; is currently the Director of Engineering at siminars.com (solves different problems with Python). He likes Coding, Coffee, Cycling and following logics &amp; patterns.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Project Page [ <a href="http://simversity.github.io/mongorm/" rel="nofollow" target="_blank">http://simversity.github.io/mongorm/</a> ]</li>
+        <li>Profile Link [ <a href="http://siminars.com/133071947969939498163702" rel="nofollow" target="_blank">http://siminars.com/133071947969939498163702</a> ]</li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c196">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/196/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/196/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[-]</a><a class="uncollapse hidden" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[+]</a>
+        <span class="commenter">Agam Dua</span>
+          326 days ago
+      </div>
+      <div class="com-body">
+        <p>This guy knows his stuff!</p>
+        <div data-id="196" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c196">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c196">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c299">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/299/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/299/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[-]</a><a class="uncollapse hidden" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          272 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi,  </p>
+<p>Please provide links to your profile and slides and videos from your previous sessions; anything that'll help folks decide if they want to attend your session</p>
+        <div data-id="299" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c299">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c299">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c374">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/374/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit/comments/374/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[-]</a><a class="uncollapse hidden" href="121-write-your-own-mongodb-orm-for-fun-and-profit#">[+]</a>
+        <span class="commenter selected">Piyush Verma</span>
+          267 days ago
+      </div>
+      <div class="com-body">
+        <p>I have included the Github page and My profile page.<br>
+Will try to do slides and add them ASAP.  </p>
+<p>I do not have any video of a prior workshop/session. This would be the first.</p>
+        <div data-id="374" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c374">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c374">[link]</a>
+          <a title="Parent" class="comment-parent" href="121-write-your-own-mongodb-orm-for-fun-and-profit#c299">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/121-write-your-own-mongodb-orm-for-fun-and-profit"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

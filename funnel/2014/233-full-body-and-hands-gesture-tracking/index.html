@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Full body and hands gesture tracking &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Full body and hands gesture tracking &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="233-full-body-and-hands-gesture-tracking#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/233-full-body-and-hands-gesture-tracking/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/233-full-body-and-hands-gesture-tracking/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+12</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Full body and hands gesture tracking</h1>
+    <p>
+      by <strong>Abhishek Kumar Singh</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/233-full-body-and-hands-gesture-tracking&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Software Development Tools</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <ul>
+<li>
+<p>It helps people to develop motion and gestures tracking multiplayer applications. </p>
+</li>
+<li>
+<p>This talk presents a brief introduction on OpenNI, Tango server and blender game engine</p>
+</li>
+</ul>
+    <h2>Description</h2>
+    <p>This is my GSoC project that deals with integration of whole body motion and hand gesture tracking of astronauts to ERAS(European MaRs Analogue Station for Advanced Technologies Integration) virtual station. Skeleton tracking based feature extraction methods will be used for tracking whole body movements and hand gestures, which will have a visible representation in terms of the astronaut avatar moving in the virtual ERAS Station environment.  </p>
+<p>It will help astronauts in getting familiar with the their habitat/station, the procedures to enter/leave it, the communication with other astronauts and rovers, etc. Thus preparing themselves by getting a before hand training in the Virtual environment will boost their confidence and will reduce chances of failures to great extent, ultimately resulting in increase in the success rate of the mission.  </p>
+<p>This talk will focuses on developing motion tracking applications. Also demo of work done will be shown.  </p>
+<h2>Benifits :</h2>
+<ul>
+<li>Audience will learn how to use OpenNI+NITE python bindings to track a Skeleton.</li>
+<li>How to publish Skeleton data on Tango server(a cross platform distributed system) so that other client applicatoin can use that data</li>
+<li>How to write a blender client which uses these data to map them to a model(here astronaut's avatar)</li>
+<li>Eventually avatar in virtual environment will be controlled by the user body gestures in real world.</li>
+</ul>
+    <h2>Requirements</h2>
+      <p>Nothing apart from presence of active listeners.</p>
+    <h2>Speaker bio</h2>
+      <p>Speaker is passionate about open source technologies and an active open source contributor. A Graduate in Computer Science and Engineering major from Amrita university and also a 2014 GSoCer.  </p>
+<p>He has been working on this project with IMS (Italian Mars Society) as a part of my GSoC(Google Summer of Code) project. He has experience with computer vision and Kinect technology as his final year project was also a part of it. </p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://wiki.mozilla.org/Abhishek/IMS_Gsoc2014Proposal" rel="nofollow" target="_blank">https://wiki.mozilla.org/Abhishek/IMS_Gsoc2014Proposal</a></li>
+        <li>Link to PyTango (Python bindings for Tango server)</li>
+        <li><a href="http://www.tango-controls.org/static/PyTango/latest/doc/html/index.html" rel="nofollow" target="_blank">http://www.tango-controls.org/static/PyTango/latest/doc/html/index.html</a></li>
+        <li>Link to blender python bindings : </li>
+        <li><a href="http://wiki.blender.org/index.php/Doc:2.4/Manual/Extensions/Python" rel="nofollow" target="_blank">http://wiki.blender.org/index.php/Doc:2.4/Manual/Extensions/Python</a></li>
+        <li><a href="http://www.blender.org/documentation/blender_python_api_2_70_release/contents.html" rel="nofollow" target="_blank">http://www.blender.org/documentation/blender_python_api_2_70_release/contents.html</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c449">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/449/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/449/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="233-full-body-and-hands-gesture-tracking#">[-]</a><a class="uncollapse hidden" href="233-full-body-and-hands-gesture-tracking#">[+]</a>
+        <span class="commenter">konark modi</span>
+          239 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Abhishek,  </p>
+<p>Request you to share more details, and link to python libraries that you will be discussing.</p>
+        <div data-id="449" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="233-full-body-and-hands-gesture-tracking#c449">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="233-full-body-and-hands-gesture-tracking#c449">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c453">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/453/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/453/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="233-full-body-and-hands-gesture-tracking#">[-]</a><a class="uncollapse hidden" href="233-full-body-and-hands-gesture-tracking#">[+]</a>
+        <span class="commenter selected">Abhishek Kumar Singh</span>
+          239 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Konark,  </p>
+<p>I have added links to some python library I will be using and also added benifit section describing what audience will gain from this talk. </p>
+        <div data-id="453" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="233-full-body-and-hands-gesture-tracking#c453">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="233-full-body-and-hands-gesture-tracking#c453">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c455">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/455/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/233-full-body-and-hands-gesture-tracking/comments/455/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="233-full-body-and-hands-gesture-tracking#">[-]</a><a class="uncollapse hidden" href="233-full-body-and-hands-gesture-tracking#">[+]</a>
+        <span class="commenter">Sarup Banskota</span>
+          237 days ago
+            (edited 237 days ago)
+      </div>
+      <div class="com-body">
+        <p>I'd really like to see this through - it's an unconventional talk, definitely makes for an interesting half an hour. Good luck!</p>
+        <div data-id="455" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="233-full-body-and-hands-gesture-tracking#c455">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="233-full-body-and-hands-gesture-tracking#c455">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/233-full-body-and-hands-gesture-tracking"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

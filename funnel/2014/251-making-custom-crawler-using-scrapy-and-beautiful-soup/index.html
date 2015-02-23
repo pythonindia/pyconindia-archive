@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Making custom crawler using Scrapy and Beautiful Soup &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Making custom crawler using Scrapy and Beautiful Soup &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="251-making-custom-crawler-using-scrapy-and-beautiful-soup#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+20</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Making custom crawler using Scrapy and Beautiful Soup</h1>
+    <p>
+      by <strong>Charul </strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Software Development Tools</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>In this session i will discuss about how to develop a custom crawler on the top of Python Scrapy. I will cover the basic steps for getting started with the python scrapy framework and how to write optimized code so that it crawls only things what you need not whole web. Also I will talk about motivation behind using custom crawler and will quote my example i.e. how i built cralwer for financial news articles.  </p>
+<p>Also I will tell you more about Python beautifulSoup which can ease your work in handling HTML and XML data.</p>
+    <h2>Description</h2>
+    <p>This session will be divided in the following topics:<br>
+1. Why we need to have custom cralwers and some succesful stories about using it.<br>
+2. How to create custom web crawler on the top of Scrapy Framework?<br>
+3. How to write optimized scrapy script?<br>
+4. How to pre-process HTML and XML data using BeatifulSoup.</p>
+    <h2>Requirements</h2>
+      <p>Attendees should have Scrapy, Requests and Beautiful Soup installed in their laptops.</p>
+    <h2>Speaker bio</h2>
+      <p>I am currently a third year undergraduate student at IIIT Allahabad. I have been selected as an intern for Google Summer of Code 2014 under fedora organisation. Prior to this, I have worked as intern on a Datagrepper Project under Gnome Outreach Program for Women. I have worked with a few startup companies as freelancer and contributed to various open source projects.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>1. Fedora Profile [<a href="https://fedoraproject.org/wiki/User:Charul" rel="nofollow" target="_blank">https://fedoraproject.org/wiki/User:Charul</a>]</li>
+        <li>2. Github (charulagrl (<a href="https://github.com/charulagrl" rel="nofollow" target="_blank">https://github.com/charulagrl</a>)</li>
+        <li>3. Blog (<a href="http://honeycoding.wordpress.com/" rel="nofollow" target="_blank">http://honeycoding.wordpress.com/</a>)</li>
+        <li>4. View Gsoc Proposal (<a href="https://fedoraproject.org/w/index.php?title=GSOC_2014/Student_Application_charul" rel="nofollow" target="_blank">https://fedoraproject.org/w/index.php?title=GSOC_2014/Student_Application_charul</a>)</li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c370">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/comments/370/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup/comments/370/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="251-making-custom-crawler-using-scrapy-and-beautiful-soup#">[-]</a><a class="uncollapse hidden" href="251-making-custom-crawler-using-scrapy-and-beautiful-soup#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          268 days ago
+      </div>
+      <div class="com-body">
+        <p>You should add more details in the talk description.</p>
+        <div data-id="370" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="251-making-custom-crawler-using-scrapy-and-beautiful-soup#c370">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="251-making-custom-crawler-using-scrapy-and-beautiful-soup#c370">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/251-making-custom-crawler-using-scrapy-and-beautiful-soup"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

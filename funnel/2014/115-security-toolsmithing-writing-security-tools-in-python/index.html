@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Security Toolsmithing: Writing security tools in Python &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Security Toolsmithing: Writing security tools in Python &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="115-security-toolsmithing-writing-security-tools-in-python#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+16</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Security Toolsmithing: Writing security tools in Python</h1>
+    <p>
+      by <strong>Yashin Mehaboobe</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Workshops</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This talk will be a hands on session that will cover how to create new security tools using Python. We'll go over the basics of python, how to utilize various modules and mainly on how Python can be utilized in various different security domains.</p>
+    <h2>Description</h2>
+    <p>Automated tools make up a large part of a penetration test or a forensic investigation. There are a large amount of tools available for almost every security related job, but sometimes the available tools just won't do for a particular scenario. This is when you need to start coding your new tool or improve upon an existing tool. Python is one of the tools widely used for this purpose. Its ease of use along with the availability of a large amount of modules have made it the language of choice for many penetration testers.  </p>
+<p>This talk will be divided into 4 domains:<br>
+1. Network penetration testing:<br>
+Introduction to modules such as socket, scapy !@# for network based attacks and defences. After that attendees will learn how to create a sniffer, a packet crafter and more in Python utilizing the information learned.<br>
+2. Malware Analysis:<br>
+pefile,yara,volatility and other malware analysis modules are introduced. Then a sample demonstration of how to create a yara based malware detection platform.<br>
+3. Web app testing:<br>
+Introduction to modules such as requests,mechanize and BeautifulSoup and how it can help in a webapp pentest.<br>
+4. Exploit and payload generation:<br>
+This section will mainly focus on memory based attacks and how to call various system API from within Python. Attendees will also learn how to inject payload into memory and create custom payloads using Python.</p>
+    <h2>Requirements</h2>
+      <p>Ubuntu/Windows with Python2.7<br>
+Following libraries:<br>
+scapy:http://www.secdev.org/projects/scapy/<br>
+impacket:http://corelabs.coresecurity.com/index.php?module=Wiki&amp;action=view&amp;type=tool&amp;name=Impacket<br>
+requests:http://docs.python-requests.org/en/latest/user/install/#install<br>
+BeautifulSoup:http://www.crummy.com/software/BeautifulSoup/bs4/doc/<br>
+Keyczar:http://www.keyczar.org/<br>
+pefile:https://code.google.com/p/pefile/<br>
+yara:https://plusvic.github.io/yara/</p>
+    <h2>Speaker bio</h2>
+      <p>Yashin Mehaboobe is a security researcher with the OpenSecurity and a Student Partner with Microsoft. His areas of interest in this field span hardware security,network security, malware analysis and reverse engineering. He had discovered a denial of service vulnerability in Android that he reported to Google and presented at Defcon Kerala. His work includes creating a static file based web application fingerprinting script for nmap, automated malware detection system for the Raspberry Pi, a network proxy in Python and a malware analysis framework in Python. He's been also invited to speak at HITB Asmterdam, Defcon Bangalore,Nullcon, c0c0n and Toorcon San Diego.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Resume:</li>
+        <li><a href="https://docs.google.com/document/d/1QZf9l6Wg96SLMVeiK8kQ3hBlyWjB6Ssy1t96GBy80Xo" rel="nofollow" target="_blank">https://docs.google.com/document/d/1QZf9l6Wg96SLMVeiK8kQ3hBlyWjB6Ssy1t96GBy80Xo</a></li>
+        <li>Slides:</li>
+        <li><a href="http://slideshare.net/yashinm" rel="nofollow" target="_blank">http://slideshare.net/yashinm</a></li>
+        <li>Github:</li>
+        <li><a href="http://github.com/sp3ctr3" rel="nofollow" target="_blank">http://github.com/sp3ctr3</a></li>
+        <li>LinkedIn:</li>
+        <li><a href="http://in.linkedin.com/pub/yashin-mehaboobe/38/a2/367" rel="nofollow" target="_blank">http://in.linkedin.com/pub/yashin-mehaboobe/38/a2/367</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c181">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/181/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/181/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="115-security-toolsmithing-writing-security-tools-in-python#">[-]</a><a class="uncollapse hidden" href="115-security-toolsmithing-writing-security-tools-in-python#">[+]</a>
+        <span class="commenter">Kiran Gangadharan</span>
+          371 days ago
+      </div>
+      <div class="com-body">
+        <p>Please do organise the required libraries in points and give the download link for each of them.</p>
+        <div data-id="181" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="115-security-toolsmithing-writing-security-tools-in-python#c181">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="115-security-toolsmithing-writing-security-tools-in-python#c181">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c250">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/250/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/250/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="115-security-toolsmithing-writing-security-tools-in-python#">[-]</a><a class="uncollapse hidden" href="115-security-toolsmithing-writing-security-tools-in-python#">[+]</a>
+        <span class="commenter selected">Yashin Mehaboobe</span>
+          285 days ago
+      </div>
+      <div class="com-body">
+        <p>I've made the changes.</p>
+        <div data-id="250" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="115-security-toolsmithing-writing-security-tools-in-python#c250">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="115-security-toolsmithing-writing-security-tools-in-python#c250">[link]</a>
+          <a title="Parent" class="comment-parent" href="115-security-toolsmithing-writing-security-tools-in-python#c181">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c240">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/240/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/240/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="115-security-toolsmithing-writing-security-tools-in-python#">[-]</a><a class="uncollapse hidden" href="115-security-toolsmithing-writing-security-tools-in-python#">[+]</a>
+        <span class="commenter">AJIT KUMAR</span>
+          289 days ago
+      </div>
+      <div class="com-body">
+        <p>I will love to attend this talk.</p>
+        <div data-id="240" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="115-security-toolsmithing-writing-security-tools-in-python#c240">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="115-security-toolsmithing-writing-security-tools-in-python#c240">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c249">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/249/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python/comments/249/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="115-security-toolsmithing-writing-security-tools-in-python#">[-]</a><a class="uncollapse hidden" href="115-security-toolsmithing-writing-security-tools-in-python#">[+]</a>
+        <span class="commenter">Nishaanth Gunasekeran</span>
+          286 days ago
+      </div>
+      <div class="com-body">
+        <p>I would love to attend.</p>
+        <div data-id="249" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="115-security-toolsmithing-writing-security-tools-in-python#c249">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="115-security-toolsmithing-writing-security-tools-in-python#c249">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

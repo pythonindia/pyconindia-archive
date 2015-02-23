@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Machine learning for mortals: probabilistic programming with PyMC &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Machine learning for mortals: probabilistic programming with PyMC &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+50</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Machine learning for mortals: probabilistic programming with PyMC</h1>
+    <p>
+      by <strong>Shashi Gowda</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Scientific Computing</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <ul>
+<li>
+<p>Introduction to Probabilistic Programming - a powerful new way of expressing machine learning problems that does not require a rigorous understanding of probability theory or machine learning itself.</p>
+</li>
+<li>
+<p>Learn about Markov chain Monte Carlo - the machinery behind PyMC.</p>
+</li>
+<li>
+<p>Explore some examples which exhibit PP's value in reducing complexity of an implementation, and while at it implement a few common ML algorithms as simple probabilistic programs using PyMC.</p>
+</li>
+<li>
+<p>My hope is that attendees go back knowing about a new tool they can use to easily explore probabilistic models for their data and make hypotheses more fearlessly.</p>
+</li>
+</ul>
+    <h2>Description</h2>
+    <p>This talk assumes no background in Machine Learning or inference and aims to start from first principles. Distributions and (minimal) jargon thrown in will be explained and a general framework for thinking about inference problems will be shown.  </p>
+<p><strong>Introduction</strong></p>
+<p>The most interesting real-world processes involve uncertainty. Tons of data is amassed everyday from such processes in varied fields: science, engineering, medicine, business, the Internet etc. Expertise in probability theory and machine learning has been essential for programmers to employ computers to model and ask the questions about the process. <strong>Probabilistic programming</strong> aims to make such modeling accessible to the working programmer with enough domain knowledge, but not necessarily with a thorough knowledge of probability theory or machine learning. Here’s how:  </p>
+<p>Simulating a random process is easy: you instruct the computer to proceed in the same way as the process--from causes to effects. Inference is the harder, reverse problem: given some evidence about the outcomes observed, the computer needs to infer what configuration of the world could have resulted in the outcomes, and with what certainty. The natural approach to inference is the <a href="http://en.wikipedia.org/wiki/Bayesian_inference">Bayesian method</a> (grown from the <a href="http://en.wikipedia.org/wiki/Bayes%27_rule">Bayes’ rule</a>). To encode Bayesian inference as a program you will need to do derivations that require strong mathematical background and quickly become mind boggling. What if one could do inference just by creating a plausible simulation of the process?  </p>
+<p><strong><a href="http://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a></strong> techniques let us do exactly that. Answers got with Monte Carlo are approximately equivalent to those from Bayesian inference without the overhead of the abstract thinking.</p>
+<p>To estimate the expected value of a function <em>f(x)</em> [where x is a vector of random variables in a probabilistic process], one repeats the experiment N times and notes down the value of the function as observed in each trial. The average of these observations is then returned as the estimated expected value of <em>f</em>. This estimation gets better as N gets larger.  </p>
+<p>The function <em>f</em> can be all sorts of things. As a simple example, suppose you would like to estimate the probability that a biased coin comes up head. Your function <em>f</em> will be 1 if a trial results in a head, 0 otherwise. Suppose you toss the coin 10000 times and find that it came out heads 4000 times, you  can now be fairly certain that the probability of getting heads is around 0.4 (average value of <em>f</em>). One famous example used to illustrate Monte Carlo is a method to estimate the value of Pi. Let a circle of diameter d be inset inside a square of edge d, and N random points be chosen from the square. If K of these points also fall inside the circle, then the ratio of the area of the circle to the square is approximately K/N. But we know that this ratio is equal to Pi x (d^2/4) / d^2 (= Pi/4) and thus can approximate the value of Pi. In this case <em>f</em> could have been 4 if the point falls inside the circle, 0 otherwise.  </p>
+<p><img alt="Monte carlo simulation for approximating pi" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pi_30K.gif/220px-Pi_30K.gif"></p>
+<p><strong><a href="http://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov Chain Monte Carlo (MCMC)</a></strong> is an family of MC techniques that are used to estimate integrals, in our case the integrals will be posterior distributions (values of <em>f</em>). You can simply describe the process at hand in terms of well known probability distributions (Bernoulli, Gaussian, Poisson, Uniform etc. -- you need not know the full mathematical details of the distributions, just their high level nature will suffice). Parameters of these distributions can then be inferred by running MCMC on the model leading us to a configuration of the world that would most likely lead to the known evidence (MCMC runs repeated trials incorporating observed data, updating beliefs about these parameters). Here, the function we are estimating, <em>f</em>, can be, for example, the rate of occurrence of coal mine disasters (Poisson process) or say, the probability that a given message is spam, and so on.</p>
+<p><strong>Outline of the talk:</strong></p>
+<ul>
+<li>Conceptual overview of the Math<ul>
+<li>Random processes</li>
+<li>Probability and probability distributions</li>
+<li>Bayesian inference<ul>
+<li>Bayes' theorem</li>
+<li>Conjugate prior distributions</li>
+<li>Examples that show complexity of Bayesian inference</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The Monte Carlo method<ul>
+<li>Example: <a href="http://arxiv.org/pdf/1404.1499v2.pdf">calculating Pi</a></li>
+<li>Markov Chain Monte Carlo</li>
+</ul>
+</li>
+<li>Generative models and model fitting with MCMC<ul>
+<li>Includes an overview of PyMC</li>
+</ul>
+</li>
+<li>Examples (Discrete)<ul>
+<li>Biased coin toss example - inferring x in Bernoulli(x)</li>
+<li>Judea Pearl’s earthquake alarm (multiple Bernoulli processes)</li>
+<li>Lotka-Volterra predator prey model</li>
+</ul>
+</li>
+<li>Examples (Common ML algorithms)<ul>
+<li>Linear regression</li>
+<li>Naive Bayes</li>
+<li>K-means clustering</li>
+</ul>
+</li>
+<li>Conclusion</li>
+</ul>
+    <h2>Requirements</h2>
+      <p>A laptop with PyMC and its dependencies installed (optional). Preferably with IPython.</p>
+    <h2>Speaker bio</h2>
+      <p>I am Shashi (<a href="http://github.com/shashi">Github</a> | <a href="http://twitter.com/g0wda">Twitter</a>), an autodidact, polyglot python lover, NITK Surathkal batch of '14 alumnus (hopefully).  </p>
+<p>In the past, I have been a GSoC student for StatusNet (‘10, ‘11), Sahana Eden (‘12) and currently for Julia Language (<a href="http://www.google-melange.com/gsoc/project/details/google/gsoc2014/g0/5113880120393728">my project</a> is to create interactive IJulia plots and widgets). I love thinking about code, and sometimes even <a href="http://github.com/shashi">write some</a>. My latest python project is called <a href="http://github.com/shashi/phosphene">phosphene</a>. It’s a library for audio visualization using which I ran visualizations on a handmade disco ball, and other <a href="https://www.youtube.com/watch?v=cLFl2TwhwGo">psychedelic peripherals</a>. I work on a data (ECoG) analysis project under Dr. Kaushik Majumdar from ISI, Bangalore. In my free time I  evangelize purely functional programming, take Paradigms of Programming classes for juniors, read slow, heavy books and listen to intricate music.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://en.wikipedia.org/wiki/Bayesian_inference" rel="nofollow" target="_blank">http://en.wikipedia.org/wiki/Bayesian_inference</a></li>
+        <li>PyMC tutorial <a href="http://pymcmc.readthedocs.org/en/latest/tutorial.html" rel="nofollow" target="_blank">http://pymcmc.readthedocs.org/en/latest/tutorial.html</a></li>
+        <li>Probabilistic programming and Bayesian Methods for Hackers (using PyMC) <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" rel="nofollow" target="_blank">http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb</a></li>
+        <li>Why Probabilistic Programming Matters - <a href="http://zinkov.com/posts/2012-06-27-why-prob-programming-matters/" rel="nofollow" target="_blank">http://zinkov.com/posts/2012-06-27-why-prob-programming-matters/</a></li>
+        <li>Paper with introduction and state-of-the art inference techniques for infering with probabilistic programs -  <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=208585" rel="nofollow" target="_blank">http://research.microsoft.com/apps/pubs/default.aspx?id=208585</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c271">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/271/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/271/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[-]</a><a class="uncollapse hidden" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          283 days ago
+      </div>
+      <div class="com-body">
+        <p>Please provide links to your profile and slides and videos from your previous sessions; anything that'll help folks decide if they want to attend your session</p>
+        <div data-id="271" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c271">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c271">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c272">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/272/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/272/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[-]</a><a class="uncollapse hidden" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[+]</a>
+        <span class="commenter selected">Shashi Gowda</span>
+          283 days ago
+      </div>
+      <div class="com-body">
+        <p>Hello! This will be the first time I will be giving this talk, and so have no videos. I have written the outline of the talk instead of slides and hoped that will suffice. Will make the actual slideshow if required. My name links to my github and twitter accounts, I should probably make them separate links. Thanks!</p>
+        <div data-id="272" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c272">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c272">[link]</a>
+          <a title="Parent" class="comment-parent" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c271">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c492">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/492/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/492/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[-]</a><a class="uncollapse hidden" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[+]</a>
+        <span class="commenter">Kathirmani Sukumar</span>
+          227 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi.. Will you able to cover all these broad topics within 40 mins???</p>
+        <div data-id="492" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c492">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c492">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c494">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/494/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc/comments/494/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[-]</a><a class="uncollapse hidden" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#">[+]</a>
+        <span class="commenter selected">Shashi Gowda</span>
+          227 days ago
+            (edited 227 days ago)
+      </div>
+      <div class="com-body">
+        <p>I am skeptical. I will rehearse and see what is possible while keeping things effective, these will be the topics I will draw from. I plan to cover Conceptual overview of the Math, and Monte Carlo method in about 10 minutes. Just a quick overview of definitions and illustrative figures while motivating MCMC. (Rigorous understanding is not required for the subsequent portion.)  </p>
+<p>Introduce Generative models and model fitting with MCMC in 10 minutes and spend 20 minutes on examples. The last 3 examples I do not want to delve into detail, but simply show proof of concept implementations with pointers to code on Github. Does that sound okay? Or do you have suggestions on improving the structure?  </p>
+<p>Thank you</p>
+        <div data-id="494" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c494">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c494">[link]</a>
+          <a title="Parent" class="comment-parent" href="177-machine-learning-for-mortals-probabilistic-programming-with-pymc#c492">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/177-machine-learning-for-mortals-probabilistic-programming-with-pymc"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Infrastructure management with Ansible &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Infrastructure management with Ansible &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="111-infrastructure-management-with-ansible#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/111-infrastructure-management-with-ansible/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/111-infrastructure-management-with-ansible/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+3</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Infrastructure management with Ansible</h1>
+    <p>
+      by <strong>Patrick Nsukami</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/111-infrastructure-management-with-ansible&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Present to you, another tool that will help you for tasks like servers infrastructure management, systems  configuration, software deployment, ...</p>
+    <h2>Description</h2>
+    <p>In this talk, I will introduce you to Ansible an IT automation tool, a radically simple model-driven configuration management, deployment, and command execution framework.</p>
+    <h2>Requirements</h2>
+      <p>A Linux flavored operating system, being able to launch a terminal, being able to install python packages, being able to edit yaml files.</p>
+    <h2>Speaker bio</h2>
+      <p>Web developer at Soon.SA since few months. But still able to meetups, barcamps, workshops, talks. Good experience in web development. Has spent some time and it is still the case, spreading the FLOSS philosophy.  </p>
+<p>As an independent, he always try to use open source tools for his personal work, and educate organizations and individuals on development and implementation of open source tools.  </p>
+<p>Python and open source advocate. When not training people, work to strengthen local open source communities in Dakar by organizing events, giving workshops/talks, raising business/government awareness and educating local trainers-to-be.  </p>
+<p>Open minded, like learning new stuff, interested by whatever can make a human, sport, music, reading, video games, Linux, Dr House, ...  </p>
+<p>You can find more about me here: <a href="http://about.me/lemeteore">http://about.me/lemeteore</a></p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://speakerdeck.com/lemeteore/infrastructure-management-with-ansible">https://speakerdeck.com/lemeteore/infrastructure-management-with-ansible</a>
+      </p>
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c170">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/170/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/170/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          375 days ago
+      </div>
+      <div class="com-body">
+        <p>Patrick, you have lots of time to prepare for this talk.  You need to improve these fields Objective, Description and Speaker Bio.  If you have presented any other talk publicly, share the slide or video links here.</p>
+        <div data-id="170" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c170">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c170">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c172">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/172/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/172/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter selected">Patrick Nsukami</span>
+          375 days ago
+      </div>
+      <div class="com-body">
+        <p>Thanks a lot for the suggestions, I will take the time to improve the mentionned fields.  </p>
+<p>I'm sorry, I've never presented any other talks publicly. Just gave tiny talks and workshops, with the Dakar Linux User Group <a href="http://blog.dakarlug.org/">http://blog.dakarlug.org/</a> (no slides available online)</p>
+        <div data-id="172" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c172">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c172">[link]</a>
+          <a title="Parent" class="comment-parent" href="111-infrastructure-management-with-ansible#c170">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c173">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/173/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/173/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          375 days ago
+      </div>
+      <div class="com-body">
+        <p>May be this is a good time to record a video/screencast with audio and upload it somewhere :)  </p>
+<p>Meanwhile you can also start working on the slides for this presentation.  </p>
+<p>There are many websites which gives tips.  I just started collecting some links here<br>
+<a href="https://github.com/pythonindia/pyconindia/wiki/SpeakerTips">https://github.com/pythonindia/pyconindia/wiki/SpeakerTips</a></p>
+<p>Feel free to update that wiki page with more useful links.  </p>
+        <div data-id="173" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c173">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c173">[link]</a>
+          <a title="Parent" class="comment-parent" href="111-infrastructure-management-with-ansible#c172">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c174">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/174/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/174/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter selected">Patrick Nsukami</span>
+          375 days ago
+      </div>
+      <div class="com-body">
+        <p>You are too kind.<br>
+Thanks a lot.</p>
+        <div data-id="174" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c174">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c174">[link]</a>
+          <a title="Parent" class="comment-parent" href="111-infrastructure-management-with-ansible#c173">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c323">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/323/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/323/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>Update to this talk is still missing.</p>
+        <div data-id="323" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c323">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c323">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c335">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/335/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/335/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter selected">Patrick Nsukami</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>Thanks a lot for the reminder, I'm late, I should feel, and I am sorry.<br>
+Slides upload in the next few hours.</p>
+        <div data-id="335" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c335">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c335">[link]</a>
+          <a title="Parent" class="comment-parent" href="111-infrastructure-management-with-ansible#c323">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c409">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/409/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/409/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter">Nitin Kumar</span>
+          253 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Patrick, I work for a networking company 'Juniper' and uses Ansible extensively. If you are fine we can work together for this paper. I would love to be part of this. </p>
+        <div data-id="409" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c409">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c409">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c410">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/410/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/111-infrastructure-management-with-ansible/comments/410/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="111-infrastructure-management-with-ansible#">[-]</a><a class="uncollapse hidden" href="111-infrastructure-management-with-ansible#">[+]</a>
+        <span class="commenter selected">Patrick Nsukami</span>
+          253 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Nitin, really hope you're doing fine.<br>
+Work together? Why not?  </p>
+<p>Tell me what are you thinking about,<br>
+I'll be glad to do this with you.</p>
+        <div data-id="410" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="111-infrastructure-management-with-ansible#c410">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="111-infrastructure-management-with-ansible#c410">[link]</a>
+          <a title="Parent" class="comment-parent" href="111-infrastructure-management-with-ansible#c409">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/111-infrastructure-management-with-ansible"); // 
+      $("#slides-link").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

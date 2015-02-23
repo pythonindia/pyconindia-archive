@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Werkzeug,Jinja2 and their implementation in flask &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Werkzeug,Jinja2 and their implementation in flask &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="203-werkzeug-jinja2-and-their-implementation-in-flask#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+30</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Werkzeug,Jinja2 and their implementation in flask</h1>
+    <p>
+      by <strong>Narasimha SV</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Understanding of  WSGI utility libraries Werkzeug and Jinja2 and how they are useful.<br>
+How these libraries are used to built a web framework.  </p>
+    <h2>Description</h2>
+    <p>Below are the contents which i want to present.<br>
+1. Introduction to Wrekzeug.<br>
+2. Sample code.<br>
+3. URL Routing in Wrekzeug.<br>
+    i.Rule Format 
+    ii. Builtin Converters
+    iii.Maps, Rules and Adapters
+    iv. Rule Factories
+    v. Rule Templates.
+4. HTTP Utilities in Wrekzeug<br>
+   i. Date Functions
+   ii. Header Parsing
+   iii. Header Utilities
+   iv. Cookies
+   v. Conditional Response Helpers
+5. Templating in Wrekzeug using Jinja2<br>
+    i. Introduction to jinja2 
+    ii. Sample jinja2 template code .
+6. Implementation of Wrekzeug and Jinja2 in Flask.</p>
+    <h2>Requirements</h2>
+      <p>laptop with Ubuntu and python 2.7</p>
+    <h2>Speaker bio</h2>
+      <p>A techie working on cloud computing.Enthusiastic in learning new things. I have worked on many platforms from cloud to mobile using different technologies. Almost from past 3 years working on python related work and updating myself with newer technologies to learn things in faster manner.  </p>
+<p>This will be my first public session.</p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c308">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/308/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/308/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Harish Kumar</span>
+          271 days ago
+      </div>
+      <div class="com-body">
+        <p>Congrats for your Presentation</p>
+        <div data-id="308" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c308">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c308">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c314">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/314/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/314/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Kracekumar Ramaraju</span>
+          271 days ago
+      </div>
+      <div class="com-body">
+        <p>Can you fix spelling mistakes like <code>Wrekzeug</code> ?</p>
+        <div data-id="314" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c314">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c314">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c337">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/337/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/337/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter selected">Narasimha SV</span>
+          270 days ago
+      </div>
+      <div class="com-body">
+        <p>thanks </p>
+        <div data-id="337" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c337">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c337">[link]</a>
+          <a title="Parent" class="comment-parent" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c314">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c318">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/318/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/318/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          270 days ago
+            (edited 270 days ago)
+      </div>
+      <div class="com-body">
+        <p>This proposal needs update, it lacks details. The speaker bio should also be updated, explaining why he is right person to talk about it.</p>
+        <div data-id="318" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c318">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c318">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c380">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/380/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/380/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Jaseem abid</span>
+          265 days ago
+      </div>
+      <div class="com-body">
+        <p>Is this really a beginner talk? I suspect it will be quite hard to cover all of this, in a beginner friendly manner in an hour or so. </p>
+        <div data-id="380" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c380">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c380">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c405">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/405/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/405/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Manish Gill</span>
+          257 days ago
+      </div>
+      <div class="com-body">
+        <p>Agreed with both Kushal Das and Jaseem abid. Needs more details and might want to update it from beginner to intermediate or advance.</p>
+        <div data-id="405" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c405">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c405">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c422">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/422/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/422/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Vaidik Kapoor</span>
+          251 days ago
+      </div>
+      <div class="com-body">
+        <p>According to the description, it seems this is better suited for a tutorial/workshop than a talk. This topic definitely requires more time than that allocated for a talk.</p>
+        <div data-id="422" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c422">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c422">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c423">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/423/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/423/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Vaidik Kapoor</span>
+          251 days ago
+      </div>
+      <div class="com-body">
+        <p>According to the description, it seems this is better suited for a tutorial/workshop than a talk. This topic definitely requires more time than that allocated for a talk.</p>
+        <div data-id="423" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c423">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c423">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c474">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/474/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask/comments/474/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[-]</a><a class="uncollapse hidden" href="203-werkzeug-jinja2-and-their-implementation-in-flask#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          229 days ago
+      </div>
+      <div class="com-body">
+        <p>Narasimha, since this is your first public session proposal - could you please respond to the other comments? Also, providing a slide draft may be useful for others to consider.</p>
+        <div data-id="474" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c474">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="203-werkzeug-jinja2-and-their-implementation-in-flask#c474">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/203-werkzeug-jinja2-and-their-implementation-in-flask"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

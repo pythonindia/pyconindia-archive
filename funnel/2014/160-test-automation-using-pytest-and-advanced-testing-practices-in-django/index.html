@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Test Automation using pytest and Advanced Testing practices in Django &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Test Automation using pytest and Advanced Testing practices in Django &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="160-test-automation-using-pytest-and-advanced-testing-practices-in-django#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+4</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Test Automation using pytest and Advanced Testing practices in Django</h1>
+    <p>
+      by <strong>Pankaj Malhotra</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Software Development Tools</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Objective is to talk about:  </p>
+<p>1 Testing Practices, elaborating on Unit and Functional Testing.<br>
+2 Features offered by pytest that make it a better testing tool.<br>
+3 Using pytest to test and demonstrate some test examples.<br>
+4 Testing in Django using pytest compared to Django TestCase.<br>
+5 Useful pytest plugins and Continuous Integration.  </p>
+    <h2>Description</h2>
+    <p>The objective of this talk as mentioned is to elaborate more on using pytest as tool for Test Automation in Python and using pytest for Django Application Testing. This talk also aims to cover best practices in testing and discussion on Unit and Functional Testing, and an insight into Continuous Integration using Travis as a CI server.  </p>
+<p>The duration of talk is estimated to be around 1 hour and this is how this one hour would be divided.  </p>
+<p>1 (5 min) Introduction to pip and virtualenv, Installing pytest and setting up a test environment.<br>
+2 (10 min) Discussion on Unit testing and Functional testing, elaborating difference between the two and where to use each one of them.<br>
+3 (5 min) Introduction to pytest and the Features that it offers making it better than the other testing tools.<br>
+4 (10 min) Writing tests with pytest and code examples covering most of its features like Fixtures and Markers.<br>
+5 (10 min) Using pytest to test Django Applications and data population for tests using advanced API called FactoryBoy and it comparison with Django Fixtures and compatibility with django TestCase.<br>
+6 (10 min) Discussion on pytest plugins and Continuous Integration with Travis CI.<br>
+7 (10 min) Doubts and QA session.</p>
+    <h2>Requirements</h2>
+      <p>1 A Laptop with Linux based operating System(Preferably Fedora/Ubuntu)<br>
+2 Python 2.7  Installed Link: <a href="https://www.python.org/download/">https://www.python.org/download/</a><br>
+3 Pytest 2.5.2 Installed Link: <a href="https://pypi.python.org/pypi/pytest">https://pypi.python.org/pypi/pytest</a><br>
+4 Django 1.6 Installed <a href="https://www.djangoproject.com/download/">https://www.djangoproject.com/download/</a><br>
+5 GitHub and Travis account for Continuous Integration.</p>
+    <h2>Speaker bio</h2>
+      <p>I am a Computer Science student at IIIT-Hyderabad with more than two years of experience with Python and Automation.<br>
+I have been working as a FOSS contributor from the past two years working with organizations like Mozilla closely with the Quality Assurance(QA) team and also received honours and awards for my contributions to code.<br>
+I am also a Google Summer of Code Intern with Mozilla working with Web QA team on a project which involves developing Functional Test Suite for a Web Application.<br>
+I am an organizer and a regular speaker at Hackathons organized by Open Source Developers group in my College.<br>
+Also I am an attendee and speaker at various Mozilla events and a formal Mozilla Representative.<br>
+I have also worked with Privly in field of Continuous Integration and configured Travis CI Instance for one of their projects.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Homepage: <a href="http://web.iiit.ac.in/~pankaj.malhotra/" rel="nofollow" target="_blank">http://web.iiit.ac.in/~pankaj.malhotra/</a></li>
+        <li>GitHub: <a href="https://github.com/bitgeeky" rel="nofollow" target="_blank">https://github.com/bitgeeky</a></li>
+        <li>Quality Assurance/Testing/Automation Awards: <a href="https://badges.mozilla.org/en-US/profiles/profile/bitgeeky" rel="nofollow" target="_blank">https://badges.mozilla.org/en-US/profiles/profile/bitgeeky</a></li>
+        <li>Blog: <a href="http://codechepo.blogspot.in/" rel="nofollow" target="_blank">http://codechepo.blogspot.in/</a></li>
+        <li>Project: <a href="http://www.google-melange.com/gsoc/project/details/google/gsoc2014/bitgeeky/5741031244955648" rel="nofollow" target="_blank">http://www.google-melange.com/gsoc/project/details/google/gsoc2014/bitgeeky/5741031244955648</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c258">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/comments/258/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django/comments/258/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="160-test-automation-using-pytest-and-advanced-testing-practices-in-django#">[-]</a><a class="uncollapse hidden" href="160-test-automation-using-pytest-and-advanced-testing-practices-in-django#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi,  </p>
+<p>Can you please provide links to your previous talks (slides and/or videos) ? </p>
+        <div data-id="258" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="160-test-automation-using-pytest-and-advanced-testing-practices-in-django#c258">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="160-test-automation-using-pytest-and-advanced-testing-practices-in-django#c258">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/160-test-automation-using-pytest-and-advanced-testing-practices-in-django"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

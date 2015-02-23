@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Building highly scalable web-services with Gevent - experiences at Plivo &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Building highly scalable web-services with Gevent - experiences at Plivo &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+26</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Building highly scalable web-services with Gevent - experiences at Plivo</h1>
+    <p>
+      by <strong>Aditya Manthramurthy</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This talk will introduce Gevent, how it works and how it can make Python scale. Plivo's architecture consists of multiple web-services built on Flask and Django. The talk will outline scaling challenges faced at Plivo, and how we handled them using Gevent with Flask  and Django to achieve high throughput and high CPU utilisation.  </p>
+<p>From this talk, attendees can expect to have an understanding of Gevent that will help them build highly concurrent webservers, especially with Flask or Django, often with little changes to existing code and without having to learn a complicated callbacks-based abstraction as used in frameworks like Tornado.</p>
+    <h2>Description</h2>
+    <p>Gevent gives your Flask/Django application the ability to do asynchronous I/O with little or no modifications! This lets your Python web-server scale to over thousands of threads without running out of memory - C10K with Python, we're nearly there!  </p>
+<h2>Audience</h2>
+<p>Web developers using Django or Flask or a similar framework, who would like to understand how Gevent can help them get much higher concurrency, often with little or no changes to existing code.  </p>
+<h2>Talk Outline</h2>
+<ol>
+<li>
+<p><strong>An outline of scaling and concurrency challenges at Plivo, and how Gevent helped us solve these problems (~5 minutes)</strong>  </p>
+<p>Blocking I/O, multi-process scaling limitations, spiky workloads and low CPU utilisation were major bottlenecks, that we were able to mitigate and solve using Gevented web-servers.</p>
+</li>
+<li>
+<p><strong>Gevent concepts: Co-routines, event loops, greenlets and monkey-patching (~5 minutes)</strong>  </p>
+<p>Gevent is a co-routine based networking library that uses light-weight execution units, called greenlets, to provide a high-level synchronous API on top of a fast event loop provided by libev.</p>
+<p>Monkey-patching provides a way to convert existing Python Standard Libraries to be greenlet aware, so they yield execution when they start to do IO.</p>
+<p>Gevent switches threads of execution, either when the running greenlet yields explicitly, or when the greenlet performs I/O. This requires that libraries doing I/O in an application, are either pure Python or provide a way to be "greened" (for e.g. the PostgreSQL database driver psycopg2).</p>
+</li>
+<li>
+<p><strong>How can I tell if Gevent will help my application to scale (~3 minutes)</strong>  </p>
+<p>Things to factor in while making the decision: Is the application IO
+bound or CPU bound? Are "green" alternatives available for libraries doing IO?  </p>
+</li>
+<li>
+<p><strong>Demo to show Gevent performance and ease of use with Flask (~5 minutes)</strong>  </p>
+<p>After an outline of request processing in a typical web-application, we simulate a real-world web-server deployment using Flask and see how performance improves when using Gevent.</p>
+</li>
+<li>
+<p><strong>Porting applications to use Gevent: what to lookout for (~6 minutes)</strong>  </p>
+<p>Learnings from porting a large Django application to Gevent - on debugging blocking operations, database drivers, and libraries that cannot be "greened" easily.</p>
+</li>
+<li>
+<p><strong>Questions (~6 minutes)</strong>  </p>
+</li>
+</ol>
+    
+    <h2>Speaker bio</h2>
+      <p>I am a Software Developer at Plivo. I've been programming in Python for over 6 years. At Plivo, I work on scaling and infrastructure management. We use Gevent extensively in our production systems, and I have gained a lot of valuable experience using it, especially with porting a large Django code-base to use gevent.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://github.com/donatello" rel="nofollow" target="_blank">https://github.com/donatello</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c472">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/comments/472/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo/comments/472/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo#">[-]</a><a class="uncollapse hidden" href="248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          229 days ago
+      </div>
+      <div class="com-body">
+        <p>This sounds interesting. I've seen issues with mixing Flask with async stuff (gevent-socketio), and I'd be curious to see to what extent you've used gevent beyond basic greening. Could you please provide links to slides and videos of talks that youve given in the past? This would help people decide whether they want to attend.</p>
+        <div data-id="472" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo#c472">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo#c472">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Continuous deployment with Fabric  &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Continuous deployment with Fabric  &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="213-continuous-deployment-with-fabric#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/213-continuous-deployment-with-fabric/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/213-continuous-deployment-with-fabric/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/213-continuous-deployment-with-fabric/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/213-continuous-deployment-with-fabric/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+8</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Continuous deployment with Fabric </h1>
+    <p>
+      by <strong>akshar raaj</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/213-continuous-deployment-with-fabric&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>People attending this talk will leave with an understanding of continuous deployment and continuous deployment tools in general and Fabric in particular.  </p>
+<p>They will appreciate the usefulness of a continuous deployment tool like Fabric. Essentially they will realise the time they save by using a single step build process. By the time they leave, they would have learned how to write a Fabric script which can automate deployment.</p>
+    <h2>Description</h2>
+    <p>Your time is precious and is best spent writing code. It should not be wasted on a production server doing the repetitive task again and again. And by repetitive task I mean fetching the code changes to server, installing the libraries, restarting the web server, restarting the proxy server and so on.  </p>
+<p>Code changes continuously. And you need to deploy the code to production every day, possibly you want to deploy with every code push. And sshing to the server every time you want to deploy, and doing the repetitive tasks is a waste of time and energy.  </p>
+<p>So, deployment of code should be automated. <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel's test</a> has a requirement that build should be a one step process.  </p>
+<p><a href="http://www.fabfile.org">Fabric</a> is a command-line tool for streamlining the use of SSH for application deployment (taken from docs).</p>
+<p>We will write a basic web application using Python. This application will serve few urls. We will use gunicorn as the web server.  </p>
+<p>Every time we want to deploy we need to do the following  </p>
+<ul>
+<li>cd to required directory.</li>
+<li>Fetch the code from the repository and checkout to master. (We will use github)</li>
+<li>Activate the virtual environment.</li>
+<li>Install the requirements i.e the third party libraries on which the application depends.</li>
+<li>Kill existing gunicorn process.</li>
+<li>Start a new gunicorn process</li>
+</ul>
+<p>We will ssh to a server and will deploy the code there. We will perform the steps mentioned above. You will notice the time it takes and pain involved in performing those steps manually. And then we will write a Fabric script which can automate these steps for us, which will be much faster than the previous approach where we manually had to do every step involved in build.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>I am a web developer at <a href="http://agiliq.com">Agiliq</a>. I primarily work with Python, Django and the related technology stack. I help people by writing <a href="http://github.com/akshar-raaj">open source code</a>, <a href="http://agiliq.com/blog/author/akshar">blog</a>, and by answering questions on <a href="http://stackoverflow.com/users/839549/akshar">Stack Overflow</a>.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://github.com/akshar-raaj" rel="nofollow" target="_blank">https://github.com/akshar-raaj</a></li>
+        <li><a href="http://agiliq.com/blog/author/akshar/" rel="nofollow" target="_blank">http://agiliq.com/blog/author/akshar/</a></li>
+        <li><a href="http://agiliq.com/blog/2012/06/understanding-args-and-kwargs/" rel="nofollow" target="_blank">http://agiliq.com/blog/2012/06/understanding-args-and-kwargs/</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c348">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/213-continuous-deployment-with-fabric/comments/348/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/213-continuous-deployment-with-fabric/comments/348/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="213-continuous-deployment-with-fabric#">[-]</a><a class="uncollapse hidden" href="213-continuous-deployment-with-fabric#">[+]</a>
+        <span class="commenter">Baiju Muthukadan</span>
+          269 days ago
+      </div>
+      <div class="com-body">
+        <p>Please provide links to slides and videos from your previous sessions; anything that'll help folks decide if they want to attend your session</p>
+        <div data-id="348" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="213-continuous-deployment-with-fabric#c348">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="213-continuous-deployment-with-fabric#c348">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c395">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/213-continuous-deployment-with-fabric/comments/395/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/213-continuous-deployment-with-fabric/comments/395/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="213-continuous-deployment-with-fabric#">[-]</a><a class="uncollapse hidden" href="213-continuous-deployment-with-fabric#">[+]</a>
+        <span class="commenter selected">akshar raaj</span>
+          259 days ago
+      </div>
+      <div class="com-body">
+        <p>I haven't taken a session at any popular conference like Pycon, but I have written a lot. You can find my blog entries at <a href="https://agiliq.com/blog/author/akshar/">https://agiliq.com/blog/author/akshar/</a>  </p>
+<p>I conduct Python workshops at Hyderabad Python meetup group. <a href="http://www.meetup.com/Hyderabad-Python-Meetup-Group/">http://www.meetup.com/Hyderabad-Python-Meetup-Group/</a>  </p>
+<p>Let me know what else I should put here.</p>
+        <div data-id="395" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="213-continuous-deployment-with-fabric#c395">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="213-continuous-deployment-with-fabric#c395">[link]</a>
+          <a title="Parent" class="comment-parent" href="213-continuous-deployment-with-fabric#c348">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/213-continuous-deployment-with-fabric"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

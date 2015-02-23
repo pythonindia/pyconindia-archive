@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>SHARQ - An API queueing system built at Plivo! &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="SHARQ - An API queueing system built at Plivo! &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="245-sharq-an-api-queueing-system-built-at-plivo#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+51</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>SHARQ - An API queueing system built at Plivo!</h1>
+    <p>
+      by <strong>Sandeep Raju</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The audience will get to learn about an API queueing system we built at Plivo. This talk sheds light on the existing queues available and why we chose to build SHARQ instead of using the existing ones.</p>
+    <h2>Description</h2>
+    <p>The talk will cover the following sections in detail.  </p>
+<h3>The Problem</h3>
+<p>Plivo often sees a spike in traffic patterns from some customers (for example when some customers decide to run a large Call or SMS campaign). These spikes tend to overload our systems because  the automatic scaling cannot be fast enough for such work loads. Under such a scenario, some customers start affecting API requests from other customers, thus bringing down the overall service quality. We do not want to have our customers take the trouble to rate limit at their end.  Thus, to ensure service quality, we need a system to queue API requests and process them at a controlled rate.  </p>
+<h3>Available Solutions &amp; Motivation for writing SHARQ</h3>
+<p>This section talks about how we evaluated Celery, and other queues. Why these did not fit into our requirements and why we chose to write it from ground up.  </p>
+<h3>Architecture and Algorithm</h3>
+<p>This section gives an overview of the implementation of SHARQ, how to use it and  a live demo. We’ll start by discussing the architecture we chose for SHARQ and the tools we chose to build it. Then, I’ll discuss the rate limiting algorithm and the redis data structures we have used. At the end, I’ll demo how SHARQ works.  </p>
+<h3>Benchmarks, Production Metrics &amp; Limitations</h3>
+<p>This section will cover some of the benchmarks of SHARQ and its analysis, some metrics from our deployment of SHARQ in production. We’ll also discuss when to use SHARQ and some ideas on how to make it scalable and highly available.  </p>
+<h3>Q&amp;A</h3>
+<p>Discussion with the audience and answering any questions.  </p>
+    
+    <h2>Speaker bio</h2>
+      <p>I work as a Product Engineer at <a href="https://www.plivo.com">Plivo</a>. I am the primary author of SHARQ. Python has been my primary programming language from the past 4+ years. I am an ardent follower of Free &amp; Open Source software and love to hack on it in my free time. I am one the founding members and admin of the <a href="http://pesos.pes.edu/">PES Open Source Community</a>. As a part of this community, I have conducted sessions on various open source softwares and have mentored some projects.  </p>
+<p>Here are my social profiles,  </p>
+<ul>
+<li><a href="https://github.com/sandeepraju">https://github.com/sandeepraju</a></li>
+<li><a href="https://twitter.com/sandeeprajup">https://twitter.com/sandeeprajup</a></li>
+</ul>
+<p>My personal website,  </p>
+<ul>
+<li><a href="http://sandeepraju.in">http://sandeepraju.in</a></li>
+</ul>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>SharQ Server: <a href="https://github.com/plivo/sharq-server" rel="nofollow" target="_blank">https://github.com/plivo/sharq-server</a></li>
+        <li>SharQ (Core Library that powers SharQ Server): <a href="https://github.com/plivo/sharq" rel="nofollow" target="_blank">https://github.com/plivo/sharq</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c371">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/371/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/371/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Kushal Das</span>
+          268 days ago
+      </div>
+      <div class="com-body">
+        <p>Where can we see the code?</p>
+        <div data-id="371" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c371">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c371">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c373">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/373/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/373/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          267 days ago
+            (edited 267 days ago)
+      </div>
+      <div class="com-body">
+        <p>Thanks for your interest. I'll share the link to the code in a few weeks.</p>
+        <div data-id="373" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c373">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c373">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c371">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c426">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/426/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/426/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Jaseem abid</span>
+          250 days ago
+      </div>
+      <div class="com-body">
+        <p>@sandeep Updates?</p>
+        <div data-id="426" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c426">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c426">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c373">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c497">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/497/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/497/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          227 days ago
+      </div>
+      <div class="com-body">
+        <p>@jaseem, I have replied about this to Aravind below..</p>
+        <div data-id="497" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c497">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c497">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c426">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c512">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/512/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/512/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          209 days ago
+            (edited 209 days ago)
+      </div>
+      <div class="com-body">
+        <p>@Kushal:
+Here are the links to the source code.  </p>
+<p>SharQ Server: <a href="https://github.com/plivo/sharq-server">https://github.com/plivo/sharq-server</a><br>
+SharQ (Core Library that powers SharQ Server): <a href="https://github.com/plivo/sharq">https://github.com/plivo/sharq</a>  </p>
+<p>Let me know what you think! :) I'll update the full docs as soon as possible.</p>
+        <div data-id="512" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c512">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c512">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c371">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c510">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/510/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/510/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          213 days ago
+      </div>
+      <div class="com-body">
+        <p>@kushal, update: I'll share the code here on monday :) finishing up with the docs! </p>
+        <div data-id="510" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c510">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c510">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c371">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c495">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/495/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/495/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          227 days ago
+      </div>
+      <div class="com-body">
+        <p>Is this open source? If it isnt, then how can people who attend your talk use it?</p>
+        <div data-id="495" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c495">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c495">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c513">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/513/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/513/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          209 days ago
+      </div>
+      <div class="com-body">
+        <p>@aravind: Here is the code.</p>
+<p>SharQ Server: <a href="https://github.com/plivo/sharq-server">https://github.com/plivo/sharq-server</a><br>
+SharQ (Core Library that powers SharQ Server): <a href="https://github.com/plivo/sharq">https://github.com/plivo/sharq</a></p>
+        <div data-id="513" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c513">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c513">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c495">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c516">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/516/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/516/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          207 days ago
+      </div>
+      <div class="com-body">
+        <p>Thanks Sandeep. I'm reviewing the code and will give it a spin today if I get a chance. By when did you think you might be able to update the docs?</p>
+        <div data-id="516" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c516">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c516">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c513">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c518">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/518/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/518/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          206 days ago
+      </div>
+      <div class="com-body">
+        <p>@aravind, I just wrote some minimal docs for you to try it out: <a href="https://gist.github.com/sandeepraju/918b104aa9846c650d75">https://gist.github.com/sandeepraju/918b104aa9846c650d75</a> If you have any questions, send me an email (sandeep080[AT]gmail[DOT]com) or tweet to me @sandeeprajup :)</p>
+        <div data-id="518" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c518">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c518">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c516">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c528">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/528/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/528/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          166 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Sandeep,  </p>
+<p>I've given it a spin. Unless I've misunderstood the use case, it wasnt clear to me how this was different from an API frontend for queueing jobs to a system like <a href="https://github.com/nvie/rq">RQ</a>.  </p>
+<p>Also, did you have some internal monitoring tools built on top of this to check the queue status?<br>
+-A</p>
+        <div data-id="528" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c528">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c528">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c518">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c529">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/529/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/529/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          166 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Sandeep,  </p>
+<p>I've given it a spin. Unless I've misunderstood the use case, it wasnt clear to me how this was different from an API frontend for queueing jobs to a system like <a href="https://github.com/nvie/rq">RQ</a>.  </p>
+<p>Also, did you have some internal monitoring tools built on top of this to check the queue status?<br>
+-A</p>
+        <div data-id="529" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c529">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c529">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c518">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c530">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/530/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/530/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          166 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Aravind,  </p>
+<p>Thanks for trying out SharQ!  </p>
+<p>The key difference here is the ability to dynamically set rate limit to each queue. SharQ can be configured to dequeue / process jobs with a specific time intervals.  </p>
+<p>To give you an example, let us assume you would want to send out notifications to your customers. Assume that for customer X, the notifications are to be sent out at 1 message / minute (even though there are 100 messages pending for him, he would want to receive at only 1 message / minute). For customer Y, 10 message / minute, and so on for N customers. And the customer should have the capability to change the rate at which he gets the notifications dynamically.  </p>
+<p>All these are possible in SharQ unlike RQ. The entire flow control mechanism needed different structuring of the queue in Redis.  </p>
+<p>SharQ has a metrics api. I think I have not updated the docs. I'm also planning to push new updates..  I'll do it in a few days. :)  </p>
+<p>Let me know if you have any more questions.</p>
+        <div data-id="530" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c530">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c530">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c529">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c496">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/496/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/496/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          227 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Aravind,  </p>
+<p>This indeed will be open sourced. I am working on making this open source and the plan is to get this out by the end of this month. It has been delayed as there were some things pending (like docs, test cases, etc.). I'll be sharing the links to the source code here in a few weeks.</p>
+        <div data-id="496" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c496">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c496">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c495">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c511">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/511/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo/comments/511/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="245-sharq-an-api-queueing-system-built-at-plivo#">[-]</a><a class="uncollapse hidden" href="245-sharq-an-api-queueing-system-built-at-plivo#">[+]</a>
+        <span class="commenter selected">Sandeep Raju</span>
+          213 days ago
+      </div>
+      <div class="com-body">
+        <p>@aravind, update: I'll share the code here on monday :) finishing up with the docs! </p>
+        <div data-id="511" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="245-sharq-an-api-queueing-system-built-at-plivo#c511">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="245-sharq-an-api-queueing-system-built-at-plivo#c511">[link]</a>
+          <a title="Parent" class="comment-parent" href="245-sharq-an-api-queueing-system-built-at-plivo#c495">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

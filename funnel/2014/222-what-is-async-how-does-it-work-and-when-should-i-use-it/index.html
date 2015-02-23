@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>What Is Async, How Does It Work, And When Should I Use It? &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="What Is Async, How Does It Work, And When Should I Use It? &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+14</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>What Is Async, How Does It Work, And When Should I Use It?</h1>
+    <p>
+      by <strong>A. Jesse Jiryu Davis</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Attendees will attain a useful definition of "asynchronous", and understand how asynchronous applications achieve I/O concurrency differently from traditional multithreaded applications. They'll be introduced to the async programming model, and learn a set of simple rules that determine when async is the right tool for the job, and when it is not.</p>
+    <h2>Description</h2>
+    <p>Python’s asynchronous frameworks, like asyncio, Tornado, and Twisted, are increasingly important for writing high-performance web applications. Even if you’re an experienced web programmer, you may lack a rigorous understanding of how these frameworks work and when to use them. Let’s see how asyncio's event loop works, and learn how to efficiently handle very large numbers of concurrent connections.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>I gave this talk at PyCon in Montreal, here's the video:  </p>
+<p><a href="http://emptysqua.re/blog/pycon-2014-video-what-is-async/">http://emptysqua.re/blog/pycon-2014-video-what-is-async/</a></p>
+<p>I'm a Senior Python Engineer at MongoDB in New York City. I’m a committer to the asyncio project and the author of its Queue implementation. Author of Motor, an async MongoDB driver for Tornado, and of Toro, a library of locks and queues for Tornado coroutines. Contributor to Python, PyMongo, MongoDB, and Tornado.</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/emptysquare/what-is-async-how-does-it-work-and-when-should-i-use-it">http://www.slideshare.net/emptysquare/what-is-async-how-does-it-work-and-when-should-i-use-it</a>
+      </p>
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c344">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/comments/344/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/comments/344/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#">[-]</a><a class="uncollapse hidden" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#">[+]</a>
+        <span class="commenter selected">A. Jesse Jiryu Davis</span>
+          269 days ago
+      </div>
+      <div class="com-body">
+        <p>The slides don't seem to be showing up correctly. Here they are on Slideshare:  </p>
+<p><a href="http://www.slideshare.net/emptysquare/what-is-async-how-does-it-work-and-when-should-i-use-it">http://www.slideshare.net/emptysquare/what-is-async-how-does-it-work-and-when-should-i-use-it</a></p>
+        <div data-id="344" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#c344">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#c344">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c430">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/comments/430/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it/comments/430/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#">[-]</a><a class="uncollapse hidden" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#">[+]</a>
+        <span class="commenter">Daniel Greenfeld</span>
+          249 days ago
+      </div>
+      <div class="com-body">
+        <p>This is a talk I would love to see. The speaker is incredible and a coder I really respect. Where is the +100 button?</p>
+        <div data-id="430" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#c430">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="222-what-is-async-how-does-it-work-and-when-should-i-use-it#c430">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/222-what-is-async-how-does-it-work-and-when-should-i-use-it"); // 
+      $("#slides-link").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Using NLTK &amp; SciPy to build a small task bot accepting natural language &mdash; PyCon India 2014 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Using NLTK &amp; SciPy to build a small task bot accepting natural language &mdash; PyCon India 2014"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="/funnel/static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="/funnel/static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2014</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+32</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Using NLTK &amp; SciPy to build a small task bot accepting natural language</h1>
+    <p>
+      by <strong>Abhishek Hingnikar</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Scientific Computing</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>We will be building a small RESTful bot in flask which performs simple tasks on Natural Language queries like "Make a Note", using nltk,scikit-learn.  </p>
+<p>Whats for the listener :  </p>
+<ul>
+<li>A real world use case and example of nltk and machine learning in action</li>
+<li>A high level understanding of how these systems work </li>
+<li>The code methodology can be expanded to make self versions of siri (small case)</li>
+<li>A rather not so booky approach on ml</li>
+</ul>
+    <h2>Description</h2>
+    <p>Almost everybody today wants to get their share on natural language processing, machine learning etc. We are on the stage where practical applications of systems using natural language as input and machine learning and their own intellect to find solutions upto some extent.  </p>
+<p>This talk will deal with some higher level logic involved in building a bot which is able to perform simple tasks like  </p>
+<ul>
+<li>Taking a Note,</li>
+<li>Sending a message,</li>
+<li>Showing a contact 
+etc.  </li>
+</ul>
+<p>The interface will be done in web but we can abstract that out since our apis will be RESTful :-) </p>
+    <h2>Requirements</h2>
+      <ul>
+<li>Basics of Python.</li>
+<li>Some knowledge of Linux is appreciated.</li>
+<li>Pre-installed nltk, scikit-learn would be amazing :D</li>
+<li>Going through <a href="http://nltk.org/book/">http://nltk.org/book/</a> it would be really appreciated but necessary.</li>
+</ul>
+    <h2>Speaker bio</h2>
+      <p>I love Automation.  </p>
+<p>I love Python.  </p>
+<p>I love Sharing and Learning.  </p>
+<p>I love the web-stack.  </p>
+<p>And  </p>
+<p>I love to do this all together!  </p>
+<p>I am currently a developer at MidNode and a founder of a startup which deals primarily with natural language and machine learning, Our product is in pre-alpha and we are planning for a mid-august / september launch.  </p>
+<p>Our whole techstack is python based (infact the same stack i would be discussing in this talk) and hence I will be giving some tips and suggestions on common pitfalls aswell.  </p>
+<p>In past I have worked on projects like <a href="http://pixter.in/">Pixter</a> and <a href="http://colorbay.me/">Colorbay</a> at MetaRain in past.  </p>
+<p>Some Cool stuff i did with web-stack :<br>
+<a href="http://codepen.io/darkyen/">http://codepen.io/darkyen/</a></p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Coming Soon - Live Demo Link</li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c263">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/263/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/263/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[-]</a><a class="uncollapse hidden" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[+]</a>
+        <span class="commenter">Aravind Krishnaswamy</span>
+          284 days ago
+      </div>
+      <div class="com-body">
+        <p>The outline looks interesting. What are some of the takeaways people attending can expect?</p>
+        <div data-id="263" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c263">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c263">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c265">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/265/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/265/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[-]</a><a class="uncollapse hidden" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[+]</a>
+        <span class="commenter selected">Abhishek Hingnikar</span>
+          283 days ago
+      </div>
+      <div class="com-body">
+        <p>Adding. </p>
+        <div data-id="265" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c265">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c265">[link]</a>
+          <a title="Parent" class="comment-parent" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c263">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c266">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/266/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language/comments/266/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[-]</a><a class="uncollapse hidden" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#">[+]</a>
+        <span class="commenter selected">Abhishek Hingnikar</span>
+          283 days ago
+      </div>
+      <div class="com-body">
+        <p>Please have a look now :-) </p>
+        <div data-id="266" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c266">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c266">[link]</a>
+          <a title="Parent" class="comment-parent" href="174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language#c263">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/funnel/static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2014/174-using-nltk-scipy-to-build-a-small-task-bot-accepting-natural-language"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>
