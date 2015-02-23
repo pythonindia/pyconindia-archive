@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Metaclass in Python and how it is helpful in framework like Django &mdash; PyCon India 2012 — PyCon India 2012 Funnel</title>
+  <meta name="DC.title" content="Metaclass in Python and how it is helpful in framework like Django &mdash; PyCon India 2012"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+
+  <!-- Stylesheets -->
+  <link href="../static/css/screen.css?v=5" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../static/css/print.css?v=1" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/2012/funnel/static/css/ie.css?v=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="hg-bar">
+  <ul id="hg-barlinks">
+    <li><a href="/2012/"><strong><span class="hg-h">PyCon India 2012</span><span class="hg-g"></span></strong></a></li>
+    <li class="selected"><a href="/2012/funnel/">Funnel</a></li>
+  </ul>
+</div><header>
+      <div id="logo"><a href="/2012/funnel/">Home</a></div>
+      <ul class="usertools">
+        
+          <li><a href="/2012/funnel/login">Login with Twitter or Google</a></li>
+              
+      </ul>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/2012/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2012</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+25</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Metaclass in Python and how it is helpful in framework like Django</h1>
+    <p>
+      by <strong>Akshar Raaj</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia" data-text="Metaclass in Python and how it is helpful in framework like Django &mdash; PyCon India 2012 Funnel #pyconindia2012">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Section</dt>
+      <dd>Core Python</dd>
+      <dt>Session type</dt>
+      <dd>Talk</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Audience will leave this session with a better understanding of how metaprogramming and other related concepts like __new__ work in Python.</p>
+    <h2>Description</h2>
+    <p>Many web frameworks written in Python, like Django, heavily use Metaclass. Understanding metaclass will help you understand the internals of your framework and how things work under the hood. 
+Once you understand metaclass, you will have a deeper understanding of the framework you use and how Python makes complex things simpler by using metaclass.</p>
+<p>With metaclass, things look built in rather than bolted upon.</p>
+<p>We plan to cover following things in this talk</p>
+<p>Talking about method __new__ for few minutes. Although my assumption will be you are familiar with __new__ .</p>
+<p>Talking about method type() and verifying that even classes are Objects in Python.</p>
+<p>We will define a class and verify that even this class is an Object.</p>
+<pre><code>class A(object):
+    pass
+</code></pre>
+<p>We will use function type() to verify A is an Object.</p>
+<pre><code>type(A)
+</code></pre>
+<p>Documentation of type() says that type() takes an Object as the argument and returns the class of that Object. It means that if you pass some argument to type() and type() executes successfully without raising an error, then the argument you passed is an Object</p>
+<p>So, whatever was returned by our last statement is the class of class A and since class A was accepted by type() as an argument, A is an object.</p>
+<p>When we see that a class is an Object in Python, we know that this class must be an instance of some other class. This 'other class' is known as metaclass.</p>
+<p>As we know by now A is an Object, so it must be an instance of some other class. Actually, A is an instance of a class named type. Under the hood, A was created something like A=type() . Actually there were some arguments also passed in this call. So it was something like A=type(arg1, arg2, arg3, arg4). We will see these exact arguments in our talk.</p>
+<p>So A is an instance of class type and  <strong>class type is the default metaclass</strong>.</p>
+<p>Earlier we used type() as a method to verify that even classes are objects and now we say that type is the default metaclass i.e class of a class. No need to get confused. Based on the number of arguments passed to type, it is figured out whether it needs to be used as a method or a class. We will clarify this in the talk.</p>
+<p>Next we will write a metaclass. Here we will see what all we need to keep in mind to write a metaclass. Say we name this class as MetaClass.</p>
+<ul>
+<li>A metaclass must extend from class type.</li>
+<li>We need to override method __new__ of type in this metaclass.</li>
+</ul>
+<p>We will keep some print statements inside overridden __new__ to see what arguments were passed to it by the interpreter. We will do some extra operations in this metaclass like adding some additional attributes on a class which is going to be created using this metaclass.</p>
+<p>We will then write another class definition say class A. In this class definition, we will specify that the metaclass we just wrote must be used to create this class. </p>
+<pre><code>class A(object):
+    a = 10
+    __metaclass__ = MetaClass
+</code></pre>
+<p>We will see some practical uses of Metaclass. Here we will go through a section of Django code and see how metaclass is useful in such situations.</p>
+<p>We will see how attributes like _meta is available on any Django model we write. Actually all this is accomplished in the metaclass of Django model. We will see how keeping this _meta on model helps later while instantiating a model and saving a model.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>Akshar is a developer at Agiliq. A curios person who wants to know how and why things work the way they work. He has been working on Django, a web framework written in Python, for last one year</p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c27">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/27/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/27/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[-]</a><a class="uncollapse hidden" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[+]</a>
+        <span class="commenter">Anand B Pillai</span>
+          923 days ago
+      </div>
+      <div class="com-body">
+        <p>Kindly note: Your talk needs more content in the description section for evaluation. Please add more content describing your talk. Think in terms of how you plan to present the talk and virtually walk through the slides here - Thanks - Admin.</p>
+        <div data-id="27" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c27">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c27">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c83">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/83/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/83/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[-]</a><a class="uncollapse hidden" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[+]</a>
+        <span class="commenter selected">Akshar Raaj</span>
+          911 days ago
+            (edited 911 days ago)
+      </div>
+      <div class="com-body">
+        <p>I have added more content describing the talk. Please have a look.</p>
+<p>Thanks.</p>
+        <div data-id="83" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c83">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c83">[link]</a>
+          <a title="Parent" class="comment-parent" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c27">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c157">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/157/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django/comments/157/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[-]</a><a class="uncollapse hidden" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#">[+]</a>
+        <span class="commenter">software mechanic</span>
+          873 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi,
+   Looks like this did not get selected. I have poked around a bit with Metaclasses, and think it would have been a good idea to have cool examples of stuff(voodoo magic) with Metaclasses.<br />
+</p>
+        <div data-id="157" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c157">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django#c157">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/2012/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2012 IPSS and contributors. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/packed.js?e108569a"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/2012/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/2012/funnel/pyconindia2012/9-metaclass-in-python-and-how-it-is-helpful-in-framework-like-django"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

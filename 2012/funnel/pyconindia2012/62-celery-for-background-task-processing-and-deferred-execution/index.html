@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Celery for background task processing and deferred execution. &mdash; PyCon India 2012 — PyCon India 2012 Funnel</title>
+  <meta name="DC.title" content="Celery for background task processing and deferred execution. &mdash; PyCon India 2012"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+
+  <!-- Stylesheets -->
+  <link href="../static/css/screen.css?v=5" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../static/css/print.css?v=1" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/2012/funnel/static/css/ie.css?v=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="hg-bar">
+  <ul id="hg-barlinks">
+    <li><a href="/2012/"><strong><span class="hg-h">PyCon India 2012</span><span class="hg-g"></span></strong></a></li>
+    <li class="selected"><a href="/2012/funnel/">Funnel</a></li>
+  </ul>
+</div><header>
+      <div id="logo"><a href="/2012/funnel/">Home</a></div>
+      <ul class="usertools">
+        
+          <li><a href="/2012/funnel/login">Login with Twitter or Google</a></li>
+              
+      </ul>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/2012/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2012</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+10</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Celery for background task processing and deferred execution.</h1>
+    <p>
+      by <strong>konark modi</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia" data-text="Celery for background task processing and deferred execution. &mdash; PyCon India 2012 Funnel #pyconindia2012">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Section</dt>
+      <dd>Web Development</dd>
+      <dt>Session type</dt>
+      <dd>Tutorial</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Understand  how we can use Celery in a web-app for background/asynchronous task which needs to processed immediately or after a scheduled interval. </p>
+    <h2>Description</h2>
+    <p>Celery is an open source asynchronous task queue/job queue based on distributed message passing. It is focused on real-time operation, but supports scheduling as well.</p>
+<p>I this tutorial we will show the use of Celery and Django to build a simple scheduling web app that needs to process tasks immediately or after a scheduled interval.</p>
+<p>The tutorial will be broadly based upon the following topics:
+1.  Celery architecture
+2.  Message broker (AMQP based messaging queue eg. RabbitMQ)
+3.  Connecting celery with RabbitMQ
+4.  Running Celery workers
+5.  Creating basic tasks and scheduling them.
+6.  Running Celery workers
+7.  Django Celery admin panel
+8.  Storing task results in a backend. (MySQL)
+9.  Monitoring the scheduling app for minimal downtime.</p>
+<p>Setup Configuration:
+Intended Audience :
+    *nix basics
+    Basics of application development
+    Basics of Python
+    Fair assumption of Django architecture ( Though celery is not just for Django, but the demos would be based over Django)</p>
+<p>System config. we'd be using:
+    Centos 6.2 : Hosted on Virtual box
+    Python version : Python 2.6.6
+    MySQL
+    Django-1.4</p>
+<p>Packages installed :
+    1. Virutal env : pip install virtualenv
+    2. RabbitMQ ( Recommended installation before Tutorial) incase internet is not working that particular day.
+    3. Celery : pip install -U celery
+    4. Django-Celery : pip install django-celery
+    5. MySQLdb module for python : easy_install MySQL , yum install mysql-devel python-devel
+    6. pytz : pip install pytz</p>
+<p>Just installation would be sufficient as of now. We'd be understanding the components in detail during the tutorial.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>Piyush Kumar is  Manager for Website Operations @ MakeMyTrip.com. He is an open source enthusiast who loves doing DevOps and Information security.
+His major work focus areas include : BigData, Monitoring, Handling Apache and Tomcat servers, MySQL, Django,  F5 BigIP LTM/GTM, Profiling JavaApp using JProfiler/YourKit, Virtualization on Linux using XEN/VMware.</p>
+<p>Konark Modi works as Sr. System Engineer for Website Operations @ MakeMyTrip.com.
+Major work focus areas include Designing/Writing/Implementing/Maintaining tools for monitoring/alerting purposes. Python/Django are the primary languages that is used in daily operations.
+Apart from this loves to interact with new technologies and keep updated with the latest happenings in the tech. space.</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://konarkmodi.com/pycon2012/pycon.pdf">http://konarkmodi.com/pycon2012/pycon.pdf</a>
+      </p>
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c124">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/comments/124/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution/comments/124/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="62-celery-for-background-task-processing-and-deferred-execution#">[-]</a><a class="uncollapse hidden" href="62-celery-for-background-task-processing-and-deferred-execution#">[+]</a>
+        <span class="commenter">Navaneethan R</span>
+          879 days ago
+      </div>
+      <div class="com-body">
+        <p>Could you give the link for the sample code?</p>
+        <div data-id="124" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="62-celery-for-background-task-processing-and-deferred-execution#c124">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="62-celery-for-background-task-processing-and-deferred-execution#c124">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/2012/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2012 IPSS and contributors. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/packed.js?e108569a"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/2012/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/2012/funnel/pyconindia2012/62-celery-for-background-task-processing-and-deferred-execution"); // 
+      $("#slides-link").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

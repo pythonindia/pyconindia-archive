@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Shake the very fabric of django deployment woes &mdash; PyCon India 2012 — PyCon India 2012 Funnel</title>
+  <meta name="DC.title" content="Shake the very fabric of django deployment woes &mdash; PyCon India 2012"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+
+  <!-- Stylesheets -->
+  <link href="../static/css/screen.css?v=5" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../static/css/print.css?v=1" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/2012/funnel/static/css/ie.css?v=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="hg-bar">
+  <ul id="hg-barlinks">
+    <li><a href="/2012/"><strong><span class="hg-h">PyCon India 2012</span><span class="hg-g"></span></strong></a></li>
+    <li class="selected"><a href="/2012/funnel/">Funnel</a></li>
+  </ul>
+</div><header>
+      <div id="logo"><a href="/2012/funnel/">Home</a></div>
+      <ul class="usertools">
+        
+          <li><a href="/2012/funnel/login">Login with Twitter or Google</a></li>
+              
+      </ul>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/2012/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2012</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+7</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Shake the very fabric of django deployment woes</h1>
+    <p>
+      by <strong>Anuvrat Parashar</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia" data-text="Shake the very fabric of django deployment woes &mdash; PyCon India 2012 Funnel #pyconindia2012">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Section</dt>
+      <dd>Web Development</dd>
+      <dt>Session type</dt>
+      <dd>Tutorial</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>There cometh a day in lives of every Django developer when they wonder whether there was a way to reduce the time spent in altering the settings file before every deployment, be it on their staging / production servers. Well there is, and thats what this tutorial intends to address.</p>
+<h3>Salient Features:</h3>
+<ul>
+<li>
+<p>Managing multiple settings file.</p>
+</li>
+<li>
+<p>Automating the deployment process with Fabric.</p>
+</li>
+<li>
+<p>Integrating above two with your source code management system</p>
+</li>
+</ul>
+<h6>Save time deploying and spend it developing.</h6>
+    <h2>Description</h2>
+    <p>The session can be broadly broken up into following phases:</p>
+<p>-A short interactive introduction to Django just to get the audience revved up. A demo on what we would do for deployment when we don't have fabric at our disposal.</p>
+<p>-A breif introduction to fabric and demonstration of magical deployment using it.</p>
+<p>-A detailed introduction to the features of Fabric will come next after which we we shall have a discussion and dicover what we could accomplish using fabric.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>An Open Source Enthusiast and Evangelist, avid Linux user who has been passionate about everything Python ever since he came to know about it. He is currently employed as a developer by Reviews42.com and spends his weekdays dabbling with their codebase. More about him can be found at  <a href="http://anuvrat.in/" title="anuvrat.in">his website</a> .</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://docs.google.com/presentation/d/1uOIt85a-XvKV_GxK2ELDN9Fx29DED1XNueePqecoyn8/edit">https://docs.google.com/presentation/d/1uOIt85a-XvKV_GxK2ELDN9Fx29DED1XNueePqecoyn8/edit</a>
+      </p>
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+    <p>
+        <a href="/2012/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2012 IPSS and contributors. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/packed.js?e108569a"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/2012/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/2012/funnel/pyconindia2012/67-shake-the-very-fabric-of-django-deployment-woes"); // 
+      $("#slides-link").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

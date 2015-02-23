@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Path Dependent Development &mdash; PyCon India 2012 — PyCon India 2012 Funnel</title>
+  <meta name="DC.title" content="Path Dependent Development &mdash; PyCon India 2012"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+
+  <!-- Stylesheets -->
+  <link href="../static/css/screen.css?v=5" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../static/css/print.css?v=1" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/2012/funnel/static/css/ie.css?v=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="hg-bar">
+  <ul id="hg-barlinks">
+    <li><a href="/2012/"><strong><span class="hg-h">PyCon India 2012</span><span class="hg-g"></span></strong></a></li>
+    <li class="selected"><a href="/2012/funnel/">Funnel</a></li>
+  </ul>
+</div><header>
+      <div id="logo"><a href="/2012/funnel/">Home</a></div>
+      <ul class="usertools">
+        
+          <li><a href="/2012/funnel/login">Login with Twitter or Google</a></li>
+              
+      </ul>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/2012/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2012</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/2012/funnel/pyconindia2012/29-path-dependent-development/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/2012/funnel/pyconindia2012/29-path-dependent-development/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/2012/funnel/pyconindia2012/29-path-dependent-development/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/2012/funnel/pyconindia2012/29-path-dependent-development/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+14</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Path Dependent Development</h1>
+    <p>
+      by <strong>Nick Coghlan</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia" data-text="Path Dependent Development &mdash; PyCon India 2012 Funnel #pyconindia2012">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/2012/funnel/pyconindia2012/29-path-dependent-development&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Section</dt>
+      <dd>_Others</dd>
+      <dt>Session type</dt>
+      <dd>Talk</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This talk is aimed at introducing a slightly different way of thinking about many of the complex trade-offs that are involved in creating and shipping useful software, and the way those trade-offs influence the evolution of a piece of software over time.</p>
+    <h2>Description</h2>
+    <p>The PulpDist project uses SQL Alchemy as part of a custom JSON validator. This could be seen as an unusual choice, so it's worth exploring the way this approach came to be adopted.</p>
+<p>Practicing iterative development means coping with the inevitable tension between "doing the simplest thing that could possibly work" to meet immediate project requirements and avoiding "reinventing the wheel" in order to take full advantage of existing software components.</p>
+<p>This means that iterative software designs are inevitably path dependent: decisions made in early iterations can shape later aspects of a project in unexpected ways. These early influences may even predate the project itself, instead being a consequence of wider organisational policies and the personal preferences and abilities of key developers.</p>
+<p>Understanding some of these factors can help with understanding why:
+- "good enough" is usually a better target than "perfect"
+- "Not Invented Here" syndrome is not always the villain it is frequently made out to be
+- the need to extensively rewrite existing components is not always a sign of past failure</p>
+    
+    <h2>Speaker bio</h2>
+      <p>Nick is a CPython core developer and a nominated member of the Python Software Foundation.</p>
+<p>Since June 2011, after more than 12 years in the aerospace and defence sector, Nick has been working on internal tools for Red Hat, including PulpDist, a set of Pulp plugins and other tools intended to make it easier to maintain a private filtered data mirroring network on commodity hardware.</p>
+<p>The views presented in this talk are based on my personal observations of the open source development community and the defence sector over the better part of a decade.</p>
+<p>A version of this talk is also being presented at PyConAU 2012.</p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c94">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/29-path-dependent-development/comments/94/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/29-path-dependent-development/comments/94/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="29-path-dependent-development#">[-]</a><a class="uncollapse hidden" href="29-path-dependent-development#">[+]</a>
+        <span class="commenter">Anand B Pillai</span>
+          910 days ago
+      </div>
+      <div class="com-body">
+        <p>Nick, would this be a lot about project management and how early decisions in a project can shape its growth etc ? Won't this be too theoretical ? Are you planning to generously use examples like the Pulpdist/SQL Alchemy instance here in your talk ? </p>
+        <div data-id="94" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="29-path-dependent-development#c94">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="29-path-dependent-development#c94">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/2012/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2012 IPSS and contributors. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/packed.js?e108569a"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/2012/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/2012/funnel/pyconindia2012/29-path-dependent-development"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

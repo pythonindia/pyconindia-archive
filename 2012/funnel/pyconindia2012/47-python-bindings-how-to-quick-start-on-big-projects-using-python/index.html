@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Python Bindings - How to quick-start on big projects using Python &mdash; PyCon India 2012 — PyCon India 2012 Funnel</title>
+  <meta name="DC.title" content="Python Bindings - How to quick-start on big projects using Python &mdash; PyCon India 2012"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+
+  <!-- Stylesheets -->
+  <link href="../static/css/screen.css?v=5" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../static/css/print.css?v=1" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/2012/funnel/static/css/ie.css?v=1" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="hg-bar">
+  <ul id="hg-barlinks">
+    <li><a href="/2012/"><strong><span class="hg-h">PyCon India 2012</span><span class="hg-g"></span></strong></a></li>
+    <li class="selected"><a href="/2012/funnel/">Funnel</a></li>
+  </ul>
+</div><header>
+      <div id="logo"><a href="/2012/funnel/">Home</a></div>
+      <ul class="usertools">
+        
+          <li><a href="/2012/funnel/login">Login with Twitter or Google</a></li>
+              
+      </ul>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/2012/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2012</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+45</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Python Bindings - How to quick-start on big projects using Python</h1>
+    <p>
+      by <strong>Anmol Rajpurohit</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia" data-text="Python Bindings - How to quick-start on big projects using Python &mdash; PyCon India 2012 Funnel #pyconindia2012">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+      <dt>Section</dt>
+      <dd>Software Development Tools</dd>
+      <dt>Session type</dt>
+      <dd>Talk</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Helping Python developers (both beginners and experienced) solve the most common problems involved with almost every big real-life project using Python:
+- Lack of proper documentation
+- No coding standards in the existing code : hard to understand
+- Different coding styles involved in the existing code
+- Less time to deliver new code (after losing considerable time in just understanding the existing code)</p>
+    <h2>Description</h2>
+    <p>Be it as a student or even as a professional, whenever you start working on any big project, a considerable amount of time is lost in the beginning to understand the existing code. Thus, you are left with less time to write and test your new code.</p>
+<p>With Python bindings and some smart coding, you can now escape/mitigate these problems and focus on your part on the project.</p>
+<p>Content Summary:
+- Common problems for a newbie on big software development projects
+- Python Bindings - why do these projects need Python?
+- How to start writing your code on DAY ONE of the project
+- Real-life demo and quick tips
+- Q&amp;A</p>
+<p>Note: This talk derives from my experience on Python coding with senior researchers from Palo Alto Research Center (PARC) and University of California, Los Angeles (UCLA). The demo at the end of session has been taken from my summer work on Named Data Networking, an integral component of CCNx - one of the most promising future Internet architecture being developed by PARC.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>I am an avid python developer and academic researcher. I enjoy applying my intellectual curiosity and coding skills towards making swift progress on research projects. Being a hard core open-source guy, I love sharing my knowledge and experience, as much as learning from others. </p>
+<p>For further information, refer: <a href="http://www.linkedin.com/in/arajpurohit">http://www.linkedin.com/in/arajpurohit</a></p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c66">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/66/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/66/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[-]</a><a class="uncollapse hidden" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[+]</a>
+        <span class="commenter">Mayur Verma</span>
+          918 days ago
+      </div>
+      <div class="com-body">
+        <p>Seems interesting !
+I wont miss this for sure as I am looking forward to contribute to research projects in near future.
+Thanks for coming up with this one Mr. Rajpurohit.</p>
+        <div data-id="66" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c66">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c66">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c60">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/60/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/60/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[-]</a><a class="uncollapse hidden" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[+]</a>
+        <span class="commenter">A S L Devi</span>
+          919 days ago
+            (edited 919 days ago)
+      </div>
+      <div class="com-body">
+        <p>I couldn't really understood the objective here. Can you please specify what is that you're going to cover?</p>
+        <div data-id="60" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c60">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c60">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c119">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/119/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python/comments/119/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[-]</a><a class="uncollapse hidden" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#">[+]</a>
+        <span class="commenter">NAMAN JAIN</span>
+          891 days ago
+      </div>
+      <div class="com-body">
+        <p>I would like to learn python.</p>
+        <div data-id="119" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c119">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="47-python-bindings-how-to-quick-start-on-big-projects-using-python#c119">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/2012/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2012 IPSS and contributors. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/packed.js?e108569a"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/2012/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/2012/funnel/pyconindia2012/47-python-bindings-how-to-quick-start-on-big-projects-using-python"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>
