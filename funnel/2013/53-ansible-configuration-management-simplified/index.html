@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Ansible: Configuration Management Simplified &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Ansible: Configuration Management Simplified &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="53-ansible-configuration-management-simplified#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/53-ansible-configuration-management-simplified/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/53-ansible-configuration-management-simplified/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/53-ansible-configuration-management-simplified/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/53-ansible-configuration-management-simplified/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+17</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Ansible: Configuration Management Simplified</h1>
+    <p>
+      by <strong>Ausmarton Zarino Fernandes</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/53-ansible-configuration-management-simplified&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Introduction to an alternative to the mainstream configuration management tools like Chef and Puppet, and what makes Ansible a better alternative to them. Also a demonstration of how to write your own configurations for a simple infrastructure setup in ansible at the end of the session. A definite benefit for those looking out for a more lightweight option as compared to Chef and Puppet.</p>
+    <h2>Description</h2>
+    <p>Ansible is unlike mainstream configuration management tools as in, it does not require a centralised server for management. It's very lightweight and doesn't require any kind of client daemon to be running on every managed instance. This along with it's ease of configuration in yaml, make it a very good candidate for managing small to medium sized infrastructures where the overhead of having a constantly polling client daemon would be quite visible.  </p>
+<p>A benefit over the more popular tools like Chef and Puppet includes the fact that for the most part, one does not need to write code for setting up common infrastructures, machine configurations are done in yaml. Python knowledge would be required when writing plugins to add more functionality to ansible.  </p>
+<p>I will cover the architecture of ansible and yaml configurations. Finally, I'll demonstrate the use of it to set up a small infrastructure by writing playbooks for it.</p>
+    
+    <h2>Speaker bio</h2>
+      <p>I work as a Technical Lead at PTC and I also am an Agile Software Development Consultant with experience in web application development with Java, PHP and .Net. I have recently been experimenting with Python and Ruby. I work primarily on Linux - specifically Fedora, which has been my favourite distro since the time it was Red Hat 7. I think I can say that a lot of my understanding of networks, servers and almost anything to do with computing comes from linux. I was a part of the fedora-infrastructure group as an apprentice and that's where I heard about ansible for the first time.<br>
+I like cycling a lot, and I cycle to work almost every day. Besides that, I enjoy travelling quite a lot. Other times, I play the guitar and the bass.</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://speakerdeck.com/ausmarton/ansible-configuration-management-simplified">https://speakerdeck.com/ausmarton/ansible-configuration-management-simplified</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>My last talk at RubyConf India 2013: <a href="http://lanyrd.com/2013/rubyconfindia/schdhy/" rel="nofollow" target="_blank">http://lanyrd.com/2013/rubyconfindia/schdhy/</a></li>
+        <li>Github: <a href="https://github.com/ausmarton" rel="nofollow" target="_blank">https://github.com/ausmarton</a></li>
+        <li>Twitter: <a href="https://twitter.com/ausmarton" rel="nofollow" target="_blank">https://twitter.com/ausmarton</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/53-ansible-configuration-management-simplified"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Build service health dashboard using Shinken &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Build service health dashboard using Shinken &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="25-build-service-health-dashboard-using-shinken#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/25-build-service-health-dashboard-using-shinken/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/25-build-service-health-dashboard-using-shinken/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/25-build-service-health-dashboard-using-shinken/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/25-build-service-health-dashboard-using-shinken/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+12</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Build service health dashboard using Shinken</h1>
+    <p>
+      by <strong>Rohit Gupta</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/25-build-service-health-dashboard-using-shinken&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Build a automated service service monitoring dashboard.</p>
+    <h2>Description</h2>
+    <h5>Server monitoring tool: Shinken</h5>
+<ul>
+<li>Introduction and what all can be monitored using this tool. Features and a brief overview of Shinken web ui.</li>
+</ul>
+<h5>Architecture</h5>
+<ul>
+<li>Different components. Scalability and performance.</li>
+</ul>
+<h5>NRPE Plugins</h5>
+<ul>
+<li>Shinken if compatible with nagios nrpe plugins. Discussion on how does nrpe checks work.</li>
+</ul>
+<h4>Build a Service dashboard:</h4>
+<p>-</p>
+<h5>Write your own nrpe plugin using python</h5>
+<ul>
+<li>Basic usage of coding...</li>
+</ul>
+<h5>Examples of automated service checks</h5>
+<ul>
+<li>Things to consider, some dos and donts. Advantage of python over shell.</li>
+</ul>
+<h5>Integrate your checks in shinken</h5>
+<ul>
+<li>Editing configuration files.</li>
+</ul>
+    
+    <h2>Speaker bio</h2>
+      <p>@rohit01 is currently working as a developer with <a href="http://plivo.com">Plivo</a>, one of the official sponsors of <a href="https://us.pycon.org/2013/">PyCon US 2013</a> and <a href="http://in.pycon.org/2012/">PyCon India 2012</a>. He is passionate about technologies and is currently working in the area of convergence of telephony over web. Some of the projects that he has worked upon include automating the cloud management over <a href="http://aws.amazon.com">AWS</a> using <a href="https://github.com/boto/boto">boto</a>, enabling High Availability, Failover solution and auto-scaling to ensure zero downtime and un-interrupted services to Plivo customers.
+He is also a FOSS enthusiast and was instrumental in promoting it by organizing the first ever <a href="http://fedoraproject.org/wiki/FedoraEvents/KGEC_Install_Fest">InstallFest</a> (with fedora 10) in his <a href="http://www.kgec.ac.in/">university</a>, founded a GNU/Linux User Group and presenting FOSS tech talks.<br>
+He was also a speaker for PyCon India 2012 and gave a talk on '<a href="http://in.pycon.org/2012/funnel/pyconindia2012/33-managing-aws-cloud-with-python">Managing AWS Cloud with Python</a>'.  </p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://bit.ly/pyconindia2013">http://bit.ly/pyconindia2013</a>
+      </p>
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/25-build-service-health-dashboard-using-shinken"); // 
+      $("#slides-link").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

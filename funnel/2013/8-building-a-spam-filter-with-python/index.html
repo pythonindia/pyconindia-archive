@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Building a spam filter with python &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Building a spam filter with python &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="8-building-a-spam-filter-with-python#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/8-building-a-spam-filter-with-python/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/8-building-a-spam-filter-with-python/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/8-building-a-spam-filter-with-python/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/8-building-a-spam-filter-with-python/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+37</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Building a spam filter with python</h1>
+    <p>
+      by <strong>Mohit Ranka</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/8-building-a-spam-filter-with-python&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Workshops</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>To give an introductory overview about datascience using a hands-on example of building a spam filter from scratch. This workshop is target to the audience who have programming skills and interested to dabble into machine learning/data sciences  </p>
+<p>After completion of this workshop you will —  </p>
+<ul>
+<li>Know what is machine learning algorithm and how it is related to "learning" (http://en.wikipedia.org/wiki/Learning) in general.</li>
+<li>Distinguish between rule based systems and ML based systems.</li>
+<li>Understand how and when to apply machine learning algorithms</li>
+<li>Understand the basic concepts of natural language processing — the science of making a computer understand human languages</li>
+<li>Complete your first Machine Learning project — A spam filter!</li>
+<li>Pointers on how to explore the ML domain further.</li>
+</ul>
+    <h2>Description</h2>
+    <p>In the workshop, we will go through  </p>
+<ul>
+<li>Basics of machine learning, classification and statistical modeling</li>
+<li>overview of nltk, a text processing library</li>
+<li>Building a text spam filter from scratch, using python.</li>
+<li>Improving the algorithm</li>
+</ul>
+    <h2>Requirements</h2>
+      <p>Basics of python, programming.<br>
+Laptop (preferably Ubuntu/Linux flavor) with python 2.7 installed.</p>
+    <h2>Speaker bio</h2>
+      <p>I am current work with Qyuki Digital Media, where I work on the in-house analytics platform and algorithms.  </p>
+<p>I have been working in text/data analytics field for last 5 year. Python is my preferred language, to implement machine learning algorithms, because of its rich library ecosystem.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://www.github.com/mohitranka" rel="nofollow" target="_blank">https://www.github.com/mohitranka</a></li>
+        <li><a href="http://www.mohitranka.com" rel="nofollow" target="_blank">http://www.mohitranka.com</a></li>
+        <li><a href="http://www.linkedin.com/in/mohitranka" rel="nofollow" target="_blank">http://www.linkedin.com/in/mohitranka</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c9">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/9/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/9/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="8-building-a-spam-filter-with-python#">[-]</a><a class="uncollapse hidden" href="8-building-a-spam-filter-with-python#">[+]</a>
+        <span class="commenter">Anand Chitipothu</span>
+          627 days ago
+      </div>
+      <div class="com-body">
+        <p>Can you please list past speaking experience at any conferences and usergroup meetings? Please post links to slides of those talks if available.</p>
+        <div data-id="9" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="8-building-a-spam-filter-with-python#c9">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="8-building-a-spam-filter-with-python#c9">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c10">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/10/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/10/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="8-building-a-spam-filter-with-python#">[-]</a><a class="uncollapse hidden" href="8-building-a-spam-filter-with-python#">[+]</a>
+        <span class="commenter selected">Mohit Ranka</span>
+          626 days ago
+      </div>
+      <div class="com-body">
+        <p>@Anand, I only have spoken in in-house events before. Slides are difficult to upload without permission, due to the mention of closed source architecture.</p>
+        <div data-id="10" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="8-building-a-spam-filter-with-python#c10">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="8-building-a-spam-filter-with-python#c10">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c100">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/100/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/100/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="8-building-a-spam-filter-with-python#">[-]</a><a class="uncollapse hidden" href="8-building-a-spam-filter-with-python#">[+]</a>
+        <span class="commenter">sankarshan mukhopadhyay</span>
+          587 days ago
+      </div>
+      <div class="com-body">
+        <p>I would request you to provide a bit more detail about what the audience would be able to achieve/do from the discussions arising from your talk.</p>
+        <div data-id="100" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="8-building-a-spam-filter-with-python#c100">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="8-building-a-spam-filter-with-python#c100">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c104">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/104/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/8-building-a-spam-filter-with-python/comments/104/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="8-building-a-spam-filter-with-python#">[-]</a><a class="uncollapse hidden" href="8-building-a-spam-filter-with-python#">[+]</a>
+        <span class="commenter selected">Mohit Ranka</span>
+          587 days ago
+      </div>
+      <div class="com-body">
+        <p>@Sankarshan, I have updated the objective to include what the audience will be able to achieve from the talk.</p>
+        <div data-id="104" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="8-building-a-spam-filter-with-python#c104">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="8-building-a-spam-filter-with-python#c104">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/8-building-a-spam-filter-with-python"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

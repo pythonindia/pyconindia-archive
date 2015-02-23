@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Serving your platform using Python &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Serving your platform using Python &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="94-serving-your-platform-using-python#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/94-serving-your-platform-using-python/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/94-serving-your-platform-using-python/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/94-serving-your-platform-using-python/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/94-serving-your-platform-using-python/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+3</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Serving your platform using Python</h1>
+    <p>
+      by <strong>Harish Vishwanath</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/94-serving-your-platform-using-python&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This talk will examine the core tenets of what it takes to make your products/platforms truly customizable by letting your customers consume the services offered by your platforms. It offers insights into creating "app"etizers for product platforms using Python to help you along the way. </p>
+    <h2>Description</h2>
+    <p>Let's face it - your products cannot solve every one of your customer's problem. At least not in the state it was shipped out of the factory. Traditional ways of making products field customizable can only go up to a certain point in helping tweak your product to suit the customer needs.  </p>
+<p>By creating a product platform where people can "run" their ideas, you can not only offer true customization but also let people innovate on top your platforms.  </p>
+<p>This talk will offer insights into what it takes to serve your platforms using python. It draws ideas from various existing technologies and PaaS providers. In each of the below areas, I will analyze various approaches, available tools/technologies/python recipes, identify best practices etc.,  </p>
+<ul>
+<li>Opening up your products
+                * Creating SDK, Abstracting your product's services, APIs</li>
+<li>Creating a runtime
+                * How to service 3rd party code?.</li>
+<li>Process isolation
+                * Ensuring that 3rd party code behaves well. 
+                * Virtualizing resources</li>
+<li>Nitty-grittys of running Python code
+                * Environment variables, 3rd party libraries, Native code</li>
+<li>Monitoring your platform
+                * Available tools. Best practices etc.,</li>
+<li>Hardening and Robustness
+                * How to ensure that at the end of the day, your product doesn't crash?</li>
+<li>App stores</li>
+</ul>
+<p>If time permits, we will see a small demo (&lt; 10 mins) :<br>
+                * Introduce  a hypothetical product using Raspberry Pi / BeagleBoard
+                * Create a "serve"able platform (done beforehand)
+                * Pick an idea from the audience and run it on the platform</p>
+    <h2>Requirements</h2>
+      <p>Basic understanding of Python</p>
+    <h2>Speaker bio</h2>
+      <p>Harish has diverse experience in building systems and applications on various platforms - Mainframes, PC, Embedded Systems and Web. He is been charming "Python" ever since he fell in love with the language about 6 years back.  </p>
+<p><a href="http://in.linkedin.com/in/harishvishwanath/">LinkedIn</a> </p>
+<p><a href="https://github.com/hvishwanath">Github</a></p>
+<p><a href="https://twitter.com/hvishwanath">@hvishwanath</a></p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c112">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/94-serving-your-platform-using-python/comments/112/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/94-serving-your-platform-using-python/comments/112/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="94-serving-your-platform-using-python#">[-]</a><a class="uncollapse hidden" href="94-serving-your-platform-using-python#">[+]</a>
+        <span class="commenter">Noufal Ibrahim</span>
+          584 days ago
+      </div>
+      <div class="com-body">
+        <p>This sounds <em>too</em> wide for a 3 hour workshop. It's necessary to trim it to be concise  if the workshop has to be effective and not rambling.</p>
+        <div data-id="112" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="94-serving-your-platform-using-python#c112">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="94-serving-your-platform-using-python#c112">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c123">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/94-serving-your-platform-using-python/comments/123/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/94-serving-your-platform-using-python/comments/123/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="94-serving-your-platform-using-python#">[-]</a><a class="uncollapse hidden" href="94-serving-your-platform-using-python#">[+]</a>
+        <span class="commenter selected">Harish Vishwanath</span>
+          583 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi  </p>
+<p>This is not proposed for a workshop. The proposal is for a talk session. My opinion is that I will be able to cover all the important and interesting points withing the time available for a talk and possibly squeeze in a demo too.</p>
+        <div data-id="123" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="94-serving-your-platform-using-python#c123">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="94-serving-your-platform-using-python#c123">[link]</a>
+          <a title="Parent" class="comment-parent" href="94-serving-your-platform-using-python#c112">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/94-serving-your-platform-using-python"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

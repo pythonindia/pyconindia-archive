@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Experiments in data mining, entity disambiguation and how to think data-structures for designing beautiful algorithms &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Experiments in data mining, entity disambiguation and how to think data-structures for designing beautiful algorithms &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+31</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Experiments in data mining, entity disambiguation and how to think data-structures for designing beautiful algorithms</h1>
+    <p>
+      by <strong>Ekta Grover</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Scientific Computing</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This session is about 3 main things –  </p>
+<ol>
+<li>
+<p>How to “think” data mining problems and quickly trying out different algorithmic approaches (Fail Cheap, if you should)  </p>
+</li>
+<li>
+<p>Three problems in data-mining around disambiguation, Natural language processing &amp; Information Retrieval  </p>
+</li>
+<li>
+<p>Measuring your Model performance - developing a near-real time performance aggregation platform  </p>
+</li>
+</ol>
+<p>And, Putting it all together – Building the problem structure (Think - data structures), analyzing, visualizing and hopefully monetizing .  </p>
+<p>The audience will walk away with concrete ideas on building your own custom disambiguation algorithms &amp; distance metrics .</p>
+    <h2>Description</h2>
+    <p>This session is for people who would like to move from pure play analytics to heavy data lifting and data engineering applications. With a background in Computer science and Quantitative economics, I blend these two approaches to bring quick wins(and Fail cheaper) to solve some of most interesting problems around us today- for fun and profit.  </p>
+<p>The four problems I will discuss are around –  </p>
+<ol>
+<li>
+<p>Scoring your connections to find your net worth in LinkedIn [Data  structures, Algorithms , Data mining &amp; Visualization]  </p>
+</li>
+<li>
+<p>Building your custom distance metrics (with Graphs as base data-structure) and finger keying – with applications for hand-collected data-sets, susceptible to entirely different distance metrics, than traditionally explored [Algorithms]  </p>
+</li>
+<li>
+<p>Building relevant Job feeds in Linkedin (TF-IDF) and (possibly) hacking around Job applications [Relevance Algorithms, Linguist pre-processing &amp; visualization]  </p>
+</li>
+<li>
+<p>Developing a custom batch aggregation platform - with competing system goals  [developing scoring metrics, concept of centrality &amp; formal constructs to measure recency]  </p>
+</li>
+</ol>
+<p>Most of all you will learn the why and why not of things, that I will keep coming back to as I discus the problems above. This I feel is the most important differentiator between coding well and coding for scale, and helps build a structured thought process to problem solving.<br>
+By the end of the session, you will have seen a blend of tools ranging from Python (Algorithms &amp; data mining &amp; Graph Theory) , Python, R &amp; ink space (Graphical representation &amp; visualization)  </p>
+<p>The session will be heavy on algorithms, and thinking data structures, so to make most of this, you need – a background/Interest in Computer science and Quantitative vigor with some hands-on coding experience, and a mind that wants to learn more.</p>
+    <h2>Requirements</h2>
+      <p>Base operating system – any *nix flavor (I am on oracle Virtual box with Ubuntu 12.04)<br>
+Python 2.7 with some data mining specific modules imported (will update the exhaustive list shortly)  </p>
+<p>Preferable, but not mandatory – R &amp; ink space installed – we use these tools only a representation and visualization of the problem statement . Python is the base tool we will be working with. Some head-start with Python would be good, to make the most of the session.</p>
+    <h2>Speaker bio</h2>
+      <p>Ekta is Sr. Analytics Consultant with data sciences team at [24]7, Innovation labs. She has a background in Quantitative Economics (MS) from Goethe University, Frankfurt and Computer Science (BE) from PESIT, Bangalore and enjoys Monetizing and leveraging technology to solve abstract Business problems.  </p>
+<p>While at Graduate school she became passionately interested in rationality, framing problems and how we humans respond to ambiguous choices - something she sews in technical dimensions with a scientific rigor in the data mining context – by thinking about the process that generated the data in first place. </p>
+<p>Her current profile with [24]7, Inc involves end to end solutionining, statistical analysis and deployment of Analytic models for e-commerce clients and designing intuitive customer experiences.  </p>
+<p>Digital footprint (Technical &amp; Professional)  -:<br>
+Linkedin : <a href="http://www.linkedin.com/in/ektagrover">http://www.linkedin.com/in/ektagrover</a><br>
+Quora : <a href="http://www.quora.com/Ekta-Grover">http://www.quora.com/Ekta-Grover</a>  </p>
+<p>Comprehensive links in Github to the 4 problems I intend to speak about -:<br>
+Experiments in data mining : <a href="http://bit.ly/12IFUfM">http://bit.ly/12IFUfM</a><br>
+A QWERTY keyboard simulator for custom distance in hand crafted datasets- <a href="http://bit.ly/1bOgVeH">http://bit.ly/1bOgVeH</a><br>
+Scoring your linkedin connections<br>
+<a href="http://bit.ly/1e0ftHi">http://bit.ly/1e0ftHi</a>
+Developing your near-real time performance benchmark platform<br>
+<a href="http://bit.ly/1fpM9I8">http://bit.ly/1fpM9I8</a></p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/ekta1007/pycon-2013-experiments-in-data-mining-entity-disambiguation-and-how-to-think-datastructures-for-designing-beautiful-algorithms">http://www.slideshare.net/ekta1007/pycon-2013-experiments-in-data-mining-entity-disambiguation-and-how-to-think-datastructures-for-designing-beautiful-algorithms</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Uploaded preliminary slides . Will update them along the days. This will be a broad skeleton of what we will cover, with some richer content, resources &amp; links. </li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c110">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/110/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/110/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[-]</a><a class="uncollapse hidden" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[+]</a>
+        <span class="commenter">nidhi</span>
+          585 days ago
+      </div>
+      <div class="com-body">
+        <p>very nice:)</p>
+        <div data-id="110" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c110">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c110">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c150">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/150/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/150/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[-]</a><a class="uncollapse hidden" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[+]</a>
+        <span class="commenter selected">Ekta Grover</span>
+          549 days ago
+      </div>
+      <div class="com-body">
+        <p>Uploaded my preliminary slides - looking for some constructive feedback &amp; suggestions. </p>
+        <div data-id="150" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c150">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c150">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c154">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/154/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms/comments/154/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[-]</a><a class="uncollapse hidden" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#">[+]</a>
+        <span class="commenter selected">Ekta Grover</span>
+          544 days ago
+      </div>
+      <div class="com-body">
+        <p>Looks like the embed of the latest slides at Slideshare is not reflecting at this page - here's the link to the latest version-<br>
+<a href="http://www.slideshare.net/ekta1007/pycon-2013-experiments-in-data-mining-entity-disambiguation-and-how-to-think-datastructures-for-designing-beautiful-algorithms">http://www.slideshare.net/ekta1007/pycon-2013-experiments-in-data-mining-entity-disambiguation-and-how-to-think-datastructures-for-designing-beautiful-algorithms</a></p>
+        <div data-id="154" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c154">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms#c154">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/103-experiments-in-data-mining-entity-disambiguation-and-how-to-think-data-structures-for-designing-beautiful-algorithms"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

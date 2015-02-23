@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Python idioms  &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Python idioms  &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="18-python-idioms#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/18-python-idioms/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/18-python-idioms/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/18-python-idioms/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/18-python-idioms/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+7</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Python idioms </h1>
+    <p>
+      by <strong>Atul S Khot</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/18-python-idioms&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Core Python</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Every programming language has its idioms... Studying these idioms helps one to write elegant code.    </p>
+    <h2>Description</h2>
+    <p>Every language brings its own culture, hacks - and style with it...<br>
+And the stuff you absolutely have to know for getting something done...<br>
+Idiomatic code is also very elegant...  </p>
+<p>While learning python, I think this would fill in the need... The coroutines stuff in python is super stuff...<br>
+Also the list copy as  </p>
+<p>def y = x[:]  </p>
+<p>While comparing with other languages - here is what I mean...  </p>
+<p>C/C++ have extensive idioms - for example,<br>
+             while( <em>d++ = </em>s++);
+is how strcpy is defined in C... (Or "executing around the pointer" idiom in C++<br>
+http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Execute-Around_Pointer)  </p>
+<p>Perl has so many - (The first time I saw Schwartzian transform - my eyes popped out<br>
+<a href="http://en.wikipedia.org/wiki/Schwartzian_transform">http://en.wikipedia.org/wiki/Schwartzian_transform</a> ;-)</p>
+<p>Java's try/finally - and list -&gt; array conversion<br>
+MyClass[] arr = myList.toArray(new MyClass[0]);<br>
+- and many others...</p>
+    
+    <h2>Speaker bio</h2>
+      <p>I have been writing code for the last 16 years - in various languages - and know many idioms for them.  </p>
+<p>Please see more about me at<br>
+<a href="http://lnkd.in/fNUepH">http://lnkd.in/fNUepH</a></p>
+
+    
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c50">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/18-python-idioms/comments/50/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/18-python-idioms/comments/50/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="18-python-idioms#">[-]</a><a class="uncollapse hidden" href="18-python-idioms#">[+]</a>
+        <span class="commenter">Noufal Ibrahim</span>
+          601 days ago
+      </div>
+      <div class="com-body">
+        <p>This proposal is too vague and the example provided is wrong. Please flesh it out and provide something more concrete.</p>
+        <div data-id="50" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="18-python-idioms#c50">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="18-python-idioms#c50">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c53">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/18-python-idioms/comments/53/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/18-python-idioms/comments/53/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="18-python-idioms#">[-]</a><a class="uncollapse hidden" href="18-python-idioms#">[+]</a>
+        <span class="commenter selected">Atul S Khot</span>
+          601 days ago
+      </div>
+      <div class="com-body">
+        <p>Not sure why it is vague - every language has idioms - and as example I have given a chosen few samples in languages I code...<br>
+      I have also listed one python idiom... The talk would cover python idioms - and possibly compare and contrast these against similar idioms in other popular languages...
+      I don't know which example you mean is wrong - please elaborate... </p>
+        <div data-id="53" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="18-python-idioms#c53">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="18-python-idioms#c53">[link]</a>
+          <a title="Parent" class="comment-parent" href="18-python-idioms#c50">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c54">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/18-python-idioms/comments/54/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/18-python-idioms/comments/54/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="18-python-idioms#">[-]</a><a class="uncollapse hidden" href="18-python-idioms#">[+]</a>
+        <span class="commenter">Noufal Ibrahim</span>
+          601 days ago
+      </div>
+      <div class="com-body">
+        <p><code>def y = x[:]</code> is not valid python. </p>
+<p>The point I'm trying to make is that I'm not exactly sure what I'd learn if I attended this session. I can't decide whether to upvote or downvote it. Not enough information.</p>
+        <div data-id="54" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="18-python-idioms#c54">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="18-python-idioms#c54">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c55">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/18-python-idioms/comments/55/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/18-python-idioms/comments/55/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="18-python-idioms#">[-]</a><a class="uncollapse hidden" href="18-python-idioms#">[+]</a>
+        <span class="commenter selected">Atul S Khot</span>
+          601 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Noufal,<br>
+       I tried it out - you are right - 
+it should have read like  </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>z = [1,2]
+t = z[:]
+t
+[1, 2]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>My apologies ;-) I think I need to practice more python...  </p>
+<p>I am not a Python programmer - but somehow love the language - found it very appealing - started to learn it on my own -  </p>
+<pre class="syntax"><code>     Having said this - a session on python idioms would do very well indeed...</code></pre>
+
+
+<p>--- cheerio atul</p>
+        <div data-id="55" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="18-python-idioms#c55">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="18-python-idioms#c55">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c56">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/18-python-idioms/comments/56/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/18-python-idioms/comments/56/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="18-python-idioms#">[-]</a><a class="uncollapse hidden" href="18-python-idioms#">[+]</a>
+        <span class="commenter selected">Atul S Khot</span>
+          601 days ago
+      </div>
+      <div class="com-body">
+        <p>Oops I think the formatter ate up the new lines - I mean all the three assignments should be on separate lines...  </p>
+<p>--- cheerio atul</p>
+        <div data-id="56" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="18-python-idioms#c56">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="18-python-idioms#c56">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/18-python-idioms"); // 
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

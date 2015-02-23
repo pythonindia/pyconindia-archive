@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Real-Time stream computation on graphs using Storm, Neo4j and Python &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Real-Time stream computation on graphs using Storm, Neo4j and Python &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+54</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Real-Time stream computation on graphs using Storm, Neo4j and Python</h1>
+    <p>
+      by <strong>Sonal Raj</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Software Development Tools</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>This session will introduce the working principles of the <a href="http://www.storm-project.net">Storm</a> real-time computation system and the <a href="http://www.neo4j.org">Neo4J</a> graph database and how to use them in conjunction to perform stream computations on distributed graph data systems using Python APIs.</p>
+    <h2>Description</h2>
+    <h3>Storm</h3>
+<p>We will briefly outline the installation and features of Twitter’s Storm framework and basic operations which make it an ideal tool for real-time stream processing of data. We will also look into it's Fault-Tolerance capabilities using programmatic implementations.  </p>
+<h3>Neo4J</h3>
+<p>We will briefly introduce Neo4j, a No-SQL graph Database – how it works, its APIs, working with REST and Cypher.  </p>
+<h3>Distributed Graph Operations</h3>
+<p>We shall then focus on how Storm and Neo4J can be made to work in co-ordination in a distributed environment to produce efficient and fast operations on significantly large graph data. The session will also include a live implementation of a scenario to demonstrate the use of Storm, Neo4J and their co-ordinated jobs in Python.  </p>
+<p>Finally the growing social applications of graph databases will not be a mystery anymore !</p>
+    <h2>Requirements</h2>
+      <ul>
+<li>basic knowledge of Distributed Systems and Databases. Although idea of Storm or Neo4J would help.</li>
+</ul>
+    <h2>Speaker bio</h2>
+      <p>I am an artist at heart, a technocrat by profession and a python enthusiast. I am passionate about python as a futuristic technology and use it avidly for development.  I am a developer for <a href="http://www.enfoss.org">Enfoss Inc.</a> , where Python is an integral part of data analytics and business intelligence products.  </p>
+<p>I have given talks on Storm Framework, whose link is as follows :<br>
+<a href="http://www.slideshare.net/sonal-raj/storm-serc-ppt">Storm Presentation at SERC</a></p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/sonal-raj/pycon-india-talk">http://www.slideshare.net/sonal-raj/pycon-india-talk</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://www.sonalraj.com" rel="nofollow" target="_blank">http://www.sonalraj.com</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c105">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/105/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/105/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[-]</a><a class="uncollapse hidden" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[+]</a>
+        <span class="commenter">Pallav Mehra</span>
+          586 days ago
+      </div>
+      <div class="com-body">
+        <p>This talk is a duplicate.<br>
+<a href="http://in.pycon.org/funnel/2013/1-introduction-to-graph-database-and-neo4j-using-python">http://in.pycon.org/funnel/2013/1-introduction-to-graph-database-and-neo4j-using-python</a></p>
+        <div data-id="105" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c105">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c105">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c107">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/107/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/107/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[-]</a><a class="uncollapse hidden" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[+]</a>
+        <span class="commenter selected">Sonal Raj</span>
+          586 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Pallav, This is not a duplicate talk, it definitely includes the one you referenced. This talk will focus more on the Integration of  Storm Framework with graph databases like Neo4J. The talk will cover more aspects distributing workloads on a Storm-Neo4j system, rather than the operations of Neo4J itself. So, the only reason it seems similar to the above talk is that in order to explain the integration process, the audience would require an introduction to Neo4J. We just can't mention it in the requirements, can we?  </p>
+        <div data-id="107" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c107">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c107">[link]</a>
+          <a title="Parent" class="comment-parent" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c105">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c132">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/132/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/132/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[-]</a><a class="uncollapse hidden" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[+]</a>
+        <span class="commenter">Harshit sharma</span>
+          574 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi , are you doing integration using Python ?</p>
+        <div data-id="132" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c132">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c132">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c134">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/134/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python/comments/134/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[-]</a><a class="uncollapse hidden" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#">[+]</a>
+        <span class="commenter selected">Sonal Raj</span>
+          573 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Harshit!  Yes, I am using the Python Bindings for both Storm and Neo4J so the integration is also in python. Although I have done it in java natively, but the python adapters do make it comfortable for end users.</p>
+        <div data-id="134" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c134">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c134">[link]</a>
+          <a title="Parent" class="comment-parent" href="61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python#c132">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/61-real-time-stream-computation-on-graphs-using-storm-neo4j-and-python"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

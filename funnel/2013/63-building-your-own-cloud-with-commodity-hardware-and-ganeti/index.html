@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Building your own Cloud with commodity hardware and &#34;Ganeti&#34; &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Building your own Cloud with commodity hardware and &#34;Ganeti&#34; &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+53</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Building your own Cloud with commodity hardware and &#34;Ganeti&#34;</h1>
+    <p>
+      by <strong>Pranjal Mittal</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The goal of my talk is to highlight what it takes to setup your own cloud, compute clusters using an awesome open-source tool called Ganeti on commodity hardware.  </p>
+<p>Ganeti is a cluster - virtual server management software written in Python / Haskell, developed at Google, open-sourced in 2007 &amp; ever growing since..  </p>
+<p>The talk would be ideal to anyone from a Software Architect, System Administrator, Cloud Computing enthusiast to University students, IT-staff, and my fellow Pythonistas.<br>
+And what do you know- The <strong>Python Software Foundation</strong> cluster is itself powered by “Ganeti” running at the Open Source Lab, in Oregon, USA.</p>
+    <h2>Description</h2>
+    <p>Many schools, institutes and SME’s possess untapped Hardware Infrastructure.<br>
+As an example scenario, I take my own institute. We have been granted over 20 high compute capacity nodes. Academic researchers, professors and students would like to have their own machine over the Institute network to host research projects, academic resources, collaborate, compute. Professors &amp; researchers want the ability to run isolated set of machines for their research work.  </p>
+<p>But the ratio is a little problem!<br>
+Individuals : Servers :: 5000 : 20  </p>
+<p>How do we flexibly divide the compute power of the limited number of servers so that it  benefits so many individuals? How do businesses tap the potential of their own commodity hardware to create a more productive environment for their employees?<br>
+Cloud Computing &amp; Virtualization is the answer. We do have really awesome “Open Source Tools” that could help us setup our very own cloud.<br>
+<strong>Ganeti</strong> is one such Open Source tool that would be the focus of my talk.</p>
+<h3>Why Ganeti over the rest- when we have Openstack, Cloudstack and Eucalyptus?</h3>
+<p>Ganeti allows to setup your cloud on commodity hardware, with the least efforts and resources in comparison to the other tools out there. It is best suited for small companies and academic institutions with less demand for computing resources and a small IT staff.  </p>
+<h3>Ganeti - At the OSU’s Open Source Lab</h3>
+<p>“Ganeti has proven to be the perfect production and development environment to quickly and easily spin up virtual machines for the open source projects housed at OSU’s Open Source Lab, including Python Software Foundation, Busybox, Inkscape, OpenMRS, phpBB, OSGeo,and Yum”  -(Lance Albertson, Director, OSUOSL)</p>
+<h3>Here’s is a time-split up and the tentative sub-topics, I plan to speak on (35 min):</h3>
+<ol>
+<li>
+<p>Intro (5 min)  </p>
+<blockquote>
+<ul>
+<li>Who am I?</li>
+<li>Private IaaS in Academic Institutions and SME’s, Open Source Tools. </li>
+<li>Virtualization, Hypervisors, and the Cloud</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Looking into Ganeti. (7 min)  </p>
+<blockquote>
+<ul>
+<li>What is Ganeti? Do I need Ganeti?</li>
+<li>Learning from peers - Ganeti at OSUOSL, Google.</li>
+<li>Quick comparison of Ganeti to Openstack, Cloudstack and Eucalyptus.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Diving into Ganeti &amp; Setting up your own cluster. (12 min)  </p>
+<blockquote>
+<ul>
+<li>Cloud (Ganeti) Terminology - Cluster, Nodes and Virtual Machines.</li>
+<li>Ganeti Components &amp; Architecture.</li>
+<li>A brief introduction to Ganeti-Command Line Interface.</li>
+<li>Redundancy and Reliability via failovers, migration</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Ganeti Web Manager (4 min)  </p>
+<blockquote>
+<ul>
+<li>Brief Introduction to the Ganeti Web Manager Project, a web application interface to Ganeti for System administrators.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Evaluating Ganeti Virtually (Optional) (7 min)  </p>
+<blockquote>
+<ul>
+<li>Setting up a virtual cluster using  Vagrant-Ganeti</li>
+<li>Small Live demo on a virtual cluster with 3 -nodes</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+    <h2>Requirements</h2>
+      <p>Basic knowledge about these would be helpful-  </p>
+<ul>
+<li>Linux System Administration</li>
+<li>Operating Systems</li>
+<li>Cloud computing</li>
+<li>Knowledge of Python? Nah. We are not going to code over ganeti right away.</li>
+<li>Laptops not required</li>
+</ul>
+    <h2>Speaker bio</h2>
+      <p>A final-year student at the Indian Institute of Technology (BHU), Varanasi, FOSS programmer, cloud computing enthusiast, web programmer, researcher. I am working with the OSU’s Open Source Lab via the Google Summer of Code 2013 program, on the Ganeti Web Manger project.  </p>
+<p>For updates on my work, follow me on github <strong>@pramttl</strong>  </p>
+<p>Any kind of constructive suggestions are solicited, at: pranjal.mittal.ece10@iitbhu.ac.in</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://docs.ganeti.org/ganeti/current/html/" rel="nofollow" target="_blank">http://docs.ganeti.org/ganeti/current/html/</a></li>
+        <li><a href="https://osuosl.org/about" rel="nofollow" target="_blank">https://osuosl.org/about</a></li>
+        <li><a href="https://code.google.com/p/ganeti/" rel="nofollow" target="_blank">https://code.google.com/p/ganeti/</a></li>
+        <li><a href="https://github.com/ramereth/vagrant-ganeti" rel="nofollow" target="_blank">https://github.com/ramereth/vagrant-ganeti</a></li>
+        <li>(About me)</li>
+        <li><a href="https://github.com/pramttl" rel="nofollow" target="_blank">https://github.com/pramttl</a></li>
+        <li><a href="http://www.linkedin.com/pub/pranjal-mittal/26/660/318" rel="nofollow" target="_blank">http://www.linkedin.com/pub/pranjal-mittal/26/660/318</a></li>
+        <li><a href="http://www.pranjalmittal.in/" rel="nofollow" target="_blank">http://www.pranjalmittal.in/</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c57">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/57/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/57/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[-]</a><a class="uncollapse hidden" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[+]</a>
+        <span class="commenter">murtuza</span>
+          600 days ago
+      </div>
+      <div class="com-body">
+        <p>All the best man!</p>
+        <div data-id="57" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c57">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c57">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c58">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/58/voteup">&#x25b2;</a><br/>
+      <span class="count">0</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/58/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[-]</a><a class="uncollapse hidden" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[+]</a>
+        <span class="commenter">Azhar Hussain </span>
+          599 days ago
+      </div>
+      <div class="com-body">
+        <p>(y)</p>
+        <div data-id="58" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c58">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c58">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c85">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/85/voteup">&#x25b2;</a><br/>
+      <span class="count">0</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti/comments/85/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[-]</a><a class="uncollapse hidden" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#">[+]</a>
+        <span class="commenter">Parth Bhalara</span>
+          589 days ago
+      </div>
+      <div class="com-body">
+        <p>best of luck dude !</p>
+        <div data-id="85" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c85">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="63-building-your-own-cloud-with-commodity-hardware-and-ganeti#c85">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/63-building-your-own-cloud-with-commodity-hardware-and-ganeti"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

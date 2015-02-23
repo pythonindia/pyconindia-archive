@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Image Processing with pyCUDA &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Image Processing with pyCUDA &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="58-image-processing-with-pycuda#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/58-image-processing-with-pycuda/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/58-image-processing-with-pycuda/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/58-image-processing-with-pycuda/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/58-image-processing-with-pycuda/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+24</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Image Processing with pyCUDA</h1>
+    <p>
+      by <strong>Manish Kumar Shukla</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/58-image-processing-with-pycuda&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Scientific Computing</dd>
+      <dt>Technical level</dt>
+      <dd>Beginner</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>Learn how to write parallel code with pyCUDA.</p>
+    <h2>Description</h2>
+    <p>Talk focuses use of libraries like<br>
+numpy<br>
+scipy<br>
+matplotlib<br>
+and pyCUDA for information extraction from an image.</p>
+    <h2>Requirements</h2>
+      <p>A Linux Machine with NVIDIA GPU<br>
+Python 2.6+<br>
+CUDA 5.5  </p>
+    <h2>Speaker bio</h2>
+      <p>3rd year dual degree(B.tech cs + MS Computational Natural Sciences)<br>
+student at IIIT Hyderabad.<br>
+As my summer project I have worked on image processing with pyCUDA for Digital in-line holographic microscopy<br>
+and currently working on optimization techniques for parallel programming.</p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://github.com/gamecoder2012/digital-inline-holographic-microscopy" rel="nofollow" target="_blank">https://github.com/gamecoder2012/digital-inline-holographic-microscopy</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c73">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/58-image-processing-with-pycuda/comments/73/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/58-image-processing-with-pycuda/comments/73/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="58-image-processing-with-pycuda#">[-]</a><a class="uncollapse hidden" href="58-image-processing-with-pycuda#">[+]</a>
+        <span class="commenter">Mrinmoy Das</span>
+          597 days ago
+      </div>
+      <div class="com-body">
+        <p>looking forward to this</p>
+        <div data-id="73" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="58-image-processing-with-pycuda#c73">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="58-image-processing-with-pycuda#c73">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c79">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/58-image-processing-with-pycuda/comments/79/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/58-image-processing-with-pycuda/comments/79/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="58-image-processing-with-pycuda#">[-]</a><a class="uncollapse hidden" href="58-image-processing-with-pycuda#">[+]</a>
+        <span class="commenter">Prateek</span>
+          593 days ago
+      </div>
+      <div class="com-body">
+        <p>Great Initiative !<br>
+Good Luck!!</p>
+        <div data-id="79" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="58-image-processing-with-pycuda#c79">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="58-image-processing-with-pycuda#c79">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c133">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/58-image-processing-with-pycuda/comments/133/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/58-image-processing-with-pycuda/comments/133/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="58-image-processing-with-pycuda#">[-]</a><a class="uncollapse hidden" href="58-image-processing-with-pycuda#">[+]</a>
+        <span class="commenter">Anand Chitipothu</span>
+          574 days ago
+      </div>
+      <div class="com-body">
+        <p>Hi Manish,  </p>
+<p>Can you please provide link to your work, your github, your website/blog?  </p>
+<p>If you have spoken at any other conference before, please mention those as well.  </p>
+        <div data-id="133" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="58-image-processing-with-pycuda#c133">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="58-image-processing-with-pycuda#c133">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/58-image-processing-with-pycuda"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

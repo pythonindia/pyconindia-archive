@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Drive your OpenStack using Python (OpenStack Python Client Libraries) &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Drive your OpenStack using Python (OpenStack Python Client Libraries) &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="81-drive-your-openstack-using-python-openstack-python-client-libraries#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+8</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Drive your OpenStack using Python (OpenStack Python Client Libraries)</h1>
+    <p>
+      by <strong>Pranav Salunke</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Infrastructure</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>To introduce India Python Community to OpenStack, its software model, architecture, and its community.<br>
+Main purpose of this talk is to demonstrate how a normal programmer can use OpenStack without having to learn it via OpenStack Python Client Libraries, a brief overview of its architecture (OpenStack and Python Client) and small demo of OpenStack, its dashboard, its API. The demo will cover how the Python Client Libraries can be used to drive your OpenStack IaaS with minimal learning.  </p>
+    <h2>Description</h2>
+    <p>This talk is to enlighten the python hackers and community in India about OpenStack and its community. OpenStack is one of the biggest growing community and has the policy of strictly adhering to Python for its core and most of its incubated projects. Although the main focus will be on its Python Client Libraries as it will address python programmers in general, as its very important for SaaS and PaaS end developers. Awareness of these clients can lead to better utilization of OpenStack cloud and programmers can save lot of time on authenticating with OpenStack and focus on their projects. A short demo of the same on OpenStack Grizzly will also be presented, which will give the feel of OpenStack and also some insight into the practical working of Python Client Libraries. This presentation and demo will be a good encouragement and influence for Python Community as they will be facing this challenge sooner or later “To make their programs/software run with/on OpenStack”, and this is the appropriate time as OpenStack is at the edge of maturity and will see lots of PaaS and SaaS related work in the near future. It will also be a delight for the Python community to see one of the most powerful Open Source cloud in action written totally in Python. Link for OpenStack Python Client Libraries : <a href="http://docs.openstack.org/developer/language-bindings.html">http://docs.openstack.org/developer/language-bindings.html</a>  </p>
+<p>Basically the following will be the session<br>
+Part I - Presentation (30-40 mins)<br>
+1. Overview on OpenStack<br>
+2. Its Community and foundation<br>
+3. Implementation (companies that use it)<br>
+4. Developers, Contributors etc.<br>
+5. RoadMap<br>
+6. Releases and release schedule<br>
+7. Components<br>
+8. Brief Technical Touch<br>
+9. OpenStack Python Client Libraries<br>
+10. What happens in the back ground (On use of Clients)<br>
+11. How much work/learning it saves<br>
+13. OpenStack Python Client Code<br>
+14. Short QnA session (~5-10 mins)  </p>
+<p>Part II - Demo (10-15 mins)<br>
+1. OpenStack Dashboard (look and feel of OpenStack)<br>
+2. OpenStack API (terminal based use)<br>
+3. OpenStack Python Client Code<br>
+4. QnA (~10 mins)  </p>
+<p>Total talk and demo should take around 1 hour including about 15-20 mins of QnA session.</p>
+    <h2>Requirements</h2>
+      <p>This is a presentation and a short demo, although I would be glad to know if you guys think it would be a good idea for workshop.<br>
+In this demo a fully functional OpenStack Sandbox deployed on Virtual Box will be used. There is no requirement for internet.  </p>
+<p>Technical Requirements : Mini-Display Port to VGA Adapter or if the projector has support for it.  </p>
+<p>If you want me to make this as a workshop, installation of OpenStack Python Client Libraries is required and a wireless router.  </p>
+    <h2>Speaker bio</h2>
+      <p>I work for Aptira (http://www.aptira.com/) as Jr. Cloud Engineer. Here I am working on OpenStack and other cloud based solutions.  </p>
+<p>OpenStack Python Client Libraries is developed by OpenStack Community. As a community member and developer of OpenStack, I feel that I am qualified for this presentation. Check me out (Pranav Salunke) in the OpenStack Developers List. <a href="http://www.openstack.org/software/grizzly/">http://www.openstack.org/software/grizzly/</a>  </p>
+<p>Every OpenStack release I create and maintain an unique guide which helps beginners and students deploy and learn OpenStack on commodity infrastructure using Virtual Box/ VMware<br>
+<a href="https://github.com/dguitarbite/OpenStack-Grizzly-VM-SandBox-Guide">https://github.com/dguitarbite/OpenStack-Grizzly-VM-SandBox-Guide</a>
+<a href="https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide">https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide</a>
+These guides are followed internationally, and many OpenStack based learning courses use it in their course in different countries.  </p>
+<p>I am a big fan of Python and I found out that I love python from the day I started learning python. I have about 3 years of experience in python, and have used QT, GTK2/3+, Django and other similar framworks/GUI tookits with python. I have designed a complete lightweight start menu for ARM based touch devices which runs on Debian based GNU/Linux, primarily used for Aakash2 tablet(https://github.com/manojgudi/py_finder). At present I am hacking on OpenStack, which is primarily written in python.  </p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="https://docs.google.com/presentation/d/11zMpr5ZOdJRyP8RoZDsiyEKVadxqujJKrYeG9Vs3xSI/edit?usp=sharing">https://docs.google.com/presentation/d/11zMpr5ZOdJRyP8RoZDsiyEKVadxqujJKrYeG9Vs3xSI/edit?usp=sharing</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li>Previous Talk at OpenStack Meetup : <a href="http://www.slideshare.net/aptira/aptira-presents-open-stack-load-balancing-as-a-service-at-banglore-india-osug-meetup-22-06-2013?from_search=3" rel="nofollow" target="_blank">http://www.slideshare.net/aptira/aptira-presents-open-stack-load-balancing-as-a-service-at-banglore-india-osug-meetup-22-06-2013?from_search=3</a></li>
+        <li>Link to Meetup’s Description : <a href="http://www.openstack.org/blog/tag/india/" rel="nofollow" target="_blank">http://www.openstack.org/blog/tag/india/</a>    </li>
+        <li>My Github profile : <a href="https://github.com/dguitarbite" rel="nofollow" target="_blank">https://github.com/dguitarbite</a></li>
+        <li>My Wordpress Blog : <a href="https://dguitarbite.wordpress.com/" rel="nofollow" target="_blank">https://dguitarbite.wordpress.com/</a></li>
+        <li>Twitter Profile : <a href="https://twitter.com/Dguitarbite" rel="nofollow" target="_blank">https://twitter.com/Dguitarbite</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/81-drive-your-openstack-using-python-openstack-python-client-libraries"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

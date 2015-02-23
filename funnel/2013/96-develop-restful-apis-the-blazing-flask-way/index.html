@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Develop RESTful APIs the Blazing Flask Way &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="Develop RESTful APIs the Blazing Flask Way &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="96-develop-restful-apis-the-blazing-flask-way#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+41</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>Develop RESTful APIs the Blazing Flask Way</h1>
+    <p>
+      by <strong>kumar rishabh</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/96-develop-restful-apis-the-blazing-flask-way&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Web Development</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>The objective of this session is to cover development of API back-end using Flask , a Python Micro framework swiftly.I will also cover version maintenance  of the application using Flask Blueprint . Since most of the RESTful APIs need a data back-end to serve the request , I will also cover basics of NoSQL database MongoDB . </p>
+    <h2>Description</h2>
+    <p>This session is for the lazy programmers out there who want to develop RESTful APIs on the fly but would like to leave the repetitive and configuration part of the job to the framework .Django a full stack framework can also achieve the same but it would very cumbersome for rapid development jobs.  </p>
+<p>This is where the flask comes into play . It is a bare minimum framework with everything else pluggable to it thus keeping the job of configuration to minimum but at the same time not compromising with the features.  </p>
+<p>I would start the session with basic configuration of flask first .Then I would delve in basics  of RESTful API development swiftly using flask . Since all the API development work requires a data back-end I would then go on to cover a NoSQL database MongoDB which is often paired with flask for API development .MongoDB is a JSON based document storage with support for schema change on the fly which makes it easier to handle ever increasing scalability requirement of RESTful API development .  </p>
+<p>Since version maintenance is an important part of application development and flask makes it so easy to do that using flask blueprint I would cover flask blueprints for version maintenance too .  </p>
+<p>The following would be the take-away from this session :<br>
+1)Why and when to choose flask , why it is so much fun and why is the world going gaga over it<br>
+2)Prototyping  RESTful APIs the swift and painless way and rolling it out over server as soon as possible (say in half an hour) without compromising over  features<br>
+3)developing a robust data backend using a noSQL solution (mongoDB) and its benefit over other SQL solutions<br>
+4)handling ever increasing requirement of scalability and how a noSQL  JSON based solution like mongoDB helps with that<br>
+5)VERSION maintenance using flask blueprint . For instance suppose my first version for cats API is <em>/cat1.0/feed but now I want to scale it up and launch brand new version of the same </em>/cat2.0/feed , how do I proceed doing it the most clean , painless and smart way .<br>
+6)comparison with other python based API rendering solutions like django Tastypie<br>
+7)some random but helpful flask GYAN  </p>
+    <h2>Requirements</h2>
+      <p>in terms of software and system :<br>
+Preferably a Linux Machine<br>
+python 2.7<br>
+mongoDB<br>
+flask , any python library to interact with mongoDB preferably PyMongo installed on the system  or in virtualenv  </p>
+<p>knowledge wise:<br>
+(although I would try to start from basics and take it to higher level but the following will still be useful)
+Must have worked a bit in developing RESTful APIs although if you dont have an experience with this I will try posting some links below so you get basic philosophy behind it  </p>
+<p>Have a little more than basic knowledge of python  </p>
+<p>Experience in the field of web development  </p>
+<p>Have you faced problem related to API development ? where all you desire is to roll out APIs as soon as possible without compromising with the features but get startled with configuration part of django , pyramid or any other MVCs .Then this is definitely the session for you  </p>
+<p>Knowledge of MVCs is a plus for sure .Although flask being micro framework it follows the philosophy behind MVC architecture to a large extent . So knowing philosophy behind MVCs or hands on experience with MVC would be a definitely helpful</p>
+    <h2>Speaker bio</h2>
+      <p>I am Kumar Rishabh ,  a third year dual degree student at IIIT Hyderabad . As a part of my lab work we are developing HadoopStack for deploying, managing and monitoring Hadoop jobs over clouds which could be both private or public .  </p>
+<p>As one of the works in the same regard we are developing RESTful APIs to allow interaction between a hadoop server and an openstack server which provides VMs on fly and converts in to hadoop resources as per specification .  </p>
+<p>We chose flask to proceed with API development in the same regard . A solution which can work efficiently on both public and private cloud would be highly desirable . You can follow the work at the links given below .  </p>
+
+  </div>
+  <div class="section">
+
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="http://siel-iiith.github.io/HadoopStack/" rel="nofollow" target="_blank">http://siel-iiith.github.io/HadoopStack/</a></li>
+        <li><a href="http://flask.pocoo.org/" rel="nofollow" target="_blank">http://flask.pocoo.org/</a></li>
+        <li><a href="http://www.mongodb.org/" rel="nofollow" target="_blank">http://www.mongodb.org/</a></li>
+        <li><a href="http://flask.pocoo.org/docs/blueprints/" rel="nofollow" target="_blank">http://flask.pocoo.org/docs/blueprints/</a></li>
+        <li>(I find this one very interesting and informative)</li>
+        <li><a href="https://blog.apigee.com/detail/restful_api_design" rel="nofollow" target="_blank">https://blog.apigee.com/detail/restful_api_design</a></li>
+        <li>(Development Branches)</li>
+        <li><a href="https://github.com/shredder12/HadoopStack" rel="nofollow" target="_blank">https://github.com/shredder12/HadoopStack</a></li>
+        <li><a href="https://github.com/hellboy2k8/" rel="nofollow" target="_blank">https://github.com/hellboy2k8/</a> </li>
+        <li><a href="https://github.com/siel-iiith/HadoopStack" rel="nofollow" target="_blank">https://github.com/siel-iiith/HadoopStack</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c97">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/97/voteup">&#x25b2;</a><br/>
+      <span class="count">2</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/97/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="96-develop-restful-apis-the-blazing-flask-way#">[-]</a><a class="uncollapse hidden" href="96-develop-restful-apis-the-blazing-flask-way#">[+]</a>
+        <span class="commenter">sankarshan mukhopadhyay</span>
+          587 days ago
+      </div>
+      <div class="com-body">
+        <p>I notice that there are other RESTful APIs and Flask talks being proposed. Would you consider putting in take-aways from your talk as part of the proposal? This should help viewers of the funnel express interest in your talk and, should it be selected, provide participants with clarity about what is expected.</p>
+        <div data-id="97" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="96-develop-restful-apis-the-blazing-flask-way#c97">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="96-develop-restful-apis-the-blazing-flask-way#c97">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c102">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/102/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/102/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="96-develop-restful-apis-the-blazing-flask-way#">[-]</a><a class="uncollapse hidden" href="96-develop-restful-apis-the-blazing-flask-way#">[+]</a>
+        <span class="commenter">rishabh</span>
+          587 days ago
+      </div>
+      <div class="com-body">
+        <p>yeah sure I will edit the proposal as per your advice soon . Thanks for the suggestion ,any other advice ,suggestion or criticism about the proposal  are always welcome :)  </p>
+        <div data-id="102" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="96-develop-restful-apis-the-blazing-flask-way#c102">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="96-develop-restful-apis-the-blazing-flask-way#c102">[link]</a>
+          <a title="Parent" class="comment-parent" href="96-develop-restful-apis-the-blazing-flask-way#c97">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c103">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/103/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/96-develop-restful-apis-the-blazing-flask-way/comments/103/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="96-develop-restful-apis-the-blazing-flask-way#">[-]</a><a class="uncollapse hidden" href="96-develop-restful-apis-the-blazing-flask-way#">[+]</a>
+        <span class="commenter">rishabh</span>
+          587 days ago
+      </div>
+      <div class="com-body">
+        <p>I have updated the take-away of the session and basic requirements for the session .Hope that helps you and others in making  decision :) Thanks for the advice</p>
+        <div data-id="103" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="96-develop-restful-apis-the-blazing-flask-way#c103">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="96-develop-restful-apis-the-blazing-flask-way#c103">[link]</a>
+          <a title="Parent" class="comment-parent" href="96-develop-restful-apis-the-blazing-flask-way#c97">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/96-develop-restful-apis-the-blazing-flask-way"); // 
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>

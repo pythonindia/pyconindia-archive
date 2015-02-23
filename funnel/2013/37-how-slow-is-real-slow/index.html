@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>how slow is real slow &mdash; PyCon India 2013 — PyCon India Funnel</title>
+  <meta name="DC.title" content="how slow is real slow &mdash; PyCon India 2013"/>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!--
+  <link rel="icon" href="/funnel/static/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/funnel/static/img/favicon.ico"/>
+  -->
+
+  <!-- Stylesheets -->
+  
+    <link href="../static/css/baseframe-packed.css?d3fb7f21" media="screen, projection" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <script src="../static/js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+  <div id="hg-bar" class="no-print">
+    <div class="container">
+          <ul id="hg-barlinks">
+            
+    <li id="hg-networkbar-home" class="strong"><a href="http://in.pycon.org/">PyCon India</a></li>
+    <li id="hg-networkbar-funnel" class="selected"><a href="http://in.pycon.org/funnel">Funnel</a></li>
+    <li id="hg-networkbar-past-events"><a href="37-how-slow-is-real-slow#" class="hg-submenu">Past Events</a>
+        <ul>
+          
+    <li id="hg-networkbar-2012"><a href="http://in.pycon.org/2012/">PyCon India 2012</a></li>
+    <li id="hg-networkbar-2011"><a href="http://in.pycon.org/2011/">PyCon India 2011</a></li>
+    <li id="hg-networkbar-2010"><a href="http://in.pycon.org/2010/">PyCon India 2010</a></li>
+    <li id="hg-networkbar-2009"><a href="http://in.pycon.org/2009/">PyCon India 2009</a></li>
+
+        </ul></li>
+
+          </ul>
+        <ul id="hg-usertools">
+          
+            <li><a href="/funnel/login">Login or sign up</a></li>      
+        </ul>
+    </div>
+  </div>
+  <div id="container">
+    <header>
+      <div id="logo"><a href="/funnel/">Home</a></div>
+      
+    </header>
+    <div id="main">
+        <ul class="breadcrumbs">
+          <li class="home"><a href="/funnel/">Home</a></li>
+          <li><a href="index.html">PyCon India 2013</a></li>
+          </ul>
+      
+      <div id="flash-messages">
+      </div>
+      
+      
+      
+
+<div class="infosheet">
+  <div class="leftear"><a href="/funnel/2013/37-how-slow-is-real-slow/prev" title="Previous">&lt;</a></div>
+  <div class="rightear"><a href="/funnel/2013/37-how-slow-is-real-slow/next" title="Next">&gt;</a></div>
+  <div class="section first">
+    <div class="votebox">
+      <div class="choices">
+          <a class="votechoice" title="Vote up" href="/funnel/2013/37-how-slow-is-real-slow/voteup">+1</a>
+          <a class="votechoice" title="Vote down" href="/funnel/2013/37-how-slow-is-real-slow/votedown">-1</a>
+        <span class="indicator">&rarr;</span>
+        <span class="score">+45</span>
+        </div>
+      <div class="label">
+        Vote on this proposal
+      </div>
+    </div>
+    <h1>how slow is real slow</h1>
+    <p>
+      by <strong>Anoop Thomas Mathew</strong>
+      (speaking)
+      
+    </p>
+    <!-- Social buttons -->
+    <div class="social">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pyconindia">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
+      <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href=/funnel/2013/37-how-slow-is-real-slow&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      
+    </div>
+  </div>
+  <div class="section bar">
+    <dl class="bar">
+        <dt>Section</dt>
+        <dd>Core Python</dd>
+      <dt>Technical level</dt>
+      <dd>Intermediate</dd>
+    </dl>
+  </div>
+  <div class="section"><h2>Objective</h2>
+    <p>A deeper look into why python is slow compared to other programming languages. The cause, effect, remedies and workarounds.</p>
+    <h2>Description</h2>
+    <p>Python programming language has been notoriously criticized for it's performance throughput since it's inception. Talk intents to explore the reasons of python being slow, and how slow it can get. A comparative study on which all are the It also will provide best practices on how to do things in python more efficiently.  </p>
+<p>Talk will discuss what are the best practices, which are the dos and don'ts and considerations to be taken into account while designing and programming with python.  </p>
+<p>A brief disucssion on how to effectively use GIL, ctypes, gevent or similar alternatives, and quick tips and tricks to boost performance will conclude the talk.</p>
+    <h2>Requirements</h2>
+      <p>Basics of <a href="http://learnpythonthehardway.org/%20Learn%20Python%20the%20Hard%20Way">python</a>. Bonus points for all with an <a href="http://ipython.org/," title="IPython">IPython</a> <a href="http://ipython.org/notebook.html">notebook</a> installed for trying out live.</p>
+    <h2>Speaker bio</h2>
+      <p><a href="https://twitter.com/atmb4u" title="Anoop Thomas Mathew">Anoop Thomas Mathew</a>  is a Python Architect with years of experience in working with python. With the title of Director of R&amp;D, <a href="http://profoundis.com" title="Profoundis Pvt. Ltd.">Profoundis</a>, and leads the engineering efforts at Profoundis, and products like  <a href="https://itestifyit.com" title="itestifyit.com">itestifyit</a> . He has spoken at conferences like Fifth Elephant 2012, FOSSMeet 2011, PyCon 2012, FOSSMeet 2013 to name a few.</p>
+
+  </div>
+  <div class="section">
+
+    
+      <h2 id="slides">Slides</h2>
+      <p>
+        <a id="slides-link" href="http://www.slideshare.net/atmb4u/how-slow-is-real-slow">http://www.slideshare.net/atmb4u/how-slow-is-real-slow</a>
+      </p>
+    
+    
+      <h2 id="links">Links</h2>
+      <ul id="links-list">
+        <li><a href="https://www.twitter.com/atmb4u" rel="nofollow" target="_blank">https://www.twitter.com/atmb4u</a></li>
+        <li><a href="http://www.slideshare.net/atmb4u/pycon-2012-scikitlearn" rel="nofollow" target="_blank">http://www.slideshare.net/atmb4u/pycon-2012-scikitlearn</a></li>
+        <li><a href="http://www.slideshare.net/atmb4u/redis-way-ofanaylticspythonfifthelephant2012" rel="nofollow" target="_blank">http://www.slideshare.net/atmb4u/redis-way-ofanaylticspythonfifthelephant2012</a></li>
+        <li><a href="http://www.slideshare.net/atmb4u/opensource-company-building" rel="nofollow" target="_blank">http://www.slideshare.net/atmb4u/opensource-company-building</a></li>
+        <li><a href="http://www.slideshare.net/atmb4u/test-driven-development-in-python" rel="nofollow" target="_blank">http://www.slideshare.net/atmb4u/test-driven-development-in-python</a></li>
+        
+      </ul>
+    
+  </div>
+  <div class="section">
+    <h2 id="comments">Comments</h2>
+    
+      <ul class="comments">
+        
+  <li class="comment">
+    <div id="c18">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/37-how-slow-is-real-slow/comments/18/voteup">&#x25b2;</a><br/>
+      <span class="count">3</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/37-how-slow-is-real-slow/comments/18/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="37-how-slow-is-real-slow#">[-]</a><a class="uncollapse hidden" href="37-how-slow-is-real-slow#">[+]</a>
+        <span class="commenter">Sanket Saurav</span>
+          617 days ago
+      </div>
+      <div class="com-body">
+        <p>Eagerly looking forward to this talk!</p>
+        <div data-id="18" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="37-how-slow-is-real-slow#c18">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="37-how-slow-is-real-slow#c18">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+  <li class="comment">
+    <div id="c30">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/37-how-slow-is-real-slow/comments/30/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/37-how-slow-is-real-slow/comments/30/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="37-how-slow-is-real-slow#">[-]</a><a class="uncollapse hidden" href="37-how-slow-is-real-slow#">[+]</a>
+        <span class="commenter">jaseem abid</span>
+          607 days ago
+      </div>
+      <div class="com-body">
+        <p>Hope you saw this already.  <a href="http://www.phi-node.com/2013/06/how-fast-can-we-make-interpreted-python.html">http://www.phi-node.com/2013/06/how-fast-can-we-make-interpreted-python.html</a></p>
+        <div data-id="30" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="37-how-slow-is-real-slow#c30">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="37-how-slow-is-real-slow#c30">[link]</a>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c31">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/37-how-slow-is-real-slow/comments/31/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/37-how-slow-is-real-slow/comments/31/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="37-how-slow-is-real-slow#">[-]</a><a class="uncollapse hidden" href="37-how-slow-is-real-slow#">[+]</a>
+        <span class="commenter selected">Anoop Thomas Mathew</span>
+          607 days ago
+      </div>
+      <div class="com-body">
+        <p>jaseem: Saw it. Thanks for the link. I suppose you read the description of the talk as well.  </p>
+<p>The point of the talk is not about which implementation of python is fast. Its about how to write efficient code, and using right tool for the right job, and not to use jumbo jackhammer for nailing a photo frame.</p>
+        <div data-id="31" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="37-how-slow-is-real-slow#c31">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="37-how-slow-is-real-slow#c31">[link]</a>
+          <a title="Parent" class="comment-parent" href="37-how-slow-is-real-slow#c30">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+      <ul class="com-children">
+        
+  <li class="comment">
+    <div id="c32">
+      
+  <div class="comment-vote"><a class="comment-vote-up" title="Vote up" href="/funnel/2013/37-how-slow-is-real-slow/comments/32/voteup">&#x25b2;</a><br/>
+      <span class="count">1</span><br/>
+      <a class="comment-vote-down" title="Vote down" href="/funnel/2013/37-how-slow-is-real-slow/comments/32/votedown">&#x25bc;</a><br/>
+  </div>
+
+      <div class="com-header">
+        <a class="collapse" href="37-how-slow-is-real-slow#">[-]</a><a class="uncollapse hidden" href="37-how-slow-is-real-slow#">[+]</a>
+        <span class="commenter">jaseem abid</span>
+          607 days ago
+      </div>
+      <div class="com-body">
+        <p>Felt that both are related and I found the paper quite insightful. Thought it might help. </p>
+        <div data-id="32" class="com-footer">
+          
+            <a title="Reply" class="comment-reply" href="37-how-slow-is-real-slow#c32">[reply]</a>
+            
+          <a title="Permalink" class="comment-permalink" href="37-how-slow-is-real-slow#c32">[link]</a>
+          <a title="Parent" class="comment-parent" href="37-how-slow-is-real-slow#c31">[parent]</a>
+        </div>
+      </div>
+    </div>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+  </li>
+
+      </ul>
+    
+    <p>
+        <a href="/funnel/login">Login with Twitter or Google to leave a comment &rarr;</a>
+      </p>
+    
+  </div>
+</div>
+
+    </div>
+    <div id="main_footer"></div>
+  </div> <!-- end of #container -->
+  <footer>
+    <div id="footer_content">
+      
+      <p>
+        Copyright &copy; 2013 <a href="http://python.org.in/">Indian Python Software Society</a>. All content is licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery === 'undefined')
+      document.write('<script type="text/javascript" src="/_baseframe/js/jquery-1.8.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="../static/js/baseframe-packed.js?ba7a078d"></script>
+  <!--[if lt IE 7 ]>
+    <script src="/funnel/static/js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  
+    <script type="text/javascript">
+     var _gaq = [['_setAccount', 'UA-17055001-1'], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+  
+<script type="text/javascript">
+  $(function() {
+    commentsInit("/funnel/2013/37-how-slow-is-real-slow"); // 
+      $("#slides-link").oembed();
+      $("#links-list a").oembed();
+  });
+</script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+</body>
+</html>
