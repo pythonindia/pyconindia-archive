@@ -1,0 +1,238 @@
+@charset "utf-8";
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	margin:14px 0px 0px 0px;
+	padding:0px;
+	background:url(/2009/sitemedia/pics/body_background.gif) repeat-x;
+}
+h1, h2, h3, h4, h5{
+	#border-bottom:1px solid #e77913;
+	#height:auto;
+	#font-size:14px;
+	color:#079046;
+	padding:6px 0px 3px 0px;
+	border-bottom:1px solid #e77913;
+	#font-weight: bolder;
+}
+
+p{
+	padding:0px;
+}
+form {
+	padding:0px;
+	margin:0px;
+}
+
+.topbar {
+	#height:136px;
+	#width:996px;
+	#padding-bottom:1px;
+	background: url(/2009/sitemedia/pics/topbar_backgroundimage2.gif) no-repeat;
+}
+.logo {
+	width:130px;
+	height:136px;
+	float:left;
+	background:url(/2009/sitemedia/pics/logo_image.gif) no-repeat  right;
+}
+.loginbtn {
+	height:24px;
+	width: 99px;
+	float:right;
+	background:url(/2009/sitemedia/pics/login_batton.gif)  no-repeat;
+}
+.loginbtn a{
+	height:24px;
+	width: 99px;
+	text-indent:-1000em;
+	display:block;
+}
+.navigationbar {
+	width:100%;
+	height:24px;
+	float:center;
+	background:url(/2009/sitemedia/pics/navigationbar_background.gif) repeat-x;
+	padding-bottom:1px;
+}
+.midpart {
+	width:996px;
+	height:auto;
+	float:left;
+}
+.mid_left {
+	font-size:11px;
+	#float:left;
+	#width:155px;
+	color:#054a25;
+}
+.mid_left ul {
+	margin:0px;
+	padding:0px;
+}
+.mid_left ul li {
+	float:left;
+	#width:100%;
+	list-style:none;
+	margin-bottom:1px;
+}
+.mid_left a {
+	color:#054a25;
+	display:block;
+	width:140px;
+	padding:5px 0px 5px 15px;
+	background: url(/2009/sitemedia/pics/batton_a_image.gif) no-repeat;
+	text-decoration:none;
+}
+.mid_left a:hover {
+	display:block;
+	width:140px;
+	padding:5px 0px 5px 15px;
+	color:#054a25;
+	background: url(/2009/sitemedia/pics/hoverbtn.jpg) no-repeat;
+	text-decoration:none;
+}
+
+
+
+
+.mid_middle {
+	width:656px;
+	height:auto;
+	float:left;
+	padding:0px 15px 0px 15px;
+}
+
+.mainheading {
+	width:90%;
+	height:auto;
+	font-size:20px;
+	color:#29166f;
+	padding:6px 0px 3px 0px;
+	font-weight: bolder;
+	text-align: center;
+}
+.sideheading {
+	width:90%;
+	border-bottom:1px solid #e77913;
+	height:auto;
+	font-size:14px;
+	color:#079046;
+	padding:6px 0px 3px 0px;
+	font-weight: bolder;
+}
+.sideheading2{
+	width:90%;
+	border-bottom:1px solid #e77913;
+	height:auto;
+	font-size:12px;
+	color:#079046;
+	padding:6px 0px 3px 0px;
+	font-weight: bolder;
+}
+.contenttext {
+	font-size:11px;
+	color:#232322;
+	float:left;
+	width: 100%;
+	height:auto;
+	padding:8px 0px 8px 0px;
+	line-height:14px;
+	text-align:justify;
+}
+.more {
+	font-size:11px;
+	color:#f64203;
+	float:left;
+	text-align:right;
+	width:100%;
+	padding:0px 0px 8px 0px;
+}
+.more a{
+	color:#f64203;
+	text-decoration:none;
+}
+.more a:hover{
+	color:#f64203;
+	text-decoration: underline;
+}
+.mid_right {
+	float:right;
+	width:155px;
+	height:auto;
+}
+.mid_right_tittlebar {
+	float:left;
+	width:145px;
+	height:14px;
+	background: url(/2009/sitemedia/pics/tittlebar.gif) no-repeat;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 0px 6px 10px;
+	color:#585958;
+}
+
+.postedby {
+	width:100%;
+	height:22px;
+	float:left;
+	text-align:center;
+	font-size:11px;
+	color: #232322;
+	padding-bottom:6px;
+	border-bottom:1px solid #eb7f14;
+}
+.bottambar {
+	width:100%;
+	height:22px;
+	float:left;
+	text-align:center;
+	font-size:11px;
+	color: #232322;
+	padding-top:6px;
+	border-top:1px solid #eb7f14;
+}
+.bottambar a{
+	color: #232322;
+	text-decoration:none;
+}
+.bottambar a:hover{
+	color: #000000;
+	text-decoration: underline;
+}
+.bottambar2 {
+	height:10px;
+	background-color:#bfdecb;
+	clear:both;
+}
+.bottamgradient {
+	width:998px;
+	height:66px;
+	margin:auto;
+	background:url(/2009/sitemedia/pics/bottam_backgroundimage2.gif) no-repeat;
+	margin-top:1px;
+}
+.batton_dropshadow {
+	width:155px;
+	height:16px;
+	float:left;
+	background:url(/2009/sitemedia/pics/btn_dropshadow.gif) no-repeat;
+}
+
+ul.sponsors li {
+    list-style-type:none;
+}
+
+table.schedule tr td.time {
+    vertical-align: top;
+    padding-top: 0px;
+    background: #eeeeee;
+    border-bottom: #aaaaaa solid 1px;
+    height: 4em;
+}
+
+table.schedule tr td.talk {
+    border: #aaaaaa solid 1px;
+    width: 31%;
+}

@@ -1,0 +1,288 @@
+Introduction 
+
+	NLP is an inter-disciplinary subject. 
+	Computer Science
+	Linguistics 
+	Statistics 
+	...........
+
+	It is a rapidly developing field of study. 
+	If you are using computers and Internet in your day to day life
+	 you may be using some NLP based product.
+	Spell- Checker
+	Search Engines etc....
+  
+Natural Language Toolkit (NLTK)
+	A collection of Python programs, modules, data set and
+	tutorial to support research and development in
+	Natural Language Processing (NLP).
+
+	Written by Steven Bird, Edvard Loper and Ewan Klien
+	
+	NLTK is
+		Free and Open source 
+		Esy to use
+		Modular
+		Simple
+		Well documented
+		Simple and extensible
+What You Will Learn
+
+	 • How simple programs can help you manipulate and analyze language data, and
+	    how to write these programs
+	 • How key concepts from NLP and linguistics are used to describe and analyze
+	    language
+	 • How data structures and algorithms are used in NLP
+	 • How language data is stored in standard formats, and how data can be used to
+	    evaluate the performance of NLP techniques
+
+
+
+I) Installation of NLTK
+	1) Make sure that Ptyhon 2.4 or 2.5 or 2.6 is available in your system
+	2) Install Python Tkinter package
+	3) Install Numpy, Matplotlib, Prover9, MaltParse and MegaM
+	4) Download NLTK and Install it
+		a) If you are installing NLTK from source 
+		   Download http://nltk.googlecode.com/files/nltk-2.0b5.zip
+		   Unzip it , It will create nltk-2.0b5 . 
+		   Open terminal and cd in to this folder
+		   Be super user 
+		   run
+		   	python setup.py install
+		 b) To install data
+		 	Start python interpreter 
+			type
+			>>> import nltk
+			>>> nltk.download()
+			It will open a GUI from the GUI you can select the packages which is
+			required. 
+			Click download button.
+			That is all!!!!!
+		Now you are ready to play with NLTK.
+
+II) Let us start the game
+	
+	1) To access data for working out the example in the book
+		a) Start Python interpreter
+			
+	2) Some basic work outs from the book
+		
+		a) Concordance 
+			
+			>>> from nltk.book import *
+			>>> text1.concordance("and")
+
+			>>> text1.similar("and")
+		
+		b) dispersion plot
+			"""
+			Positional information 
+			"""
+
+			>>> text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])
+
+			You can see a graphical plot.
+
+			>>> text4.dispersion_plot(["and", "to", "of", "with", "the"]) 
+
+			What is it !!! Why ???
+		c) Counting Vocabulary
+
+			>>> len(text3)
+			
+
+			1) List of distinct word in text3 sorted in dictionary order.
+
+			   >>> sorted(set(text3))
+
+			2) Count occurrence of a particular word in a text.
+
+				>>> text3.count("and")
+
+				>>> 100 * text3.count("and") / len(text3)
+				""" What percentage of text it is taken by a specific word. """
+
+			3) Selecting word based on parameters
+
+				{w|w is a member of V and P(w)}
+
+				[w for w in V if p(w)]
+
+				>>> V = set(text1)
+				>>> my_word = [w for w in V if len(w) > 15]
+				>>> sorted(my_word)
+
+				>>> fd = FreqDist(text4)
+				>>> sorted([w for w in set(text5) if len(w) > 7 and fd[w] > 15])
+			
+
+		d) Finding bi-grams 
+
+			>>> txt = "jaganadh is talking about NLTK."
+			>>> wlist = txt.split()
+			>>> bigrams(wlist)
+
+			what will happen if i do like this
+
+			>>> bigrams(txt)
+
+		e) Collocations
+
+			>>> text4.collocations()
+
+III) So far we were playing with data available in NLTK
+	Now let us see if it is possible to work with our own data.
+
+	a) Populate our own corpora with NLTKand analyse it 
+
+		>>> from nltk.corpus import PlaintextCorpusReader as ptr
+		>>> cr = '/home/conf/Desktop/pyConf.in/cor'
+		>>> wlis = ptr(cr,'.*')
+		>>>  wlis.fileids()
+		
+	b) Let us try to find it out how to count number of characters, words and sentences in the corpus.
+
+		>>> for fid in wlis.fileids():
+				print len(wlis.raw(fid))
+
+		>>> for fid in wlis.fileids():
+		        print len(wlis.words(fid))
+
+		>>> for fid in wlis.fileids():
+		        print len(wlis.sents(fid))
+
+
+
+	c) How to extract sentences from the corpus which we populated.
+
+
+		>>> for sent in wlis.sents('1c'):
+			     print sent
+
+	d) Find the longest sentence in the corpus.
+
+		>>> sents = wlis.sents('1c')
+		>>> long_sen = max([len(s) for s in sents])
+		>>> [s for s in sents if len(s) == long_sen]
+
+
+	e) Generating bigrams from the corpus 
+
+		>>> nltk.bigrams(wlis.words('1c'))
+
+	f) Ploting conditional frquency distribution 
+
+		>>> big = nltk.bigrams(wlis.words('1c'))
+		>>> gd = nltk.ConditionalFreqDist(big)
+		>>> gd.plot()
+
+	g) Tabulate CFD
+
+		>>> gd.tabulate()
+
+	h) Generating puzzle 
+
+		>>> puzzle = nltk.FreqDist('egivrvonl')
+		>>> ob = 'r'
+		>>> wl = nltk.corpus.words.words()
+		>>> [w for w in wl if len(w) >= 6 and ob in w and nltk.FreqDist(w) <= puzzle]
+
+	i) Finding pronunciation of words
+
+		>>> ent = nltk.corpus.cmudict.entries()
+		>>> w = 'work'
+		>>> for wo, p in ent:
+				if wo == w:
+					print p
+	
+	We can find stress patterns in text also with this module.
+
+	j) WordNet data accessing
+
+		>>> from nltk.corpus import wordnet as wn
+		>>> wn.synsets('car')
+		>>> wn.synset('car.n.01').lemma_names
+
+	
+		>>> for synset in wn.synsets('car'):
+				print synset.lemma_names
+	
+IV) Collecting corpus from web with NLTK
+
+		>>> from urllib import urlopen
+		>>> url = 'http://jaganadhg.freeflux.net/blog'
+		>>> raw = urlopen(url).read()
+		>>> txt = nltk.clean_html(raw)
+
+
+		To tokenize text 
+
+		>>> tok = nltk.word_tokenize(txt)
+
+	a) Stemming 
+
+		>>> porter = nltk.PorterStemmer()
+		>>> word = 'running'
+		>>> porter.stem(word)
+
+		>>> lancaster = nltk.LancasterStemmer()
+		>>> lancaster.stem(tok[110])
+
+	b) Lemmatization 
+
+		>>> wnl = nltk.WordNetLemmatizer()
+		>>> wnl.lemmatize(word)
+
+V) POS Tagging 
+
+	a) 	>>> text = nltk.word_tokenize("We are attending Python Conference")
+		>>> nltk.pos_tag(text)
+	
+
+VI) Parsing 
+
+		>>> sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"), ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
+		>>> grammar = "NP: {<DT>?<JJ>*<NN>}"
+		>>> cp = nltk.RegexpParser(grammar)
+		>>> result = cp.parse(sentence)
+		>>> print result
+		>>> result.draw()
+
+VII) What people are doing with NTK.
+
+	A group of students from Bangalor developed a small application for finding authorship attribution.
+	Analyzing IRC log . (Found in planet python)
+	Create corus from web.
+	Extraction MWE from corpus.
+	Teaching NLP
+
+VIII) Whre to find more info on NLTK
+	Visit the NLTK site www.nltk.org 
+		
+	Buy a book "Natural Language Processing with Python" from O'Reilly
+	In India it can be purchased from Shroffpublishers
+	Contents in the book
+
+		C1	Language Processing and Python
+		C2	Accessing Text Corpora and Lexical Resources
+		C3	Processing Raw Text
+		C4	Writing Structured Programs
+		C5	Catagorizing and Tagging Words
+		C6	Learning to Classify
+		C7	Extracting Information from Text
+		C8	Analyzing Sentence Structure
+		C9	Building Feature-Based Grammers
+		C10	Analyzing the Meaning of Sentences
+		C11	Managing Linguistic Data
+
+IX)  Contribute to NLTK
+	Visit the NLTK site.
+	GSOC
+	Buy a book 
+
+jaganadhg@gmail.com
+jaganadhg@au-kbc.org
+
+http://jaganadhg.freeflux.net/blog
+
