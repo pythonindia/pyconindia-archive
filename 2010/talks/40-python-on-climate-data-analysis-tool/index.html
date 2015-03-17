@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Python on Climate Data Analysis Tool - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Python on Climate Data Analysis Tool</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Arulalan.T</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2010/talks?level=Beginner">Beginner</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2010/talks?topic=Python standard library">Python standard library</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value"> CDAT, Climate, Weather, Map </td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>Climate Data Analysis Tool [CDAT] is an open source python library and it is mainly designed for Meteorological Department.
+</p>
+<p>Using CDAT library we can plot the world map or any continents or any regional map in visual canvas system (VCS).
+</p>
+<p>Over the map in vcs, we can plot the pressure,temperature and other weather indications &amp; changes in various colors in 2 Dimensional view.
+</p>
+<p>Also we can easily generate the thermodynamic diagrams and visualize the air temperature over our continents with help of the real climate data.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<p>We are going to see the following things . . .
+</p>
+<ul>
+ <li><p>What is CDAT Library ?
+</p>
+
+ </li>
+
+ <li><p>How can we use it as a meteorologist ?
+</p>
+
+ </li>
+
+ <li><p>How can we write coding for meteorologist using CDAT as normal python programmers ?
+</p>
+
+ </li>
+
+ <li><p>My Real Time Application of CDAT in Indian Meteorological Department.
+</p>
+
+ </li>
+
+ <li><p>How can we write code for new markers in CDAT ?
+</p>
+
+ </li>
+
+ <li><p>How can we edit or create our continents region in the CDAT world map ?
+</p>
+
+ </li>
+
+ <li><p>My Contribution to CDAT in its core development ( created many new markers )
+</p>
+
+ </li>
+</ul>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>Links:
+</p>
+<p>CDAT :  <a href="http://www2-pcmdi.llnl.gov/cdat">http://www2-pcmdi.llnl.gov/cdat</a>
+</p>
+<p>My Corrections in Our CDAT India Map :  <a href="http://tuxworld.wordpress.com/2010/02/13/how-to-edit-world-map-in-cdat-documentation/">http://tuxworld.wordpress.com/2010/02/13/how-to-edit-world-map-in-cdat-documentation/</a>
+</p>
+<p>My few new markers in CDAT : <a href="http://tuxcoder.wordpress.com/2010/07/14/my-4-new-weather-symbol-markers-in-cdat-developing/">http://tuxcoder.wordpress.com/2010/07/14/my-4-new-weather-symbol-markers-in-cdat-developing/</a>
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Arulalan.T has completed Master of Computer Application in Chennai. He is an Open Source enthusiast and mentoring Kanchi Linux User Group [1].
+</p>
+<p>Active member of Chennai Python User Group [2].
+</p>
+<p>While doing his college project only, he learned Python and completed his project [ Generating Current Isothermal Lines Over CDAT-India Map ] successfully.
+</p>
+<p>Then he got an opportunity to do a real time application in Python using CDAT module for Indian Meteorological Department [IMD], Chennai. The application is named as &quot;Generating Change Chart&quot; and almost completed 90% of work in it.
+</p>
+<p>One happy news is that, his project in IMD is going to implement in all over India as a mandatory for their daily climate observations.
+</p>
+<p>He post his activities/codes in his FOSS blog : <a href="http://tuxcoder.wordpress.com">http://tuxcoder.wordpress.com</a>
+</p>
+<p>[1] : <a href="http://kanchilug.wordpress.com">http://kanchilug.wordpress.com</a>
+</p>
+<p>[2] : <a href="http://chennaipy.wordpress.com">http://chennaipy.wordpress.com</a>
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+<table class="files">
+    <tr>
+        <th>file</th>
+        <th>size</th>
+        <th>uploaded</th>
+        <th>comment</th>
+    </tr>
+<tr>
+    <td><a href="/2010/static/files/talks/40/Climate-Data-Analysis-Tool-PyConfIndia-2010.odp">Climate-Data-Analysis-Tool-PyConfIndia-2010.odp</a></td>
+    <td>3.1 MB</td>
+    <td>september 19, 2010</td>
+    <td>The talk will contains with live demo on CDAT with the help of my slide.</td>
+</tr>
+</table>
+<p>
+You can <a href='/2010/talks/40/upload'>upload or delete a file</a> if you are author of this talk.
+</p>
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

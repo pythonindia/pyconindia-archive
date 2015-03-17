@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rapid 3D Game Development in Blender 2.5 - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Rapid 3D Game Development in Blender 2.5</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Arun Ravindran</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2010/talks?level=Beginner">Beginner</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2010/talks?topic=Game programming">Game programming</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">blender, 3d, game programming, game development, modeling, Python, AI</td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>3D Game Development is a multi-disciplinary field today involving several man years of development. However, innovations in game design require tools to rapidly prototype and realise a game concept. Blender Game Engine is a free and open source game development tool which offers a end-to-end solution from modelling to scripting.
+</p>
+<p>Learn how one can build a game framework within Blender without writing a single line of code. Extend the game in creative ways using Python scripting. The talk also covers several concepts of 3D game programming and where to look for further information.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<ol>
+ <li>
+     Introduction to 3D Game Programming
+ </li>
+
+ <li>
+     Components of Typical 3D Games
+ </li>
+
+ <li>
+     Python 3D Game Development
+ </li>
+
+ <li>
+     Blender 2.5 Basics
+ </li>
+
+ <li>
+     Blender Modelling Tutorial
+ </li>
+
+ <li>
+     Blender Game Engine
+ </li>
+
+ <li>
+     Game Tutorial in Blender
+ </li>
+
+ <li>
+     Advanced Stuff
+ </li>
+
+ <li>
+     Further Reading
+ </li>
+</ol>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>The talk will cover some hands-on with Blender. Hence, it is recommended to install Blender 2.5 on your laptops before attending to fully appreciate the session.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Arun Ravindran has been an avid open source enthusiast and evangelist for over a decade. His language of choice is Python and occasionally dabbles in Haskell, Perl and Lisp. His favourite areas are Game Programming, Emergent Behaviour and Web programming. He regularly blogs at <a href="http://www.arunrocks.com/blog/">www.arunrocks.com</a>
+</p>
+<p>He is a functional consultant with a wide range of experience in Retail, Manufacturing and Banking working for a leading IT consulting company.
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+<table class="files">
+    <tr>
+        <th>file</th>
+        <th>size</th>
+        <th>uploaded</th>
+        <th>comment</th>
+    </tr>
+<tr>
+    <td><a href="/2010/static/files/talks/37/Blender-Game-Engine-for-Rapid-Game-Development---Pycon-2010-final.pdf">Blender-Game-Engine-for-Rapid-Game-Development---Pycon-2010-final.pdf</a></td>
+    <td>557.3 KB</td>
+    <td>september 25, 2010</td>
+    <td>The full version that was presented at PyCon</td>
+</tr>
+<tr>
+    <td><a href="/2010/static/files/talks/37/Blender-Game-Engine-for-Rapid-Game-Development---Pycon-2010.pdf">Blender-Game-Engine-for-Rapid-Game-Development---Pycon-2010.pdf</a></td>
+    <td>47.6 KB</td>
+    <td>september 21, 2010</td>
+    <td>arocks</td>
+</tr>
+</table>
+<p>
+You can <a href='/2010/talks/37/upload'>upload or delete a file</a> if you are author of this talk.
+</p>
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

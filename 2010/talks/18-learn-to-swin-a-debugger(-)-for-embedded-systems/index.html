@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Learn to Swin - A Debugger(?) for Embedded Systems  - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Learn to Swin - A Debugger(?) for Embedded Systems </h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Sriram V Iyer</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2010/talks?level=Beginner">Beginner</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2010/talks?topic=Testing">Testing</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">debugging, embedded systems</td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>Swin is a debugger / interactive console for truly limited config embedded systems without a display and keyboard. Swin was developed purely in Python and has a lot of interesting features that are not available to embedded systems programmers who use a serial / ethernet ports to debug their applications. Swin is built on some fundamental abstractions to access memory and can be used to debug any system that does not have a MMU. Swin runs on the PC and can connect to the embedded device over multiple interfaces (that implement the fundamental abstractions)
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<p>Python is usually not embraced by developers for low level embedded systems because Python cannot run in very low CPU / memory configurations - Python will also not be realtime. However, Python can be used to create tools for embedded systems rather than directly trying to put Python inside the system.
+</p>
+<p>Swin is one such utility. Developing for systems that don't have a display / keyboard can be challenging - Esp, if there is no JTAG / BDM connectivity. Developers rely on reading directly from memory based on:
+   (1) Writing Debug Information to fixed Memory Locations
+   (2) If that's not possible, use Linker Map files to read addresses of variables .bss/.data sections and read the variable values
+</p>
+<p>Option (2) is a problem because the location of variables change with (almost) every build. 
+</p>
+<p>Swin uses linker map files and provides a user with a command-line console with which user can read / write variables in an interactive manner. Swin can also interpret memory locations as structures or array of structures (excellent logging tool). 
+</p>
+<p>To achieve all the above and more, Swin uses a lot of Python - I plan to explain how the debugger is used and then explain the concepts involved in developing the debugger:
+   a. Command Handling Engine
+   b. Permissions Handler
+   c. Data-Structure Interpretation Engine
+   d. Linker MAP parser
+   e. Stack Tracer (when exception occurs)
+   f. Batch mode / simple macro expansions
+   6. Post Mortem Debug
+</p>
+<p>Detailed Overview of the Presentation
+</p>
+<p>Swin - What it is? What can it do?
+   Why did I do Swin?
+   Why use Swin?
+   Why Python for Swin?
+   Fundamental Abstractions that are required by Swin
+   Swin / Python
+     --- How commands are interpreted
+     --- How memory/map files are parsed
+     --- Simple stack tracer (MIPS architecture dependent)
+   Future Directions
+     --- Heuristics based Assistance
+     --- Dynamically add Heuristics
+     --- Remote / Online Debug
+     <br />
+   I am not a Python expert, but Swin was a terrific success in terms of adoption (100% !) within my prev company's software development community. It is also used by many network operators around the world to get dynamic information about the mobile device (for which Swin was originally developed) - I attribute the entire success of Swin to Python, and Swin has created about 20+ developers to learn Python!
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>Thought this was a good opportunity to evangelize Python even to developers who cannot technically run Python inside their system, but use it from outside! Just thought it wouldn't harm anyone to submit this proposal! 
+</p>
+<p>I wrote Swin in my stint as Principal Engineer with my prev employer, who is a world leader in mobile WiMax chipset development
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Sriram V Iyer is currently Chief Technology Officer at United Mobile Apps Pvt Ltd (www.umobile.in, www.usyncworld.com), a India based Tech startup that believes that the user owns the data in his mobile device (currently, the mobile device owns the data!). He is a Python enthusiast and evangelist. He has applied for a couple of patents on Scheduling algorithms for wireless systems and testing based on dynamic languages. He has also authored a book - 'Embedded Realtime Systems Programming', published by Tata McGrawHill. He blogs infrequently at sviyer-tech.blogspot.com
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+No files uploaded. You can <a href='/2010/talks/18/upload'>upload a file</a> if you are author of this talk.
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

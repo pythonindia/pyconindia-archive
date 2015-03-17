@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Paradigms of Web Development and comparison of approaches using django and Google Appengine WebApp framework - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Paradigms of Web Development and comparison of approaches using django and Google Appengine WebApp framework</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Lakshman Prasad</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2010/talks?level=Intermediate">Intermediate</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2010/talks?topic=Web programming">Web programming</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">Web Programming, Django, Appengine, </td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>Web development frameworks provide various features to make common web development paradigms easy to implement. 
+</p>
+<p>The talk covers various paradigms of web development, like authentication, session data, caching, CSRF protection, file storage, etc. seperating &quot;what&quot; from &quot;how&quot; and then compares the approaches to be taken by the developer using django and the appengine webapp framework to implement it, by examining what features they provide.
+</p>
+<p>The abstractions provided by django are transparent and extensible. They will be arrived at, by starting from a simple case of implementing the paradigms manually and progressively adding abstractions. Some of the transparencies and the way to use them to achieve a few common ends, will be discussed.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<p>The talk is an attempt to examine the web development paradigms horizontally and framework agnostic ally.
+</p>
+<p>Once the problem is identified, the approach to solve it, taken by the web frameworks, django, and AppEngine webapp framework is examined. Necessary abstractions needed to make it convenient for developer to implement it, are added progressively and solutions used by the framework are arrived at.
+</p>
+<p>The areas explored include:
+</p>
+<ul>
+ <li>
+     Authentication
+ </li>
+
+ <li>
+     Caching
+ </li>
+
+ <li>
+     Session Data
+ </li>
+
+ <li>
+     CSRF Protection
+ </li>
+
+ <li>
+     File Storage
+ </li>
+
+ <li>
+     Data Manipulation
+ </li>
+
+ <li>
+     Image thumbnailing
+ </li>
+
+ <li>
+     Permissions
+ </li>
+
+ <li>
+     Etc, time permitting
+ </li>
+</ul>
+<p>For each, the following are discussed:
+</p>
+<ul>
+ <li>
+     Define the problem
+ </li>
+
+ <li>
+     The approach the developer should take to solve it
+ </li>
+
+ <li>
+     Features provided by django
+ </li>
+
+ <li>
+     Features provides bu App Engine
+ </li>
+
+ <li>
+     How to bend what django provides, for customizations
+ </li>
+
+ <li>
+     How the framework implements this feature.
+ </li>
+</ul>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>How is this talk different from the /2010/talks/31-howto-django-in-gae ?
+</p>
+<p>This talk covers features provided by web development frameworks and is not a tutorial on django on app engine. Django and App Engine web app frameworks are specific ones chosen to contrast and compare.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Lakshman Prasad is a partner at Agiliq: http://agiliq.com/ where he, with an expert team, does consulting and development of web applications exclusively using the django framework and the related python technology stack. Earlier, he worked on developing enterprise software using Java at Oracle India and Infosys Technologies. He has since become passionate about Django, Python and modern pragmatic tools and processes for developing web applications. He maintains an infrequent personal blog: http://becomingguru.com/ and engages actively on Stackoverflow: http://stackoverflow.com/users/55562/lakshman-prasad on topics related to django.
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+<table class="files">
+    <tr>
+        <th>file</th>
+        <th>size</th>
+        <th>uploaded</th>
+        <th>comment</th>
+    </tr>
+<tr>
+    <td><a href="/2010/static/files/talks/59/talk3.pdf">talk3.pdf</a></td>
+    <td>5.0 MB</td>
+    <td>september 25, 2010</td>
+    <td>The latest version</td>
+</tr>
+<tr>
+    <td><a href="/2010/static/files/talks/59/talk2.pdf">talk2.pdf</a></td>
+    <td>5.0 MB</td>
+    <td>september 25, 2010</td>
+    <td>Updated version</td>
+</tr>
+<tr>
+    <td><a href="/2010/static/files/talks/59/talk1.pdf">talk1.pdf</a></td>
+    <td>5.0 MB</td>
+    <td>september 19, 2010</td>
+    <td>This is version 0.1, that will be replaced soon</td>
+</tr>
+</table>
+<p>
+You can <a href='/2010/talks/59/upload'>upload or delete a file</a> if you are author of this talk.
+</p>
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

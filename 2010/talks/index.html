@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Talks - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>Talks</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    td, th {
+        padding: 5px;
+        border-bottom: 1px solid #E7E3D3;
+    }
+    td.index, th.index {
+        width: 20px;
+        text-align: right;
+    }
+    td.title {
+        width: 50%;
+    }
+    td.author, td.status {
+        width: 25%;
+    }
+    th {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .pending {
+        background: solid #dddddd;
+     }
+    .accepted {
+        background: #ddffdd;
+    }
+    .rejected {
+        background: #ffdddd;
+    }
+    .withdrawn td.title{
+        text-decoration:line-through;
+        background: solid #dddddd;
+    }
+
+</style>
+<table class="talks">
+    <tr>
+        <th class="index">#</th>
+        <th>Talk title</th>
+        <th>Submitted by</th>
+        <th>Status</th>
+        <th>Slides Uploded</th>
+    </tr>
+<tr class="talk_review odd accepted">
+    <td class="index">1</td>
+    <td class="title"><a href="/2010/talks/81">Into 3D with VPython</a></td>
+    <td class="author">Deepak Mishra</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">2</td>
+    <td class="title"><a href="/2010/talks/80">Beyond Django 101</a></td>
+    <td class="author">Kausikram Krishnasayee</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">3</td>
+    <td class="title"><a href="/2010/talks/79">Freshen your test cases</a></td>
+    <td class="author">Kausikram Krishnasayee</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">4</td>
+    <td class="title"><a href="/2010/talks/78">Deadly Combo -- python &amp; newt</a></td>
+    <td class="author">Kushal Das</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">5</td>
+    <td class="title"><a href="/2010/talks/77">CGI Programming in Python</a></td>
+    <td class="author">S.Selvamani</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even rejected">
+    <td class="index">6</td>
+    <td class="title"><a href="/2010/talks/76">Data Structure and Algorithms using Python</a></td>
+    <td class="author">V.Balakrishnan</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">7</td>
+    <td class="title"><a href="/2010/talks/75">Don&#39;t be afraid of meta-classes</a></td>
+    <td class="author">Anand B Pillai</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">8</td>
+    <td class="title"><a href="/2010/talks/74">Geospatial search frameworks for Python</a></td>
+    <td class="author">Ishan Chattopadhyaya</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">9</td>
+    <td class="title"><a href="/2010/talks/73">Creating installation files for our python programs and source tarball</a></td>
+    <td class="author">Rajkumar.S</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even withdrawn">
+    <td class="index">10</td>
+    <td class="title"><a href="/2010/talks/72">Cloud Computing with Python</a></td>
+    <td class="author">Harihara Vinayakaram N</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">11</td>
+    <td class="title"><a href="/2010/talks/71">Django Pluggables</a></td>
+    <td class="author">Dheeraj Sayala</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">12</td>
+    <td class="title"><a href="/2010/talks/70">Polyform Puzzler and a Pythonic Algorithm X</a></td>
+    <td class="author">David Goodger</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">13</td>
+    <td class="title"><a href="/2010/talks/69">Database Programming with Python</a></td>
+    <td class="author">Biju B, Sreejith S</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">14</td>
+    <td class="title"><a href="/2010/talks/68">Semantic Web Programming in Python an Introduction</a></td>
+    <td class="author">Biju B, Jaganadh G</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">15</td>
+    <td class="title"><a href="/2010/talks/67">Introduction to Machine Learning with Python</a></td>
+    <td class="author">Sreejith S, Jaganadh G</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">16</td>
+    <td class="title"><a href="/2010/talks/66">Functional Programming with Python</a></td>
+    <td class="author">Dhananjay Nene</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">17</td>
+    <td class="title"><a href="/2010/talks/65">Multi-core programming with Python</a></td>
+    <td class="author">Keerthi Shankar</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">18</td>
+    <td class="title"><a href="/2010/talks/64">Sugar: The sweet constructionist learning environment</a></td>
+    <td class="author">Anish Mangal, Arjun Sarwal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">19</td>
+    <td class="title"><a href="/2010/talks/63">Deployment to large server farms using Fabric and BitTorrent.</a></td>
+    <td class="author">Manoj S Mahalingam,Shyam Sundar CS</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">20</td>
+    <td class="title"><a href="/2010/talks/62">2to3</a></td>
+    <td class="author">Zubin Mithra</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">21</td>
+    <td class="title"><a href="/2010/talks/61">Building Multimedia Applications using GStreamer and Python</a></td>
+    <td class="author">Yuvaraj Pandian T</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even rejected">
+    <td class="index">22</td>
+    <td class="title"><a href="/2010/talks/60">Performance, Profiling and Optimization in Python</a></td>
+    <td class="author">Gayatri Nittala, Mohan Sindhe</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">23</td>
+    <td class="title"><a href="/2010/talks/59">Paradigms of Web Development and comparison of approaches using django and Google Appengine WebApp framework</a></td>
+    <td class="author">Lakshman Prasad</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">24</td>
+    <td class="title"><a href="/2010/talks/58">Test Driven Development</a></td>
+    <td class="author">Gayatri Nittala, Madhubala Vasireddy</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">25</td>
+    <td class="title"><a href="/2010/talks/57">Text Parsing in Python</a></td>
+    <td class="author">Gayatri Nittala, Madhubala Vasireddy</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">26</td>
+    <td class="title"><a href="/2010/talks/56">Indic Language Processing with SILPA</a></td>
+    <td class="author">Santhosh Thottingal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">27</td>
+    <td class="title"><a href="/2010/talks/55">Web based Power Management tool</a></td>
+    <td class="author">Vishnu Murty,Subhan</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even withdrawn">
+    <td class="index">28</td>
+    <td class="title"><a href="/2010/talks/54">Garbage Collection in Python</a></td>
+    <td class="author">Krishna Kumaar Natarajan</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">29</td>
+    <td class="title"><a href="/2010/talks/53">Quickly</a></td>
+    <td class="author">Rajeswari S</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">30</td>
+    <td class="title"><a href="/2010/talks/52">Device Interfacing with Python and ZIO</a></td>
+    <td class="author">Vijay Kumar B.</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">31</td>
+    <td class="title"><a href="/2010/talks/51">Talk cancelled - Python on the Android</a></td>
+    <td class="author">Vimalkumar Velayudhan</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">32</td>
+    <td class="title"><a href="/2010/talks/50">Python Celery</a></td>
+    <td class="author">Mahendra M</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">33</td>
+    <td class="title"><a href="/2010/talks/49">All about PyGTK and short demo of my GSoC project developed using PyGTK.</a></td>
+    <td class="author">Kirubakaran Sampath</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">34</td>
+    <td class="title"><a href="/2010/talks/48">Twisted programming</a></td>
+    <td class="author">Mahendra M</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">35</td>
+    <td class="title"><a href="/2010/talks/47">A Hands on experience with Django</a></td>
+    <td class="author">Gaurav Kalra</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even rejected">
+    <td class="index">36</td>
+    <td class="title"><a href="/2010/talks/46">SIR Python !</a></td>
+    <td class="author">meswamy</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">37</td>
+    <td class="title"><a href="/2010/talks/45">Network Programming with Python</a></td>
+    <td class="author">Dhastha Gheer. A</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">38</td>
+    <td class="title"><a href="/2010/talks/44">The Zen of Web</a></td>
+    <td class="author">Anand Chitipothu</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">39</td>
+    <td class="title"><a href="/2010/talks/43">Python in the hardware world: MyHDL</a></td>
+    <td class="author">Anish Mangal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">40</td>
+    <td class="title"><a href="/2010/talks/42">Biomedical text mining with Python:Some experiments</a></td>
+    <td class="author">Jaganadh G, Dr. Carlos Rodriguez Penagos</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">41</td>
+    <td class="title"><a href="/2010/talks/41">AULT  : Agent based User simulation and Load Testing </a></td>
+    <td class="author">Om Narayan</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">42</td>
+    <td class="title"><a href="/2010/talks/40">Python on Climate Data Analysis Tool</a></td>
+    <td class="author">Arulalan.T</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">43</td>
+    <td class="title"><a href="/2010/talks/39">Python In The Wild: Enabling children to voice their opinions </a></td>
+    <td class="author">Diptanu Choudhury, Jeff Wishnie</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">44</td>
+    <td class="title"><a href="/2010/talks/38">World repo - the repository of the world</a></td>
+    <td class="author">V.Srikrishnan, V. Shunmugachamy</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">45</td>
+    <td class="title"><a href="/2010/talks/37">Rapid 3D Game Development in Blender 2.5</a></td>
+    <td class="author">Arun Ravindran</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">46</td>
+    <td class="title"><a href="/2010/talks/36">Scraping with Python for Fun and Profit</a></td>
+    <td class="author">Abhishek Mishra</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">47</td>
+    <td class="title"><a href="/2010/talks/35">Creating and Deploying python web applications on Google App Engine</a></td>
+    <td class="author">Saurabh Tiwari</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">48</td>
+    <td class="title"><a href="/2010/talks/34">Python on Mobile phones</a></td>
+    <td class="author">N.Seshadri</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">49</td>
+    <td class="title"><a href="/2010/talks/33">Introduction to Image Analysis in Python</a></td>
+    <td class="author">Anil C R</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">50</td>
+    <td class="title"><a href="/2010/talks/32">llvm-py: Writing Compilers Using Python</a></td>
+    <td class="author">Mahadevan R</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">51</td>
+    <td class="title"><a href="/2010/talks/31">Talk Cancelled: HOWTO Django in GAE</a></td>
+    <td class="author">Venkatraman.S</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">52</td>
+    <td class="title"><a href="/2010/talks/30">Tracking Tech Trends with Python</a></td>
+    <td class="author">Dorai Thodla</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">53</td>
+    <td class="title"><a href="/2010/talks/29">NoSQL Primer</a></td>
+    <td class="author">Harsh Vachhani, Amol Gupta</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">54</td>
+    <td class="title"><a href="/2010/talks/28">Marketing Python:Lessons Learned</a></td>
+    <td class="author">Ramdas S</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">55</td>
+    <td class="title"><a href="/2010/talks/27">OpenStreetMap.org and Python</a></td>
+    <td class="author">Rajan Vaish</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">56</td>
+    <td class="title"><a href="/2010/talks/26">Playing with Launchpad API using launchpadlib</a></td>
+    <td class="author">Manish Sinha</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">57</td>
+    <td class="title"><a href="/2010/talks/25">Hacking S60 based phones with Python</a></td>
+    <td class="author">Steven Fernandez</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even rejected">
+    <td class="index">58</td>
+    <td class="title"><a href="/2010/talks/24">Introduction to web programming</a></td>
+    <td class="author">Shabda, Ashok Raavi</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">59</td>
+    <td class="title"><a href="/2010/talks/23">Everything about Dictionaries</a></td>
+    <td class="author">Shashwat Anand</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">60</td>
+    <td class="title"><a href="/2010/talks/22">Python + Wii = Intuitive Control </a></td>
+    <td class="author">Asim Mittal</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">61</td>
+    <td class="title"><a href="/2010/talks/21">Extending and Embedding Python under Windows ( using C/C++ )</a></td>
+    <td class="author">Praseed Pai K.T.</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">62</td>
+    <td class="title"><a href="/2010/talks/20">Natural Language Processing in Python</a></td>
+    <td class="author">Shirish Goyal</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">63</td>
+    <td class="title"><a href="/2010/talks/19">Introduction to Python and How I learnt it</a></td>
+    <td class="author">Kannappan</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even rejected">
+    <td class="index">64</td>
+    <td class="title"><a href="/2010/talks/18">Learn to Swin - A Debugger(?) for Embedded Systems </a></td>
+    <td class="author">Sriram V Iyer</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd rejected">
+    <td class="index">65</td>
+    <td class="title"><a href="/2010/talks/17">A Metadata-driven Web App Framework</a></td>
+    <td class="author">Rushabh Mehta</td>
+    <td class="status">Rejected</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">66</td>
+    <td class="title"><a href="/2010/talks/16">pydicom - a pure python module for handling DICOM</a></td>
+    <td class="author">Arun B</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">67</td>
+    <td class="title"><a href="/2010/talks/15">Using Python to build a General Purpose Test Framework</a></td>
+    <td class="author">Rahul Verma</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">68</td>
+    <td class="title"><a href="/2010/talks/14">Internet Protocols in the Python Standard Library</a></td>
+    <td class="author">Senthil Kumaran</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">69</td>
+    <td class="title"><a href="/2010/talks/13">Python object model and introduction to meta programming</a></td>
+    <td class="author">Sambasiva S</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even withdrawn">
+    <td class="index">70</td>
+    <td class="title"><a href="/2010/talks/12">Talk Canceled: Building High Performance websites using Python and Redis</a></td>
+    <td class="author">Gopalakrishnan Subramani</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd withdrawn">
+    <td class="index">71</td>
+    <td class="title"><a href="/2010/talks/11">Talk cancelled - Getting functional with Python 3.0</a></td>
+    <td class="author">Vijay Mathew</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">72</td>
+    <td class="title"><a href="/2010/talks/10">BlueBream - The Zope Web Framework</a></td>
+    <td class="author">Baiju M</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">73</td>
+    <td class="title"><a href="/2010/talks/9">The Road to PyCon India 2010</a></td>
+    <td class="author">Noufal Ibrahim</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">74</td>
+    <td class="title"><a href="/2010/talks/8">PDF Accessibility with Python  </a></td>
+    <td class="author">Anand B Pillai</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">75</td>
+    <td class="title"><a href="/2010/talks/7">Automation using Python</a></td>
+    <td class="author">Nitin Kumar, Swathi Nath</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even withdrawn">
+    <td class="index">76</td>
+    <td class="title"><a href="/2010/talks/4">Plugin frameworks : 3 approaches to designing plugin APIs</a></td>
+    <td class="author">Noufal Ibrahim</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">77</td>
+    <td class="title"><a href="/2010/talks/5">Building Scalable Apps using Google App Engine</a></td>
+    <td class="author">Pranav Prakash</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even withdrawn">
+    <td class="index">78</td>
+    <td class="title"><a href="/2010/talks/3">Python and golf</a></td>
+    <td class="author">Kenneth Gonsalves</td>
+    <td class="status">Withdrawn</td>
+    <td class="status">No</td>
+</tr>
+<tr class="talk_review odd accepted">
+    <td class="index">79</td>
+    <td class="title"><a href="/2010/talks/2">GUI Programming using PyQt</a></td>
+    <td class="author">Ankur Gupta</td>
+    <td class="status">Accepted</td>
+    <td class="status">Yes</td>
+</tr>
+<tr class="talk_review even accepted">
+    <td class="index">80</td>
+    <td class="title"><a href="/2010/talks/1">Case study: Opendevice &amp; Python</a></td>
+    <td class="author">Srirangan</td>
+    <td class="status">Accepted</td>
+    <td class="status">No</td>
+</tr>
+</table>
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

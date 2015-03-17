@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>2to3 - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                <h1>2to3</h1>
+                
+
+<div style="margin: -10px 0px 10px 5px">
+<a href="/2010/talks">Talks</a> | <a href="/2010/talks/submit">Submit a talk</a>
+</div>
+
+
+<style type="text/css">
+    .label {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tr>
+        <td class="label">Authors</td>
+        <td class="value">Zubin Mithra</td>
+    </tr>
+
+    <tr>
+        <td class="label">Level</td>
+        <td class="value"><a href="/2010/talks?level=Intermediate">Intermediate</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Topic</td>
+        <td class="value"><a href="/2010/talks?topic=Core Python (including Python 3.x)">Core Python (including Python 3.x)</a></td>
+    </tr>
+
+    <tr>
+        <td class="label">Tags</td>
+        <td class="value">python3k, porting</td>
+    </tr>
+</table>    
+
+<div>
+    <div class="label">Summary</div>
+    <div>
+<p>Python3.1 has been out for more than an year now, and many popular distributions are yet to be ported from Python2.x over to Python3k. This is mostly because of the 'my-dependencies-arent-ported-whose-dependencies-arent-ported' problem; and this forms a vicious circle. In most cases, porting a Python codebase from 2to3 is not that complicated, but a lot of community effort would be needed in order for this to work out quickly.
+</p>
+<p>The talk introduces the 2to3 tool, the strategy used by the author to port the Distutils2 codebase over to Python3k and encourages Python developers to move over to Python3k and help the community do the same.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Outline</div>
+    <div>
+<ol>
+ <li>
+     How different <em>is</em> Python3k?
+ </li>
+
+ <li>
+     A tool named 2to3 to help port?! nice!
+ </li>
+
+ <li>
+     This is how I went about porting Distutils2 ...
+ </li>
+
+ <li>
+     Do I have to maintain two branches for my project? One for 2.x and another for 3k? :(
+ </li>
+
+ <li>
+     I wish to help the community move over to Py3k, what do I do?<ul>
+ <li>
+     host sprints(PSF sponsors sprints, hope you know about that!)
+ </li>
+
+ <li>
+     help out at the Python-porting ML
+ </li>
+
+ <li>
+     help port libraries(duh!)
+ </li>
+</ul>
+
+ </li>
+
+ <li>
+     Under-the-hood<ul>
+ <li>
+     how <em>exactly</em> strings are handled in Python3k
+ </li>
+
+ <li>
+     how <em>exactly</em> integers are handled in Python3k
+ </li>
+</ul>
+
+ </li>
+</ol>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Notes</div>
+    <div>
+<p>Talk length - Sections 1,2,4, and 5 will take 20 minutes. 3 and 6 are expected to take another 20 minutes. 
+   5 minutes for clearing doubts, if any.
+</p>
+<p>Section 1 is more about which corresponding idiom to use in Py3 instead of 2.x; so there really is no <em>concept</em> being explained here. So, it can be brushed through quickly. Moreover, the slides of the talk will be made available online so that the viewers can re-check into the details later on.
+</p>
+<p>Section 3 will be about the workflow I adopted while porting Distutils2 over to Python3k(I'll mention mercurial patch queues).
+</p>
+<p>Section 4 will explain the various alternatives available for people who wish to port their libraries. They could have seperate codebases(in which case they have to apply bug fixes seperately to each branch) or they could have a single one(in which case they might end up having a messier codebase).
+</p>
+<p>Section 6 will talk about how integers and strings are handled from the API onward, upward.
+</p>
+
+
+</div>
+</div>
+
+<div>
+    <div class="label">Profile of the authors</div>
+    <div>
+<p>Zubin is a final year student pursuing a degree in Information Technology at the Amrita School Of Engineering, Kerala. Currently a Distutils contributor, he finds Django an interesting web-framework even though he is not primarily a web-developer. The Mercurial lover that he is, he has also written a few articles on the same for open-source magazines like Linux For You. Interested in the field of Information Security, Version Control, Concurrency issues and Compiler Design, he is currently completing his work on GSoC on behalf of the Python Software Foundation.
+   He blogs at http://zubin71.wordpress.com
+</p>
+
+
+</div>
+</div>
+
+<div class="label">Files</div>
+
+
+<style type="text/css">
+    table.files {
+        border-collapse: collapse;
+        margin: 10px 0px;
+    }
+    table.files td {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+    }
+    table.files th {
+        padding: 10px;
+        border: 1px solid #d7d3c3;
+        font-weight: bold;
+    }
+</style>
+ 
+<div>
+<table class="files">
+    <tr>
+        <th>file</th>
+        <th>size</th>
+        <th>uploaded</th>
+        <th>comment</th>
+    </tr>
+<tr>
+    <td><a href="/2010/static/files/talks/62/2to3-final2.pdf">2to3-final2.pdf</a></td>
+    <td>986.4 KB</td>
+    <td>september 25, 2010</td>
+    <td>the _final_ one ;-)</td>
+</tr>
+<tr>
+    <td><a href="/2010/static/files/talks/62/2to3-final.pdf">2to3-final.pdf</a></td>
+    <td>982.4 KB</td>
+    <td>september 25, 2010</td>
+    <td>final version of the presentation</td>
+</tr>
+<tr>
+    <td><a href="/2010/static/files/talks/62/2to3.ppt">2to3.ppt</a></td>
+    <td>602.5 KB</td>
+    <td>september 19, 2010</td>
+    <td>This presentation was originally made using Keynote and converted to Powerpoint later on(it has caused a few small formatting changes). I hope I will be able to demonstrate the presentation on my notebook, so that this will not be an issue. As of now, I have uploaded the ppt version of the same.</td>
+</tr>
+</table>
+<p>
+You can <a href='/2010/talks/62/upload'>upload or delete a file</a> if you are author of this talk.
+</p>
+</div>
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>
