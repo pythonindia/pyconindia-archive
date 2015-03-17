@@ -1,0 +1,135 @@
+# Demo Code snippets
+#
+# N.Seshadri 
+# seshadri.pycon@gmail.com
+# PyCon India 2010
+# Python on Mobile Phones
+--------------------------------------------------------------------------------------------------
+
+import sysinfo
+sysinfo.imei()
+sysinfo.battery()
+sysinfo.total_ram()
+sysinfo.free_ram()
+sysinfo.total_rom()
+sysinfo.sw_version()
+
+--------------------------------------------------------------------------------------------------
+
+UI Components:
+===============
+import appuifw
+appuifw.query()  text, number, date, time, code, query
+appuifw.note() info, conf error
+appuifw.multi_query(u'Firstname',u'LastName')
+
+index=appuifw.popup_menu(choicearr, u"Title')
+res = appuifw.selection_list(options, search_field=0)
+
+
+options = map ( lambda x : u'Option %s'%x, range(5))
+res = appuifw.multi_selection_list(options, style='checkbox', search_field=1)
+
+
+t = appuifw.Text()
+t.add(u"hello world\n")
+appuifw.app.body = t
+full_s = t.get()
+t.clear()
+print t.font
+print appuifw.available_fonts()
+appuifw.app.title = u"Py app"
+appuifw.app.screen = 'full' # 'normal' , 'large', 'full'
+
+Example Code:   ListBox
+Example Code:   Form
+Example Code:   Tabs
+Example Code:   Double_listbox
+Example Code:   Menu with Submenu
+Example Code:   Canvas Shapes
+Example code:   screenshot
+Example code:   ImageViewer
+Example code:   Nixie Clock
+Example code:   MemoryMonitor
+
+--------------------------------------------------------------------------------------------------
+
+Audio
+=======
+import audio
+myaudio = audio.Sound.open(r'e:\download\test.mp3')
+myaudio.record()
+myaudio.stop()
+myaudio.play()
+myaudio.stop()
+myaudio.close()
+
+Example Code:	UI of an App
+
+--------------------------------------------------------------------------------------------------
+
+Telephone
+==========
+
+import telephone
+telephone.dial(u"+16505758524")
+telephone.hang_up()
+
+SMS
+-----
+import inbox
+received_box = inbox.Inbox(inbox.EInbox)
+sent_box = inbox.Inbox(inbox.ESent)
+msg_ids = received_box.sms_messages()
+msg_ids.sort() # ascending order
+id = msg_ids[-1] # get the last one
+
+#Send SMS before trying out this one
+
+received_box.content(id)
+received_box.time(id),
+received_box.address(id),
+received_box.unread(id),
+
+import messaging
+contact_number = "+16501112222"
+message="Some message"
+contact_name = "David"
+messaging.sms_send(contact_number, message, name=contact_name)
+
+Example Code: SMS Autoreply
+
+--------------------------------------------------------------------------------------------------
+
+e32 module
+=============
+
+import e32, appuifw
+e32.ao_sleep(2) # in seconds. time.sleep(2) would make the UI freeze too
+inactivity_in_seconds = e32.inactivity()
+e32.reset_inactivity()
+# copy a file: (target, source), and only \\ as separator
+e32.file_copy('E:\\'+random_script, 'C:\\Python\\'+random_script)
+# let the user select a drive
+i = appuifw.popup_menu(e32.drive_list(), u"Select where to put the secret files")
+appuifw.note(u"You have selected %s"% e32.drive_list()[i], 'info')
+
+Example Code: File Browser
+
+--------------------------------------------------------------------------------------------------
+
+camera:
+=========
+import camera
+Example Code:  pyvideorecording.py
+
+Networking
+============
+	urllib
+	ftplib
+	smtplib
+	
+socket.bt_discover()
+apid = socket.select_access_point()
+apobj = socket.access_point(apid)
+socket.set_default_access_point(apobj)

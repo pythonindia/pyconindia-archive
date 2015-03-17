@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://in.pycon.org/2010/static/css/diff.css"?>
+<rss version="2.0" 
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+    <channel>
+        <title>PyCon India 2010 Blog</title>
+        <link>http://in.pycon.org/2010/blog</link>
+        <atom:link href="http://in.pycon.org/2010/blog/feed.rss" rel="self" type="application/rss+xml" />
+        <description>Track the most recent changes to http://in.pycon.org/2010 in this feed.</description>
+        <lastBuildDate>Tue, 21 Dec 2010 06:08:23 GMT</lastBuildDate>
+        <generator>Infogami</generator>
+        <item>
+            <title>PyCon India 2010 videos are up.</title>
+            <link>http://in.pycon.org/2010/blog/37-pycon-india-2010-videos-are-up.</link>
+            <guid>http://in.pycon.org/2010/blog/37</guid>
+            <description>
+                                    
+&lt;p&gt;The videos for PyCon India 2010 have been posted on blip.tv at &lt;a href=&quot;http://pyconindia.blip.tv/posts?view=archive&amp;amp;nsfw=dc&quot;&gt;http://pyconindia.blip.tv/posts?view=archive&amp;amp;nsfw=dc&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;We apologise for the delay. There were some issues getting them ready. 
+   Please let us know if there are any issues with the tagging/titles. 
+&lt;/p&gt;
+&lt;p&gt;Unfortunately, the audio on some of the videos is poor. 
+&lt;/p&gt;
+&lt;p&gt;Thank you for being part of PyCon India and we hope to see you again next year!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 21 Dec 2010 06:08:23 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Videos and DVDs update</title>
+            <link>http://in.pycon.org/2010/blog/36-videos-and-dvds-update</link>
+            <guid>http://in.pycon.org/2010/blog/36</guid>
+            <description>
+                                    
+&lt;p&gt;We have received the videos of the conference from our videographer. There&#39;s some small post processing we need to do before we can upload them. We will also be giving them to Vodex so that they can begin their processing shortly. 
+&lt;/p&gt;
+&lt;p&gt;If you can help with the ripping and uploading of the videos, please email &lt;a href=&quot;mailto:contact@in.pycon.org&quot;&gt;contact@in.pycon.org&lt;/a&gt;. The size of the videos (after ripping) is approximately 3GB per hall per day. This is what we need to upload.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sat, 09 Oct 2010 07:51:01 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Offline DVDs</title>
+            <link>http://in.pycon.org/2010/blog/35-offline-dvds</link>
+            <guid>http://in.pycon.org/2010/blog/35</guid>
+            <description>
+                                    
+&lt;p&gt;This is a post to update everyone who has ordered the presentation DVDs.
+   The update is from the Vodex team and is as follows
+&lt;/p&gt;
+&lt;p&gt;We are still awaiting the arrival of the videos which will need to be
+   processed.  Tentatively
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     Video will be received by 8th Oct
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Vodex team will process the video for developing content by Oct 20th. 
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Oct 20th onward DVD will be shipped to respective buyer.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will keep you informed of the progress. Kindly bear with us.
+&lt;/p&gt;
+&lt;p&gt;In case of any queries for availability of DVD, please email to Vodex team
+   at pycon2010@vodex.in.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Mon, 04 Oct 2010 16:19:07 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Winners of the Wingware IDE raffle draw</title>
+            <link>http://in.pycon.org/2010/blog/34-winners-of-the-wingware-ide-raffle-draw</link>
+            <guid>http://in.pycon.org/2010/blog/34</guid>
+            <description>
+                                    
+&lt;p&gt;This post is to announce the winners of the Wingware IDE raffle draw.
+&lt;/p&gt;
+&lt;p&gt;The winners receive a 3 OS license for Wing IDE Pro 4.x (regular pricing $395) generously sponsored by Wingware. 
+&lt;/p&gt;
+&lt;p&gt;The winners are 
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     Christy John with order number 40809
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Pranay Prateek with order number 45869
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Thiyagaraj Krshna  with order number 48218
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Krishnan Parthasarathi with order number 49110
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Anand Pandit with order number 51521
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The winners have been mailed with instructions on how to claim the prize. Congratulations to you all and thanks for attending the conference.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 30 Sep 2010 06:11:59 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Feedback please!</title>
+            <link>http://in.pycon.org/2010/blog/33-feedback-please!</link>
+            <guid>http://in.pycon.org/2010/blog/33</guid>
+            <description>
+                                    
+&lt;p&gt;If you have attended the PyCon India 2010 conference, please fill the &lt;a href=&quot;http://pyconindia.wufoo.com/forms/pycon-india-2010-feedback/&quot;&gt;feedback form&lt;/a&gt; to let us know how you felt about it. This will help us to make the next conference better.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Wed, 29 Sep 2010 10:50:44 GMT</pubDate>
+            <dc:creator>Anand Chitipothu</dc:creator>
+        </item>
+        <item>
+            <title>Wrap up</title>
+            <link>http://in.pycon.org/2010/blog/32-wrap-up</link>
+            <guid>http://in.pycon.org/2010/blog/32</guid>
+            <description>
+                                    
+&lt;p&gt;Thanks to everyone for attending the conference, presenting and generally making it a success. 
+&lt;/p&gt;
+&lt;p&gt;There are a few more things to wrap up. Mainly the videos and the DVD mailout to people who have signed up for it. We will keep this space updated with the details.
+&lt;/p&gt;
+&lt;p&gt;Thanks again and see you all next year!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 28 Sep 2010 07:00:13 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Halls and Topics</title>
+            <link>http://in.pycon.org/2010/blog/31-halls-and-topics</link>
+            <guid>http://in.pycon.org/2010/blog/31</guid>
+            <description>
+                                    
+&lt;p&gt;Though we don&#39;t have the concept of tracks in this year&#39;s Pycon, the talks have been assigned to each hall roughly according to some topic categorization.
+&lt;/p&gt;
+&lt;p&gt;Here is the how every talk hall is assigned to talks accordingly to category.
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     &lt;strong&gt;Auditorium (ESB2 Seminar-Hall 1)&lt;/strong&gt; - Apart from the Keynote, the auditorium will hold talks in the topics of 3D/Algorithms/Compilers/Database/Hardware/Mobile/Windows &amp;amp; Open-source Python Projects.
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     &lt;strong&gt;Lecture Hall 1 (ESB2 Seminar-Hall 2)&lt;/strong&gt; - Almost all talks on Internet, Search &amp;amp; Web Application frameworks is in this hall (except introductory ones). Apart from that this hall will host talks related to Python/Conference Advocacy and E-inclusion.  &lt;br /&gt;
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     &lt;strong&gt;Lecture Hall 2 (Hi-Tech Hall)&lt;/strong&gt; - All introductory or newbie talks are scheduled in this hall irrespective of topic. Also, this hall will host talks related to Testing/GUI &amp;amp; Image Processing.
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     &lt;strong&gt;Lecture Hall 3 (ESB1 Computer Lab, 3rd Floor)&lt;/strong&gt; - The FOSSEE scientific/engineering workshop. This will be a continuous session and attending only part of it will bring only limited benefit. It&#39;s specially designed for engineers and scientists. For details, please refer to &lt;a href=&quot;http://in.pycon.org/2010/blog/25-python-for-science-and-engineering-workshop-by-fossee&quot;&gt;this blog post&lt;/a&gt;. 
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The locations of the halls will be displayed at the venue and volunteers will be around to help you find the halls. 
+&lt;/p&gt;
+&lt;p&gt;So if you don&#39;t have the schedule at hand, you know approximately where to head to if you have a topic in mind.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Fri, 24 Sep 2010 12:12:14 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Reaching the venue</title>
+            <link>http://in.pycon.org/2010/blog/30-reaching-the-venue</link>
+            <guid>http://in.pycon.org/2010/blog/30</guid>
+            <description>
+                                    
+&lt;p&gt;Here is some information that will be useful for delegates traveling to the conference, especially from those outside Bangalore.
+&lt;/p&gt;
+&lt;p&gt;The main hot-spots to reach MSRIT are &lt;a href=&quot;http://maps.google.com/maps/place?cid=14696817273378848526&amp;amp;q=KBS+Bus+Station,+Bangalore&amp;amp;hl=en&amp;amp;cd=1&amp;amp;cad=src:pplink&amp;amp;ei=YVGcTL62NJaWkAXiz9zVBg&amp;amp;sig2=fb5MNQE74nWftUpIIF5Gvg&quot;&gt;Majestic Bus Stand (also called Kempegowda Bus Station or &amp;quot;KBS&amp;quot; in short)&lt;/a&gt;, &lt;a href=&quot;http://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;q=&amp;amp;vps=5&amp;amp;jsv=278a&amp;amp;sll=13.154376,77.706299&amp;amp;sspn=0.51083,0.922852&amp;amp;ie=UTF8&amp;amp;geocode=FQ19xgAdiIufBA&amp;amp;split=0&quot;&gt;Malleshwaram&lt;/a&gt;, &lt;a href=&quot;http://maps.google.com/maps/place?cid=16863372394875297164&amp;amp;q=City+Market,+Bangalore&amp;amp;hl=en&amp;amp;cd=2&amp;amp;cad=src:pplink&amp;amp;ei=dVKcTJWlBIWRkQWu2ZiPBA&amp;amp;sig2=q7gvFphqbMKE2PqFqh2f0w&quot;&gt;K.R Market&lt;/a&gt; and &lt;a href=&quot;http://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;q=&amp;amp;vps=12&amp;amp;jsv=278a&amp;amp;sll=12.956868,77.625555&amp;amp;sspn=0.12781,0.230713&amp;amp;ie=UTF8&amp;amp;geocode=FVTMxgAdwkKfBA&amp;amp;split=0&quot;&gt;Yeshwantpur&lt;/a&gt;.   &lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;Here are some BMTC bus routes from Majestic (KBS) to MSRIT.
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     &lt;strong&gt;273, 273C, 271A , 271B , 271C, 271D, 99A , 99B, 21&lt;/strong&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are taking a flight to Bangalore, the best option is to take a bus or taxi from the airport to Majestic and take one of these buses to the venue. (BMTC operates a number of buses from Airport to different parts of the city. Of course you can always ask the taxi driver to drop you directly at the venue if you choose to). 
+&lt;/p&gt;
+&lt;p&gt;Those taking a train to Bangalore can get down at Bangalore City Railway Station (which is directly opposite KBS), cross the road to KBS and take one of the buses above.
+&lt;/p&gt;
+&lt;p&gt;For those getting down at Yeshwantpur Railway Station, you can take any bus from the railway station bus depot to Yeshwantpur bus stop and from there take any &lt;strong&gt;401&lt;/strong&gt; series bus to MSRIT.
+&lt;/p&gt;
+&lt;p&gt;For those getting down at K.R Market, the following bus numbers can be used to reach MSRIT.
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     &lt;strong&gt;177, 177-D, 266, 266-A, 266-B, 266-C, 266-D, 266-E, 266-F, 266-G, 266-K, 266-M, 268, 268-E, 269-A, 271-F, 271-J, 271-L, 271-M, 275, 276-N, 58-A, and 99-E.&lt;/strong&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;People coming from far away such as Whitefield, Marathalli, Sarjapur, HAL areas can reach Mekhri Circle and take an auto from there to the venue. (The same option is also available for those coming from the airport, if they chose to).
+&lt;/p&gt;
+&lt;p&gt;Those coming from Hosur, Electronics-City to the city can take a bus from Bommanahalli to Corporation circle and take bus &lt;strong&gt;98-D&lt;/strong&gt; to MSRIT. The following buses go from Bommanahalli to Corporation.
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     &lt;strong&gt;276-G, 343-A, 343-B, 346, 346-H, 347-B, 347-F, 348-E, 348-G, 352-E, 354-C, 356-D, 356-J, 356-P, 356-Q, and 360-K&lt;/strong&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those coming from Mysore direction can take a bus to Sirsi circle and from their to Mathikere (MSRIT). The buses &lt;strong&gt;225-CA and K-3&lt;/strong&gt; go to Sirsi circle from Mysore satellite terminal and the buses &lt;strong&gt;202-A, 202-D, 202-E, 401-BA, and 58-A&lt;/strong&gt; go from Sirsi circle to Mathikere.
+&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://www.btis.in/&quot;&gt;BMTC route information&lt;/a&gt; website can be used for finding out routes to the venue.
+&lt;/p&gt;
+&lt;p&gt;You can contact &lt;strong&gt;Anil Kumar: 9739754227&lt;/strong&gt; or &lt;strong&gt;Harish Raddi :  9036059723&lt;/strong&gt; for any help in case you need directions to reach the venue.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Fri, 24 Sep 2010 07:49:02 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>First AGM of the IPSS</title>
+            <link>http://in.pycon.org/2010/blog/29-first-agm-of-the-ipss</link>
+            <guid>http://in.pycon.org/2010/blog/29</guid>
+            <description>
+                                    
+&lt;p&gt;The 1st Annual General Body Meeting of the &lt;a href=&quot;http://ipss.org.in&quot;&gt;Indian Python Software Society&lt;/a&gt; will be held on Sunday the 26th of September at 6 pm IST at the MS Ramaiah College of Engineering Bangalore, after the 2nd Annual Pycon India is held.
+&lt;/p&gt;
+&lt;p&gt;For further details, please refer to &lt;a href=&quot;http://ipss.org.in/newsfull/1/&quot;&gt;http://ipss.org.in/newsfull/1/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;All are welcome to participate.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 23 Sep 2010 13:08:39 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Pycon India goes live as scheduled</title>
+            <link>http://in.pycon.org/2010/blog/28-pycon-india-goes-live-as-scheduled</link>
+            <guid>http://in.pycon.org/2010/blog/28</guid>
+            <description>
+                                    
+&lt;p&gt;The honorable Supreme court of India has deferred the Ayodhya case decision by a week. Read the news at &lt;a href=&quot;http://www.ndtv.com/article/india/supreme-court-defers-ayodha-verdict-by-a-week-54235&quot;&gt;NDTV&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;So any cloud hanging over Pycon India this week-end is cleared. We &lt;strong&gt;are going to have&lt;/strong&gt; the conference this week-end as planned with no changes. This is the final notification from us on this matter.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 23 Sep 2010 10:13:15 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Ayodhya verdict</title>
+            <link>http://in.pycon.org/2010/blog/27-ayodhya-verdict</link>
+            <guid>http://in.pycon.org/2010/blog/27</guid>
+            <description>
+                                    
+&lt;p&gt;As many of you must have heard, the verdict of the Ayodhya case might be delivered on this Friday (24 September). Many &lt;a href=&quot;http://www.hindustantimes.com/Karnataka-schools-colleges-shut-on-Sep-24-25/Article1-603459.aspx&quot;&gt;news sources&lt;/a&gt; indicate that the Govt. of Karnataka has declared a prohibition on 24 and 25 of the month under section 144 which prevents gatherings. This might affect the conference. 
+&lt;/p&gt;
+&lt;p&gt;We have no official stance on this yet since there&#39;s still some vagueness regarding the situation. We will keep you posted on the situation and will do our best to prevent disappointment. Please keep your eyes on the &lt;a href=&quot;http://twitter.com/pyconindia&quot;&gt;twitter feed&lt;/a&gt; and this blog to get updates.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Wed, 22 Sep 2010 19:58:14 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Downloadable Schedule</title>
+            <link>http://in.pycon.org/2010/blog/26-downloadable-schedule</link>
+            <guid>http://in.pycon.org/2010/blog/26</guid>
+            <description>
+                                    
+&lt;p&gt;We have put up the talk schedules as a PDF file which can be downloaded &lt;a href=&quot;/2010/static/schedule.pdf&quot;&gt;here&lt;/a&gt;. You can use this to take a print out of the schedule which you can carry to the conference to keep track of the talks yourselves.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Wed, 22 Sep 2010 13:25:02 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Python for Science and Engineering workshop by FOSSEE</title>
+            <link>http://in.pycon.org/2010/blog/25-python-for-science-and-engineering-workshop-by-fossee</link>
+            <guid>http://in.pycon.org/2010/blog/25</guid>
+            <description>
+                                    
+&lt;p&gt;The &lt;a href=&quot;http://fossee.in&quot;&gt;FOSSEE&lt;/a&gt; team from IIT Bombay is conducting a workshop on &amp;quot;Python for Science and Engineering&amp;quot; as a special track at PyCON India 2010.
+&lt;/p&gt;
+&lt;p&gt;The workshop is completely hands-on and FOSSEE team expects each of the
+   participant to have an access to a computer. So if you are planning to
+   attend the workshop please carry your own laptop for the workshop with
+   all the following packages installed.
+&lt;/p&gt;
+&lt;ol&gt;
+ &lt;li&gt;&lt;p&gt;If you are a Linux user please make sure the following packages are
+      installed:
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+     IPython
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Matplotlib
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Numpy
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Scipy
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     Pylab
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     MayaVi
+     If you use Ubuntu or any other Debian based installations you can run
+     the following command to install the packages mentioned above:
+     &lt;code&gt;sudo apt-get install ipython python-matplotlib python-numpy python-scipy
+mayavi2&lt;/code&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+ &lt;/li&gt;
+
+ &lt;li&gt;&lt;p&gt;Windows users can download and install Enthought Python Distribution(EPD) from the Enthought website. EPD comes bundled with all the Python related packages necessary for the workshop. The free to use academic version can be downloaded from here:
+   &lt;a href=&quot;http://www.enthought.com/products/edudownload.php&quot;&gt;http://www.enthought.com/products/edudownload.php&lt;/a&gt;
+&lt;/p&gt;
+
+ &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Both Windows and Linux users can download and install the Sage package as
+   described here: &lt;a href=&quot;http://sagemath.org/download.html&quot;&gt;http://sagemath.org/download.html
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Please make sure all these packages are installed before you come for the
+   workshop since the organizers will not be in a position to install these
+   packages for you on the spot because of the time constraints.
+&lt;/p&gt;
+&lt;p&gt;The FOSSEE team has also created their own Linux distribution which comes
+   bundled with all the packages required for the workshop pre-installed. This
+   distribution of Linux is based on Ubuntu 10.04. If you would like to give
+   it a spin, you can download the iso from their website at:
+   &lt;a href=&quot;http://fossee.in/files/iso/LivePython-10.09-i386.iso&quot;&gt;http://fossee.in/files/iso/LivePython-10.09-i386.iso&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;There is no extra registration charge to attend the workshop.
+&lt;/p&gt;
+&lt;p&gt;For any clarifications, please contact &lt;a href=&quot;mailto:contact@in.pycon.org&quot;&gt;contact@in.pycon.org&lt;/a&gt; or &lt;a href=&quot;madhusudancs@gmail.com&quot;&gt;madhusudancs@gmail.com&lt;/a&gt;.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 21 Sep 2010 14:44:45 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talk Schedules published</title>
+            <link>http://in.pycon.org/2010/blog/24-talk-schedules-published</link>
+            <guid>http://in.pycon.org/2010/blog/24</guid>
+            <description>
+                                    
+&lt;p&gt;The &lt;a href=&quot;/2010/schedule&quot;&gt;talks schedule&lt;/a&gt; has been published on the site. If you are speaker for the conference, look at the schedule and find out the day, time and hall where your talk has been slotted. I have taken into account all specific scheduling requests I received while scheduling the talks. Further changes in schedules are not possible unless there is a cancellation or withdrawal of talks.
+&lt;/p&gt;
+&lt;p&gt;The keynote by David begins at the &lt;strong&gt;Auditorium&lt;/strong&gt; on &lt;strong&gt;Sep 25&lt;/strong&gt; at &lt;strong&gt;9.30 am&lt;/strong&gt;. There are no talks scheduled in the other halls during this time since we would like everyone present to be free to listen to David&#39;s keynote. Lunch timings are from 12.30-1.30 pm every day. There will also be short tea break between 4.15-4.30 pm. Talks end every day at 5.30 pm.
+&lt;/p&gt;
+&lt;p&gt;If you have any questions on the schedule email me at &lt;i&gt;abpillai at gmail dot com&lt;/i&gt;. See you all in Bangalore on Saturday!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 21 Sep 2010 09:03:45 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>DVDs of PyCon India presentations and videos</title>
+            <link>http://in.pycon.org/2010/blog/23-dvds-of-pycon-india-presentations-and-videos</link>
+            <guid>http://in.pycon.org/2010/blog/23</guid>
+            <description>
+                                    
+&lt;p&gt;All the content (videos and slides) of the conference will be available online for people who want them. Last year however, there were several requests from people to provide recordings of the events so that they could watch them offline.
+&lt;/p&gt;
+&lt;p&gt;This year, we have partnered with &lt;a href=&quot;http://vodex.in&quot;&gt;Vodex technologies&lt;/a&gt; to distribute the DVDs of the presentations and videos of the conference. The DVDs being sold will contain an HTML5 based application which will synchronise the talk and the presentation. 
+&lt;/p&gt;
+&lt;p&gt;The DVDs will be sold at Rs. 125 per DVD. This is not included as part of the registration fees and interested attendees will have to purchase the DVDs separately. Once the conference is over, the videos will be processed, the DVDs burnt and couriered to the attendees who have purchased them. 
+&lt;/p&gt;
+&lt;p&gt;Vodex will be putting up a stall at the conference where interested attendees can register and pay for the DVDs.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sun, 19 Sep 2010 15:40:14 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Wing IDE licenses at PyCon India</title>
+            <link>http://in.pycon.org/2010/blog/22-wing-ide-licenses-at-pycon-india</link>
+            <guid>http://in.pycon.org/2010/blog/22</guid>
+            <description>
+                                    
+&lt;p&gt;Wingware, the Python IDE company has graciously given us five 3 platform licenses to be given as door prizes for the conference. We will be conducting a raffle draw at the end of the conference to find our winners.
+&lt;/p&gt;
+&lt;p&gt;They have also given all participants for the conference a hefty discount for the IDE. Make sure you&#39;re there to avail of this.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sat, 18 Sep 2010 03:40:56 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talk slides deadline extended to Sep 19</title>
+            <link>http://in.pycon.org/2010/blog/21-talk-slides-deadline-extended-to-sep-19</link>
+            <guid>http://in.pycon.org/2010/blog/21</guid>
+            <description>
+                                    
+&lt;p&gt;Considering that only a handful of folks have yet uploaded the slides for their talks and this being an extended holiday week-end when most people would like to take off or get some rest, I have extended the talks slide upload deadline to &lt;strong&gt;Sep 19 2010&lt;/strong&gt; i.e the next Sunday.
+&lt;/p&gt;
+&lt;p&gt;Those who haven&#39;t uploaded their talk slides, please consider this the final deadline since it is just a week before the conference, when we would like to have the slides for all talks uploaded to the site.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Fri, 10 Sep 2010 07:21:56 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Talk schedules </title>
+            <link>http://in.pycon.org/2010/blog/20-talk-schedules</link>
+            <guid>http://in.pycon.org/2010/blog/20</guid>
+            <description>
+                                    
+&lt;p&gt;There seems to be some wrong information (at least I saw one tweet on this) circulating that talk schedules are already put up. This is NOT correct. Talk schedules will be put up around a week before the conference. We have only put up the selected talks list which has been available in the &lt;a href=&quot;/2010/talks&quot;&gt;Talks list&lt;/a&gt; for some time already.
+&lt;/p&gt;
+&lt;p&gt;If you want specific scheduling for your talk (scheduling on a specific day at a specific time etc) then please send an email regarding the same at the email address &lt;i&gt;abpillai at gmail dot com&lt;/i&gt;. Valid reasons for this could be that you are arriving late into the city, you are not coming for the first day due to some personal reasons etc. We cannot accommodate all such requests, but will try to do so for those who are coming from outside Bangalore if valid reasons are quoted in the email.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 09 Sep 2010 06:56:13 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Talk Slides</title>
+            <link>http://in.pycon.org/2010/blog/19-talk-slides</link>
+            <guid>http://in.pycon.org/2010/blog/19</guid>
+            <description>
+                                    
+&lt;p&gt;As of today, September 6 2010, there are only a handful of talks which have slides uploaded. If you have submitted a talk to Pycon India 2010, which has been approved, please make sure you upload your talk slides on the site by &lt;strong&gt;Sep 10 2010&lt;/strong&gt;.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Mon, 06 Sep 2010 03:54:41 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Offline payments</title>
+            <link>http://in.pycon.org/2010/blog/18-offline-payments</link>
+            <guid>http://in.pycon.org/2010/blog/18</guid>
+            <description>
+                                    
+&lt;p&gt;A lot of questions have been coming in regarding paying offline for the event. This post is to clarify the situation. 
+&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;p&gt;The preferred way to pay is online. It takes a few minutes to do and there&#39;s no headache, extra book keeping for anyone. Please try to do this.
+&lt;/p&gt;
+
+ &lt;/li&gt;
+
+ &lt;li&gt;&lt;p&gt;If this is a problem, please book a ticket using the register link above and transfer the money into our bank account. You can either transfer it online using netbanking or go to an AXIS bank branch and do it there. Our bank account details (account holder name, IFSC etc.) are at &lt;a href=&quot;http://ipss.org.in/&quot;&gt;http://ipss.org.in/&lt;/a&gt;. Once you transfer the money, please mail &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#99;&amp;#111;&amp;#110;&amp;#116;&amp;#97;&amp;#99;&amp;#116;&amp;#64;&amp;#105;&amp;#110;&amp;#46;&amp;#112;&amp;#121;&amp;#99;&amp;#111;&amp;#110;&amp;#46;&amp;#111;&amp;#114;&amp;#103;&quot;&gt;&amp;#99;&amp;#111;&amp;#110;&amp;#116;&amp;#97;&amp;#99;&amp;#116;&amp;#64;&amp;#105;&amp;#110;&amp;#46;&amp;#112;&amp;#121;&amp;#99;&amp;#111;&amp;#110;&amp;#46;&amp;#111;&amp;#114;&amp;#103;&lt;/a&gt; with your ticket/order number. We will mark the ticket as paid and you&#39;ll get an email. 
+&lt;/p&gt;
+
+ &lt;/li&gt;
+
+ &lt;li&gt;&lt;p&gt;The final option is to pay at the venue. This is not preferred and you&#39;ll miss the keynote presentations and many other good talks in the morning.
+&lt;/p&gt;
+
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 02 Sep 2010 16:56:12 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talks FAQ has been updated</title>
+            <link>http://in.pycon.org/2010/blog/17-talks-faq-has-been-updated</link>
+            <guid>http://in.pycon.org/2010/blog/17</guid>
+            <description>
+                                    
+&lt;p&gt;I have added a few more Q&amp;amp;A regarding accepted talks in the &lt;a href=&quot;/2010/cfp/faq&quot;&gt;Talks FAQ&lt;/a&gt; to answer some questions I have received. Hope this is useful. If you have any question that is not answered in it, please get in touch with me.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Wed, 01 Sep 2010 09:39:53 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Do selected speakers have to register ?</title>
+            <link>http://in.pycon.org/2010/blog/16-do-selected-speakers-have-to-register</link>
+            <guid>http://in.pycon.org/2010/blog/16</guid>
+            <description>
+                                    
+&lt;p&gt;Questions have come up as to whether accepted speakers have to register on the website and pay. The answer is &lt;strong&gt;yes&lt;/strong&gt;. The registration costs are just enough to cover the food and swag costs and so we require that all the delegates (including selected speakers) register and pay.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 31 Aug 2010 06:48:47 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talk uploads deadline is Sep 10 2010</title>
+            <link>http://in.pycon.org/2010/blog/15-talk-uploads-deadline-is-sep-10-2010</link>
+            <guid>http://in.pycon.org/2010/blog/15</guid>
+            <description>
+                                    
+&lt;p&gt;I am getting a lot of requests in my email and phone regarding the deadline for talk slides upload for approved talks on the website. Initially this was announced as August 31 2010 (today). 
+&lt;/p&gt;
+&lt;p&gt;To give the authors enough time to prepare their slides, we have &lt;strong&gt;postponed this to September 10 2010&lt;/strong&gt;. If you are an author with an approved talk for Pycon India 2010, please start work on your talk slides at the earliest and kindly make sure that you upload the slides before the deadline.
+&lt;/p&gt;
+&lt;p&gt;To upload a slide for your talk, visit your talk URL and go the &amp;quot;Files&amp;quot; section. Click on the link that says &amp;quot;upload a file&amp;quot; which will take you to the upload form. Enter the required information and click on &amp;quot;Upload&amp;quot;. One of the fields is the secret password for your talk which has been emailed to you separately earlier. If you don&#39;t have the secret password for your talk, you can get in touch with me.
+&lt;/p&gt;
+&lt;p&gt;We prefer open formats namely ODF formatted slides, but you can also upload powerpoint slides with a &amp;quot;.ppt&amp;quot; extension. Please refrain from using formats which are not yet commonly used (for example &amp;quot;pptx&amp;quot;). Also, if you are an Apple keynote user, please try to export your presentation to ODF format before uploading. PDF is also okay, but kindly refrain from using formats like RTF, HTML etc.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 31 Aug 2010 04:18:31 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Early bird registrations end soon</title>
+            <link>http://in.pycon.org/2010/blog/14-early-bird-registrations-end-soon</link>
+            <guid>http://in.pycon.org/2010/blog/14</guid>
+            <description>
+                                    
+&lt;p&gt;The early bird rates will not be available after August 31. Please register before that to avail reduced costs. The prices will increase after that. 
+&lt;/p&gt;
+&lt;p&gt;While we will be collecting the registration costs at the venue, it&#39;s best that payment is done in advance. The queues at the registration counter might be long and you risk missing out on the keynote and morning talks.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Mon, 23 Aug 2010 14:50:22 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talk reviews are complete</title>
+            <link>http://in.pycon.org/2010/blog/13-talk-reviews-are-complete</link>
+            <guid>http://in.pycon.org/2010/blog/13</guid>
+            <description>
+                                    
+&lt;p&gt;The talk reviews have been completed as of today and the authors of the top 60 talks have been informed regarding the approval of their talks through email. 
+&lt;/p&gt;
+&lt;p&gt;All the talk submissions were of high quality and the review process took time and effort due to the sheer number and quality of talk proposals. 
+&lt;/p&gt;
+&lt;p&gt;The talks page has not yet been updated (as of this writing) with the talks status. However this will be done in a day or two. 
+&lt;/p&gt;
+&lt;p&gt;I express my gratitude to the members of the review committee for their help in evaluating the talk proposals. Congratulations to all the authors whose talks have been selected and a big thanks to everyone who took the time to submit a proposal.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 19 Aug 2010 18:36:07 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Second platinum sponsor</title>
+            <link>http://in.pycon.org/2010/blog/12-second-platinum-sponsor</link>
+            <guid>http://in.pycon.org/2010/blog/12</guid>
+            <description>
+                                    
+&lt;p&gt;It pleases me to announce our second platinum Sponsor.
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://fossee.in&quot;&gt;Fossee&lt;/a&gt; is an &lt;a href=&quot;http://www.education.nic.in/&quot;&gt;MHRD&lt;/a&gt; backed project aimed at spreading open source software throughout India in the educational and academic sectors. They will be holding a special track targeted at scientists and engineers for the two days of the conference. 
+&lt;/p&gt;
+&lt;p&gt;The volunteers conducting PyCon India 2010 would like to thank the FOSSEE project for their support.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 17 Aug 2010 06:27:54 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Talks selection announcement date postponed to August 20</title>
+            <link>http://in.pycon.org/2010/blog/11-talks-selection-announcement-date-postponed-to-august-20</link>
+            <guid>http://in.pycon.org/2010/blog/11</guid>
+            <description>
+                                    
+&lt;p&gt;We have decided to extend the date for announcing the list of selected talks for Pycon India 2010 to &lt;strong&gt;August 20 2010&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;The main reason for this is to give enough time for reviewers for evaluation since the number of talks submitted was rather higher than originally estimated. Also, this should give enough time for those authors who we have requested to re-submit their talks and haven&#39;t yet done so.
+&lt;/p&gt;
+&lt;p&gt;If you are an author who has submitted a talk, please wait for the final announcement on August 20. If your talk has been requested for a re-submission, kindly resubmit it before &lt;strong&gt;Tuesday August 17 2010&lt;/strong&gt; to make sure it is considered for the final list of talks.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sun, 15 Aug 2010 11:25:56 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Review process</title>
+            <link>http://in.pycon.org/2010/blog/10-review-process</link>
+            <guid>http://in.pycon.org/2010/blog/10</guid>
+            <description>
+                                    
+&lt;p&gt;We have started the talk review process from today. Talks will be reviewed and selected by a committee of reviewers. Each talk will be reviewed by a group of four reviewers, each one rating the talk on a scale of 25. The total score for the talk is the sum of all scores by the reviewers on a scale of 100.
+&lt;/p&gt;
+&lt;p&gt;The detailed review process is available in the following wiki page.
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://wiki.python.org/moin/PyConIndia2010/ProposalSelectionGuidelines&quot;&gt;http://wiki.python.org/moin/PyConIndia2010/ProposalSelectionGuidelines&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;We will be publishing the list of top 60 talks based on the review scores by August 15th on this site and the authors will be informed of the talk acceptance directly through email.
+&lt;/p&gt;
+&lt;p&gt;If you receive an email informing of an incomplete submission asking you to re-submit the talk, please do so before the date given in the email, otherwise your talk will be automatically disqualified from the selection process. 
+&lt;/p&gt;
+&lt;p&gt;If you have any questions on the review process, contact me directly at &lt;i&gt;abpillai at gmail dot com&lt;/i&gt;.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Tue, 03 Aug 2010 07:29:08 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Call for talk proposals is closed</title>
+            <link>http://in.pycon.org/2010/blog/9-call-for-talk-proposals-is-closed</link>
+            <guid>http://in.pycon.org/2010/blog/9</guid>
+            <description>
+                                    
+&lt;p&gt;We have had an amazing response to our &lt;a href=&quot;/2010/cfp&quot;&gt;call for proposals&lt;/a&gt; from the Python community in India. On the closing bell, as on 00:00 hours on August 01 2010, a total of &lt;a href=&quot;/2010/talks&quot;&gt;80 talks&lt;/a&gt; have been submitted on a wide variety of topics. 
+&lt;/p&gt;
+&lt;p&gt;The call for proposals was &lt;a href=&quot;/2010/blog/1-call-for-proposals-is-open&quot;&gt;announced&lt;/a&gt; on June 12. The CFP saw little activity in June, but picked up steam towards the second half of July with most of the talks submitted in the last week. As many as 35 talks were submitted in the closing week of the CFP, which accounts for nearly half of the total submissions. The last day of the CFP saw close to 20 talks submitted.
+&lt;/p&gt;
+&lt;p&gt;This has been a tremendous response from the Python community in India, showing that interest in Python is alive and flourishing in India. We thank everyone who submitted a proposal for their valuable support and contribution to the conference.
+&lt;/p&gt;
+&lt;p&gt;The reviews will be starting in a couple of days and we will be publishing information on the review process before that, so watch this space for further updates.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sat, 31 Jul 2010 19:59:34 GMT</pubDate>
+            <dc:creator>Anand B Pillai</dc:creator>
+        </item>
+        <item>
+            <title>Mapping party near PyCon India</title>
+            <link>http://in.pycon.org/2010/blog/8-mapping-party-near-pycon-india</link>
+            <guid>http://in.pycon.org/2010/blog/8</guid>
+            <description>
+                                    
+&lt;p&gt;Pythonistas who are also Open Street Mapping members are planning a mapping party to coincide with the conference.
+&lt;/p&gt;
+&lt;p&gt;The details are at &lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Inpycon_2010_Bangalore&quot;&gt;http://wiki.openstreetmap.org/wiki/Inpycon_2010_Bangalore&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;Here is the location map.
+&lt;/p&gt;
+&lt;iframe width=&quot;425&quot; height=&quot;350&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;http://www.openstreetmap.org/export/embed.html?bbox=77.55854,13.02517,77.57427,13.03711&amp;layer=mapnik&quot; style=&quot;border: 1px solid black&quot;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;small&gt;&lt;a href=&quot;http://www.openstreetmap.org/?lat=13.03114&amp;lon=77.566405&amp;zoom=15&amp;layers=B000FTFT&quot;&gt;View Larger Map&lt;/a&gt;&lt;/small&gt;
+
+The openstreetmap uses Python to a large extent in it&#39;s tools - geodjango for one, python-mapnik for another, and practically everywhere else.
+
+
+
+
+
+
+            </description>
+            <pubDate>Thu, 22 Jul 2010 04:25:02 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>First platinum sponsor</title>
+            <link>http://in.pycon.org/2010/blog/7-first-platinum-sponsor</link>
+            <guid>http://in.pycon.org/2010/blog/7</guid>
+            <description>
+                                    
+&lt;p&gt;PyCon India has it&#39;s first sponsor. &lt;a href=&quot;http://www.zeomega.com&quot;&gt;ZeOmega&lt;/a&gt; was a supporter of the maiden conference last year and they&#39;ve lent us their support this year as well. All the volunteers who are working on the conference would like to thank ZeOmega for their financial and moral support for the conference. We can&#39;t do it without you!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Thu, 15 Jul 2010 07:40:47 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>Registrations are open!</title>
+            <link>http://in.pycon.org/2010/blog/6-registrations-are-open!</link>
+            <guid>http://in.pycon.org/2010/blog/6</guid>
+            <description>
+                                    
+&lt;p&gt;The time we&#39;ve all been waiting for! PyCon India 2010 registrations are open. The early bird registrations last till the end of August so please make sure you register on time. The rates will increase after that and spot registrants might not get any swag.
+&lt;/p&gt;
+&lt;p&gt;We understand that there are a number of students who might find it hard to pay online. We will be collecting the money for the registrations offline during the user group meetups at the various cities in July and in August before the conference. You can pay there. If you&#39;re in a city that doesn&#39;t have a user group, this is a great chance to start one.
+&lt;/p&gt;
+&lt;p&gt;All the participants (including speakers) have to register so please do so. If you have any questions, please direct them to &lt;a href=&quot;mailto:contact@in.pycon.org&quot;&gt;contact@in.pycon.org&lt;/a&gt; or tweet them to &lt;a href=&quot;http://twitter.com/pyconindia&quot;&gt;@pyconindia&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;So, what are you waiting for? Go to &lt;a href=&quot;http://in.pycon.org/2010/register&quot;&gt;http://in.pycon.org/2010/register&lt;/a&gt; and register right away!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Wed, 07 Jul 2010 06:50:36 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>T-shirt designs needed</title>
+            <link>http://in.pycon.org/2010/blog/5-t-shirt-designs-needed</link>
+            <guid>http://in.pycon.org/2010/blog/5</guid>
+            <description>
+                                    
+&lt;p&gt;PyCons throughout the world are purely volunteer run. It takes all kinds of talent to get a successful conference going.
+&lt;/p&gt;
+&lt;p&gt;At this point, we need artists. People who have the ability to create works of art. Our main form of advertising and publicity &lt;em&gt;after&lt;/em&gt; the conference is our T-shirt. We need it to be really good looking and eye catching. 
+&lt;/p&gt;
+&lt;p&gt;The logo should look good and be identifiable at low and high resolutions. It would be nice if the uploads were of very high resolution (or in a scalable format like svg). 
+&lt;/p&gt;
+&lt;p&gt;So, all you artistically inclined Pythonistas out there, please contribute logos and T-shirt designs. You can upload them &lt;a href=&quot;http://wiki.python.org/moin/PyConIndia2010/Artwork&quot;&gt;here&lt;/a&gt; along with your name and we&#39;ll pick the best ones with a community vote. We&#39;ll keep the doors open for the whole of July and after that put the designs to a vote.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Mon, 05 Jul 2010 18:32:44 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>New speakers welcome!</title>
+            <link>http://in.pycon.org/2010/blog/4-new-speakers-welcome!</link>
+            <guid>http://in.pycon.org/2010/blog/4</guid>
+            <description>
+                                    
+&lt;p&gt;We&#39;re having one track during PyCon India specifically dedicated to first time speakers and newcomers to the Python community.
+&lt;/p&gt;
+&lt;p&gt;This track will consist only of talks by people who have not had much experience speaking in public. The subjects covered will be basic tutorials as well. If you have done some work in Python regardless of how &amp;quot;simple&amp;quot; it is, we welcome your presentations. It&#39;s a great way to get rid of the stage shyness and be part of the community. 
+&lt;/p&gt;
+&lt;p&gt;Do consider &lt;a href=&quot;http://in.pycon.org/2010/cfp&quot;&gt;submitting a proposal&lt;/a&gt;!
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Mon, 05 Jul 2010 09:31:39 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>David Goodger is our keynote speaker</title>
+            <link>http://in.pycon.org/2010/blog/3-david-goodger-is-our-keynote-speaker</link>
+            <guid>http://in.pycon.org/2010/blog/3</guid>
+            <description>
+                                    
+&lt;p&gt;&lt;a href=&quot;http://python.net/~goodger/&quot;&gt;David Goodger&lt;/a&gt; has agreed to be our keynote speaker for PyCon India 2010. 
+&lt;/p&gt;
+&lt;p&gt;David is, among other things, the original developer of &lt;a href=&quot;http://docutils.sourceforge.net/&quot;&gt;docutils&lt;/a&gt; and was the chair of the PyCon in the US for 2008 and 2009. He is an office bearer at the Python Software Foundation and is notable member of the technical and social Python communities. 
+&lt;/p&gt;
+&lt;p&gt;David has agreed to be our keynote speaker and we&#39;re very excited to have him.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sat, 03 Jul 2010 08:00:43 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+        <item>
+            <title>PSF is sponsoring PyCon India 2010</title>
+            <link>http://in.pycon.org/2010/blog/1-psf-is-sponsoring-pycon-india-2010</link>
+            <guid>http://in.pycon.org/2010/blog/1</guid>
+            <description>
+                                    
+&lt;p&gt;The &lt;a href=&quot;http://www.python.org/psf&quot;&gt;Python Software Foundation (PSF)&lt;/a&gt; is a gold sponsor for Pycon India 2010. PSF is the non-profit organisation that holds the intellectual property rights behind the &lt;a href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt; programming language.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Fri, 25 Jun 2010 18:54:02 GMT</pubDate>
+            <dc:creator>Anand Chitipothu</dc:creator>
+        </item>
+        <item>
+            <title>Call for proposals is open</title>
+            <link>http://in.pycon.org/2010/blog/2-call-for-proposals-is-open</link>
+            <guid>http://in.pycon.org/2010/blog/2</guid>
+            <description>
+                                    
+&lt;p&gt;The Call for Proposals is open. Please visit the &lt;a href=&quot;/2010/cfp&quot;&gt;CFP&lt;/a&gt; page to submit a talk proposal.
+&lt;/p&gt;
+
+
+
+            </description>
+            <pubDate>Sat, 12 Jun 2010 18:54:02 GMT</pubDate>
+            <dc:creator>Noufal Ibrahim</dc:creator>
+        </item>
+    </channel>
+</rss>

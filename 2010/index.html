@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home - PyCon India 2010</title>
+    <link rel="shortcut icon" href="/2010/static/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/2010/static/themes/foomanchoo/style.css" />
+
+   <link href="/2010/blog/feed.rss" rel="alternate" title="PyCon India 2010 Blog" type="application/rss+xml" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/2010/static/js/jquery/jquery.cycle.lite.min.js"></script>
+
+    <link href="/2010/static/wmd.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/2010/static/js/jquery.wmd.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready( function(){
+//         $('#slide-content img').css({'display':'block'});
+        // ^^ should help non js browsers display only one slide
+        $('#slide-content').cycle({
+            fx:    'fade',
+            speed:  2500
+        });
+
+        $("textarea.wmd").wmd({
+            "preview": true,
+            "helpLink": "http://daringfireball.net/projects/markdown/",
+            "helpHoverTitle": "Markdown Help"
+        });
+
+       // Cufon.replace('#nav');
+       // Cufon.replace('#contents h1');
+       // Cufon.replace('#contents h2');
+       // Cufon.replace('#contents h3');
+       // Cufon.replace('#contents h4');
+    });
+
+    </script>
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-17055001-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+      var ga = document.createElement('script'); ga.type =
+    'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+    'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="defaultCountdown"></div>
+
+            <div id="nav">
+                <div id="nav_spacer">
+                    <div class='nav_start'>
+                            &nbsp;
+                    </div>
+                    <div class="nav_first">
+                        <a href="/2010/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/2010/register">Register</a>
+                    </div>
+                    <div>
+                        <a href="/2010/sponsors">Sponsors</a>
+                    </div>
+                    <div>
+                        <a href="/2010/talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="/2010/schedule">Schedule</a>
+                    </div>
+                    <div>
+                        <a href="/2010/publicity">Publicity</a>
+                    </div>
+                    <div>
+                        <a href="/2010/blog">Blog</a>
+                    </div>
+                    <div>
+                        <a href="/2010/faq">FAQ</a>
+                    </div>
+
+                    <div class='nav_end'>
+                        <a style="color: #ffbbbb; font-size:0.9em;" href="/2009">2009</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+        <div id="slideshow">
+            <div id="slide-content">
+                <img class='visible' src="/2010/static/images/slideshow/4.jpg" height="180" width="880" />
+                <img src="/2010/static/images/slideshow/2.jpg" height="180" width="880" />
+                <img src="/2010/static/images/slideshow/3.jpg" height="180" width="880" />
+                <img src="/2010/static/images/slideshow/7.jpg" height="180" width="880" />
+                <img src="/2010/static/images/slideshow/5.jpg" height="180" width="880" />
+                <img src="/2010/static/images/slideshow/6.jpg" height="180" width="880" />
+            </div>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <h3>PLATINUM</h3>
+                <p>
+                    <a href="http://www.zeomega.com" title="ZeOmega"><img class="sponsor" src="/2010/static/images/zeomega-logo.gif" alt="ZeOmega Logo"/></a>
+                </p>
+                <p>
+                     <a href="http://fossee.in" title="FOSSEE">
+                          <img src="/2010/static/images/fossee-logo.jpg" width="180" height="74px" alt="FOSSEE" />
+                      </a>
+                </p>
+                
+                <h3>GOLD</h3>
+                <p>
+                    <a href="http://www.python.org/psf/" title="Python Software Foundation"><img class="sponsor" src="/2010/static/images/python-logo.png" alt="PSF logo"/></a>
+                </p>
+
+                <h3>SILVER</h3>
+                <p>
+                    <a href="http://www.tandberg.com/" title="TANDBERG, now part of Cisco"><img class="sponsor" src="/2010/static/images/tandberg_cisco_joint_logo.jpg" alt="TANDBERG, now part of Cisco"/></a>
+                </p>
+
+                <p>
+                    <a href="http://www.projectplace.com/landingpages/PyCon-2010" title="Online project management & collaboration - software as a service"><img class="sponsor" src="/2010/static/images/projectplace.png" alt="Projectplace - "Online project management & collaboration - software as a service"/></a>
+                </p>
+
+                <h3>VENUE</h3>
+                <p>
+                    <a href="http://www.msrit.edu/"  title="M. S. Ramaiah Institute of Technology"><img class="sponsor" src="/2010/static/images/msrit.jpg" alt="MSRIT logo"/></a>
+                </p>
+
+                <h3>Supported By</h3>
+                <p>
+                    <a href="http://www.mahiti.org/"  title="Mahiti Infotech"><img class="sponsor" src="/2010/static/images/mahiti-logo.jpg" alt="Mahiti Logo"/></a>
+                </p>
+
+                <h3>Media Partner</h3>
+                <p>
+                    <a href="http://vodex.in/"  title="Virtual Veda"><img class="sponsor" src="/2010/static/images/VodexLogo.jpg" alt="Vodex Logo"/></a>
+                </p>
+
+            </div>
+
+            <!-- end of sidebar -->
+
+            <div id="contents">
+                <div class="flash-messages">
+                </div>
+                
+                
+
+
+
+
+
+
+
+<p>
+
+<h1>About PyCon India 2010</h1>
+<p>Welcome to the Pycon India 2010 conference website!
+</p>
+<p>PyCon India 2010 is the primary <a href="http://www.python.org">Python</a> conference in India. A purely volunteer effort, it is being hosted for the second time in India, and will attract some of the best Python developers in India and abroad. 
+</p>
+<p>The conference will take place on <strong>25th and 26th, September 2010</strong>. 
+</p>
+<p>The conference will consist of a number of full length presentations, a number of shorter lightning talks and open sprints and BoFs.
+</p>
+<p><strong>&quot;Please make sure that you keep a printed copy of your ticket with you when you come for the conference&quot;</strong>
+</p>
+
+<h2>News</h2>
+
+<ul>
+<li>
+    <strong>Dec 21, 2010</strong>: <a href="/2010//blog/37-pycon-india-2010-videos-are-up.">PyCon India 2010 videos are up.</a>
+</li>
+<li>
+    <strong>Oct 09, 2010</strong>: <a href="/2010//blog/36-videos-and-dvds-update">Videos and DVDs update</a>
+</li>
+<li>
+    <strong>Oct 04, 2010</strong>: <a href="/2010//blog/35-offline-dvds">Offline DVDs</a>
+</li>
+</ul>
+<a href="/2010/blog">More...</a>
+
+
+<h2>Keynote Speaker</h2>
+<img src="https://sites.google.com/a/goodger.org/david/Home/DJG-536x356.jpg" alt="David Goodger's Image" width="50%" height="50%"/>
+
+<p><a href="http://david.goodger.org/">David Goodger</a> is the keynote speaker for PyCon India 2010.
+</p>
+<p>David was PyCon US chair from 2008 to 2009 and the original developer of the <a href="http://docutils.sourceforge.net/">docutils</a> project. David has been associated to the <a href="http://www.python.org/psf">Python Software Foundation</a> since 2003 and has held several positions at PSF. Most recently he was a member of the board of directors of PSF.
+</p>
+<p>David is also a core Python contributor and is the author of several <a href="http://www.python.org/peps">PEPs</a>.
+</p>
+
+<h2>Venue</h2>
+<p>The conference will be conducted at the <a href="/2010/venue">M S Ramaiah Institute of Technology, Bangalore</a> (<a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=msrit&amp;sll=13.0166,77.598152&amp;sspn=0.155208,0.308647&amp;ie=UTF8&amp;hq=msrit&amp;hnear=&amp;ll=13.022036,77.570772&amp;spn=0.054355,0.047207&amp;z=14">map</a>).
+</p>
+
+<h2>Important Dates</h2>
+<ul>
+ <li>
+     Last date for normal registrations is <strong>Sep 20 2010</strong>. 
+ </li>
+
+ <li>
+     Deadline for talk slides upload has been extended to <strong>Sep 19 2010</strong>.
+ </li>
+
+ <li>
+     Accepted talk proposals were announced on <strong>August 20 2010</strong>.
+ </li>
+</ul>
+
+<h2>Staying upto date</h2>
+<p>Keep in touch with conference updates by subscribe to <a href="/2010/blog/feed.rss">RSS feed</a> and joining the <a href="http://twitter.com/#search?q=%23inpycon2010">#inpycon2010</a> channel.
+</p>
+<p>Follow our twitter updates - our official account is <a href="http://twitter.com/pyconindia">@pyconindia</a>. 
+</p>
+
+<h2>Related events.</h2>
+<p>The <a href="/2010/related_events">related events</a> page has a list of events taking place near the conference which attendees might be interested in. If you have any events that you'd like publicised here, please let us know at <a href="mailto:contact@in.pycon.org">contact@in.pycon.org</a>.
+</p>
+<p><br><br>
+</p>
+
+<h4><i>Live Updates</i></h4>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#inpycon2010',
+  interval: 6000,
+  title: 'PyCon India 2010',
+  subject: 'PyCON India',
+  width: 500,
+  height: 400,
+  theme: {
+    shell: {
+      background: '#CCCCCC',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+
+
+
+</p>
+
+
+
+
+
+            </div>
+            <!-- end of normal content -->
+
+        </div>
+        <!-- end of content -->
+
+        <div id="footer">
+        <div style="float: right"><br/>Powered by <a href="http://infogami.org/">Infogami</a></div>
+        <div>
+            <a href="mailto:contact@in.pycon.org">Contact Us</a> | <a href="/2010/account/login">Admin</a>
+        </div> 
+        <div>Copyright (c) 2010 <a href="http://ipss.org.in/">Indian Python Software Society</a></div>
+        </div>
+
+            
+        <!-- end of content -->
+
+    </div>
+</body>
+</html>

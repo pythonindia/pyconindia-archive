@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://slides.html5rocks.com/#slide1 -->
+<!-- Slide templates used from http://slides.html5rocks.com. Content authored by Dhananjay Nene -->
+<html manifest="cache.manifest"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if gte IE 9]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <title>Functional Programming in Python. Pycon India 2010. Dhananjay Nene</title>
+    <style>
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+/* Added by Dhananjay */
+.p { color: #BA2121 } /* Literal.String */
+.n { color: #7D9029 } /* Name.Attribute */
+    </style>
+
+    <style>      
+      body {
+        font: 32px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px; top: 0px;
+	white-space: normal;
+      }
+      
+      .presentation {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        display: block;
+        overflow: hidden;
+        background: #778;
+      }
+      
+      .slides {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        display: block;
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+        -moz-transition: -moz-transform 1s ease-in-out;
+        -o-transition: -o-transform 1s ease-in-out;
+        transition: transform 1s ease-in-out;
+      }
+
+      .slide {
+        display: none;
+        position: absolute;
+        overflow: hidden;
+        width: 900px;
+        height: 700px;
+        left: 50%;
+        top: 50%;
+        margin-top: -350px;
+        background-color: #eee;
+        background: -webkit-gradient(linear, left bottom, left top, from(#bbd), to(#fff));
+        background: -moz-linear-gradient(bottom, #bbd, #fff);
+        background: linear-gradient(bottom, #bbd, #fff);
+        -webkit-transition: margin 0.25s ease-in-out;
+        -moz-transition: margin 0.25s ease-in-out;
+        -o-transition: margin 0.25s ease-in-out;
+        transition: margin 0.25s ease-in-out;
+      }
+      
+      .slide:nth-child(even) {
+        -moz-border-radius: 20px 0;
+        -khtml-border-radius: 20px 0;
+        border-radius: 20px 0; /* includes Opera 10.5+ */
+        -webkit-border-top-left-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+      }
+      
+      .slide:nth-child(odd) {
+        -moz-border-radius: 0 20px;
+        -khtml-border-radius: 0 20px;
+        border-radius: 0 20px;
+        -webkit-border-top-right-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+      }
+
+      .slide p, .slide textarea {
+        font-size: 20px;
+      }
+
+      .slide .counter {
+        color: #999999;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        display: block;
+        font-size: 12px;
+      }
+
+      .slide.title > .counter,
+      .slide.segue > .counter,
+      .slide.mainTitle > .counter {
+        display: none;
+      }
+
+      .force-render {
+        display: block;
+        visibility: hidden;
+      }
+      
+      .slide.far-past {
+        display: block;
+        margin-left: -2400px;
+      }
+      
+      .slide.past {
+        visibility: visible;
+        display: block;
+        margin-left: -1400px;
+      }
+      
+      .slide.current {
+        visibility: visible;
+        display: block;
+        margin-left: -450px;
+      }
+      
+      .slide.future {
+        visibility: visible;
+        display: block;
+        margin-left: 500px;
+      }
+      
+      .slide.far-future {
+        display: block;
+        margin-left: 1500px;
+      }
+
+      body.three-d div.presentation {
+        /*background: -webkit-gradient(radial, 50% 50%, 10, 50% 50%, 1000, from(#333), to(#000));        */
+      }
+      
+      body.three-d div.slides {
+        -webkit-transform: translateX(50px) scale(0.8) rotateY(10deg);
+        -moz-transform: translateX(50px) scale(0.8) rotateY(10deg);
+        -o-transform: translateX(50px) scale(0.8) rotateY(10deg);
+        transform: translateX(50px) scale(0.8) rotateY(10deg);
+      }
+      
+      /* Content */
+      /*
+        Font sizes:
+        header h1 - 50px
+        h2, p - 20px
+        default, pre, input - 16px
+      */
+      
+      @font-face { font-family: 'Junction'; src: url(src/Junction02.otf); }
+      @font-face { font-family: 'LeagueGothic'; src: url(src/LeagueGothic.otf); }
+      
+
+      header {
+        font-family: 'Droid Sans';
+        font-weight: normal;
+        letter-spacing: -.05em;
+        color: black;
+        text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+        position: absolute;
+        left: 30px;
+        top: 25px;
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+      }
+      
+      h1 {
+        font-size: 115%;
+        display: block;
+        float: top;
+      	font-weight: bold;
+      	padding: 0;
+      	margin: 0;
+      }
+      
+      h2 {
+        font-family: 'Droid Sans';
+        color: black;
+        font-size: 20px;
+        padding: 0;
+        margin: 15px 0 5px 0;
+      }
+            
+      h2:first-child {
+        margin-top: 0;
+      }
+
+      section, footer {
+        font-family: 'Droid Sans', Verdana, Arial, sans-serif;
+        color: #3f3f3f;
+        text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+        margin: 30px 30px 0;
+        display: block;
+        overflow: hidden;
+      }
+      
+      footer {
+        font-size: 12px;
+        margin: 20px 0 0 30px;
+      }
+
+      a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 110%;
+        border-bottom: 2px solid #3f3f3f;
+      }
+
+      .gmap a {
+        line-height: 100%;
+        border-bottom: none;
+      }
+
+      li {
+        padding: 10px 0;
+      }
+
+      button {
+        font-size: 20px;
+      }
+      
+      pre button {
+        margin: 2px;
+      }
+      
+      .summary {
+        font-size: 30px;
+      }
+
+      .bullets {
+        font-size: 40px;
+      }
+      
+      section.left {
+        float: left;
+        width: 390px;
+      }
+      
+      section.small {
+        font-size: 24px;
+      }
+      
+      section.small ul {
+        margin: 0 0 0 15px;
+        padding: 0;
+      }
+      
+      section.small li {
+        padding-bottom: 0;
+      }
+            
+      section.middle {
+        line-height: 68px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        height: 700px;
+        width: 900px;
+      }
+      
+      pre {
+        text-align: left;
+        font-family: 'Droid Sans Mono', monospace;        
+        font-size: 70%;
+        padding: 10px 20px;
+        background: rgba(255, 0, 0, 0.05);
+        -webkit-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 0, 0, 0.2);
+      }
+      
+      pre select {
+        font-family: Monaco, Courier;
+        border: 1px solid #c61800;
+      }
+        
+      input {
+        font-size: 16px;
+        margin-right: 10px;
+        font-family: Helvetica;
+        padding: 3px;
+      }
+      input[type="range"] {
+        width: 100%;
+      }
+      
+      button {
+        margin: 20px 10px 0 0;
+        font-family: Verdana;
+      }
+      
+      button.large {
+        font-size: 32px;
+      }
+        
+      pre b {
+        font-weight: normal;
+        color: #c61800;
+        text-shadow: #c61800 0 0 1px;
+        /*letter-spacing: -1px;*/
+      }
+      pre em {
+        font-weight: normal;
+        font-style: normal;
+        color: #18a600;
+        text-shadow: #18a600 0 0 1px;
+      }
+      pre input[type="range"] {
+        height: 6px;
+        cursor: pointer;
+        width: auto;
+      }
+      
+      div.example {
+        display: block;
+        padding: 10px 20px;
+        color: black;
+        background: rgba(255, 255, 255, 0.4);
+        -webkit-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      
+      video {
+        -moz-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      
+      .css,
+      .js,
+      .html,
+      .key {
+        font-family: 'Droid Sans';
+        color: black;
+        display: inline-block;
+        padding: 6px 10px 3px 10px;
+        font-size: 25px;
+        line-height: 30px;
+        text-shadow: none;
+        letter-spacing: 0;
+        bottom: 10px;
+        position: relative;
+        -moz-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+        -o-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+      }
+      
+      .key { font-family: Arial; }
+      
+      :not(header) > .css,
+      :not(header) > .js,
+      :not(header) > .html,
+      :not(header) > .key {
+        margin: 0 5px;
+        bottom: 4px;
+      }
+      
+      .css {
+        background: -webkit-gradient(linear, left top, left bottom, from(#ff4), to(#ffa));
+        background-color: #ff4;
+        background: -moz-linear-gradient(left top, #ff4, #ffa);
+      }
+      .js {
+        background: -webkit-gradient(linear, left top, left bottom, from(#4f4), to(#afa));
+        background-color: #4f4;
+        background: -moz-linear-gradient(left top, #4f4, #afa);
+      }
+      .html {
+        background: -webkit-gradient(linear, left top, left bottom, from(#e88), to(#fee));
+        background-color: #e88;
+        background: -moz-linear-gradient(left top, #e88, #fee);
+      }
+
+      .two-column {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+      }
+      
+      .summary li::before, .bullets li::before {
+        content: '· ';
+      }
+
+      .stroke {
+        -webkit-text-stroke-color: red;
+        -webkit-text-stroke-width: 1px;
+      } /* currently webkit-only */
+      
+      .center {
+        text-align: center;
+      }
+      
+      .formula {
+        font-size: 50px;
+      }
+      
+      #presentation-counter {
+        color: #ccc;
+        font-size: 100px;
+        letter-spacing: 1px;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .landing p {
+        font-size: 35px;
+      }
+            
+      .code {
+        white-space: pre;
+      }      
+    </style>
+    
+  <body>
+    <div class="presentation">
+      <div id="presentation-counter">1</div>
+      <div class="slides">
+
+        <div class="slide">
+          <section class="landing middle">
+              <h1>Functional Programming in Python</h1>
+                <br/><br/>Pycon India 2010<br/>September 25-26, 2010<br/><br/>
+		<em>Draft</em><br/>
+                <em>Dhananjay Nene<br/><a href="http://blog.dhananjaynene.com">Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/dnene">Twitter</a><br/></em>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+              <h1>Out of scope</h1>
+              <ul>
+                <li>Debate between OO, imperative and functional programming styles</li>
+                <li>Debate between pure FP vs. Mixed paradigm programming</li>
+                <li>Debate between idiomatic Python constructs visavis those encouraged by functional programming</li>
+                <li>The actual process of deciding whether to apply functional programming</li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+              <h1>Why functional programming ?</h1>
+              <ul>
+                <li>Functions as building blocks. Allows construction of complex logic using composition and higher order functions</li>
+                <li>No side effects and immutability leads to reduced likelihood of errors and easier ability to unit test individual functions</li>
+                <li>Superior ability to deal with concurrency and multi=threading</li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+              <h1>Python <==> Functional Programming</h1>
+              <ul>
+                <li>Python is not a ground up functional programming language</li>
+                <li>Python treats functions as first class citizens. Thats the basic construct to enable functional programming</li>
+                <li>Python also supports a lot of other useful constructs for functional programming. However it is deficient in some.</li>
+                <li>It is possible to write the same logic imperatively and using functional programming.</li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+              <h1>Python constructs for Functional Programming</h1>
+              <ul>
+                <li>Functions</li>
+                <li>Function references and invocation</li>
+                <li>Function composition (eg. decorators)</li>
+                <li>Sequences, slices</li>
+                <li>Iterators, generators</li>
+                <li>List comprehnsions</li>
+                <li>lambda</li>
+                <li>map(), reduce() and filter()</li>
+                <li>functools and itertools modules</li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+              <h1>Python Constructs : Functions</h1>
+              <pre><div class="code">    <span class="c"># Double the value</span><br/>    <span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><br/><br/>    <span class="c"># Use a function reference</span><br/>    <span class="n">twice</span> <span class="o">=</span> <span class="n">double</span><br/>    <span class="k">assert</span> <span class="n">twice</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><br/><br/>    <span class="c"># ** apply_twice is a higher order function **</span><br/>    <span class="k">def</span> <span class="nf">apply_twice</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">argument</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="k">return</span> <span class="n">function</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">argument</span><span class="p">))</span><br/>    <span class="k">assert</span> <span class="n">apply_twice</span><span class="p">(</span><span class="n">double</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span><br/><br/>    <span class="k">def</span> <span class="nf">convert_to_string</span><span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span><br/>        <span class="k">return</span> <span class="n">inner</span><br/><br/>    <span class="nd">@convert_to_string</span><br/>    <span class="k">def</span> <span class="nf">triple</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Python Constructs : Partial Functions              </h1>
+              <pre><div class="code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span><br/><br/><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="n">y</span><br/><br/><span class="n">square</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span><br/><span class="n">cube</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">cube</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">343</span><span class="p">)</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Python Constructs : Generators              </h1>
+              <pre><div class="code"><span class="c"># Generator</span><br/><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">()</span> <span class="p">:</span><br/>    <span class="n">prev</span><span class="p">,</span> <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><br/>    <span class="k">while</span> <span class="bp">True</span> <span class="p">:</span><br/>        <span class="k">yield</span> <span class="n">current</span><br/>        <span class="n">prev</span><span class="p">,</span> <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="p">,</span> <span class="n">prev</span> <span class="o">+</span> <span class="n">current</span><br/><br/><span class="c"># Generator instantiation</span><br/><span class="n">gen</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">()</span><br/><br/><span class="c"># Generator usage</span><br/><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="k">print</span> <span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Python Constructs : Iterators              </h1>
+              <pre><div class="code"><span class="c"># Iterator to iterate through field names of an object</span><br/><span class="k">class</span> <span class="nc">AttrIterator</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">obj</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><br/>    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><br/>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">>=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">)</span> <span class="p">:</span> <span class="k">raise</span> <span class="ne">StopIteration</span><br/>        <span class="n">attr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="p">]</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span><br/>        <span class="k">return</span> <span class="n">attr</span><br/><br/><span class="c"># Class</span><br/><span class="k">class</span> <span class="nc">Something</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><br/>    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="n">AttrIterator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><br/><br/><span class="c"># Iterator usage</span><br/><span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">Something</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="k">print</span> <span class="n">attr</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Python Constructs : List Comprehensions              </h1>
+              <pre><div class="code"><span class="n">one_to_ten</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span><br/><span class="k">assert</span> <span class="n">one_to_ten</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><br/><br/><span class="c"># Simple list comprehension</span><br/><span class="n">squares_of_odds</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">one_to_ten</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span><br/><span class="k">assert</span> <span class="n">squares_of_odds</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">81</span><span class="p">)</span><br/><br/><span class="c"># Lambda</span><br/><span class="n">double</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><br/><span class="k">assert</span> <span class="n">double</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span><br/><br/><span class="c"># filter()</span><br/><span class="n">odd_only</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">one_to_ten</span><span class="p">)</span><br/><span class="k">assert</span> <span class="n">odd_only</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span><br/><br/><span class="c"># map()</span><br/><span class="n">doubled_list</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">double</span><span class="p">,</span><span class="n">one_to_ten</span><span class="p">)</span><br/><span class="k">assert</span> <span class="n">doubled_list</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span><br/><br/><span class="c"># reduce()</span><br/><span class="nb">sum</span> <span class="o">=</span> <span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acc</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">acc</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span> <span class="n">one_to_ten</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><br/><span class="k">assert</span> <span class="nb">sum</span> <span class="o">==</span> <span class="mi">55</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Python Constructs : itertools              </h1>
+              <pre><div class="code"><span class="kn">import</span> <span class="nn">itertools</span> <span class="kn">as</span> <span class="nn">it</span><br/><span class="n">one_to_ten</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">one_to_ten</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>   <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">izip</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'c'</span><span class="p">)))</span>   <span class="o">==</span><br/>                                <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="s">'a'</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="s">'b'</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="s">'c'</span><span class="p">))</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">chain</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">combinations</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span> <span class="o">==</span><br/>                                <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><br/><br/><span class="k">assert</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">cycle</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span><span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Immutable Objects              </h1>
+              <ul>
+                                <li>Immutable object is an object whose state cannot be modified after it is created                </li>
+                                <li>When an object is known to be immutable its reference can always be used safely. <em>(Context: Concurrency)</em>                </li>
+                                <li>Python has no notion of immutable objects. You can                    <ul>                                            <li>Avoid all immutable operations on python structures                      </li>                                            <li>Hand craft your own structures or use libraries such as pysistence                      </li>                    </ul>                </li>
+                                <li><em>If you do multiprocessing, but no multithreading, immutability still useful but less so.</em>                </li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Sample immutable object              </h1>
+              <pre><div class="code"><span class="k">class</span> <span class="nc">Immutable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><br/>    <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span><br/>        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">"can't modify immutable instance"</span><span class="p">)</span><br/>    <span class="n">__delattr__</span> <span class="o">=</span> <span class="n">__setattr__</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><br/>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="k">return</span> <span class="s">"Immutable </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span><br/>                                    <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span><br/>    <span class="n">__repr__</span> <span class="o">=</span> <span class="n">__str__</span><br/><br/><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Immutable</span><span class="p">):</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span> <span class="n">pincode</span><span class="p">):</span><br/>        <span class="nb">super</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><br/>                <span class="o">**</span><span class="p">{</span><span class="s">'name'</span><span class="p">:</span><span class="n">name</span><span class="p">,</span> <span class="s">'pincode'</span> <span class="p">:</span> <span class="n">pincode</span><span class="p">})</span><br/><br/><span class="n">me</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Dhananjay"</span><span class="p">,</span> <span class="mi">411001</span><span class="p">)</span><br/><span class="c"># <strong>Careful</strong>. The following will still work</span><br/><span class="n">me</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Nene'</span><br/><span class="c"># The following raises an exception</span><br/><span class="n">me</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Foobar"</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Concurrency and Parallel Processing              </h1>
+              <ul>
+                                <li>We cannot but at this stage refer to the GIL                </li>
+                                <li>For computationally (non IO) intensive tasks, GIL will constrain ability to leverage multiple cores.                </li>
+                                <li>For large grained computation blocks, you can use multiprocessing instead.                </li>
+                                <li>The <em>multiprocessing</em> module (PEP-371) eases that pain.                </li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Sample Message Passing Code (1 of 4)              </h1>
+              <pre><div class="code"><span class="kn">import</span> <span class="nn">multiprocessing</span><br/><span class="kn">import</span> <span class="nn">os</span><br/><span class="kn">import</span> <span class="nn">time</span><br/><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><br/><span class="kn">import</span> <span class="nn">re</span><br/><br/><span class="k">class</span> <span class="nc">Actor</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">function</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span><br/>        <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Manager</span><span class="p">()</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="o">=</span> <span class="n">function</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">()</span><br/>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="k">while</span> <span class="bp">True</span> <span class="p">:</span><br/>            <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><br/>            <span class="k">if</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span> <span class="p">:</span><br/>                <span class="k">break</span><br/>            <span class="bp">self</span><span class="o">.</span><span class="n">function</span><span class="p">(</span><span class="o">*</span><span class="n">val</span><span class="p">)</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Sample Message Passing Code (2 of 4)              </h1>
+              <pre><div class="code"><span class="k">def</span> <span class="nf">map_word</span><span class="p">(</span><span class="n">wdlist</span><span class="p">,</span><span class="n">word</span><span class="p">):</span><br/>    <span class="c"># Locate the dictionary & increment the wordcount</span><br/>    <span class="n">worddict</span> <span class="o">=</span> <span class="n">wdlist</span><span class="p">[</span><span class="nb">hash</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">%</span> <span class="n">mapper</span><span class="o">.</span><span class="n">reducer_count</span><span class="p">]</span><br/>    <span class="n">worddict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">worddict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><br/>    <span class="k">return</span> <span class="n">wdlist</span><br/><br/><span class="k">def</span> <span class="nf">mapper</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span><br/>    <span class="k">with</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">"r"</span><span class="p">))</span> <span class="k">as</span> <span class="nb">file</span> <span class="p">:</span><br/>        <span class="n">worddicts</span> <span class="o">=</span> <span class="nb">reduce</span><span class="p">(</span><br/>            <span class="c"># using mapword function</span><br/>            <span class="n">map_word</span><span class="p">,</span><br/>            <span class="c"># being called for each word</span><br/>            <span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><br/>                <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'\w+'</span><span class="p">,</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">())),</span><br/>            <span class="c"># starting point being a list of empty dicts</span><br/>            <span class="nb">list</span><span class="p">({}</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mapper</span><span class="o">.</span><span class="n">reducer_count</span><span class="p">)))</span><br/><br/>    <span class="c"># put each dictionary in the appropriate queue to reduce</span><br/>    <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span> <span class="p">:</span> <span class="n">mapper</span><span class="o">.</span><span class="n">reducer_queues</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><br/>                        <span class="p">(</span><span class="s">"put"</span><span class="p">,</span> <span class="n">worddicts</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">filename</span><span class="p">)),</span><br/>        <span class="nb">range</span><span class="p">(</span><span class="n">mapper</span><span class="o">.</span><span class="n">reducer_count</span><span class="p">))</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Sample Message Passing Code (3 of 4)              </h1>
+              <pre><div class="code"><span class="k">def</span> <span class="nf">initmapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span><br/>    <span class="nb">setattr</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span><span class="s">'reducer_queues'</span><span class="p">,</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><br/>    <span class="nb">setattr</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span><span class="s">'reducer_count'</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><br/><br/><span class="k">def</span> <span class="nf">reducer</span><span class="p">(</span><span class="o">*</span><span class="n">message</span><span class="p">):</span><br/>    <span class="k">if</span> <span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"put"</span> <span class="p">:</span><br/>        <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">message</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span><br/>            <span class="n">reducer</span><span class="o">.</span><span class="n">worddict</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">message</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">count</span><br/>    <span class="k">elif</span> <span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"init"</span> <span class="p">:</span><br/>        <span class="nb">setattr</span><span class="p">(</span><span class="n">reducer</span><span class="p">,</span><span class="s">'worddict'</span><span class="p">,</span><span class="n">defaultdict</span><span class="p">(</span><br/>                        <span class="k">lambda</span> <span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="mi">0</span><span class="p">)))</span><br/>    <span class="k">elif</span> <span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"show"</span> <span class="p">:</span><br/>        <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">filedict</span> <span class="ow">in</span> <span class="n">reducer</span><span class="o">.</span><span class="n">worddict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span><br/>            <span class="k">for</span> <span class="n">filename</span><span class="p">,</span><span class="n">count</span> <span class="ow">in</span> <span class="n">filedict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span><br/>                <span class="k">print</span> <span class="n">word</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">count</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Sample Message Passing Code (4 of 4)              </h1>
+              <pre><div class="code"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span> <span class="p">:</span><br/>    <span class="n">reducers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Actor</span><span class="p">(</span><span class="n">reducer</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><br/>    <span class="n">reducer_queues</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">reducer</span><span class="o">.</span><span class="n">queue</span> <span class="k">for</span> <span class="n">reducer</span> <span class="ow">in</span> <span class="n">reducers</span><span class="p">)</span><br/>    <span class="k">for</span> <span class="n">reducer_queue</span> <span class="ow">in</span> <span class="n">reducer_queues</span> <span class="p">:</span><br/>        <span class="n">reducer_queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="s">"init"</span><span class="p">,))</span><br/>    <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><br/>                <span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">initializer</span><span class="o">=</span><span class="n">initmapper</span><span class="p">,</span><br/>                <span class="n">initargs</span><span class="o">=</span><span class="p">(</span><span class="n">reducer_queues</span><span class="p">,))</span><br/>    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span><span class="n">name</span><span class="p">)</span><br/>            <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirname</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span><br/>                    <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">"../data/20_newsgroups"</span><span class="p">)</span><br/>                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">filename</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="n">pool</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="p">(</span><span class="n">filename</span><span class="p">,))</span><br/>    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span><br/>    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span><br/><br/>    <span class="k">for</span> <span class="n">reducer_queue</span> <span class="ow">in</span> <span class="n">reducer_queues</span> <span class="p">:</span><br/>        <span class="n">reducer_queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="s">"show"</span><span class="p">,))</span><br/>        <span class="n">reducer_queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="bp">None</span><span class="p">,))</span><br/>    <span class="k">for</span> <span class="n">reducer</span> <span class="ow">in</span> <span class="n">reducers</span> <span class="p">:</span> <span class="n">reducer</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div></pre>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Conway's Game of Life              </h1>
+              <ul>
+                                <li>A board consisting of number of rows and columns                </li>
+                                <li>Each cell in the board is either alive or dead                </li>
+                                <li>With each iteration, the number of live neighbours of each cell are counted                </li>
+                                <li>Depending on the current status of the cell, and the number of live neighbours, the next status of the cell is determined.                </li>
+              </ul>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Conway's Game of Life: OO + imperative way              </h1>
+                <div style="overflow:auto; height: 600px;">
+              <pre><div class="code"><span class="k">class</span> <span class="nc">Cell</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">state</span><span class="p">):</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">row</span> <span class="o">=</span> <span class="n">row</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">col</span> <span class="o">=</span> <span class="n">col</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">neighbours</span> <span class="o">=</span> <span class="p">{}</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">state</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">False</span><br/>    <span class="k">def</span> <span class="nf">set_neighbour</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">c</span><span class="p">):</span><br/>        <span class="n">neighbour</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">neighbours</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">row</span><span class="p">,</span><span class="n">c</span><span class="o">.</span><span class="n">col</span><span class="p">),</span><span class="bp">None</span><span class="p">)</span><br/>        <span class="k">if</span> <span class="ow">not</span> <span class="n">neighbour</span> <span class="p">:</span><br/>            <span class="bp">self</span><span class="o">.</span><span class="n">neighbours</span><span class="p">[(</span><span class="n">cell</span><span class="o">.</span><span class="n">row</span><span class="p">,</span><span class="n">cell</span><span class="o">.</span><span class="n">col</span><span class="p">)]</span> <span class="o">=</span> <span class="n">cell</span><br/>    <span class="k">def</span> <span class="nf">live_neighbours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="n">live</span> <span class="o">=</span> <span class="mi">0</span><br/>        <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">neighbours</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">:</span><br/>            <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">state</span> <span class="p">:</span><br/>                <span class="n">live</span> <span class="o">+=</span> <span class="mi">1</span><br/>        <span class="k">return</span> <span class="n">live</span><br/><br/>    <span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="n">live</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">live_neighbours</span><span class="p">()</span><br/>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="p">:</span><br/>            <span class="k">if</span> <span class="n">live</span> <span class="o"><</span> <span class="mi">2</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">False</span><br/>            <span class="k">elif</span> <span class="n">live</span> <span class="o">></span> <span class="mi">3</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">False</span><br/>            <span class="k">else</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">True</span><br/>        <span class="k">elif</span> <span class="n">live</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span><br/>            <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">True</span><br/>        <span class="k">else</span> <span class="p">:</span><br/>            <span class="bp">self</span><span class="o">.</span><span class="n">marked</span> <span class="o">=</span> <span class="bp">False</span><br/><br/>    <span class="k">def</span> <span class="nf">switch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">marked</span><br/><br/><span class="k">class</span> <span class="nc">Board</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><br/>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">rows</span><span class="p">,</span><span class="n">cols</span><span class="p">,</span><span class="n">live</span><span class="p">):</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">cells</span> <span class="o">=</span> <span class="p">[]</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">rows</span> <span class="o">=</span> <span class="n">rows</span><br/>        <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">cols</span><br/>        <span class="k">for</span> <span class="n">row_nbr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span><br/>            <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><br/>            <span class="k">for</span> <span class="n">col_nbr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span> <span class="p">:</span><br/>                <span class="k">if</span> <span class="p">(</span><span class="n">row_nbr</span><span class="p">,</span><span class="n">col_nbr</span><span class="p">)</span> <span class="ow">in</span> <span class="n">live</span> <span class="p">:</span><br/>                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Cell</span><span class="p">(</span><span class="n">row_nbr</span><span class="p">,</span><span class="n">col_nbr</span><span class="p">,</span><span class="bp">True</span><span class="p">))</span><br/>                <span class="k">else</span> <span class="p">:</span><br/>                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Cell</span><span class="p">(</span><span class="n">row_nbr</span><span class="p">,</span><span class="n">col_nbr</span><span class="p">,</span><span class="bp">False</span><span class="p">))</span><br/>        <span class="k">for</span> <span class="n">row_nbr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="k">for</span> <span class="n">col_nbr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span> <span class="p">:</span><br/>                <span class="k">for</span> <span class="n">row_offset</span> <span class="ow">in</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span><br/>                    <span class="k">for</span> <span class="n">col_offset</span> <span class="ow">in</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span><br/>                        <span class="bp">self</span><span class="o">.</span><span class="n">set_neighbours</span><span class="p">(</span><br/>                            <span class="n">row_nbr</span><span class="p">,</span><span class="n">col_nbr</span><span class="p">,</span><br/>                            <span class="n">row_offset</span><span class="p">,</span><span class="n">col_offset</span><span class="p">)</span><br/>    <span class="k">def</span> <span class="nf">set_neighbours</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">row_nbr</span><span class="p">,</span><span class="n">col_nbr</span><span class="p">,</span><br/>                       <span class="n">row_offset</span><span class="p">,</span><span class="n">col_offset</span><span class="p">):</span><br/>        <span class="n">n_row</span> <span class="o">=</span> <span class="n">row_nbr</span> <span class="o">+</span> <span class="n">row_offset</span><br/>        <span class="n">n_col</span> <span class="o">=</span> <span class="n">col_nbr</span> <span class="o">+</span> <span class="n">col_offset</span><br/>        <span class="k">if</span> <span class="mi">0</span> <span class="o"><=</span> <span class="n">n_row</span> <span class="o"><</span> <span class="n">rows</span> <span class="p">:</span><br/>            <span class="k">if</span> <span class="mi">0</span> <span class="o"><=</span> <span class="n">n_col</span> <span class="o"><</span> <span class="n">cols</span> <span class="p">:</span><br/>                <span class="k">if</span> <span class="p">(</span><span class="n">n_row</span> <span class="o">!=</span> <span class="n">row_nbr</span><span class="p">)</span> <span class="ow">or</span> \<br/>                    <span class="p">(</span><span class="n">n_col</span> <span class="o">!=</span> <span class="n">col_nbr</span><span class="p">)</span> <span class="p">:</span><br/>                    <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">row_nbr</span><span class="p">][</span><span class="n">col_nbr</span><span class="p">]</span>\<br/>                        <span class="o">.</span><span class="n">set_neighbour</span><span class="p">(</span><br/>                            <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">n_row</span><span class="p">][</span><span class="n">n_col</span><span class="p">])</span><br/><br/>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="nb">buffer</span> <span class="o">=</span> <span class="p">[]</span><br/>        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="n">row_buffer</span> <span class="o">=</span> <span class="p">[]</span><br/>            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span> <span class="p">:</span><br/>                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">:</span><br/>                    <span class="n">row_buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'*'</span><span class="p">)</span><br/>                <span class="k">else</span> <span class="p">:</span><br/>                    <span class="n">row_buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'_'</span><span class="p">)</span><br/>            <span class="nb">buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row_buffer</span><span class="p">))</span><br/>        <span class="k">return</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span><br/><br/>    <span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span> <span class="p">:</span><br/>                <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">cycle</span><span class="p">()</span><br/>        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">)</span> <span class="p">:</span><br/>            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span> <span class="p">:</span><br/>                <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">switch</span><span class="p">()</span><br/><br/><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span> <span class="p">:</span><br/><span class="c">#    print board.show()</span><br/>    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><br/>    <span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,((</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span><br/>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span> <span class="p">:</span><br/>        <span class="n">board</span><span class="o">.</span><span class="n">cycle</span><span class="p">()</span><br/>    <span class="n">stop</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><br/>    <span class="k">print</span> <span class="s">"Time:"</span><span class="p">,</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">start</span></div></pre>
+                </div>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Game of Life: Functional way              </h1>
+                <div style="overflow:auto; height: 600px;">
+              <pre><div class="code"><span class="k">def</span> <span class="nf">generate_board</span><span class="p">(</span><span class="n">n_row</span><span class="p">,</span> <span class="n">n_col</span><span class="p">,</span> <span class="n">live</span><span class="p">):</span><br/>    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><br/>        <span class="p">((</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">)</span> <span class="ow">in</span> <span class="n">live</span><span class="p">,</span> <span class="n">neighbours</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">n_row</span><span class="p">,</span><span class="n">n_col</span><span class="p">))</span><br/>        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_col</span><span class="p">))</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_row</span><span class="p">)</span> <span class="p">)</span><br/><br/><span class="k">def</span> <span class="nf">neighbours</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">n_row</span><span class="p">,</span><span class="n">n_col</span><span class="p">):</span><br/>    <span class="k">return</span> <span class="nb">tuple</span><span class="p">((</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><br/>        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">n_row</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><br/>            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">n_col</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><br/>                <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">!=</span> <span class="n">row</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="n">col</span><span class="p">))</span><br/><br/><span class="k">def</span> <span class="nf">next_state</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span><br/>    <span class="k">for</span> <span class="n">state</span><span class="p">,</span><span class="n">nbrs</span> <span class="ow">in</span> <span class="n">row</span> <span class="p">:</span><br/>        <span class="n">live</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">nbrs</span> <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><br/>        <span class="k">yield</span> <span class="n">state</span><span class="p">,</span><span class="mi">2</span><span class="o"><=</span><span class="n">live</span><span class="o"><=</span> <span class="mi">3</span> <span class="k">if</span> <span class="n">state</span> <span class="k">else</span> <span class="n">live</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span><span class="n">nbrs</span><br/><br/><span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="n">board</span><span class="p">):</span><br/>    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><br/>        <span class="p">(</span><span class="n">new</span><span class="p">,</span><span class="n">nns</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="n">nns</span> <span class="ow">in</span> <span class="n">row</span><span class="p">)</span><br/>            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">next_state</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">board</span><span class="p">))</span><br/>                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">board</span><span class="p">))</span><br/><br/><span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">board</span><span class="p">):</span><br/>    <span class="k">return</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'*'</span> <span class="k">if</span> <span class="n">col</span> <span class="k">else</span> <span class="s">'_'</span><br/>                        <span class="k">for</span> <span class="n">col</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="n">row</span><span class="p">))</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">board</span><span class="p">)</span><br/><br/><span class="kn">import</span> <span class="nn">time</span><br/><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><br/><span class="n">board</span> <span class="o">=</span> <span class="n">generate_board</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,((</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span><br/><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span> <span class="p">:</span><br/>    <span class="n">board</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">board</span><span class="p">)</span><br/><span class="n">stop</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><br/><span class="k">print</span> <span class="s">"Time:"</span><span class="p">,</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">start</span></div></pre>
+                </div>
+          </section>
+        </div>
+        <div class="slide">
+          <section class="">
+                            <h1>Characteristics of Functional Code              </h1>
+              <ul>
+                                <li>Code looks very different, often non idiomatic. Readibility may need to be reevaluated                </li>
+                                <li>Brain needs to be retaught.                </li>
+                                <li>Many small classes become tuples or dicts                </li>
+                                <li>Many methods will become functions                </li>
+                                <li>Larger function blocks likely to be broken down into many smaller functions                </li>
+                                <li>Most functions are likely to have no side-effects                  <ul>                                        <li>Lesser likelihood of defects being introduced                    </li>                                        <li>Much easier to test                    </li>                  </ul>                </li>
+              </ul>
+          </section>
+        </div>      </div> <!-- slides -->
+
+    </div> <!-- presentation -->
+
+    <script>
+      (function() {
+        var doc = document;
+        var disableBuilds = true;
+
+        var ctr = 0;
+        var spaces = /\s+/, a1 = [''];
+
+        var toArray = function(list) {
+          return Array.prototype.slice.call(list || [], 0);
+        };
+
+        var byId = function(id) {
+          if (typeof id == 'string') { return doc.getElementById(id); }
+          return id;
+        };
+
+        var query = function(query, root) {
+          if (!query) { return []; }
+          if (typeof query != 'string') { return toArray(query); }
+          if (typeof root == 'string') {
+            root = byId(root);
+            if(!root){ return []; }
+          }
+
+          root = root || document;
+          var rootIsDoc = (root.nodeType == 9);
+          var doc = rootIsDoc ? root : (root.ownerDocument || document);
+
+          // rewrite the query to be ID rooted
+          if (!rootIsDoc || ('>~+'.indexOf(query.charAt(0)) >= 0)) {
+            root.id = root.id || ('qUnique' + (ctr++));
+            query = '#' + root.id + ' ' + query;
+          }
+          // don't choke on something like ".yada.yada >"
+          if ('>~+'.indexOf(query.slice(-1)) >= 0) { query += ' *'; }
+
+          return toArray(doc.querySelectorAll(query));
+        };
+
+        var strToArray = function(s) {
+          if (typeof s == 'string' || s instanceof String) {
+            if (s.indexOf(' ') < 0) {
+              a1[0] = s;
+              return a1;
+            } else {
+              return s.split(spaces);
+            }
+          }
+          return s;
+        };
+
+        var addClass = function(node, classStr) {
+          classStr = strToArray(classStr);
+          var cls = ' ' + node.className + ' ';
+          for (var i = 0, len = classStr.length, c; i < len; ++i) {
+            c = classStr[i];
+            if (c && cls.indexOf(' ' + c + ' ') < 0) {
+              cls += c + ' ';
+            }
+          }
+          node.className = cls.trim();
+        };
+
+        var removeClass = function(node, classStr) {
+          var cls;
+          if (classStr !== undefined) {
+            classStr = strToArray(classStr);
+            cls = ' ' + node.className + ' ';
+            for (var i = 0, len = classStr.length; i < len; ++i) {
+              cls = cls.replace(' ' + classStr[i] + ' ', ' ');
+            }
+            cls = cls.trim();
+          } else {
+            cls = '';
+          }
+          if (node.className != cls) {
+            node.className = cls;
+          }
+        };
+
+        var toggleClass = function(node, classStr) {
+          var cls = ' ' + node.className + ' ';
+          if (cls.indexOf(' ' + classStr.trim() + ' ') >= 0) {
+            removeClass(node, classStr);
+          } else {
+            addClass(node, classStr);
+          }
+        };
+
+        var ua = navigator.userAgent;
+        var isFF = parseFloat(ua.split('Firefox/')[1]) || undefined;
+        var isWK = parseFloat(ua.split('WebKit/')[1]) || undefined;
+        var isOpera = parseFloat(ua.split('Opera/')[1]) || undefined;
+
+        var canTransition = (function() {
+          var ver = parseFloat(ua.split('Version/')[1]) || undefined;
+          // test to determine if this browser can handle CSS transitions.
+          var cachedCanTransition = 
+            (isWK || (isFF && isFF > 3.6 ) || (isOpera && ver >= 10.5));
+          return function() { return cachedCanTransition; }
+        })();
+
+        //
+        // Slide class
+        //
+        var Slide = function(node, idx) {
+          this._node = node;
+          if (idx >= 0) {
+            this._count = idx + 1;
+          }
+          if (this._node) {
+            addClass(this._node, 'slide distant-slide');
+          }
+          this._makeCounter();
+          this._makeBuildList();
+        };
+
+        Slide.prototype = {
+          _node: null,
+          _count: 0,
+          _buildList: [],
+          _visited: false,
+          _currentState: '',
+          _states: [ 'distant-slide', 'far-past',
+                     'past', 'current', 'future',
+                     'far-future', 'distant-slide' ],
+          setState: function(state) {
+            if (typeof state != 'string') {
+              state = this._states[state];
+            }
+            if (state == 'current' && !this._visited) {
+              this._visited = true;
+              this._makeBuildList();
+            }
+            removeClass(this._node, this._states);
+            addClass(this._node, state);
+            this._currentState = state;
+
+            // delay first auto run. Really wish this were in CSS.
+            /*
+            this._runAutos();
+            */
+            var _t = this;
+            setTimeout(function(){ _t._runAutos(); } , 400);
+          },
+          _makeCounter: function() {
+            if(!this._count || !this._node) { return; }
+            var c = doc.createElement('span');
+            c.innerHTML = this._count;
+            c.className = 'counter';
+            this._node.appendChild(c);
+          },
+          _makeBuildList: function() {
+            this._buildList = [];
+            if (disableBuilds) { return; }
+            if (this._node) {
+              this._buildList = query('[data-build] > *', this._node);
+            }
+            this._buildList.forEach(function(el) {
+              addClass(el, 'to-build');
+            });
+          },
+          _runAutos: function() {
+            if (this._currentState != 'current') {
+              return;
+            }
+            // find the next auto, slice it out of the list, and run it
+            var idx = -1;
+            this._buildList.some(function(n, i) {
+              if (n.hasAttribute('data-auto')) {
+                idx = i;
+                return true;
+              }
+              return false;
+            });
+            if (idx >= 0) {
+              var elem = this._buildList.splice(idx, 1)[0];
+              var transitionEnd = isWK ? 'webkitTransitionEnd' : (isFF ? 'mozTransitionEnd' : 'oTransitionEnd');
+              var _t = this;
+              if (canTransition()) {
+                var l = function(evt) {
+                  elem.parentNode.removeEventListener(transitionEnd, l, false);
+                  _t._runAutos();
+                };
+                elem.parentNode.addEventListener(transitionEnd, l, false);
+                removeClass(elem, 'to-build');
+              } else {
+                setTimeout(function() {
+                  removeClass(elem, 'to-build');
+                  _t._runAutos();
+                }, 400);
+              }
+            }
+          },
+          buildNext: function() {
+            if (!this._buildList.length) {
+              return false;
+            }
+            removeClass(this._buildList.shift(), 'to-build');
+            return true;
+          },
+        };
+
+        //
+        // SlideShow class
+        //
+        var SlideShow = function(slides) {
+          this._slides = (slides || []).map(function(el, idx) {
+            return new Slide(el, idx);
+          });
+
+          var h = window.location.hash;
+          try {
+            this.current = parseInt(h.split('#slide')[1], 10);
+          }catch (e) { /* squeltch */ }
+          this.current = isNaN(this.current) ? 1 : this.current;
+          var _t = this;
+          doc.addEventListener('keydown', 
+              function(e) { _t.handleKeys(e); }, false);
+          doc.addEventListener('mousewheel', 
+              function(e) { _t.handleWheel(e); }, false);
+          doc.addEventListener('DOMMouseScroll', 
+              function(e) { _t.handleWheel(e); }, false);
+          doc.addEventListener('touchstart', 
+              function(e) { _t.handleTouchStart(e); }, false);
+          doc.addEventListener('touchend', 
+              function(e) { _t.handleTouchEnd(e); }, false);
+          window.addEventListener('popstate', 
+              function(e) { _t.go(e.state); }, false);
+          this._update();          
+        };
+
+        SlideShow.prototype = {
+          _slides: [],
+          _update: function(dontPush) {
+            document.querySelector('#presentation-counter').innerText = this.current;
+            if (history.pushState) {
+              if (!dontPush) {
+                history.pushState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+              }
+            } else {
+              window.location.hash = 'slide' + this.current;
+            }
+            for (var x = this.current-1; x < this.current + 7; x++) {
+              if (this._slides[x-4]) {
+                this._slides[x-4].setState(Math.max(0, x-this.current));
+              }
+            }
+          },
+
+          current: 0,
+          next: function() {
+            if (!this._slides[this.current-1].buildNext()) {
+              this.current = Math.min(this.current + 1, this._slides.length);
+              this._update();
+            }
+          },
+          prev: function() {
+            this.current = Math.max(this.current-1, 1);
+            this._update();
+          },
+          go: function(num) {
+            if (history.pushState && this.current != num) {
+              history.replaceState(this.current, 'Slide ' + this.current, '#slide' + this.current);
+            }
+            this.current = num;
+            this._update(true);
+          },
+
+          _notesOn: false,
+          showNotes: function() {
+            var isOn = this._notesOn = !this._notesOn;
+            query('.notes').forEach(function(el) {
+              el.style.display = (notesOn) ? 'block' : 'none';
+            });
+          },
+          switch3D: function() {
+            toggleClass(document.body, 'three-d');
+          },
+          handleWheel: function(e) {
+            var delta = 0;
+            if (e.wheelDelta) {
+              delta = e.wheelDelta/120;
+              if (isOpera) {
+                delta = -delta;
+              }
+            } else if (e.detail) {
+              delta = -e.detail/3;
+            }
+
+            if (delta > 0 ) {
+              this.prev();
+              return;
+            }
+            if (delta < 0 ) {
+              this.next();
+              return;
+            }
+          },
+          handleKeys: function(e) {
+            
+            if (/^(input|textarea)$/i.test(e.target.nodeName)) return;
+            
+            switch (e.keyCode) {
+              case 37: // left arrow
+                this.prev(); break;
+              case 39: // right arrow
+              case 32: // space
+                this.next(); break;
+              case 50: // 2
+                this.showNotes(); break;
+              case 51: // 3
+                this.switch3D(); break;
+            }
+          },
+          _touchStartX: 0,
+          handleTouchStart: function(e) {
+            this._touchStartX = e.touches[0].pageX;
+          },
+          handleTouchEnd: function(e) {
+            var delta = this._touchStartX - e.changedTouches[0].pageX;
+            var SWIPE_SIZE = 150;
+            if (delta > SWIPE_SIZE) {
+              this.next();
+            } else if (delta< -SWIPE_SIZE) {
+              this.prev();
+            }
+          },
+        };
+
+        // Initialize
+        var slideshow = new SlideShow(query('.slide'));
+      })();
+    </script>
+
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+		<script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+    
+  
+</body></html>

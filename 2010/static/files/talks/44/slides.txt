@@ -1,0 +1,218 @@
+.. include:: <s5defs.txt>
+
+================
+ The Zen of Web
+================
+
+Anand Chitipothu
+----------------
+
+.. footer:: PyCon India 2010 / September 25-26, 2010
+
+World Wide Web
+==============
+
+Key Concepts:
+
+* Uniform Resource Locators
+* Hyper Text
+* Hyper Text Transfer Protocol
+
+Uniform Resource Locators
+=========================
+::
+
+    http://in.pycon.org/2010/talks/44-the-zen-of-web
+    
+    http://docs.python.org/tutorial/
+    
+    http://en.wikipedia.org/wiki/Guido_van_Rossum
+    
+Hyper Text
+==========
+::
+
+    The <a href="http://python.org">Python 
+    programming language</a> was created by 
+    <a href="http://en.wikipedia.org/wiki/Guido_van_Rossum">
+    Guido vas Rossum</a>.
+
+HTTP: Sample Request
+====================
+
+::
+
+    GET /helloworld.txt HTTP/1.1
+    User-Agent: curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8l zlib/1.2.3
+    Host: anandology.com
+    Accept: */*
+
+HTTP: Sample Response
+=====================
+
+::
+
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Accept-Ranges: bytes
+    ETag: "2838438748"
+    Last-Modified: Fri, 24 Sep 2010 18:28:17 GMT
+    Content-Length: 14
+    Date: Fri, 24 Sep 2010 18:29:34 GMT
+    Server: lighttpd/1.4.19
+
+    Hello, world!
+
+How to Build Web Applications?
+==============================
+
+Let There be Resources
+======================
+
+* Design your webapp around resources, not actions.
+* Give an URL for each resource.
+
+Design Beautiful URLs
+=====================
+
+Beautuful URLs:
+
+* never change
+* readable
+* recognizable
+* rememberable (?)
+
+Understand HTTP Methods
+=======================
+
+* GET - Requests a resource.
+* POST - Submits data to a resource. 
+* PUT - Updates a resource.
+* DELETE - Deletes a resource.
+
+GET should not have side-effects and PUT and DELETE should be idempotent.
+
+Avoid Server-Side Sessions
+==========================
+
+HTTP is designed to be stateless.
+
+Stateful Conversation 
+=====================
+::
+
+    client: This is Anand and my password is secret. 
+            Do I have any new emails.
+    server: Hello Anand, you have 2 new emails.
+    client: please show me the first one.
+    server: blah blah blah!
+    client: and the next one please!
+    server: blee blee blee!
+    client: Thank you server, I'm leaving now.
+    server: bye!
+    
+Stateless Conversation
+======================
+::
+
+    client: This is Anand and my password is secret. 
+            Do I have any new emails.
+    server: Hello Anand, you have 2 new emails,
+            email-x and email-y.
+    client: This is Anand and my password is secret, 
+            please show me email-x.
+    server: blah blah blah!
+    client: This is Anand and my password is secret, 
+            please show me email-y.
+    server: blee blee blee!
+    client: Thank you server, I'm leaving now.
+    server: bye!
+
+Shopping Cart without Sessions
+==============================
+
+.. class:: incremental
+
+* Make shopping cart a resource
+* Give it a URL
+* Link it with user account
+
+Support Multiple Formats
+========================
+
+**Request**::
+
+    GET / HTTP/1.1
+    Accept: application/json
+    ...
+    
+**Response**::
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    ...
+
+Support Multiple Languages
+==========================
+
+**Request**::
+
+    GET /hello HTTP/1.1
+    Accept-Language: te,kn;q=0.8,en;q=0.5
+    ...
+    
+**Response**::
+
+    HTTP/1.1 200 OK
+    Content-Language: te
+    ...
+
+Compress When Possible
+======================
+
+**Request**::
+    
+    GET / HTTP/1.1
+    Accept-Encoding: gzip, deflate
+    ....
+    
+**Response**::
+
+    HTTP/1.1 200 OK
+    Content-Encoding: gzip
+    Vary: Accept-Encoding
+    ...
+
+
+Provide Caching Info
+====================
+
+**Request**::
+
+    GET / HTTP/1.1
+    ...
+    
+**Response**::
+
+    HTTP/1.1 200 OK
+    Cache-Control: public
+    Last-Modified: ...
+    E-Tag: "..."
+
+
+Summary
+=======
+
+* Let there be resources
+* Design beautiful URLs
+* Understand HTTP methods
+* Avoid server-side sessions
+* Support multiple formats
+* Support multiple languages
+* Compress when possible
+* Provide caching info
+
+Questions?
+==========
+
+
