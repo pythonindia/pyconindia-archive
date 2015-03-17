@@ -1,0 +1,70 @@
+/* 
+PyCon India customizations to the original design. 
+*/
+
+body {
+    background: #fff;
+}
+
+body.home {
+    background: #fff url('../img/bg_body.png') repeat-x;
+}
+
+
+header div#about > div small{
+    font-weight: 300;
+    letter-spacing: normal;
+}
+
+.schedules_table td a{
+    font: inherit;
+    font-style: normal;
+}
+
+.schedules_table td a.speaker {
+    font: 12px 'Lora';
+    font-style: italic;
+}
+
+.schedules_table td a.title {
+    font: inherit;
+    color: inherit;
+    font-style: normal;
+}
+
+.map {
+    overflow: hidden;
+    background: none;
+}
+
+footer, footer a, footer a:hover {
+    color: #bbb;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.sponsor-box {
+    text-align: left;
+}
+
+#schedule p {
+    font-size: 17px;
+}
+
+#workshops p {
+    font-size: 17px;
+}
+
+.sponsors-list img.gold {
+    width: auto;
+    max-width: 250px;
+}
+
+.mobile-only {
+    display: none;
+}
+.desktop-only {
+    display: block;
+}
